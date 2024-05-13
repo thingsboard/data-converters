@@ -35,3 +35,11 @@ Here
 - Milesight - the name of the vendor. 
 
 - info.json - describes the vendor with the following structure:
+
+
+```
+{
+  "url" : "https://www.milesight.com/",
+  "description" : "Milesight offers multi-potential sensing products to capture the most meaningful data and makes it accessible across diverse applications. It innovatively applies emerging technologies such as Al, 5G, and loT to distinct use scenarios. With a commitment to making sensing matter, Milesight quickly responds to customer-specific challenges and collaborates with an expanding network of partners to deliver unique data value. It is determined to make real, positive impacts in smart buildings, intelligent traffic, intelligent security, smart cities, and beyond."
+}
+```
