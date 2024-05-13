@@ -43,3 +43,27 @@ Here
   "description" : "Milesight offers multi-potential sensing products to capture the most meaningful data and makes it accessible across diverse applications. It innovatively applies emerging technologies such as Al, 5G, and loT to distinct use scenarios. With a commitment to making sensing matter, Milesight quickly responds to customer-specific challenges and collaborates with an expanding network of partners to deliver unique data value. It is determined to make real, positive impacts in smart buildings, intelligent traffic, intelligent security, smart cities, and beyond."
 }
 ```
+
+- logo.svg - a scalable image that contains the vendor logo.
+
+- WS202 - the device model.
+
+- guide.md - markdown document with the description of the device payload.
+
+- info.json - describes the device with the following structure:
+
+```
+{
+  "url": "https://www.milesight.com/iot/product/lorawan-sensor/ws202",
+  "label" "WS202 PIR & Light Sensor",
+  "description": "PIR sensor based on passive infrared technology to detect a motion or occupancy."
+}
+
+```
+
+- photo.png - photo of the device. Optional. 
+
+- ChirpStack and Loriot are folders named after the types of integrations supported by this device. The enumeration will be provided later and must be listed in README.md
+
+- uplink or downlink- subfolder for each integration type that contains converter.json - the exported converter, optional  metadata.json with the message metadata, and one of payload.json,  payload.txt or payload.base64 that contains sample data for running the test. The expected result is stored here in result.json
+  
