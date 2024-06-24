@@ -1,0 +1,196 @@
+// Encode uplink data from incoming Rule Engine message
+
+// msg - JSON message payload uplink message json
+// msgType - type of message, for ex. 'ATTRIBUTES_UPDATED', 'POST_TELEMETRY_REQUEST', etc.
+// metadata - list of key-value pairs with additional data about the message
+// integrationMetadata - list of key-value pairs with additional data defined in Integration executing this converter
+
+
+var input = {};
+input = msg;
+
+
+// Process data from incoming message and metadata
+
+input.devSerialNumber = metadata.ss_serialNumber;
+
+var encodedOut = encodeDownlink(input);
+/**
+ * Payload Encoder
+ *
+ * Copyright 2024 Milesight IoT
+ *
+ * @product WS302
+ */
+// Chirpstack v4
+function encodeDownlink(input) {
+    return milesightDeviceEncode(input);
+}
+
+// Chirpstack v3
+function Encode(fPort, obj, variables) {
+    return milesightDeviceEncode(obj);
+}
+
+// The Things Network
+function Encoder(obj, port) {
+    return milesightDeviceEncode(obj);
+}
+
+function milesightDeviceEncode(payload) {
+    var encoded = [];
+
+    if (payload.reboot != null) {
+        encoded = encoded.concat(reboot(payload.reboot));
+    }
+    if (payload.timezone != null) {
+        encoded = encoded.concat(setTimeZone(payload.timezone));
+    }
+    if (payload.timestamp != null) {
+        encoded = encoded.concat(setTime(payload.timestamp));
+    }
+    if (payload.time_sync_enable != null) {
+        encoded = encoded.concat(timeSyncEnable(payload.time_sync_enable));
+    }
+    if (payload.led_enable != null) {
+        encoded = encoded.concat(ledEnable(payload.led_enable));
+    }
+    if (payload.frequency_weighting_type != null && payload.time_weighting_type != null) {
+        encoded = encoded.concat(setWeightingType(payload.frequency_weighting_type, payload.time_weighting_type));
+    }
+
+    return encoded;
+}
+
+/**
+ * reboot device
+ * @param {number} reboot
+ * @example payload: { "reboot": 1 }, output: FF10FF
+ */
+function reboot(reboot) {
+    var reboot_values = [0, 1];
+    if (reboot_values.indexOf(reboot) === -1) {
+        newError("reboot must be 0 or 1");
+    }
+    if (reboot === 0) {
+        return [];
+    }
+
+    return [0xff, 0x10, 0xff];
+}
+
+
+/**
+ * set device time
+ * @param {number} timestamp unit: second, UTC time
+ * @example payload: { "timestamp": 1628832309 }, output: FF1135021661
+ */
+function setTime(timestamp) {
+    if (!(timestamp instanceof Number)) {
+        newError("timestamp must be a number", timestamp);
+    }
+
+    var buffer = [0xff, 0x11, 0x00, 0x00, 0x00, 0x00];
+    var iHex = longToHex(timestamp, false);
+    var hexB = hexToBytes(iHex);
+    buffer[2] = hexB[0];
+    buffer[3] = hexB[1];
+    buffer[4] = hexB[2];
+    buffer[5] = hexB[3];
+    return buffer;
+}
+
+/**
+ * set time zone
+ * @param {number} timezone
+ * @example payload: { "timezone": -4 }, output: FF17D8FF
+ */
+function setTimeZone(timezone) {
+    if (!(timezone instanceof Number)) {
+        newError("timezone must be a number", timezone);
+    }
+
+    var buffer = [0xff, 0x17, 0x00, 0x00];
+    var iHex = intToHex(timezone * 10, false, 4, false);
+    var hexB = hexToBytes(iHex);
+    var iByte = printUnsignedBytes(hexB);
+    buffer[2] = iByte[0];
+    buffer[3] = iByte[1];
+    return buffer;
+}
+
+/**
+ * time sync enable
+ * @param {number} time_sync_enable values: (0: disable, 1: enable)
+ * @example payload: { "time_sync_enable": 1 }, output: FF3B01
+ */
+function timeSyncEnable(time_sync_enable) {
+    var time_sync_enable_values = [0, 1];
+    if (time_sync_enable_values.indexOf(time_sync_enable) === -1) {
+        newError("time_sync_enable must be 0 or 1", time_sync_enable);
+    }
+
+    return time_sync_enable === 1 ? [0xff, 0x3b, 0x01] : [0xff, 0x3b, 0x00];
+}
+
+/**
+ * set led enable
+ * @param {number} led_enable values: (0: disable, 1: enable)
+ * @example payload: { "led_enable": 1 }, output: FF2F01
+ */
+function ledEnable(led_enable) {
+    var led_enable_values = [0, 1];
+    if (led_enable_values.indexOf(led_enable) === -1) {
+        newError("ed_enable must be 0 or 1", led_enable);
+    }
+
+    return led_enable === 1 ? [0xff, 0x2d, 0x01] : [0xff, 0x2d, 0x00];
+}
+
+/**
+ * set frequency weighting type and time weighting type
+ * @param {number} frequency_weighting_type values: (0: Z, 1: A, 2: C)
+ * @param {number} time_weighting_type values: (0: I, 1: F, 2: S)
+ * @returns
+ */
+function setWeightingType(frequency_weighting_type, time_weighting_type) {
+    var frequency_weighting_type_values = [0, 1, 2];
+    var time_weighting_type_values = [0, 1, 2];
+    if (!(frequency_weighting_type instanceof Number)) {
+        newError("frequency_weighting_type must be a number", frequency_weighting_type);
+    }
+    if (!(time_weighting_type instanceof Number)) {
+        newError("time_weighting_type must be a number", time_weighting_type);
+    }
+    if (frequency_weighting_type_values.indexOf(frequency_weighting_type) === -1) {
+        newError("frequency_weighting_type must be 0, 1 or 2", frequency_weighting_type);
+    }
+    if (time_weighting_type_values.indexOf(time_weighting_type) === -1) {
+        newError("time_weighting_type must be 0, 1 or 2", time_weighting_type);
+    }
+
+    var buffer = [0xff, 0x1d, 0x00, 0x00];
+    buffer[2] = frequency_weighting_type;
+    buffer[3] = time_weighting_type;
+    return buffer;
+}
+
+// Result object with encoded uplink payload
+var result = {
+
+    // uplink data content type: JSON, TEXT or BINARY (base64 format)
+    contentType: "JSON",
+
+    // uplink data
+    data: encodedOut,
+
+    devSerialNumber: input.devSerialNumber,
+
+    // Optional metadata object presented in key/value format
+    metadata: {
+        topic: metadata['deviceType']+'/'+metadata['deviceName']+'/upload'
+    }
+
+};
+
+return result;

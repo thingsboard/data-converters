@@ -1,0 +1,17 @@
+{
+  "deviceName": "WS302",
+  "deviceType": "deviceProfileName",
+  "attributes": {
+    "deviceProfileName": "deviceProfileName"
+  },
+  "telemetry": {
+    "ts": 1718853643431,
+    "values": {
+      "hexString": "017564055B053F02DA016A02",
+      "battery": 100,
+      "LAF": 57.5,
+      "LAeq": 47.4,
+      "LAFmax": 61.8
+    }
+  }
+}

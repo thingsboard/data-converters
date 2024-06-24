@@ -1,0 +1,8 @@
+{
+  "contentType": "JSON",
+  "data": [255, 16, 255, 255, 23, 216, 255, 255, 17, 53, 2, 22, 97, 255, 59, 1, 255, 45, 1, 255, 29, 1, 1],
+  "devSerialNumber": "SN111",
+  "metadata": {
+    "topic": "temp-sensor/sensorA/upload"
+  }
+}

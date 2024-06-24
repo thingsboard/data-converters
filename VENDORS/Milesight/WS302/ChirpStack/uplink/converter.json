@@ -10,7 +10,6 @@ function decodePayload(input) {
 
     output.telemetry.HEX_bytes = bytesToHex(input);
 
-    var historyData = {};
     var decoded = {};
     decoded.hexString = bytesToHex(input);
     for (var i = 0; i < input.length; ) {

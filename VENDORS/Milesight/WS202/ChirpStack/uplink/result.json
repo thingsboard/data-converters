@@ -1,0 +1,16 @@
+{
+  "deviceName": "WS202",
+  "deviceType": "deviceProfileName",
+  "attributes": {
+    "deviceProfileName": "deviceProfileName"
+  },
+  "telemetry": {
+    "ts": 1718804406160,
+    "values": {
+      "hexString": "017510030001040000",
+      "battery": 16,
+      "pir": "trigger",
+      "daylight": "dark"
+    }
+  }
+}
