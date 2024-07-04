@@ -1,0 +1,7 @@
+{
+    "deviceInfo": {
+        "deviceName": "AT101",
+        "deviceProfileName": "deviceProfileName"
+    },
+    "data": "01756403671B01050000048836BF7701F000090722"
+}
