@@ -1,0 +1,141 @@
+var data = decodeToJson(payload);
+var deviceName = data.deviceInfo.deviceName;
+var deviceType = data.deviceInfo.deviceProfileName;
+
+var total_in_chns = [0x03, 0x06, 0x09, 0x0c];
+var total_out_chns = [0x04, 0x07, 0x0a, 0x0d];
+var period_chns = [0x05, 0x08, 0x0b, 0x0e];
+
+function decodePayload(input) {
+    var output = { attributes:{}, telemetry: {} };
+    // --- Decoding code --- //
+
+    output.telemetry.HEX_bytes = bytesToHex(input);
+
+    var decoded = {};
+
+    for (var i = 0; i < input.length; ) {
+        var channel_id = input[i++] & 0xff;
+        var channel_type = input[i++] & 0xff;
+
+        // LINE TOTAL IN
+        if (includes(total_in_chns, channel_id) && channel_type === 0xd2) {
+            var channel_in_name = "line_" + ((channel_id - total_in_chns[0]) / 3 + 1);
+            decoded[channel_in_name + "_total_in"] = parseBytesToInt(input, i, 4, false);
+            i += 4;
+        }
+        // LINE TOTAL OUT
+        else if (includes(total_out_chns, channel_id) && channel_type === 0xd2) {
+            var channel_out_name = "line_" + ((channel_id - total_out_chns[0]) / 3 + 1);
+            decoded[channel_out_name + "_total_out"] = parseBytesToInt(input, i, 4, false);
+            i += 4;
+        }
+        // LINE PERIOD
+        else if (includes(period_chns, channel_id) && channel_type === 0xcc) {
+            var channel_period_name = "line_" + ((channel_id - period_chns[0]) / 3 + 1);
+            decoded[channel_period_name + "_period_in"] = parseBytesToInt(input, i, 2, false);
+            decoded[channel_period_name + "_period_out"] = parseBytesToInt(input, i + 2, 4, false);
+            i += 4;
+        }
+        // REGION COUNT
+        else if (channel_id === 0x0f && channel_type === 0xe3) {
+            decoded.region_1_count = input[i];
+            decoded.region_2_count = input[i + 1];
+            decoded.region_3_count = input[i + 2];
+            decoded.region_4_count = input[i + 3];
+            i += 4;
+        }
+        // REGION DWELL TIME
+        else if (channel_id === 0x10 && channel_type === 0xe4) {
+            var dwell_channel_name = "region_" + input[i];
+            decoded[dwell_channel_name + "_avg_dwell"] = parseBytesToInt(input, i + 1, 2, false);
+            decoded[dwell_channel_name + "_max_dwell"] = parseBytesToInt(input, i + 3, 2, false);
+            i += 5;
+        } else {
+            break;
+        }
+    }
+
+    return decoded;
+}
+
+// --- attributes and telemetry objects ---
+var telemetry = {};
+var attributes = {};
+// --- attributes and telemetry objects ---
+
+// --- Timestamp parsing
+var dateString = data.time;
+var timestamp = -1;
+if (dateString != null) {
+    timestamp = new Date(dateString).getTime();
+    if (timestamp == -1) {
+        var secondsSeparatorIndex = dateString.lastIndexOf('.') + 1;
+        var millisecondsEndIndex = dateString.lastIndexOf('+');
+        if (millisecondsEndIndex == -1) {
+            millisecondsEndIndex = dateString.lastIndexOf('Z');
+        }
+        if (millisecondsEndIndex == -1) {
+            millisecondsEndIndex = dateString.lastIndexOf('-');
+        }
+        if (millisecondsEndIndex == -1) {
+            if (dateString.length >= secondsSeparatorIndex + 3) {
+                dateString = dateString.substring(0, secondsSeparatorIndex + 3);
+            }
+        } else {
+            dateString = dateString.substring(0, secondsSeparatorIndex + 3) +
+                dateString.substring(millisecondsEndIndex, dateString.length);
+        }
+        timestamp = new Date(dateString).getTime();
+    }
+}
+// If we cannot parse timestamp - we will use the current timestamp
+if (timestamp == -1) {
+    timestamp = Date.now();
+}
+// --- Timestamp parsing
+
+// You can add some keys manually to attributes or telemetry
+attributes.deduplicationId = data.deduplicationId;
+
+// You can exclude some keys from the result
+var excludeFromAttributesList = ["deviceName", "rxInfo", "confirmed", "data", "deduplicationId","time", "adr", "dr", "fCnt"];
+var excludeFromTelemetryList = ["data", "deviceInfo", "txInfo", "devAddr", "adr", "time", "fPort", "region_common_name", "region_config_id", "deduplicationId"];
+
+// Message parsing
+// To avoid paths in the decoded objects we passing false value to function as "pathInKey" argument.
+// Warning: pathInKey can cause already found fields to be overwritten with the last value found.
+
+var telemetryData = toFlatMap(data, excludeFromTelemetryList, false);
+var attributesData = toFlatMap(data, excludeFromAttributesList, false);
+
+var uplinkDataList = [];
+
+// Passing incoming bytes to decodePayload function, to get custom decoding
+// var bas64 = base64ToBytes(data.data);
+var hexB = hexToBytes(data.data);
+var customDecoding = decodePayload(hexB);
+
+// Collecting data to result
+if (customDecoding.?telemetry.size() > 0) {
+    telemetry.putAll(customDecoding.telemetry);
+}
+
+if (customDecoding.?attributes.size() > 0) {
+    attributes.putAll(customDecoding.attributes);
+}
+
+telemetry.putAll(telemetryData);
+attributes.putAll(attributesData);
+
+var result = {
+    deviceName: deviceName,
+    deviceType: deviceType,
+    attributes: attributes,
+    telemetry: {
+        ts: timestamp,
+        values: telemetry
+    }
+};
+
+return result;

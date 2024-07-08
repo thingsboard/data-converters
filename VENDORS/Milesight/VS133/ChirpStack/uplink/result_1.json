@@ -1,0 +1,19 @@
+{
+  "deviceName": "AT101",
+  "deviceType": "deviceProfileName",
+  "attributes": {
+    "deviceProfileName": "deviceProfileName"
+  },
+  "telemetry": {
+    "ts": 1720121583344,
+    "values": {
+      "battery": 100,
+      "temperature": 28.3,
+      "position": "normal",
+      "latitude": 24.62495,
+      "longitude": 118.030576,
+      "motion_status": "moving",
+      "geofence_status": "unset"
+    }
+  }
+}
