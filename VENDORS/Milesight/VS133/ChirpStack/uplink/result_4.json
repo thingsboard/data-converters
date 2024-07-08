@@ -1,0 +1,19 @@
+{
+  "attributes": {
+    "device": "VS133",
+    "deviceProfileName": "deviceProfileName"
+  },
+  "telemetry": {
+    "ts": 1720438223169,
+    "values": {
+      "region_1_avg_dwell": 4105,
+      "region_1_max_dwell": 8465,
+      "region_2_avg_dwell": 8565,
+      "region_2_max_dwell": 13173,
+      "region_3_avg_dwell": 8577,
+      "region_3_max_dwell": 35107,
+      "region_4_avg_dwell": 118,
+      "region_4_max_dwell": 34579
+    }
+  }
+}

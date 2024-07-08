@@ -1,7 +1,7 @@
 {
-    "deviceInfo": {
-        "deviceName": "AT101",
-        "deviceProfileName": "deviceProfileName"
-    },
-    "data": "01756403671B0105000106D9081CC316222DF9C30206D90824E124F6A667B60206D90824E124F54DE3BC0206D90824E124F57971B20206D90824E124F319A8C802"
+  "deviceInfo": {
+    "device": "VS133",
+    "deviceProfileName": "deviceProfileName"
+  },
+  "data": "05CC0000000008CC000000000BCC000000000ECC05000700"
 }

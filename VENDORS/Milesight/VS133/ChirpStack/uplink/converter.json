@@ -10,8 +10,6 @@ function decodePayload(input) {
     var output = { attributes:{}, telemetry: {} };
     // --- Decoding code --- //
 
-    output.telemetry.HEX_bytes = bytesToHex(input);
-
     var decoded = {};
 
     for (var i = 0; i < input.length; ) {
@@ -19,22 +17,22 @@ function decodePayload(input) {
         var channel_type = input[i++] & 0xff;
 
         // LINE TOTAL IN
-        if (includes(total_in_chns, channel_id) && channel_type === 0xd2) {
+        if (total_in_chns.indexOf(channel_id) >= 0 && channel_type === 0xd2) {
             var channel_in_name = "line_" + ((channel_id - total_in_chns[0]) / 3 + 1);
             decoded[channel_in_name + "_total_in"] = parseBytesToInt(input, i, 4, false);
             i += 4;
         }
         // LINE TOTAL OUT
-        else if (includes(total_out_chns, channel_id) && channel_type === 0xd2) {
+        else if (total_out_chns.indexOf(channel_id) >= 0 && channel_type === 0xd2) {
             var channel_out_name = "line_" + ((channel_id - total_out_chns[0]) / 3 + 1);
             decoded[channel_out_name + "_total_out"] = parseBytesToInt(input, i, 4, false);
             i += 4;
         }
         // LINE PERIOD
-        else if (includes(period_chns, channel_id) && channel_type === 0xcc) {
+        else if (period_chns.indexOf(channel_id) >= 0 && channel_type === 0xcc) {
             var channel_period_name = "line_" + ((channel_id - period_chns[0]) / 3 + 1);
             decoded[channel_period_name + "_period_in"] = parseBytesToInt(input, i, 2, false);
-            decoded[channel_period_name + "_period_out"] = parseBytesToInt(input, i + 2, 4, false);
+            decoded[channel_period_name + "_period_out"] = parseBytesToInt(input, i + 2, 2, false);
             i += 4;
         }
         // REGION COUNT
@@ -55,8 +53,10 @@ function decodePayload(input) {
             break;
         }
     }
+    output.telemetry = decoded;
 
-    return decoded;
+    // --- Decoding code --- //
+    return output;
 }
 
 // --- attributes and telemetry objects ---
@@ -109,8 +109,6 @@ var excludeFromTelemetryList = ["data", "deviceInfo", "txInfo", "devAddr", "adr"
 var telemetryData = toFlatMap(data, excludeFromTelemetryList, false);
 var attributesData = toFlatMap(data, excludeFromAttributesList, false);
 
-var uplinkDataList = [];
-
 // Passing incoming bytes to decodePayload function, to get custom decoding
 // var bas64 = base64ToBytes(data.data);
 var hexB = hexToBytes(data.data);
@@ -129,8 +127,6 @@ telemetry.putAll(telemetryData);
 attributes.putAll(attributesData);
 
 var result = {
-    deviceName: deviceName,
-    deviceType: deviceType,
     attributes: attributes,
     telemetry: {
         ts: timestamp,
