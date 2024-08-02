@@ -140,7 +140,8 @@
 //  "Multiplier1": 1
 
 {
-  "Volt": 3.1,    //  (low voltage), 9F (Hex) = 1001 1111(Bin) >> 1F(Hex) =31(Dec), 31*0.1v=3.1v  if bit 7= 1, it means low voltage.
+  "Volt": 3.1,       // byte (9F): Battery-3.1V, 9F (Hex) = 1001 1111(Bin) >> 1F(Hex) =31(Dec), 31*0.1v=3.1v
+  "LowVolt": true,   // (low voltage), 9F (Hex) = 1001 1111(Bin), if bit 7= 1, it means low voltage.
   "Current1": 1000,  // Current1 = 1000 * "Multiplier1" =  1 ==  1000
   "Current2": 600,   // Current2 =  200 * "Multiplier1" =  3 ==   600 
   "Current3": 70000, // Current3 = 7000 * "Multiplier1" = 10 == 70000 
@@ -154,7 +155,8 @@
 //  "Multiplier3": 10
 
 {
-  "Volt": 3.1,
+  "Volt": 3.1,       // byte (9F): Battery-3.1V, 9F (Hex) = 1001 1111(Bin) >> 1F(Hex) =31(Dec), 31*0.1v=3.1v
+  "LowVolt": true,   // (low voltage), 9F (Hex) = 1001 1111(Bin), if bit 7 = 1, it means low voltage. 
   "Current1": 1000,  // Current1 = 1000 * "Multiplier1" =  1 ==  1000
   "Current2": 600,   // Current2 =  200 * "Multiplier2" =  3 ==   600 
   "Current3": 70000, // Current3 = 7000 * "Multiplier3" = 10 == 70000 
@@ -171,7 +173,7 @@
 // "Multiplier3": 100  //  0x36 = 00 11 01 10 (Bin): 11 == 100
 
 {
-  "Volt": 3.6,
+  "Volt": 3.6,        // byte (24): Battery-3.6V, 24 (Hex) = 0010 0100(Bin) >> 24(Hex) =36(Dec), 36*0.1v=3.6v, if bit 7 = 0, this means that the voltage is normal. 
   "Current1": 1000,   // Current1 = 1501 * "Multiplier1" =  10 ==  15010 mA
   "Current2": 600,    // Current2 = 1492 * "Multiplier2" =   5 ==   7460 mA
   "Current3": 700000, // Current3 = 7000 * "Multiplier3" = 100 == 700000 mA = 700A 
@@ -187,8 +189,8 @@
 //  01 4A 04 9F 39 000000000000 :: "HEX_bytes": 014A049F39000000000000 :: "frm_payload": "AUoEnzkAAAAAAAA="
 
 {
-  "Volt": 3.1,        //  byte (9F): Battery-3.1V (low voltage) , 9F (Hex) = 1001 1111(Bin) >> 1F(Hex) =31(Dec), 31*0.1v=3.1v
-                      // if bit 7= 1, it means low voltage.
+  "Volt": 3.1,            // byte (9F): Battery-3.1V, 9F (Hex) = 1001 1111(Bin) >> 1F(Hex) =31(Dec), 31*0.1v=3.1v
+  "LowVolt": true,        // if bit 7= 1, it means low voltage.
   "LowCurrent1Alarm": 1,  //  0x39 = 00 11 10 01 (Bin0): 0 == 1
   "HighCurrent1Alarm": 0, //  0x39 = 00 11 10 01 (Bin1): 0 == 0
   "LowCurrent2Alarm": 0,  //  0x39 = 00 11 10 01 (Bin2): 0 == 0

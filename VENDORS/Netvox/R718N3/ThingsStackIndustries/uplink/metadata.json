@@ -1,13 +1,3 @@
-[{
-  "gateway_ids": {
-    "gateway_id": "eui-7076ff00640524a7",
-    "eui": "7076FF00640524A7"
-  },
-  "time": "2024-07-09T12:53:52.889146Z",
-  "timestamp": 2772584315,
-  "rssi": -70,
-  "channel_rssi": -70,
-  "snr": 10.8,
-  "uplink_token": "CiIKIAoUZXVpLTcwNzZmZjAwNjQwNTI0YTcSCHB2/wBkBSSnEPuOiaoKGgwI4OW0tAYQrPPr2gMg+PCc19imiwE=",
-  "received_at": "2024-07-09T12:53:50.822347049Z"
-}]
+{
+  "integrationName": "The Things Stack Industries integration"
+}
