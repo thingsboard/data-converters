@@ -1,7 +1,0 @@
-{
-    "deviceInfo": {
-        "device": "VS133",
-        "deviceProfileName": "deviceProfileName"
-    },
-    "data": "10E4010910112110E4027521753310E4038121238910E40476001387"
-}

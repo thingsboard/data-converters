@@ -1,7 +1,0 @@
-{
-  "deviceInfo": {
-    "deviceName": "WS202",
-    "deviceProfileName": "deviceProfileName"
-  },
-  "data": "017510030001040000"
-}

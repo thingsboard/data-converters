@@ -10,7 +10,9 @@
 ## Example
 
 ```json
-// 017510 030001 040000
+// description: Battery; PIR; Daylight
+// 017510 030001 040000 
+// "HEX_bytes": 017510030001040000 :: ""HEX_bytes_base64"": "AXUQAwABBAAA"
 {
     "battery": 16,
     "pir": "trigger",

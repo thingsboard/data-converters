@@ -1,13 +1,28 @@
 {
-  "deviceName": "AM319(L)",
-  "deviceType": "deviceProfileName",
+  "deviceName": "Device name",
+  "deviceType": "Chirpstack default device profile",
+  "groupName": "9-in-1 IAQ Sensor",
   "attributes": {
-    "deviceProfileName": "deviceProfileName"
+    "deduplicationId": "57433366-50a6-4dc2-8145-2df1bbc70d9e",
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "tenantName": "ChirpStack",
+    "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75",
+    "applicationName": "Chirpstack application",
+    "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
+    "deviceProfileName": "Chirpstack default device profile",
+    "devEui": "1000000000000001",
+    "devAddr": "20000001",
+    "fPort": 85,
+    "frequency": 868500000,
+    "bandwidth": 125000,
+    "spreadingFactor": 7,
+    "codeRate": "CR_4_5"
   },
   "telemetry": {
-    "ts": 1718800989848,
+    "ts": 1684741625404,
     "values": {
-      "hexString": "0367EE0004687C05000106CB02077DA803087D2500097366270A7D04000B7D20000C7D3000",
+      "hexString": "0175550367EE0004687C05000106CB02077DA803087D2500097366270A7D04000B7D20000C7D3000",
+      "battery": 85,
       "temperature": 23.8,
       "humidity": 62,
       "pir": "trigger",
@@ -17,7 +32,18 @@
       "pressure": 1008.6,
       "hcho": 0.04,
       "pm2_5": 32,
-      "pm10": 48
+      "pm10": 48,
+      "dr": 5,
+      "fCnt": 4,
+      "confirmed": false,
+      "gatewayId": "6a7e111a10000000",
+      "uplinkId": 24022,
+      "rssi": -35,
+      "snr": 11.5,
+      "channel": 2,
+      "rfChain": 1,
+      "context": "EFwMtA==",
+      "crcStatus": "CRC_OK"
     }
   }
 }

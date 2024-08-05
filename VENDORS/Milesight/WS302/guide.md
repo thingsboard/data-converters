@@ -9,7 +9,9 @@
 ## Example
 
 ```json
-// 017564 055B053F02DA016A02
+// description: Battery; Sound Level
+// 017564 055B053F02DA016A02 
+// "HEX_bytes": 017564055B053F02DA016A02 :: ""HEX_bytes_base64"": "AAXVkBVsFPwLaAWoC"
 {
   "battery": 100,
   "LAF": 57.5,

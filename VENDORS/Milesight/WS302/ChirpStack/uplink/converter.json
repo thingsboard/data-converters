@@ -1,122 +1,39 @@
-var data = decodeToJson(payload);
-var deviceName = data.deviceInfo.deviceName;
-var deviceType = data.deviceInfo.deviceProfileName;
-
-
-
-function decodePayload(input) {
-    var output = { attributes:{}, telemetry: {} };
-    // --- Decoding code --- //
-
-    output.telemetry.HEX_bytes = bytesToHex(input);
-
-    var decoded = {};
-    decoded.hexString = bytesToHex(input);
-    for (var i = 0; i < input.length; ) {
-        var channel_id = input[i++];
-        var channel_type = input[i++];
-        // BATTERY
-        if (channel_id === 0x01 && channel_type === 0x75) {
-            decoded.battery = input[i];
-            i += 1;
-        }
-        // PIR
-        else if (channel_id === 0x03 && channel_type === 0x00) {
-            decoded.pir = input[i] === 0 ? "normal" : "trigger";
-            i += 1;
-        }
-        // DAYLIGHT
-        else if (channel_id === 0x04 && channel_type === 0x00) {
-            decoded.daylight = input[i] === 0 ? "dark" : "light";
-            i += 1;
-        } else {
-            break;
-        }
-    }
-
-    output.telemetry = decoded;
-
-    // --- Decoding code --- //
-    return output;
+{
+    "name": "UplinkWS302",
+    "type": "UPLINK",
+    "debugMode": true,
+    "configuration": {
+    "scriptLang": "TBEL",
+        "decoder": null,
+        "tbelDecoder": "var data = decodeToJson(payload);\nvar deviceName = data.deviceInfo.deviceName;\nvar deviceType = data.deviceInfo.deviceProfileName;\nvar groupName = 'Monitor Sound Level with Ease';\n// var customerName = 'Customer A';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// If you want to parse incoming data somehow, you can add your code to this function.\n// input: bytes\n// expected output:\n//  {\n//    \"attributes\": {\"attributeKey\": \"attributeValue\"},\n//    \"telemetry\": {\"telemetryKey\": \"telemetryValue\"}\n//  }\n//\n// In the example - bytes will be saved as HEX string and also parsed as light level, battery level and PIR sensor value.\n//\n\nfunction decodePayload(inputArray) {\n    var output = { attributes:{}, telemetry: {}};\n    // --- Decoding code --- //\n    var input = byteArrayToExecutionArrayList(inputArray);\n    output.telemetry.HEX_bytes = bytesToHex(input);\n    var decoded = {};\n    decoded.hexString = bytesToHex(input);\n    for (var i = 0; i < input.length - 2; ) {\n        var channel_id = input[i++];\n        var channel_type = input[i++];\n\n        // BATTERY\n        if (channel_id === 0x01 && channel_type === 0x75) {\n            decoded.battery = input[i];\n            i += 1;\n        }\n        // SOUND\n        else if (channel_id === 0x05 && channel_type === 0x5b) {\n            var weight = input[i];\n            var freq_weight = readFrequencyWeightType(weight & 0x03);\n            var time_weight = readTimeWeightType((weight >> 2) & 0x03);\n\n            sound_level_name = \"L\" + freq_weight + time_weight;\n            sound_level_eq_name = \"L\" + freq_weight + \"eq\";\n            sound_level_max_name = \"L\" + freq_weight + time_weight + \"max\";\n            decoded[sound_level_name] = parseBytesToInt(input, i + 1, 2, false) / 10;\n            decoded[sound_level_eq_name] = parseBytesToInt(input, i + 3, 2, false) / 10;\n            decoded[sound_level_max_name] =parseBytesToInt(input, i + 5, 2, false) / 10;\n            i += 7;\n        }\n        // LoRaWAN Class Type\n        else if (channel_id === 0xff && channel_type === 0x0f) {\n            decoded.lorawan_class = readLoRaWANClass(input[i]);\n            i += 1;\n        } else {\n            break;\n        }\n    }\n    output.telemetry = decoded;\n\n    // --- Decoding code --- //\n    return output;\n}\n\n\nfunction readFrequencyWeightType(type) {\n    switch (type) {\n        case 0:\n            return \"Z\";\n        case 1:\n            return \"A\";\n        case 2:\n            return \"C\";\n    }\n}\n\nfunction readTimeWeightType(type) {\n    switch (type) {\n        case 0: // impulse time weighting\n            return \"I\";\n        case 1: // fast time weighting\n            return \"F\";\n        case 2: // slow time weighting\n            return \"S\";\n    }\n}\n\n// --- attributes and telemetry objects ---\nvar telemetry = {};\nvar attributes = {};\n// --- attributes and telemetry objects ---\n\n// --- Timestamp parsing\nvar dateString = data.time;\nvar timestamp = -1;\nif (dateString != null) {\n    timestamp = new Date(dateString).getTime();\n    if (timestamp == -1) {\n        var secondsSeparatorIndex = dateString.lastIndexOf('.') + 1;\n        var millisecondsEndIndex = dateString.lastIndexOf('+');\n        if (millisecondsEndIndex == -1) {\n            millisecondsEndIndex = dateString.lastIndexOf('Z');\n        }\n        if (millisecondsEndIndex == -1) {\n            millisecondsEndIndex = dateString.lastIndexOf('-');\n        }\n        if (millisecondsEndIndex == -1) {\n            if (dateString.length >= secondsSeparatorIndex + 3) {\n                dateString = dateString.substring(0, secondsSeparatorIndex + 3);\n            }\n        } else {\n            dateString = dateString.substring(0, secondsSeparatorIndex + 3) +\n                dateString.substring(millisecondsEndIndex, dateString.length);\n        }\n        timestamp = new Date(dateString).getTime();\n    }\n}\n// If we cannot parse timestamp - we will use the current timestamp\nif (timestamp == -1) {\n    timestamp = Date.now();\n}\n// --- Timestamp parsing\n\n// You can add some keys manually to attributes or telemetry\nattributes.deduplicationId = data.deduplicationId;\n\n// You can exclude some keys from the result\nvar excludeFromAttributesList = [\"deviceName\", \"rxInfo\", \"confirmed\", \"data\", \"deduplicationId\",\"time\", \"adr\", \"dr\", \"fCnt\"];\nvar excludeFromTelemetryList = [\"data\", \"deviceInfo\", \"txInfo\", \"devAddr\", \"adr\", \"time\", \"fPort\", \"region_common_name\", \"region_config_id\", \"deduplicationId\"];\n\n// Message parsing\n// To avoid paths in the decoded objects we passing false value to function as \"pathInKey\" argument.\n// Warning: pathInKey can cause already found fields to be overwritten with the last value found.\n\nvar telemetryData = toFlatMap(data, excludeFromTelemetryList, false);\nvar attributesData = toFlatMap(data, excludeFromAttributesList, false);\n\nvar uplinkDataList = [];\n\n// Passing incoming bytes to decodePayload function, to get custom decoding\nvar customDecoding = decodePayload(base64ToBytes(data.data));\n\n// Collecting data to result\nif (customDecoding.?telemetry.size() > 0) {\n    telemetry.putAll(customDecoding.telemetry);\n}\n\nif (customDecoding.?attributes.size() > 0) {\n    attributes.putAll(customDecoding.attributes);\n}\n\ntelemetry.putAll(telemetryData);\nattributes.putAll(attributesData);\n\nvar result = {\n    deviceName: deviceName,\n    deviceType: deviceType,\n//  assetName: assetName,\n//  assetType: assetType,\n//  customerName: customerName,\n    groupName: groupName,\n    attributes: attributes,\n    telemetry: {\n        ts: timestamp,\n        values: telemetry\n    }\n};\n\nreturn result;",
+        "encoder": null,
+        "tbelEncoder": null,
+        "updateOnlyKeys": [
+        "tenantId",
+        "tenantName",
+        "applicationId",
+        "applicationName",
+        "deviceProfileId",
+        "deviceProfileName",
+        "devEui",
+        "devAddr",
+        "fPort",
+        "frequency",
+        "bandwidth",
+        "spreadingFactor",
+        "codeRate",
+        "battery",
+        "pir",
+        "daylight",
+        "confirmed",
+        "gatewayId",
+        "channel",
+        "rfChain",
+        "crcStatus"
+    ]
+},
+    "additionalInfo": {
+    "description": ""
+},
+    "edgeTemplate": false
 }
-
-// --- attributes and telemetry objects ---
-var telemetry = {};
-var attributes = {};
-// --- attributes and telemetry objects ---
-
-// --- Timestamp parsing
-var dateString = data.time;
-var timestamp = -1;
-if (dateString != null) {
-    timestamp = new Date(dateString).getTime();
-    if (timestamp == -1) {
-        var secondsSeparatorIndex = dateString.lastIndexOf('.') + 1;
-        var millisecondsEndIndex = dateString.lastIndexOf('+');
-        if (millisecondsEndIndex == -1) {
-            millisecondsEndIndex = dateString.lastIndexOf('Z');
-        }
-        if (millisecondsEndIndex == -1) {
-            millisecondsEndIndex = dateString.lastIndexOf('-');
-        }
-        if (millisecondsEndIndex == -1) {
-            if (dateString.length >= secondsSeparatorIndex + 3) {
-                dateString = dateString.substring(0, secondsSeparatorIndex + 3);
-            }
-        } else {
-            dateString = dateString.substring(0, secondsSeparatorIndex + 3) +
-                dateString.substring(millisecondsEndIndex, dateString.length);
-        }
-        timestamp = new Date(dateString).getTime();
-    }
-}
-// If we cannot parse timestamp - we will use the current timestamp
-if (timestamp == -1) {
-    timestamp = Date.now();
-}
-// --- Timestamp parsing
-
-// You can add some keys manually to attributes or telemetry
-attributes.deduplicationId = data.deduplicationId;
-
-// You can exclude some keys from the result
-var excludeFromAttributesList = ["deviceName", "rxInfo", "confirmed", "data", "deduplicationId","time", "adr", "dr", "fCnt"];
-var excludeFromTelemetryList = ["data", "deviceInfo", "txInfo", "devAddr", "adr", "time", "fPort", "region_common_name", "region_config_id", "deduplicationId"];
-
-// Message parsing
-// To avoid paths in the decoded objects we passing false value to function as "pathInKey" argument.
-// Warning: pathInKey can cause already found fields to be overwritten with the last value found.
-
-var telemetryData = toFlatMap(data, excludeFromTelemetryList, false);
-var attributesData = toFlatMap(data, excludeFromAttributesList, false);
-
-var uplinkDataList = [];
-
-// Passing incoming bytes to decodePayload function, to get custom decoding
-// var bas64 = base64ToBytes(data.data);
-var hexB = hexToBytes(data.data);
-var customDecoding = decodePayload(hexB);
-
-// Collecting data to result
-if (customDecoding.?telemetry.size() > 0) {
-    telemetry.putAll(customDecoding.telemetry);
-}
-
-if (customDecoding.?attributes.size() > 0) {
-    attributes.putAll(customDecoding.attributes);
-}
-
-telemetry.putAll(telemetryData);
-attributes.putAll(attributesData);
-
-var result = {
-    deviceName: deviceName,
-    deviceType: deviceType,
-    attributes: attributes,
-    telemetry: {
-        ts: timestamp,
-        values: telemetry
-    }
-};
-
-return result;

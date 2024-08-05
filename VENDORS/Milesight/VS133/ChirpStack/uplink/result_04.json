@@ -1,7 +1,7 @@
 {
   "deviceName": "Device name",
   "deviceType": "Chirpstack default device profile",
-  "groupName": "Monitor Sound Level with Ease",
+  "groupName": "People counting sensor",
   "attributes": {
     "deduplicationId": "57433366-50a6-4dc2-8145-2df1bbc70d9e",
     "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
@@ -21,11 +21,15 @@
   "telemetry": {
     "ts": 1684741625404,
     "values": {
-      "hexString": "017564055B053F02DA016A02",
-      "battery": 100,
-      "LAF": 57.5,
-      "LAeq": 47.4,
-      "LAFmax": 61.8,
+      "hexString": "10E4010910112110E4027521753310E4038121238910E40476001387",
+      "region_1_avg_dwell": 4105,
+      "region_1_max_dwell": 8465,
+      "region_2_avg_dwell": 8565,
+      "region_2_max_dwell": 13173,
+      "region_3_avg_dwell": 8577,
+      "region_3_max_dwell": 35107,
+      "region_4_avg_dwell": 118,
+      "region_4_max_dwell": 34579,
       "dr": 5,
       "fCnt": 4,
       "confirmed": false,
