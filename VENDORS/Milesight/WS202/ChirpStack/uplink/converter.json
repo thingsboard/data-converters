@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for ChirpStack integration for WS202 device",
+  "name": "WS202_Uplink",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

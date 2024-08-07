@@ -1,9 +1,0 @@
-{
-  "reboot": 1,
-  "timezone": -4,
-  "timestamp": 1628832309,
-  "time_sync_enable": 1,
-  "led_enable": 1,
-  "frequency_weighting_type": 1,
-  "time_weighting_type": 1
-}

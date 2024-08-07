@@ -1,5 +1,5 @@
 {
-    "name": "UplinkWS302",
+    "name": "WS302_Uplink",
     "type": "UPLINK",
     "debugMode": true,
     "configuration": {

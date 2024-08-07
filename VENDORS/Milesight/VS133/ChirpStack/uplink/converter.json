@@ -1,5 +1,5 @@
 {
-    "name": "UplinkVS133",
+    "name": "VS133_Uplink",
     "type": "UPLINK",
     "debugMode": true,
     "configuration": {

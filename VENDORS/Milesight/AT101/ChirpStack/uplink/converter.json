@@ -1,5 +1,5 @@
 {
-    "name": "UplinkAT101",
+    "name": "AT101_Uplink",
     "type": "UPLINK",
     "debugMode": true,
     "configuration": {
