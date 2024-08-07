@@ -1,5 +1,5 @@
 {
-    "name": "WS302_Uplink",
+    "name": "Milesight WS302 Uplink for ChirpStack integration",
     "type": "UPLINK",
     "debugMode": true,
     "configuration": {

@@ -1,5 +1,5 @@
 {
-    "name": "AT101_Uplink",
+    "name": "Milesight AT101 Uplink for ChirpStack integration",
     "type": "UPLINK",
     "debugMode": true,
     "configuration": {

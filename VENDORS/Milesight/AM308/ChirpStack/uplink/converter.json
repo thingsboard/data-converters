@@ -1,5 +1,5 @@
 {
-    "name": "AM308_Uplink",
+    "name": "Milesight AM308 Uplink for ChirpStack integration",
     "type": "UPLINK",
     "debugMode": true,
     "configuration": {

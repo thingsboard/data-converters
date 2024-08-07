@@ -1,5 +1,5 @@
 {
-  "name": "WS202_Uplink",
+  "name": "Milesight WS202 Uplink for ChirpStack integration",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

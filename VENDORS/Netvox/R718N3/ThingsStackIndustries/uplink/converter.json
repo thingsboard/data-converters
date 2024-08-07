@@ -1,5 +1,5 @@
 {
-  "name": "R718N3_Uplink",
+  "name": "Netvox R718N3 Uplink for ThingsStackIndustries integration",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {
