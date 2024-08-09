@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for ChirpStack integration for WS202 device",
+  "name": "Milesight WS202 Uplink for ChirpStack integration",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {
