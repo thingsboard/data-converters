@@ -1,0 +1,73 @@
+{
+  "deviceName": "Device name",
+  "deviceType": "Chirpstack default device profile",
+  "groupName": "9-in-1 IAQ Sensor",
+  "attributes": {
+    "deduplicationId": "57433366-50a6-4dc2-8145-2df1bbc70d9e",
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "tenantName": "ChirpStack",
+    "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75",
+    "applicationName": "Chirpstack application",
+    "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
+    "deviceProfileName": "Chirpstack default device profile",
+    "devEui": "1000000000000001",
+    "devAddr": "20000001",
+    "fPort": 85,
+    "frequency": 868500000,
+    "bandwidth": 125000,
+    "spreadingFactor": 7,
+    "codeRate": "CR_4_5"
+  },
+  "telemetry": {
+    "ts": 1684741625404,
+    "values": {
+      "hexString": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36",
+      "temperature": 25.1,
+      "temperature_target": 16.6,
+      "temperature_control_mode": "heat",
+      "temperature_control_status": "standby",
+      "fan_mode": "auto",
+      "fan_status": "standby",
+      "plan_event": "not executed",
+      "temperature_alarm": "threshold alarm",
+      "wires": ["Y1", "GH", "OB", "AUX"],
+      "ob_mode": "heat",
+      "plan_schedule": [{
+        "type": "wake",
+        "index": 1,
+        "plan_enable": "disable",
+        "week_recycle": [],
+        "time": "11:31",
+        "i": 50
+      }, {
+        "type": "home",
+        "index": 2,
+        "plan_enable": "enable",
+        "week_recycle": ["Wed.", "Fri."],
+        "time": "00:00",
+        "i": 58
+      }],
+      "plan_settings": [{
+        "type": "sleep",
+        "temperature_ctl_mode": "auto",
+        "fan_mode": "on",
+        "temperature_target": 78,
+        "temperature_unit": "℃",
+        "temperature_unit_val": 78,
+        "temperature_unit_val7": 0,
+        "temperature_error": 5.4
+      }],
+      "dr": 5,
+      "fCnt": 4,
+      "confirmed": false,
+      "gatewayId": "6a7e111a10000000",
+      "uplinkId": 24022,
+      "rssi": -35,
+      "snr": 11.5,
+      "channel": 2,
+      "rfChain": 1,
+      "context": "EFwMtA==",
+      "crcStatus": "CRC_OK"
+    }
+  }
+}
