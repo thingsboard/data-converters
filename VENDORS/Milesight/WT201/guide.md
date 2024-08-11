@@ -1,5 +1,7 @@
 
-## Payload Definition
+
+# UplinkDecoder:
+## Payload Definition 
 
 | CHANNEL                  |  ID  | TYPE | LENGTH | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                           |
 | :----------------------- | :--: | :--: | :----: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +24,7 @@
 | Plan                     | 0xFF | 0xC9 |   6    | type(1B) + index(1B) + plan_enable(1B) + week_recycle(1B) + time(1B)<br />type, values: (0: wake, 1: away, 2: home, 3: sleep)<br />index, range: [0, 15]<br />week_recycle, read: bits, (bit1: mon, bit2: tues, bit3: wed, bit4: thur, bit5: fri, bit6: sat, bit7: sun)<br />time, unit: mins                                                                                                                         |
 | Wires                    | 0xFF | 0xCA |   3    | value1(1B) + value2(1B) + value3(1B)<br />value1, bit0-bit1: y1, bit2-bit3: gh, bit4-bit5: o/b, bit6-bit7: w1<br />value2, bit0-bit1: e, bit2-bit3: di, bit4-bit5: pek, bit6-bit7: (1: w2, 2: aux)<br />value3, bit0-bit1: (1: y2, 2: gl), bit2-bit3: (0: cool, 1: heat)                                                                                                                                              |
 | Temperature Mode Support | 0xFF | 0xCB |   3    | mode_enable(1B) + heat_level_enable(1B) + cool_level_enable(1B)<br />mode_enable, read: bits, (bit0: heat, bit1: em heat, bit2: cool, bit3: auto)<br />heat_level_enable, read: bits, (bit0: stage-1 heat, bit1: stage-2 heat, bit2: stage-3 heat, bit3: stage-4 heat, bit4: aux heat)<br />cool_level_enable: read: bits, (bit0: stage-1 cool, bit1: stage-2 cool)                                                   |
-|       | 0xFF | 0xF6 |   1    | control_permissions(1B)<br />control_permissions, values: (0: thermostat, 1: remote control)                                                                                                                                                                                                                                                                                                                          |
+| Control Permissions      | 0xFF | 0xF6 |   1    | control_permissions(1B)<br />control_permissions, values: (0: thermostat, 1: remote control)                                                                                                                                                                                                                                                                                                                          |
 | Temperature Alarm        | 0x83 | 0x67 |   3    | temperature(2B) + temperature_alarm(1B)<br />temperature, unit: ℃, read: int16/10<br />temperature_alarm, values: (1: emergency heating timeout, 2: auxiliary heating timeout, 3: persistent low temperature, 4: persistent low temperature release, 5: persistent high temperature, 6: persistent high temperature release, 7: freeze protection, 8: freeze protection release, 9: threshold, 10: threshold release) |
 | Temperature Exception    | 0xB3 | 0x67 |   1    | temperature_exception(1B)<br />temperature_exception, values: (1: read failed, 2: out of range)                                                                                                                                                                                                                                                                                                                       |
 | Humidity Exception       | 0xB9 | 0x68 |   1    | humidity_exception(1B)<br />humidity_exception, values: (1: read failed, 2: out of range)                                                                                                                                                                                                                                                                                                                             |
@@ -205,7 +207,7 @@
 //9) 
 // description: Ambient Temperature, Target Temperature, Temperature Control, Fan Control, Plan Event, System Status, Humidity
 // 03671101 0467FA00 05E772 06E806 07BC00 088E01 096844
-// "HEX_bytes": 036711010467FA0005E77206E80607BC00088E01096844 :: "HEX_bytes_base64"": "A2cRAQRn+gAF53IG6AYHvAAIjgEJaEQ="
+// "HEX_bytes": 036711010467FA0005E77206E80607BC00088E01096844 :: "HEX_bytes_base64": "A2cRAQRn+gAF53IG6AYHvAAIjgEJaEQ="
 {
     "temperature": 27.3,
     "temperature_target": 25.0,
@@ -226,5 +228,76 @@
 // "HEX_bytes": FFF600 :: "HEX_bytes_base64"": "//YA"
 {
     "control_permissions": "thermostat"
+}
+```
+
+# DownlinkDecoder:
+## Payload Definition 
+** NOTE: 
+
+1) Command Format 1:
+
+| Channel | Type   | Command |
+|:-------:|:-------|:--------|
+|   ff    | 1 Byte | N Bytes |
+
+
+   Reply Format:
+
+| Channel | Type            | Command         |
+|:-------:|:----------------|:----------------|
+|   ff    | Same as command | Same as command |
+
+
+2) Command Format 2:
+
+| Channel | Type   | Command |
+|:-------:|:-------|:--------|
+|   f9    | 1 Byte | N Bytes |
+
+
+Reply Format:
+
+| Channel | Type            | Command         | Return Code                                                  |
+|:-------:|:----------------|-----------------|:-------------------------------------------------------------|
+|   f8    | Same as command | Same as command | 00: success<br /> 01: not support<br /><br/>02: out of range |
+
+
+|             Item             | Channel | Type | Byte | Description                                                                                                                                                                                                                                              |
+|:----------------------------:|:--------|------|------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|            Reboot            | 0xFF    | 0x10 | 1    | ff                                                                                                                                                                                                                                                       |
+|     Query Current Status     | 0xFF    | 0x28 | 1    | 01, the device will return a periodic packet                                                                                                                                                                                                             |
+|      Reporting Interval      | 0xFF    | 0x8E | 3    | Byte 1: 00<br />Byte 2-3: Interval time, unit: min                                                                                                                                                                                                       |
+|        System On/Off         | 0xFF    | 0xC5 | 1    | System On/Off                                                                                                                                                                                                                                            |
+|      Control Permission      | 0xFF    | 0xF6 | 1    | 00=Thermostat, 01=Remote Control                                                                                                                                                                                                                         |
+|          Child Lock          | 0xFF    | 0x25 | 2    | Byte 1: ff<br />Byte 2: for every bit 0=disable, 1=enable.<br />Bit0: System on/off; Bit1: Temperature +; Bit2: Temperature -; Bit3: Fan mode; Bit4: Temperature control mode; Bit5: Reset and reboot; Bit6-7: 00                                        |
+|        UTC Time Zone         | 0xFF    | 0xBD | 2    | INT16/60                                                                                                                                                                                                                                                 |
+|     Daylight Saving Time     | 0xFF    | 0xBA | 10   | Byte 1: 00-disable, 01-enable<br />Byte 2: DST bias, unit: min<br />Byte 3-6: Start time, Month (1B)+Week(1B) + Hours of a Day (2B)<br />Week: Bit7-4 1: 1st, 2: 2nd,...;  Bit3-0: 1: Monday, 2:Tuesday,...7: Sunday;<br />Byte 7-10: End time           |
+|         Data Storage         | 0xFF    | 0x68 | 1    | 00: disable, 01: enable                                                                                                                                                                                                                                  |
+|     Data Retransmission      | 0xFF    | 0x69 | 1    | 00: disable, 01: enable                                                                                                                                                                                                                                  |
+| Data Retransmission Interval | 0xFF    | 0x6A | 1    | Byte 1: 00<br />Byte 2-3: Interval time, unit: s<br />range: 30~1200s (600s by default)                                                                                                                                                                  |
+|       Multicast group        | 0xFF    | 0x82 | 1    | Bit 7-4: multicast group 4 to 1 change status, 0 = not allow control, 1 = allow control.<br /> Bit 3-0: multicast group 4 to 1 control status, 0 for disable, 1 for enable..<br />Note: after disabling or enabling, the device will re-join the network |
+
+
+## Example
+
+```json
+// 1) 
+// description: Reboot the device.
+
+// payload
+{
+  "reboot": 1
+}
+
+// fPort: 85
+// bytes: FF10FF :: "bytes_base64"": "/xD/"
+// reult send
+{
+  "contentType": "JSON",
+  "data": "{\"bytes\":\"/xD/\"}",
+  "metadata": {
+    "topic": "temp-sensor/sensorA/SN111/upload"
+  }
 }
 ```

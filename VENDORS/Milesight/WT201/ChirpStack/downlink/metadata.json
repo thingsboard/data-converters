@@ -1,0 +1,6 @@
+{
+  "integrationName": "ChirpStack integration",
+  "deviceName": "sensorA",
+  "ss_serialNumber": "SN111",
+  "deviceType": "temp-sensor"
+}
