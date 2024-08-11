@@ -1,0 +1,7 @@
+{
+  "contentType": "JSON",
+  "data": "{\"tempFreq\":60,\"humFreq\":30,\"devSerialNumber\":\"SN111\"}",
+  "metadata": {
+    "topic": "temp-sensor/sensorA/upload"
+  }
+}

@@ -17,12 +17,12 @@
 | Plan Event               | 0x07 | 0xBC |   1    | plan_event(0..3)<br />plan_event, values: (0: not executed, 1: wake, 2: away, 3: home, 4: sleep)                                                                                                                                                                                                                                                                                                                      |
 | System Status            | 0x08 | 0x8E |   1    | system_status(1B)<br />system_status, values: (0: off, 1: on)                                                                                                                                                                                                                                                                                                                                                         |
 | Humidity                 | 0x09 | 0x68 |   1    | humidity(1B)<br />humidity, unit: %RH, read: int8/2                                                                                                                                                                                                                                                                                                                                                                   |
-| Wires Relay Status       | 0x0A | 0x6E |   1    | wire_relay_status(1B)                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Plan Settings            | 0xFF | 0xC8 |   6    | type(1B) + temperature_ctl_mode(1B) + fan_mode(1B) + temperature_target(1B), unit: ℃, read: int16/10  +  temperature_unit(1B: bit:7), values: (0: "℃", 1: "℉") + temperature_error(1B), read: int16/10                                                                                                                                                                                                                  |
+| Wires Relay Status       | 0x0A | 0x6E |   1    | wire_relay_status(1B) bit0: Y1, bit1: Y2/GL, bit2: W1, bit3: W2/AUX, bit4: E, bit5: G, bit6: O/B, bit7: 0                                                                                                                                                                                                                                                                                                             |
+| Plan Settings            | 0xFF | 0xC8 |   6    | type(1B) + temperature_ctl_mode(1B) + fan_mode(1B) + temperature_target(1B), unit: ℃, read: int16/10  +  temperature_unit(1B: bit:7), values: (0: "℃", 1: "℉") + temperature_error(1B), read: int16/10                                                                                                                                                                                                              |
 | Plan                     | 0xFF | 0xC9 |   6    | type(1B) + index(1B) + plan_enable(1B) + week_recycle(1B) + time(1B)<br />type, values: (0: wake, 1: away, 2: home, 3: sleep)<br />index, range: [0, 15]<br />week_recycle, read: bits, (bit1: mon, bit2: tues, bit3: wed, bit4: thur, bit5: fri, bit6: sat, bit7: sun)<br />time, unit: mins                                                                                                                         |
 | Wires                    | 0xFF | 0xCA |   3    | value1(1B) + value2(1B) + value3(1B)<br />value1, bit0-bit1: y1, bit2-bit3: gh, bit4-bit5: o/b, bit6-bit7: w1<br />value2, bit0-bit1: e, bit2-bit3: di, bit4-bit5: pek, bit6-bit7: (1: w2, 2: aux)<br />value3, bit0-bit1: (1: y2, 2: gl), bit2-bit3: (0: cool, 1: heat)                                                                                                                                              |
 | Temperature Mode Support | 0xFF | 0xCB |   3    | mode_enable(1B) + heat_level_enable(1B) + cool_level_enable(1B)<br />mode_enable, read: bits, (bit0: heat, bit1: em heat, bit2: cool, bit3: auto)<br />heat_level_enable, read: bits, (bit0: stage-1 heat, bit1: stage-2 heat, bit2: stage-3 heat, bit3: stage-4 heat, bit4: aux heat)<br />cool_level_enable: read: bits, (bit0: stage-1 cool, bit1: stage-2 cool)                                                   |
-| Control Permissions      | 0xFF | 0xF6 |   1    | control_permissions(1B)<br />control_permissions, values: (0: thermostat, 1: remote control)                                                                                                                                                                                                                                                                                                                          |
+|       | 0xFF | 0xF6 |   1    | control_permissions(1B)<br />control_permissions, values: (0: thermostat, 1: remote control)                                                                                                                                                                                                                                                                                                                          |
 | Temperature Alarm        | 0x83 | 0x67 |   3    | temperature(2B) + temperature_alarm(1B)<br />temperature, unit: ℃, read: int16/10<br />temperature_alarm, values: (1: emergency heating timeout, 2: auxiliary heating timeout, 3: persistent low temperature, 4: persistent low temperature release, 5: persistent high temperature, 6: persistent high temperature release, 7: freeze protection, 8: freeze protection release, 9: threshold, 10: threshold release) |
 | Temperature Exception    | 0xB3 | 0x67 |   1    | temperature_exception(1B)<br />temperature_exception, values: (1: read failed, 2: out of range)                                                                                                                                                                                                                                                                                                                       |
 | Humidity Exception       | 0xB9 | 0x68 |   1    | humidity_exception(1B)<br />humidity_exception, values: (1: read failed, 2: out of range)                                                                                                                                                                                                                                                                                                                             |
@@ -63,8 +63,8 @@
 ```
 // All:
 {
-"hex": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36",
-"data": "A2cCAQRnpgAF5wAG6AAHvACDZ/sACSDOXEcKZdCewJH/yw0RAf/KFYAE/8kAAAAAswL/yQIBASgAAP/IAwMBTjY="
+"hex": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36FFC80303014E36FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF010003671101088E0109684A0A6E72036711010467FA0005E77206E80607BC00088E01096844FFF600",
+"data": "A2cCAQRnpgAF5wAG6AAHvACDZ/sACSDOXEcKZdCewJH/yw0RAf/KFYAE/8kAAAAAswL/yQIBASgAAP/IAwMBTjb/yAMDAU42/wv//wEB/xZnkdGWBAUABf8JAQD/CgED/w8C//8BAANnEQEIjgEJaEoKbnIDZxEBBGf6AAXncgboBge8AAiOAQloRP/2AA=="
 }
 // 
 ```
@@ -153,7 +153,6 @@
 // description: Plan Settings
 // FFC80303014E36
 // "HEX_bytes": FFC80303014E36 :: "HEX_bytes_base64"": "/8gDAwFONg=="
-// FFC80303014E36
 {
     "plan_settings": [
         {
@@ -164,5 +163,68 @@
             "type": "sleep"
         }
     ]
+}
+
+```//7) 
+// description: Device Status, Protocol Version, Serial Number, Hardware Version, Firmware Version, LoRaWAN Class Type, TSL Version
+// FF0BFF FF0101 FF166791D19604050005 FF090100 FF0A0103 FF0F02 FFFF0100
+// "HEX_bytes": FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF0100 :: "HEX_bytes_base64"": "/wv//wEB/xZnkdGWBAUABf8JAQD/CgED/w8C//8BAA=="
+{
+    "device_status": "on",      // FF
+    "ipso_version": "v1.0",     // 01
+    "sn": "6791D19604050005",   // 6791D19604050005
+    "hardware_version": "v1.0", // 0100
+    "firmware_version": "v1.3", // 0103
+    "lorawan_class": "ClassC",  // 02
+    "tsl_version": "v1.0"       // 0100
+}
+```
+
+```
+//8) 
+// description: Ambient Temperature, System Status, Humidity, Wires Relay Status
+// 03671101 088E01 09684A 0A6E72
+// "HEX_bytes": 03671101088E0109684A0A6E72 :: "HEX_bytes_base64"": "A2cRAQiOAQloSgpucg=="
+{
+      "temperature": 27.3,
+      "system_status": "on",
+      "humidity": 37.0,
+      "wires_relay": {      // 0x72 => 114 => 0111 0010
+        "y1": 0,            // bit0
+        "y2_gl": 1,         // bit1
+        "w1": 0,            // bit2
+        "w2_aux": 0,        // bit3
+        "e": 1,             // bit4
+        "g": 1,             // bit5
+        "ob": 1             // bit6
+      }
+}
+```
+
+```
+//9) 
+// description: Ambient Temperature, Target Temperature, Temperature Control, Fan Control, Plan Event, System Status, Humidity
+// 03671101 0467FA00 05E772 06E806 07BC00 088E01 096844
+// "HEX_bytes": 036711010467FA0005E77206E80607BC00088E01096844 :: "HEX_bytes_base64"": "A2cRAQRn+gAF53IG6AYHvAAIjgEJaEQ="
+{
+    "temperature": 27.3,
+    "temperature_target": 25.0,
+    "temperature_control_mode": "cool",
+    "temperature_control_status": "stage-2 cool",
+    "fan_mode": "circulate",
+    "fan_status": "high speed",
+    "plan_event": "not executed",
+    "system_status": "on",
+    "humidity": 34.0,
+}
+```
+
+```
+//10) 
+// description: Control Permissions
+// FFF600
+// "HEX_bytes": FFF600 :: "HEX_bytes_base64"": "//YA"
+{
+    "control_permissions": "thermostat"
 }
 ```
