@@ -286,7 +286,6 @@ Reply Format:
 // All:
 // payload
 {
-{
   "reboot": 1,
   "report_interval": 2,
     "child_lock_config": {
@@ -313,6 +312,12 @@ Reply Format:
       "weekday": 7,
       "time": "23:38"
     }
+  },
+  "multicast_group_config": {
+    "group1_enable": 0,
+    "group2_enable": 1,
+    "group3_enable": 0,
+    "group4_enable": 1
   }
 }
 
@@ -320,8 +325,8 @@ Reply Format:
 {
     "contentType": "JSON",
     "fPort": 85,
-    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBQ==\"}",
-    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05",
+    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+g==\"}",
+    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FA",
     "metadata": {
         "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
     }
@@ -462,6 +467,33 @@ Reply Format:
   "fPort": 85,
   "data": "{\"bytes\":\"/7oBPAoXpQAEF4oF\"}",
   "dataHex": "FFBA013C0A17A50004178A05",
+  "metadata": {
+    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+  }
+}
+```
+
+```json
+// 6) 
+// description: Multicast group (Set multicast group: 1 as disable; 2 as enable; 3 as disable; 4 as enable;).
+
+// payload
+{
+  "multicast_group_config": {
+    "group1_enable": 0,
+    "group2_enable": 1,
+    "group3_enable": 0,
+    "group4_enable": 1
+  }
+}
+// fPort: 85
+// bytes: FF82FA :: "bytes_base64"": "/4L6"
+// reult send
+{
+  "contentType": "JSON",
+  "fPort": 85,
+  "data": "{\"bytes\":\"/4L6\"}",
+  "dataHex": "FF82FA",
   "metadata": {
     "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
   }
