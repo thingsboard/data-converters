@@ -1,15 +1,4 @@
 {
-  "reboot": 1,
-  "report_interval": 2,
-  "child_lock_config": {
-    "power_button": 1,
-    "up_button": 0,
-    "down_button": 1,
-    "fan_button": 0,
-    "mode_button": 0,
-    "reset_button": 1
-  },
-  "timezone": -4,
   "dst_config": {
     "enable": 1,
     "bias": 60,

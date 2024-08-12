@@ -281,9 +281,58 @@ Reply Format:
 
 ## Example
 
+
+```
+// All:
+// payload
+{
+{
+  "reboot": 1,
+  "report_interval": 2,
+    "child_lock_config": {
+    "power_button": 1,  
+    "up_button": 0,     
+    "down_button": 1,   
+    "fan_button": 0,    
+    "mode_button": 0,   
+    "reset_button": 1   
+  },
+  "timezone": -4,
+    "dst_config": {
+    "enable": 1,
+    "bias": 60,
+    "start_time": {
+      "month": 10,
+      "week": 1,
+      "weekday": 7,
+      "time": "2:45"
+    },
+    "end_time": {
+      "month": 4,
+      "week": 1,
+      "weekday": 7,
+      "time": "23:38"
+    }
+  }
+}
+
+// reult send
+{
+    "contentType": "JSON",
+    "fPort": 85,
+    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBQ==\"}",
+    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05",
+    "metadata": {
+        "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    }
+}
+```
+
+```
+
 ```json
 // 1) 
-// description: Reboot the device.
+// description: Reboot (Reboot the device).
 
 // payload
 {
@@ -294,10 +343,127 @@ Reply Format:
 // bytes: FF10FF :: "bytes_base64"": "/xD/"
 // reult send
 {
+{
+    "contentType": "JSON",
+    "fPort": 85,
+    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBQ==\"}",
+    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05",
+    "metadata": {
+        "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    }
+}
+```
+
+```json
+// 2) 
+// description: Reporting Interval (Set reporting interval as 2 minutes).
+
+// payload
+{
+  "report_interval": 2
+}
+
+// fPort: 85
+// bytes: FF8E000200 :: "bytes_base64"": "/44AAgA="
+// reult send
+{
   "contentType": "JSON",
-  "data": "{\"bytes\":\"/xD/\"}",
+  "fPort": 85,
+  "data": "{\"bytes\":\"/44AAgA=\"}",
+  "dataHex": "FF8E000200",
   "metadata": {
-    "topic": "temp-sensor/sensorA/SN111/upload"
+    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+  }
+}
+```
+
+```json
+// 3) 
+// description: Child Lock.
+
+// payload
+{
+  "child_lock_config": {
+    "power_button": 1,  // System on/off
+    "up_button": 0,     // Temperature +
+    "down_button": 1,   // Temperature -
+    "fan_button": 0,    // Fan mode
+    "mode_button": 0,   // Temperature control mode
+    "reset_button": 1   // Reset and reboot
+  }
+}
+
+// fPort: 85
+// bytes: FF25FF25 :: "bytes_base64"": "/yX/JQ=="
+// reult send
+{
+  "contentType": "JSON",
+  "fPort": 85,
+  "data": "{\"bytes\":\"/yX/JQ==\"}",
+  "dataHex": "FF25FF25",
+  "metadata": {
+    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+  }
+}
+```
+
+```json
+// 4) 
+// description: UTC Time Zone (Set time zone).
+
+// payload
+{
+  "timezone": -4
+}
+
+// fPort: 85
+// bytes: FFBD10FF :: "bytes_base64"": "/70Q/w=="
+// reult send
+{
+  "contentType": "JSON",
+  "fPort": 85,
+  "data": "{\"bytes\":\"/70Q/w==\"}",
+  "dataHex": "FFBD10FF",
+  "metadata": {
+    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+  }
+}
+```
+
+```json
+// 5) 
+// description: Daylight Saving Time ( Set DST time: start time is October 1st Sunday 2:45, end time is April 1st Sunday 23:38, and bias is 1h (60 minutes)).
+
+// payload
+{
+  "dst_config": {
+    "enable": 1,
+    "bias": 60,
+    "start_time": {
+      "month": 10,
+      "week": 1,
+      "weekday": 7,
+      "time": "2:45"
+    },
+    "end_time": {
+      "month": 4,
+      "week": 1,
+      "weekday": 7,
+      "time": "23:38"
+    }
+  }
+}
+
+// fPort: 85
+// bytes: FFBA 01 3C 0A17A500 04178A05 :: "bytes_base64"": "/7oBPAoXpQAEF4oF"
+// reult send
+{
+  "contentType": "JSON",
+  "fPort": 85,
+  "data": "{\"bytes\":\"/7oBPAoXpQAEF4oF\"}",
+  "dataHex": "FFBA013C0A17A50004178A05",
+  "metadata": {
+    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
   }
 }
 ```

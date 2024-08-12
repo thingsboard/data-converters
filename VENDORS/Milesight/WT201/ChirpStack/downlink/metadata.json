@@ -1,6 +1,6 @@
 {
   "integrationName": "ChirpStack integration",
   "deviceName": "sensorWT201",
-  "sn_serialNumber": "6791D19604050005",
+  "ss_serialNumber": "6791D19604050005",
   "deviceType": "smartThermostat"
 }
