@@ -32,5 +32,18 @@
     "group2_enable": 1,
     "group3_enable": 0,
     "group4_enable": 1
+  },
+  "wiring_settings": {
+    "y1_enable": 1,
+    "g_gh_enable": 1,
+    "ob_enable": 1,
+    "w1_enable": 1,
+    "e_enable": 0,
+    "cl_cn_enable": 1,
+    "pek_enable": 0,
+    "w2_aux_enable": 10,
+    "y2_gl_enable": 1,
+    "ob_value": 11
   }
+
 }

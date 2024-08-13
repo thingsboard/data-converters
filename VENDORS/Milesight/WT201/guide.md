@@ -233,8 +233,9 @@
 
 # DownlinkDecoder (Downlink Command):
 ## Payload Definition 
-WT201 supports downlink commands to configure the device. The application port is 85 by
-default and can be configured via ToolBox.
+
+WT201 supports downlink commands to configure the device. The application port is 85 by default and can be configured via ToolBox.
+
 **Note:** If confirmed mode on the device or network server is enabled, the device will reply the downlink command with reply format.
 
 1) Command Format 1:
@@ -260,9 +261,9 @@ default and can be configured via ToolBox.
 
 Reply Format:
 
-| Channel | Type            | Command         | Return Code                                                  |
-|:-------:|:----------------|-----------------|:-------------------------------------------------------------|
-|   f8    | Same as command | Same as command | 00: success<br /> 01: not support<br /><br/>02: out of range |
+| Channel | Type            | Command         | Return Code                                           |
+|:-------:|:----------------|-----------------|:------------------------------------------------------|
+|   f8    | Same as command | Same as command | 00: success<br/> 01: not support<br/>02: out of range |
 
 ### Basic Settings
 
@@ -281,7 +282,7 @@ Reply Format:
 | Data Retransmission Interval | 0xFF    | 0x6A | 1    | Byte 1: 00<br />Byte 2-3: Interval time, unit: s<br />range: 30~1200s (600s by default)                                                                                                                                                                  |
 |       Multicast group        | 0xFF    | 0x82 | 1    | Bit 7-4: multicast group 4 to 1 change status, 0 = not allow control, 1 = allow control.<br /> Bit 3-0: multicast group 4 to 1 control status, 0 for disable, 1 for enable..<br />Note: after disabling or enabling, the device will re-join the network |
 
-## Example
+#### Example
 
 ```
 // All:
@@ -319,6 +320,18 @@ Reply Format:
     "group2_enable": 1,
     "group3_enable": 0,
     "group4_enable": 1
+  },
+    "wiring_settings": {
+    "y1_enable": 1,
+    "g_gh_enable": 1,
+    "ob_enable": 1,
+    "w1_enable": 1,
+    "e_enable": 0,
+    "cl_cn_enable": 1,
+    "pek_enable": 0,
+    "w2_aux_enable": 10,
+    "y2_gl_enable": 1,
+    "ob_value": 11
   }
 }
 
@@ -326,8 +339,8 @@ Reply Format:
 {
     "contentType": "JSON",
     "fPort": 85,
-    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+g==\"}",
-    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FA",
+    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+v/KVYQt\"}",
+    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA55842D",
     "metadata": {
         "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
     }
@@ -508,5 +521,66 @@ Reply Format:
 |:-----------------:|:-------:|:----:|:----:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  Wiring Settings  |  0xFF   | 0xCA |  3   | Byte 1 (00=disable, 01=enable):<br/>- Bit1-0: Y1;<br/>- Bit3-2: G/GH;<br/>- Bit5-4: OB;<br/>- Bit7-6: W1;<br/>Byte 2 (00=disable, 01=enable):<br/>- Bit1-0: E;<br/>- Bit3-2: CL&CN;<br/>- Bit5-4: PEK; (00=disable, 01=enable)<br/>- Bit7-6: W2/AUX  (00=disable, 01=W2, 10=AUX)<br/>Byte 3:<br/>- Bit1-0: Y2/GL (00=disable, 01=Y2, 10=GL);<br/>- Bit3-2: OB (00=O/B on cool, 01=O/B on heat 11=Keep Original Setting);<br/>- Bit7-4: 0000                                 |
 |  Reversing Valve  |  0xFF   | 0xB5 |  1   | 00=O/B on cool, 01=O/B on heat                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Freeze Protection |  0xFF   | 0xB0 |  3   | Byte 1: 00-disable, 01-enable; Byte 2-3: Protection temperature, INT16/10, unit: °C                                                                                                                                                                                                                                                                                                                                                                                         |
+| Freeze Protection |  0xFF   | 0xB0 |  3   | Byte 1: 00-disable, 01-enable;<br/>Byte 2-3: Protection temperature, INT16/10, unit: °C                                                                                                                                                                                                                                                                                                                                                                                     |
 | Room Card Setting |  0xFF   | 0xC1 |  4   | Byte 1: 00-disable, 01-enable;<br/>Byte 2: 00=System on/off, 01=Insert an event<br/>Byte 3: for every bit: 0=disable, 1=enable<br/> - Corresponding event of every bit:<br/>-- Bit0: Insert card- Wake;<br/>-- Bit1: Insert card- Wake;<br/>-- Bit2: Insert card- Home (Default);<br/>-- Bit3: Insert card- Sleep;<br/>-- Bit4: Remove card- Wake;<br/>-- Bit5: Remove card- Away(Default);<br/>-- Bit6: Remove card- Home;<br/>-- Bit7: Remove card- Sleep;<br/>Byte 4: 00 |
+
+Reply format:
+
+The device will send a reply including wirings, supported mode and levels when it receives a wiring setting command.
+
+| Channel | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|:-------:|:----:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  0xFF   | 0xCB | 3 Bytes, for every bit: 0=disable, 1=enable<br/>Byte 1: Supported temperature control mode<br/>- Bit0: Heat;<br/>- Bit1: EM Heat;br/>- Bit2: Cool;<br/>- Bit3: Auto;< >br/>- Bit7-4: 0000;<br/>Byte 2: Supported heat level, only works when using heat mode<br/>- Bit0: 1-stage Heat;<br/>- Bit1: 2-stage Heat;br/>- Bit2: 3-stage Heat;<br/>- Bit3: 4-stage Heat;<br/>- Bit4: Auxiliary Heat;<br/>- Bit7-5: 0000;<br/>Byte 3: Supported cool level, only works when using cool mode<br/>- Bit0: 1-stage Cool;br/>- Bit1: 2-stage Cool;br/>- Bit7-2: 0000; |
+|  0xFF   | 0xCA | The definition is the same as downlink command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+
+#### Example
+
+```json
+// 7) 
+// description: Enable W1, Y1, Y2, G, CL&CN, AUX, O/B, O/B=Keep Original Setting.
+
+// payload
+{
+  "wiring_settings": {
+    "y1_enable": 1,
+    "g_gh_enable": 1,
+    "ob_enable": 1,
+    "w1_enable": 1,
+    "e_enable": 0,
+    "cl_cn_enable": 1,
+    "pek_enable": 0,
+    "w2_aux_enable": 10,
+    "y2_gl_enable": 1,
+    "ob_value": 11
+  }
+}
+// fPort: 85
+// bytes: FFCA 55842D :: "bytes_base64"": "/8pVhC0="
+// reult send
+{
+  "contentType": "JSON",
+  "fPort": 85,
+  "data": "{\"bytes\":\"/4L6\"}",
+  "dataHex": "FFCA55842D",
+  "metadata": {
+    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+  }
+}
+
+//Reply:
+//FFCB 0D0703 FFCA55842D
+```
+
+```json
+// 8) 
+// description: Enable freeze protection and set as 5°C.
+
+// payload
+{
+
+}
+// fPort: 85
+// bytes: FFB0 01 3200 :: "bytes_base64"": ""
+// reult send
+
+```
