@@ -231,9 +231,11 @@
 }
 ```
 
-# DownlinkDecoder:
+# DownlinkDecoder (Downlink Command):
 ## Payload Definition 
-** NOTE: 
+WT201 supports downlink commands to configure the device. The application port is 85 by
+default and can be configured via ToolBox.
+**Note:** If confirmed mode on the device or network server is enabled, the device will reply the downlink command with reply format.
 
 1) Command Format 1:
 
@@ -262,6 +264,7 @@ Reply Format:
 |:-------:|:----------------|-----------------|:-------------------------------------------------------------|
 |   f8    | Same as command | Same as command | 00: success<br /> 01: not support<br /><br/>02: out of range |
 
+### Basic Settings
 
 |             Item             | Channel | Type | Byte | Description                                                                                                                                                                                                                                              |
 |:----------------------------:|:--------|------|------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -278,9 +281,7 @@ Reply Format:
 | Data Retransmission Interval | 0xFF    | 0x6A | 1    | Byte 1: 00<br />Byte 2-3: Interval time, unit: s<br />range: 30~1200s (600s by default)                                                                                                                                                                  |
 |       Multicast group        | 0xFF    | 0x82 | 1    | Bit 7-4: multicast group 4 to 1 change status, 0 = not allow control, 1 = allow control.<br /> Bit 3-0: multicast group 4 to 1 control status, 0 for disable, 1 for enable..<br />Note: after disabling or enabling, the device will re-join the network |
 
-
 ## Example
-
 
 ```
 // All:
@@ -499,3 +500,15 @@ Reply Format:
   }
 }
 ```
+
+### Installation Setting
+** Below settings only take effect when control permission is Thermostat.
+
+|       Item        | Channel | Type | Byte | Description                                                                                                                                                                                                                                                                                                                                                                                                       |
+|:-----------------:|:-------:|:----:|:----:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  Wiring Settings  |  0xFF   | 0xCA |  3   | Byte 1:  Bit1-0: Y1;   Bit3-2: G/GH;   Bit5-4: OB;   Bit7-6: W1;  (00=disable, 01=enable)                                                                                                                                                                                                                                                                                                                         |
+|                   |         |      |      | Byte 2:  Bit1-0: E;    Bit3-2: CL&CN;  Bit5-4: PEK; (00=disable, 01=enable)<br/>_________Bit7-6: W2/AUX  (00=disable, 01=W2, 10=AUX)                                                                                                                                                                                                                                                                              |
+|                   |         |      |      | Byte 3:  Bit1-0: Y2/GL (00=disable, 01=Y2, 10=GL); Bit3-2: OB (00=O/B on cool, 01=O/B on heat 11=Keep Original Setting);) Bit7-4: 0000                                                                                                                                                                                                                                                                            | 
+|  Reversing Valve  |  0xFF   | 0xB5 |  1   | 00=O/B on cool, 01=O/B on heat                                                                                                                                                                                                                                                                                                                                                                                    |
+| Freeze Protection |  0xFF   | 0xB0 |  3   | Byte 1: 00-disable, 01-enable; Byte 2-3: Protection temperature, INT16/10, unit: °C                                                                                                                                                                                                                                                                                                                               |
+| Room Card Setting |  0xFF   | 0xC1 |  4   | Byte 1: 00-disable, 01-enable; Byte 2: 00=System on/off, 01=Insert an event<br/>Byte 3: for every bit: 0=disable, 1=enable <br/>Corresponding event of every bit:<br/>Bit0: Insert card- Wake; Bit1: Insert card- Wake; Bit2: Insert card- Home (Default); Bit3: Insert card- Sleep; Bit4: Remove card- Wake; Bit5: Remove card- Away(Default); Bit6: Remove card- Home; Bit7: Remove card- Sleep;<br/>Byte 4: 00 |
