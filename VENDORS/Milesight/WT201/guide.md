@@ -92,7 +92,7 @@
 // "HEX_bytes": 8367FB0009 :: "HEX_bytes_base64"": "g2f7AAk="
 {
     "temperature": 25.1,
-    "temperature_alarm": "threshold alarm"
+    "temperature_alarm": "temperature threshold alarm",
 }
 
 //3) 
@@ -119,10 +119,10 @@
 // FFCB0D1101 FFCA158004 
 // "HEX_bytes": FFCB0D1101FFCA158004 :: "HEX_bytes_base64"": "/8sNEQH/yhWABA=="
 {
-    "ob_mode": "heat",
-    "temperature_ctl_mode_enable": ["heat", "cool", "auto"],
-    "temperature_ctl_status_enable": ["stage-1 heat", "aux heat", "stage-1 cool"],
-    "wires": ["y1", "gh", "ob", "aux"]
+      "temperature_control_mode_enable": ["heat", "cool", "auto"],
+      "temperature_control_status_enable": ["stage-1 heat", "aux heat", "stage-1 cool"],
+      "wires": ["y1", "g", "ob", "aux"],
+      "ob_mode": "heat"
 }
 
 //5) 
@@ -321,17 +321,21 @@ Reply Format:
     "group3_enable": 0,
     "group4_enable": 1
   },
-    "wiring_settings": {
-    "y1_enable": 1,
-    "g_gh_enable": 1,
-    "ob_enable": 1,
-    "w1_enable": 1,
-    "e_enable": 0,
-    "cl_cn_enable": 1,
-    "pek_enable": 0,
-    "w2_aux_enable": 10,
-    "y2_gl_enable": 1,
-    "ob_value": 11
+  "wiring_settings": {
+    "y1": 1,
+    "g": 1,
+    "ob": 1,
+    "w1": 1,
+    "e": 0,
+    "cl_cn": 0,
+    "pek": 0,
+    "w2_aux": 0,
+    "y2_gl": 1,
+    "ob_mode": 1
+  },
+    "freeze_protection_config": {
+    "enable": 1,
+    "temperature": 5
   }
 }
 
@@ -339,14 +343,12 @@ Reply Format:
 {
     "contentType": "JSON",
     "fPort": 85,
-    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+v/KVYQt\"}",
-    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA55842D",
+    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+v/KVQAF/7ABMgA=\"}",
+    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA550005FFB0013200",
     "metadata": {
         "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
     }
 }
-```
-
 ```
 
 ```json
@@ -537,50 +539,68 @@ The device will send a reply including wirings, supported mode and levels when i
 
 ```json
 // 7) 
-// description: Enable W1, Y1, Y2, G, CL&CN, AUX, O/B, O/B=Keep Original Setting.
-
+// description: Enable W1, Y1, Y2, G, O/B, O/B=on heat.
 // payload
 {
   "wiring_settings": {
-    "y1_enable": 1,
-    "g_gh_enable": 1,
-    "ob_enable": 1,
-    "w1_enable": 1,
-    "e_enable": 0,
-    "cl_cn_enable": 1,
-    "pek_enable": 0,
-    "w2_aux_enable": 10,
-    "y2_gl_enable": 1,
-    "ob_value": 11
+    "y1": 1,
+    "g": 1,
+    "ob": 1,
+    "w1": 1,
+    "e": 0,
+    "cl_cn": 0,
+    "pek": 0,
+    "w2_aux": 0,
+    "y2_gl": 1,
+    "ob_mode": 1
   }
 }
 // fPort: 85
-// bytes: FFCA 55842D :: "bytes_base64"": "/8pVhC0="
+// bytes: FFCA 550005 :: "bytes_base64"": "/8pVAAU="
 // reult send
 {
-  "contentType": "JSON",
-  "fPort": 85,
-  "data": "{\"bytes\":\"/4L6\"}",
-  "dataHex": "FFCA55842D",
-  "metadata": {
+    "contentType": "JSON",
+    "fPort": 85,
+    "data": "{\"bytes\":\"/8pVAAU=\"}",
+    "dataHex": "FFCA550005",
+    "metadata": {
     "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
-  }
+    }
 }
 
 //Reply:
-//FFCB 0D0703 FFCA55842D
+//FFCB0D0703 FFCA550005
+// "HEX_bytes": FFCB0D0703FFCA550005 :: "HEX_bytes_base64"": "/8sNBwP/ylUABQ=="
+{
+    "temperature_control_mode_enable": ["heat", "cool", "auto"],
+    "temperature_control_status_enable": ["stage-1 heat", "stage-2 heat", "stage-3 heat", "stage-1 cool", "stage-2 cool"],
+    "wires": ["y1", "g", "ob", "w1", "y2"],
+    "ob_mode": "heat"
+}
 ```
 
 ```json
 // 8) 
 // description: Enable freeze protection and set as 5°C.
-
 // payload
 {
-
+  "freeze_protection_config": {
+    "enable": 1,
+    "temperature": 5
+  }
 }
 // fPort: 85
-// bytes: FFB0 01 3200 :: "bytes_base64"": ""
+// bytes: FFB0 01 3200 :: "bytes_base64"": "/7ABMgA="
 // reult send
+{
+  "contentType": "JSON",
+  "fPort": 85,
+  "data": "{\"bytes\":\"/7ABMgA=\"}",
+  "dataHex": "FFB0013200",
+  "metadata": {
+    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+  }
+}
+
 
 ```

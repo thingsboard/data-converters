@@ -24,7 +24,7 @@
       "hexString": "FFCB0D1101FFCA158004",
       "temperature_control_mode_enable": ["heat", "cool", "auto"],
       "temperature_control_status_enable": ["stage-1 heat", "aux heat", "stage-1 cool"],
-      "wires": ["Y1", "GH", "OB", "AUX"],
+      "wires": ["y1", "g", "ob", "aux"],
       "ob_mode": "heat",
       "dr": 5,
       "fCnt": 4,

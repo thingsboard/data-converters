@@ -1,14 +1,14 @@
 {
   "wiring_settings": {
-    "y1_enable": 1,
-    "g_gh_enable": 1,
-    "ob_enable": 1,
-    "w1_enable": 1,
-    "e_enable": 0,
-    "cl_cn_enable": 1,
-    "pek_enable": 0,
-    "w2_aux_enable": 10,
-    "y2_gl_enable": 1,
-    "ob_value": 11
+    "y1": 1,
+    "g": 1,
+    "ob": 1,
+    "w1": 1,
+    "e": 0,
+    "cl_cn": 0,
+    "pek": 0,
+    "w2_aux": 0,
+    "y2_gl": 1,
+    "ob_mode": 1
   }
 }

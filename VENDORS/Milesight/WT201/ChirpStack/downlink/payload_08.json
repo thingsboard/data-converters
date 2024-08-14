@@ -1,0 +1,6 @@
+{
+  "freeze_protection_config": {
+    "enable": 1,
+    "temperature": 5
+  }
+}

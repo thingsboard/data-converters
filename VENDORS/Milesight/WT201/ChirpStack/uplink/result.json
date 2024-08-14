@@ -29,8 +29,8 @@
       "fan_mode": "circulate",
       "fan_status": "high speed",
       "plan_event": "not executed",
-      "temperature_alarm": "threshold alarm",
-      "wires": ["Y1", "GH", "OB", "AUX"],
+      "temperature_alarm": "temperature threshold alarm",
+      "wires": ["y1", "g", "ob", "aux"],
       "ob_mode": "heat",
       "plan_schedule": [{
         "type": "wake",

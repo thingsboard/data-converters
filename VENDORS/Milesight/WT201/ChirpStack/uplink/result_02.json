@@ -23,7 +23,7 @@
     "values": {
       "hexString": "8367FB0009",
       "temperature": 25.1,
-      "temperature_alarm": "threshold alarm",
+      "temperature_alarm": "temperature threshold alarm",
       "dr": 5,
       "fCnt": 4,
       "confirmed": false,
