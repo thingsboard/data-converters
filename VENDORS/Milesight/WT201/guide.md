@@ -600,6 +600,21 @@ The device will send a reply including wirings, supported mode and levels when i
 
 ### Thermostat Control Settings
 
+When control permission is Thermostat, the device supports temperature control settings via
+below commands.
+
+|             Item             | Channel | Type | Byte | Description                                                                                                            |
+|:----------------------------:|:-------:|:----:|:----:|:-----------------------------------------------------------------------------------------------------------------------|
+|   Temperature Control Mode   |  0xFF   | 0xFB |  1   | 00=Heat, 01=EM Heat, 02=Cool, 03= Auto                                                                                 |
+|      Target Temperature      |  0xFF   | 0xFA |  3   | 00=Heat, 01=EM Heat, 02=Cool, 03= Auto<br/>Byte 2-3: Target temperature, INT16/10,unit: °C                             |
+|    Temperature Tolerance     |  0xFF   | 0xB8 |  2   | Byte 1: Target temperature tolerance, UINT8/10, unit: °C<br/>Byte 2: Temperature control tolerance, UINT8/10, unit: °C |
+|           Fan Mode           |  0xFF   | 0xB6 |  1   | 00=Auto, 01=On, 02=Circulate                                                                                           |
+|          Fan Delay           |  0xF9   | 0x05 |  2   | Byte 1: 00-disable, 01-enable<br/>Byte 2: duration of delay, UINT8, unit: min, range: 5-55                             |
+| Fan Circulate Operation Time |  0xF9   | 0x06 |  1   | UINT8, unit: min/h, range: 5-55                                                                                        |
+|    Fan Regulate Humidity     |  0xF9   | 0x07 |  2   | Byte 1: 00-disable, 01-enable<br/>Byte 2: regulate interval, UINT8, unit: min/h, range: 5-55                           |
+|    Target Humidity Range     |  0xF9   | 0x09 |  2   | Min. Value (1B) + Max. Value(1B) Min./Max. Value: UINT8, unit: %RH                                                     |
+| Temp. Control and Dehumidify |  0xF9   | 0x0A |  2   | Byte 1: 00-disable, 01-enable Byte 2: tolerance value, UINT8/10, unit: °C                                              |
+
 
 #### Example
 
