@@ -333,7 +333,7 @@ Reply Format:
     "y2_gl": 1,
     "ob_mode": 1
   },
-    "freeze_protection_config": {
+  "freeze_protection_config": {
     "enable": 1,
     "temperature": 5
   }
@@ -364,14 +364,12 @@ Reply Format:
 // bytes: FF10FF :: "bytes_base64"": "/xD/"
 // reult send
 {
-{
-    "contentType": "JSON",
-    "fPort": 85,
-    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBQ==\"}",
-    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05",
-    "metadata": {
-        "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
-    }
+  "contentType": "TEXT",
+  "data": "FF10FF",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
 }
 ```
 
@@ -388,12 +386,11 @@ Reply Format:
 // bytes: FF8E000200 :: "bytes_base64"": "/44AAgA="
 // reult send
 {
-  "contentType": "JSON",
-  "fPort": 85,
-  "data": "{\"bytes\":\"/44AAgA=\"}",
-  "dataHex": "FF8E000200",
+  "contentType": "TEXT",
+  "data": "FF8E000200",
   "metadata": {
-    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
   }
 }
 ```
@@ -418,12 +415,11 @@ Reply Format:
 // bytes: FF25FF25 :: "bytes_base64"": "/yX/JQ=="
 // reult send
 {
-  "contentType": "JSON",
-  "fPort": 85,
-  "data": "{\"bytes\":\"/yX/JQ==\"}",
-  "dataHex": "FF25FF25",
+  "contentType": "TEXT",
+  "data": "FF25FF25",
   "metadata": {
-    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
   }
 }
 ```
@@ -441,12 +437,11 @@ Reply Format:
 // bytes: FFBD10FF :: "bytes_base64"": "/70Q/w=="
 // reult send
 {
-  "contentType": "JSON",
-  "fPort": 85,
-  "data": "{\"bytes\":\"/70Q/w==\"}",
-  "dataHex": "FFBD10FF",
+  "contentType": "TEXT",
+  "data": "FFBD10FF",
   "metadata": {
-    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
   }
 }
 ```
@@ -479,12 +474,11 @@ Reply Format:
 // bytes: FFBA 01 3C 0A17A500 04178A05 :: "bytes_base64"": "/7oBPAoXpQAEF4oF"
 // reult send
 {
-  "contentType": "JSON",
-  "fPort": 85,
-  "data": "{\"bytes\":\"/7oBPAoXpQAEF4oF\"}",
-  "dataHex": "FFBA013C0A17A50004178A05",
+  "contentType": "TEXT",
+  "data": "FFBA013C0A17A50004178A05",
   "metadata": {
-    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
   }
 }
 ```
@@ -506,12 +500,11 @@ Reply Format:
 // bytes: FF82FA :: "bytes_base64"": "/4L6"
 // reult send
 {
-  "contentType": "JSON",
-  "fPort": 85,
-  "data": "{\"bytes\":\"/4L6\"}",
-  "dataHex": "FF82FA",
+  "contentType": "TEXT",
+  "data": "FF82FA",
   "metadata": {
-    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
   }
 }
 ```
@@ -559,15 +552,13 @@ The device will send a reply including wirings, supported mode and levels when i
 // bytes: FFCA 550005 :: "bytes_base64"": "/8pVAAU="
 // reult send
 {
-    "contentType": "JSON",
-    "fPort": 85,
-    "data": "{\"bytes\":\"/8pVAAU=\"}",
-    "dataHex": "FFCA550005",
-    "metadata": {
-    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
-    }
+  "contentType": "TEXT",
+  "data": "FFCA550005",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
 }
-
 //Reply:
 //FFCB0D0703 FFCA550005
 // "HEX_bytes": FFCB0D0703FFCA550005 :: "HEX_bytes_base64"": "/8sNBwP/ylUABQ=="
@@ -593,14 +584,11 @@ The device will send a reply including wirings, supported mode and levels when i
 // bytes: FFB0 01 3200 :: "bytes_base64"": "/7ABMgA="
 // reult send
 {
-  "contentType": "JSON",
-  "fPort": 85,
-  "data": "{\"bytes\":\"/7ABMgA=\"}",
-  "dataHex": "FFB0013200",
+  "contentType": "TEXT",
+  "data": "FFB0013200",
   "metadata": {
-    "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
   }
 }
-
-
 ```
