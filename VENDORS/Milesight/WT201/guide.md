@@ -336,17 +336,22 @@ Reply Format:
   "freeze_protection_config": {
     "enable": 1,
     "temperature": 5
-  }
+  },
+    "temperature_control": {
+    "mode": 2,
+    "temperature": 21.6
+  }  
 }
 
 // reult send
 {
-    "contentType": "JSON",
+    "contentType": "TEXT",
     "fPort": 85,
-    "data": "{\"bytes\":\"/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+v/KVQAF/7ABMgA=\"}",
-    "dataHex": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA550005FFB0013200",
+    "data": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA550005FFB0013200FFFA02D800",
+    "dataBase64": "/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+v/KVQAF/7ABMgD/+gLYAA==",
     "metadata": {
-        "topic": "smartThermostat/sensorWT201/6791D19604050005/upload"
+        "DevEUI": "24e1124707c483636",
+        "fPort": "85"
     }
 }
 ```
@@ -586,6 +591,57 @@ The device will send a reply including wirings, supported mode and levels when i
 {
   "contentType": "TEXT",
   "data": "FFB0013200",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+### Thermostat Control Settings
+
+
+#### Example
+
+
+```json
+// 09) 
+// description: Set temperature control mode as Auto.
+// payload
+{
+  "temperature_control": {
+    "mode": 3
+  }
+}
+// fPort: 85
+// bytes: FFFB 03 :: "bytes_base64"": "//sD"
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "FFFB03",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 10) 
+// description: Set target temperature of Cool mode as 21.6°C.
+// payload
+{
+  "temperature_control": {
+    "mode": 2,
+    "temperature": 21.6
+  }
+}
+// fPort: 85
+// bytes: FFFA 02 D800 :: "bytes_base64"": "//oC2AA="
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "FFFA02D800",
   "metadata": {
     "DevEUI": "24e1124707c483636",
     "fPort": "85"
