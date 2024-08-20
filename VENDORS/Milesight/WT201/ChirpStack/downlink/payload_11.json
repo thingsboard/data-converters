@@ -1,0 +1,6 @@
+{
+  "temperature_tolerance": {
+    "temperature_error": 1,
+    "auto_control_temperature_error": 1
+  }
+}

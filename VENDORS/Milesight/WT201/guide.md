@@ -288,67 +288,86 @@ Reply Format:
 // All:
 // payload
 {
-  "reboot": 1,
-  "report_interval": 2,
+    "reboot": 1,
+    "report_interval": 2,
     "child_lock_config": {
-    "power_button": 1,  
-    "up_button": 0,     
-    "down_button": 1,   
-    "fan_button": 0,    
-    "mode_button": 0,   
-    "reset_button": 1   
-  },
-  "timezone": -4,
-    "dst_config": {
-    "enable": 1,
-    "bias": 60,
-    "start_time": {
-      "month": 10,
-      "week": 1,
-      "weekday": 7,
-      "time": "2:45"
+        "power_button": 1,
+        "up_button": 0,
+        "down_button": 1,
+        "fan_button": 0,
+        "mode_button": 0,
+        "reset_button": 1
     },
-    "end_time": {
-      "month": 4,
-      "week": 1,
-      "weekday": 7,
-      "time": "23:38"
-    }
-  },
-  "multicast_group_config": {
-    "group1_enable": 0,
-    "group2_enable": 1,
-    "group3_enable": 0,
-    "group4_enable": 1
-  },
-  "wiring_settings": {
-    "y1": 1,
-    "g": 1,
-    "ob": 1,
-    "w1": 1,
-    "e": 0,
-    "cl_cn": 0,
-    "pek": 0,
-    "w2_aux": 0,
-    "y2_gl": 1,
-    "ob_mode": 1
-  },
-  "freeze_protection_config": {
-    "enable": 1,
-    "temperature": 5
-  },
+    "timezone": -4,
+    "dst_config": {
+        "enable": 1,
+        "bias": 60,
+        "start_time": {
+            "month": 10,
+            "week": 1,
+            "weekday": 7,
+            "time": "2:45"
+        },
+        "end_time": {
+            "month": 4,
+            "week": 1,
+            "weekday": 7,
+            "time": "23:38"
+        }
+    },
+    "multicast_group_config": {
+        "group1_enable": 0,
+        "group2_enable": 1,
+        "group3_enable": 0,
+        "group4_enable": 1
+    },
+    "wiring_settings": {
+        "y1": 1,
+        "g": 1,
+        "ob": 1,
+        "w1": 1,
+        "e": 0,
+        "cl_cn": 0,
+        "pek": 0,
+        "w2_aux": 0,
+        "y2_gl": 1,
+        "ob_mode": 1
+    },
+    "freeze_protection_config": {
+        "enable": 1,
+        "temperature": 5
+    },
     "temperature_control": {
-    "mode": 2,
-    "temperature": 21.6
-  }  
+        "mode": 2,
+        "temperature": 21.6
+    },
+    "temperature_tolerance": {
+        "temperature_error": 1,
+        "auto_control_temperature_error": 1
+    },
+    "fan_mode": 0,
+    "fan_delay": {
+        "enable": 1,
+        "fan_delay_time": 30
+    },
+    "fan_circulate": 10,
+    "fan_regulate_humidity": {
+        "enable": 1,
+        "regulate_interval": 30
+    },
+    "humidity_range": {
+        "min": 20,
+        "max": 80
+    },
+    "dehumidify": {
+        "enable": 1,
+        "temperature_tolerance": 1
+    }
 }
-
 // reult send
 {
     "contentType": "TEXT",
-    "fPort": 85,
-    "data": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA550005FFB0013200FFFA02D800",
-    "dataBase64": "/xD//44AAgD/Jf8l/70Q//+6ATwKF6UABBeKBf+C+v/KVQAF/7ABMgD/+gLYAA==",
+    "data": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA550005FFB0013200FFFA02D800FFB80A0AFFB600F905011EF9060AF907011EF9091450F90A010A",
     "metadata": {
         "DevEUI": "24e1124707c483636",
         "fPort": "85"
@@ -657,6 +676,161 @@ below commands.
 {
   "contentType": "TEXT",
   "data": "FFFA02D800",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 11) 
+// description: Set Temperature Tolerance.
+// payload
+{
+  "temperature_tolerance": {
+    "temperature_error": 1,
+    "auto_control_temperature_error": 1
+  }
+}
+// fPort: 85
+// bytes: FFB8 0A 0A :: "bytes_base64"": "/7gKCg=="
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "FFB80A0A",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 12) 
+// description: Set Fan Mode.
+// payload
+{
+  "fan_mode": 0
+}
+// fPort: 85
+// bytes:FFB6 00 :: "bytes_base64"": "/7YA"
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "FFB600",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 14) 
+// description: Set Fan Delay.
+// payload
+{
+  "fan_delay": {
+    "enable": 1,
+    "fan_delay_time": 30
+  }
+}
+// fPort: 85
+// bytes:F905 01 1E :: "bytes_base64"": "+QUBHg=="
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "F905011E",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 15) 
+// description: Set Fan Circulate Operation Time.
+// payload
+{
+  "fan_circulate": 10
+}
+// fPort: 85
+// bytes:F906 0A :: "bytes_base64"": "+QYK"
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "F9060A",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 16) 
+// description: Set Fan Regulate Humidity.
+// payload
+{
+  "fan_regulate_humidity": {
+    "enable": 1,
+    "regulate_interval": 30
+  }
+}
+// fPort: 85
+// bytes:F907 01 1E :: "bytes_base64"": "+QcBHg=="
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "F907011E",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 17) 
+// description: Set Target Humidity Range.
+// payload
+{
+  "humidity_range": {
+    "min": 20,
+    "max": 80
+  }
+}
+// fPort: 85
+// bytes:F909 14 50 :: "bytes_base64"": "+QkUUA=="
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "F9091450",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 18) 
+// description: Set Temp. Control and Dehumidify.
+// payload
+{
+  "dehumidify": {
+    "enable": 1,
+    "temperature_tolerance": 1
+  }
+}
+// fPort: 85
+// bytes:F90A 01 0A :: "bytes_base64"": "+QoBCg=="
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "F90A010A",
   "metadata": {
     "DevEUI": "24e1124707c483636",
     "fPort": "85"
