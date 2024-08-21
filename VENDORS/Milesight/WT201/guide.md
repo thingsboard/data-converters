@@ -362,13 +362,15 @@ Reply Format:
     "dehumidify": {
         "enable": 1,
         "temperature_tolerance": 1
-    }
+    },
+    "report_status": 1,
+    "system_on_off": 1,
+    "control_permissions": 0
 }
 // reult send
 {
     "contentType": "TEXT",
-    "data": "FF10FFFF8E000200FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA550005FFB0013200FFFA02D800FFB80A0AFFB600F905011EF9060AF907011EF9091450F90A010A",
-    "metadata": {
+    "data": "FF10FFFF2801FF8E000200FFC501FFF600FF25FF25FFBD10FFFFBA013C0A17A50004178A05FF82FAFFCA550005FFB0013200FFFA02D800FFB80A0AFFB600F905011EF9060AF907011EF9091450F90A010A",    "metadata": {
         "DevEUI": "24e1124707c483636",
         "fPort": "85"
     }
@@ -831,6 +833,66 @@ below commands.
 {
   "contentType": "TEXT",
   "data": "F90A010A",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 19) 
+// description: Query Current Status.
+// payload
+{
+  "report_status": 1
+}
+// fPort: 85
+// bytes:FF28 01 :: "bytes_base64"": "/ygB"
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "FF2801",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 20) 
+// description: Set System On/Off.
+// payload
+{
+  "system_on_off": 1
+}
+// fPort: 85
+// bytes:FFC5 01 :: "bytes_base64"": "/8UB"
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "FFC501",
+  "metadata": {
+    "DevEUI": "24e1124707c483636",
+    "fPort": "85"
+  }
+}
+```
+
+```json
+// 21) 
+// description: Set Control Permission. // 00=Thermostat, 01=Remote Control
+// payload
+{
+  "control_permissions": 0
+}
+// fPort: 85
+// bytes:FFF6 00 :: "bytes_base64"": "//YA"
+// reult send
+{
+  "contentType": "TEXT",
+  "data": "FFF600",
   "metadata": {
     "DevEUI": "24e1124707c483636",
     "fPort": "85"
