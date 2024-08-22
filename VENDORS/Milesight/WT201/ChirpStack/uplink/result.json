@@ -21,7 +21,7 @@
   "telemetry": {
     "ts": 1684741625404,
     "values": {
-      "hexString": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36FFC80303014E36FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF010003671101088E0109684A0A6E72036711010467FA0005E77206E80607BC00088E01096844FFF600",
+      "hexString": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF010003671101088E0109684A0A6E72036711010467FA0005E77206E80607BC00088E01096844FFF600B36701B96802",
       "temperature": 27.3,
       "temperature_target": 25.0,
       "temperature_control_mode": "cool",
@@ -54,13 +54,6 @@
         "temperature_target": 78,
         "temperature_unit": "℃",
         "temperature_error": 5.4
-      }, {
-        "type": "sleep",
-        "temperature_ctl_mode": "auto",
-        "fan_mode": "on",
-        "temperature_target": 78,
-        "temperature_unit": "℃",
-        "temperature_error": 5.4
       }],
       "device_status": "on",
       "ipso_version": "v1.0",
@@ -81,6 +74,8 @@
         "ob": 1
       },
       "control_permissions": "thermostat",
+      "temperature_exception": "collection failure",
+      "humidity_exception": "out of measuring range",
       "dr": 5,
       "fCnt": 4,
       "confirmed": false,

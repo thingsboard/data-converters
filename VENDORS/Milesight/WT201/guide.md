@@ -65,8 +65,8 @@
 ```
 // All:
 {
-"hex": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36FFC80303014E36FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF010003671101088E0109684A0A6E72036711010467FA0005E77206E80607BC00088E01096844FFF600",
-"data": "A2cCAQRnpgAF5wAG6AAHvACDZ/sACSDOXEcKZdCewJH/yw0RAf/KFYAE/8kAAAAAswL/yQIBASgAAP/IAwMBTjb/yAMDAU42/wv//wEB/xZnkdGWBAUABf8JAQD/CgED/w8C//8BAANnEQEIjgEJaEoKbnIDZxEBBGf6AAXncgboBge8AAiOAQloRP/2AA=="
+"hex": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF010003671101088E0109684A0A6E72036711010467FA0005E77206E80607BC00088E01096844FFF600B36701B96802",
+"data": "A2cCAQRnpgAF5wAG6AAHvACDZ/sACSDOXEcKZdCewJH/yw0RAf/KFYAE/8kAAAAAswL/yQIBASgAAP/IAwMBTjb/yAMDAU42/wv//wEB/xZnkdGWBAUABf8JAQD/CgED/w8C//8BAANnEQEIjgEJaEoKbnIDZxEBBGf6AAXncgboBge8AAiOAQloRP/2ALNnAQ=="
 }
 // 
 ```
@@ -74,16 +74,16 @@
 ```json
 //1) 
 // description: Ambient Temperature; Target Temperature; Temperature Control; Fan Control; Plan Event
-// 03670201 0467A600 05E700 06E800 07BC00 
-// "HEX_bytes": 036702010467A60005E70006E80007BC00 :: ""HEX_bytes_base64"": "A2cCAQRnpgAF5wAG6AAHvAA="
+// 03670201 0467A600 05E700 06E806 07BC00 
+// "HEX_bytes": 036702010467A60005E70006E80607BC00 :: ""HEX_bytes_base64"": "A2cCAQRnpgAF5wAG6AYHvAA="
 {
-    "fan_mode": "auto",
-    "fan_status": "standby",
-    "plan_event": "not executed",
     "temperature": 25.8,
-    "temperature_ctl_mode": "heat",
-    "temperature_ctl_status": "standby",
-    "temperature_target": 16.6
+    "temperature_target": 16.6,
+    "temperature_control_mode": "heat",
+    "temperature_control_status": "standby",
+    "fan_mode": "circulate",
+    "fan_status": "high speed",
+    "plan_event": "not executed"
 }
 
 //2) 
@@ -126,9 +126,9 @@
 }
 
 //5) 
-// description: plan Schedule
-// FFFC900000000B302 FFC9020101280000 
-// "HEX_bytes": FFC900000000B302FFC9020101280000 :: "HEX_bytes_base64"": "/8kAAAAAswL/yQIBASgAAA=="
+// description: plan Schedule (Set Wake plan time: 6:30 am on weekdays (Mon. To Fri.), 8:00am on weekend (Sat. To San.).)
+// FFC90000013E8601 FFC9000101C0E001
+// "HEX_bytes": FFC90000013E8601FFC9000101C0E001 :: "HEX_bytes_base64"": "/8kAAAE+hgH/yQABAcDgAQ=="
 {
     "plan_schedule": [
         {
@@ -228,6 +228,26 @@
 // "HEX_bytes": FFF600 :: "HEX_bytes_base64"": "//YA"
 {
     "control_permissions": "thermostat"
+}
+```
+
+```
+//11) 
+// description: Temperature Exception
+// B367 01
+// "HEX_bytes": B36701 :: "HEX_bytes_base64"": "s2cB"
+{
+    "temperature_exception": "collection failure"
+}
+```
+
+```
+//12) 
+// description: Temperature Exception
+// B968  02
+// "HEX_bytes": B96802 :: "HEX_bytes_base64"": "uWgC"
+{
+    "humidity_exception": "out of measuring range"
 }
 ```
 
