@@ -47,5 +47,35 @@
   "freeze_protection_config": {
     "enable": 1,
     "temperature": 5
-  }
+  },
+  "temperature_control": {
+    "mode": 2,
+    "temperature": 21.6
+  },
+  "temperature_tolerance": {
+    "temperature_error": 1,
+    "auto_control_temperature_error": 1
+  },
+  "fan_mode": 0,
+  "fan_delay": {
+    "enable": 1,
+    "fan_delay_time": 30
+  },
+  "fan_circulate": 10,
+  "fan_regulate_humidity": {
+    "enable": 1,
+    "regulate_interval": 30
+  },
+  "humidity_range": {
+    "min": 20,
+    "max": 80
+  },
+  "dehumidify": {
+    "enable": 1,
+    "temperature_tolerance": 1
+  },
+  "report_status": 1,
+  "system_on_off": 1,
+  "control_permissions": 0,
+  "ob_mode": 0
 }
