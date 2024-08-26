@@ -1,0 +1,8 @@
+{
+  "multicast_group_config": {
+    "group1_enable": 0,
+    "group2_enable": 1,
+    "group3_enable": 0,
+    "group4_enable": 1
+  }
+}
