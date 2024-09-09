@@ -1,5 +1,5 @@
 {
-    "name": "Milesight WT201 Uplink for ChirpStack integration",
+    "name": "ChirpStack uplink converter for Milesight WT201",
     "type": "UPLINK",
     "debugMode": true,
     "configuration": {
