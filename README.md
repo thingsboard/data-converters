@@ -82,4 +82,6 @@ Here is a breakdown of the structure:
 
 We encourage you to contribute by creating a Pull Request (PR) for this repository with your device converters. Please adhere to the proposed [library structure](#library-structure).
 
+If you encounter any issues creating a Pull Request, you may alternatively create a [public gist](https://gist.github.com/) with the necessary files and submit a GitHub issue containing the link to your gist.
+
 Once submitted, our team will review the request and run manual and automated tests. After the PR is merged, it may take up to 24 hours for the new converter to be available in existing ThingsBoard instances.
