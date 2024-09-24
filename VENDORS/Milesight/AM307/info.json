@@ -1,5 +1,5 @@
 {
   "url": "https://www.milesight.com/iot/product/lorawan-sensor/am319",
-  "label": "7-in-1 IAQ Sensor: AM307(L)",
+  "label": "AM307(L): 7-in-1 IAQ Sensor",
   "description": "AM307 is a 7-in-1 ambience monitoring sensor including the \nmeasurement of temperature, \nhumidity, \nCO2 concentration,\nTVOC, \npressure, \nlight, \nmotion, etc. \nIt can show visually with different modes on the E-ink screen in real-time and transmit to network server using LoRaWAN® technology."
 }
