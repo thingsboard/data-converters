@@ -2,7 +2,7 @@ name: Validate Data Converters
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     paths:
       - 'VENDORS/**/uplink/**'
@@ -22,7 +22,7 @@ jobs:
           architecture: "x64"
       - name: Install tb-rest-client
         run: |
-          pip install tb-rest-client-pe
+          pip install tb-rest-client
       - name: Run Validation Script
         env:
           ENDPOINT: ${{ secrets.ENDPOINT }}
