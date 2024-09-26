@@ -21,6 +21,10 @@ def find_payload_and_result_pairs(directory):
 
     if 'payload.json' in payloads and 'result.json' in results:
         pairs.append(('payload.json', 'result.json'))
+    elif 'payload.json' in payloads and 'result.json' not in results:
+        print(f"Validation failed for {directory}: payload.json is present, but result.json is missing.")
+    elif 'result.json' in results and 'payload.json' not in payloads:
+        print(f"Validation failed for {directory}: result.json is present, but payload.json is missing.")
 
     for payload_file in payloads:
         if re.match(r'payload_\d+\.json', payload_file):
@@ -28,6 +32,15 @@ def find_payload_and_result_pairs(directory):
             result_file = f"result_{suffix}.json"
             if result_file in results:
                 pairs.append((payload_file, result_file))
+            else:
+                print(f"Validation failed for {directory}: {payload_file} is present, but {result_file} is missing.")
+
+    for result_file in results:
+        if re.match(r'result_\d+\.json', result_file):
+            suffix = re.search(r'_(\d+)\.json', result_file).group(1)
+            payload_file = f"payload_{suffix}.json"
+            if payload_file not in payloads:
+                print(f"Validation failed for {directory}: {result_file} is present, but {payload_file} is missing.")
 
     return pairs
 
@@ -35,6 +48,20 @@ def find_payload_and_result_pairs(directory):
 def validate_uplink_downlink(directory):
     converter_file = os.path.join(directory, 'converter.json')
     metadata_file = os.path.join(directory, 'metadata.json')
+
+    if not os.path.exists(converter_file):
+        print(f"Validation failed for {directory}: converter.json is missing.")
+        return False
+    if os.path.getsize(converter_file) == 0:
+        print(f"Validation failed for {directory}: converter.json is empty.")
+        return False
+
+    if not os.path.exists(metadata_file):
+        print(f"Validation failed for {directory}: metadata.json is missing.")
+        return False
+    if os.path.getsize(metadata_file) == 0:
+        print(f"Validation failed for {directory}: metadata.json is empty.")
+        return False
 
     with open(converter_file) as f:
         converter = json.load(f)
@@ -49,9 +76,32 @@ def validate_uplink_downlink(directory):
     }
 
     payload_result_pairs = find_payload_and_result_pairs(directory)
+
+    if not payload_result_pairs:
+        print(f"Validation failed for {directory}: No valid payload-result pairs found.")
+        return False
+
     success = True
 
     for payload_file, result_file in payload_result_pairs:
+        if not os.path.exists(os.path.join(directory, payload_file)):
+            print(f"Validation failed for {directory}: {payload_file} is missing.")
+            success = False
+            continue
+        if os.path.getsize(os.path.join(directory, payload_file)) == 0:
+            print(f"Validation failed for {directory}: {payload_file} is empty.")
+            success = False
+            continue
+
+        if not os.path.exists(os.path.join(directory, result_file)):
+            print(f"Validation failed for {directory}: {result_file} is missing.")
+            success = False
+            continue
+        if os.path.getsize(os.path.join(directory, result_file)) == 0:
+            print(f"Validation failed for {directory}: {result_file} is empty.")
+            success = False
+            continue
+
         with open(os.path.join(directory, payload_file)) as pf:
             payload = json.load(pf)
         with open(os.path.join(directory, result_file)) as rf:
@@ -99,7 +149,7 @@ def walk_vendors_directory(root_dir):
     all_success = True
 
     for root, dirs, files in os.walk(root_dir):
-        if 'converter.json' in files and 'metadata.json' in files:
+        if root.endswith('uplink') or root.endswith('downlink'):
             success = validate_uplink_downlink(root)
             if not success:
                 all_success = False
