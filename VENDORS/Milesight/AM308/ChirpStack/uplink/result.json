@@ -1,7 +1,7 @@
 {
   "deviceName": "Device name",
   "deviceType": "Chirpstack default device profile",
-  "groupName": "9-in-1 IAQ Sensor",
+  "groupName": "8-in-1 IAQ Sensor",
   "attributes": {
     "deduplicationId": "57433366-50a6-4dc2-8145-2df1bbc70d9e",
     "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
