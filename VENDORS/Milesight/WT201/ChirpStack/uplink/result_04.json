@@ -22,7 +22,7 @@
     "ts": 1684741625404,
     "values": {
       "hexString": "FFCB0D1101FFCA158004",
-      "temperature_control_mode_enable": ["heat", "cool", "auto"],
+      "temperature_control_mode_enable": ["auto", "cool", "heat"],
       "temperature_control_status_enable": ["stage-1 heat", "aux heat", "stage-1 cool"],
       "wires": ["y1", "g", "ob", "aux"],
       "ob_mode": "heat",

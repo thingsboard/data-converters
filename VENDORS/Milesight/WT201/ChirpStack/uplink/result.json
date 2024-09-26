@@ -30,6 +30,18 @@
       "fan_status": "high speed",
       "plan_event": "not executed",
       "temperature_alarm": "temperature threshold alarm",
+      "history": [{
+        "timestamp": 1695172444,
+        "fan_mode": "auto",
+        "fan_status": "standby",
+        "system_status": "on",
+        "temperature": 27.0,
+        "temperature_ctl_mode": "heat",
+        "temperature_ctl_status": "standby",
+        "temperature_target": 16.6
+      }],
+      "temperature_control_mode_enable": ["auto", "cool", "heat"],
+      "temperature_control_status_enable": ["stage-1 heat", "aux heat", "stage-1 cool"],
       "wires": ["y1", "g", "ob", "aux"],
       "ob_mode": "heat",
       "plan_schedule": [{
