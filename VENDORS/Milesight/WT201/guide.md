@@ -65,8 +65,8 @@
 ```
 // All:
 {
-"hex": "036702010467A60005E70006E80007BC008367FB000920CE5C470A65D09EC091FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF010003671101088E0109684A0A6E72036711010467FA0005E77206E80607BC00088E01096844FFF600B36701B96802",
-"data": "A2cCAQRnpgAF5wAG6AAHvACDZ/sACSDOXEcKZdCewJH/yw0RAf/KFYAE/8kAAAAAswL/yQIBASgAAP/IAwMBTjb/C///AQH/FmeR0ZYEBQAF/wkBAP8KAQP/DwL//wEAA2cRAQiOAQloSgpucgNnEQEEZ/oABedyBugGB7wACI4BCWhE//YAs2cBuWgC"
+"hex": "036702010467A60005E70006E80007BC008367FB0009FFCB0D1101FFCA158004FFC900000000B302FFC9020101280000FFC80303014E36FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF010003671101088E0109684A0A6E72036711010467FA0005E77206E80607BC00088E01096844FFF600B36701B9680220CE5C470A65D09EC09120CE7B843865C6A516B9",
+"data": "A2cCAQRnpgAF5wAG6AAHvACDZ/sACf/LDREB/8oVgAT/yQAAAACzAv/JAgEBKAAA/8gDAwFONv8L//8BAf8WZ5HRlgQFAAX/CQEA/woBA/8PAv//AQADZxEBCI4BCWhKCm5yA2cRAQRn+gAF53IG6AYHvAAIjgEJaET/9gCzZwG5aAIgzlxHCmXQnsCRIM57hDhlxqUWuQ=="
 }
 // 
 ```
@@ -92,27 +92,42 @@
 // "HEX_bytes": 8367FB0009 :: "HEX_bytes_base64"": "g2f7AAk="
 {
     "temperature": 25.1,
-    "temperature_alarm": "temperature threshold alarm",
+    "temperature_alarm": "temperature threshold alarm"
 }
 
 //3) 
-// description: Historical Data
-// 20CE5C470A65D09EC091 
-// "HEX_bytes": 20CE5C470A65D09EC091 :: "HEX_bytes_base64"": "IM5cRwpl0J7AkQ=="
-{
-    "history": [
-        {
+// description: Historical Data:  2023-09-20T01:14:04Z => 1695172444 : 0x5C470A65;  2023-10-25T02:59:07Z => 1698202747 :  0x7B843865
+// 20CE 5C470A65 D09E C091 => 9ED0 => (10 01 11 10  11 0) (1 00 00); 91С0 => (10010001110)(000)(00);  
+// 20CE 7B843865 C6A5 16B9 => A5C6 => (10 10 01 01  11 0) (0 01 10); B616 => (10111001000)(101)(10); 
+
+// "HEX_bytes": 20CE5C470A65D09EC09120CE7B843865C6A516B9 :: "HEX_bytes_base64"": TbUtils.hexToBase64("20CE5C470A65D09EC09120CE7B843865C6A516B9") = "IM5cRwpl0J7AkSDOe4Q4ZcalFrk="
+
+[
+    {
+        "ts": 1695172444,
+        "values": {
             "fan_mode": "auto",
             "fan_status": "standby",
             "system_status": "on",
-            "temperature": 27,
+            "temperature": 27.0,
             "temperature_ctl_mode": "heat",
             "temperature_ctl_status": "standby",
-            "temperature_target": 16.6,
-            "timestamp": 1695172444
+            "temperature_target": 16.6
         }
-    ]
-}
+    }, 
+    {
+        "ts": 1698202747,
+        "values": {
+            "fan_mode": "circulate",
+            "fan_status": "high speed",
+            "system_status": "off",
+            "temperature": 32.6,
+            "temperature_ctl_mode": "cool",
+            "temperature_ctl_status": "em heat",
+            "temperature_target": 48.0
+        }
+    }
+]
 
 //4) 
 // description: Temperature Mode Support; Wires
