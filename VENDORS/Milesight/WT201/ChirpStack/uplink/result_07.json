@@ -16,19 +16,17 @@
         "frequency": 868500000,
         "bandwidth": 125000,
         "spreadingFactor": 7,
-        "codeRate": "CR_4_5"
+        "codeRate": "CR_4_5",
+        "ipso_version": "v1.0",
+        "sn": "6791D19604050005",
+        "hardware_version": "v1.0",
+        "firmware_version": "v1.3",
+        "lorawan_class": "ClassC",
+        "tsl_version": "v1.0"
     },
     "telemetry": {
         "ts": 1684741625404,
         "values": {
-            "hexString": "FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF0100",
-            "device_status": "on",
-            "ipso_version": "v1.0",
-            "sn": "6791D19604050005",
-            "hardware_version": "v1.0",
-            "firmware_version": "v1.3",
-            "lorawan_class": "ClassC",
-            "tsl_version": "v1.0",
             "dr": 5,
             "fCnt": 4,
             "confirmed": false,
@@ -39,7 +37,9 @@
             "channel": 2,
             "rfChain": 1,
             "context": "EFwMtA==",
-            "crcStatus": "CRC_OK"
+            "crcStatus": "CRC_OK",
+            "hexString": "FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF0100",
+            "device_status": "on"
         }
     }
 }
