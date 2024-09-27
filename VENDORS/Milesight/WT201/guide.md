@@ -85,7 +85,9 @@
     "fan_status": "high speed",
     "plan_event": "not executed"
 }
+```
 
+```json
 //2) 
 // description: Temperature Alarm
 // 8367FB0009 
@@ -94,7 +96,9 @@
     "temperature": 25.1,
     "temperature_alarm": "temperature threshold alarm"
 }
+```
 
+```json
 //3) 
 // description: Historical Data:  2023-09-20T01:14:04Z => 1695172444 : 0x5C470A65;  2023-10-25T02:59:07Z => 1698202747 :  0x7B843865
 // 20CE 5C470A65 D09E C091 => 9ED0 => (10 01 11 10  11 0) (1 00 00); 91С0 => (10010001110)(000)(00);  
@@ -128,7 +132,9 @@
         }
     }
 ]
+```
 
+```json
 //4) 
 // description: Temperature Mode Support; Wires
 // FFCB0D1101 FFCA158004 
@@ -139,7 +145,9 @@
       "wires": ["y1", "g", "ob", "aux"],
       "ob_mode": "heat"
 }
+```
 
+```json
 //5) 
 // description: plan Schedule (Set Wake plan time: 6:30 am on weekdays (Mon. To Fri.), 8:00am on weekend (Sat. To San.).)
 // FFC90000013E8601 FFC9000101C0E001
@@ -165,7 +173,9 @@
         }
     ]
 }
+```
 
+```json
 //6) 
 // description: Plan Settings
 // FFC80303014E36
@@ -181,8 +191,11 @@
         }
     ]
 }
+```
 
-```//7) 
+```json
+//7) 
+
 // description: Device Status, Protocol Version, Serial Number, Hardware Version, Firmware Version, LoRaWAN Class Type, TSL Version
 // FF0BFF FF0101 FF166791D19604050005 FF090100 FF0A0103 FF0F02 FFFF0100
 // "HEX_bytes": FF0BFFFF0101FF166791D19604050005FF090100FF0A0103FF0F02FFFF0100 :: "HEX_bytes_base64"": "/wv//wEB/xZnkdGWBAUABf8JAQD/CgED/w8C//8BAA=="
@@ -197,7 +210,7 @@
 }
 ```
 
-```
+```json
 //8) 
 // description: Ambient Temperature, System Status, Humidity, Wires Relay Status
 // 03671101 088E01 09684A 0A6E72
@@ -218,7 +231,7 @@
 }
 ```
 
-```
+```json
 //9) 
 // description: Ambient Temperature, Target Temperature, Temperature Control, Fan Control, Plan Event, System Status, Humidity
 // 03671101 0467FA00 05E772 06E806 07BC00 088E01 096844
@@ -236,7 +249,7 @@
 }
 ```
 
-```
+```json
 //10) 
 // description: Control Permissions
 // FFF600
@@ -246,7 +259,7 @@
 }
 ```
 
-```
+```json
 //11) 
 // description: Temperature Exception
 // B367 01
@@ -256,7 +269,7 @@
 }
 ```
 
-```
+```json
 //12) 
 // description: Temperature Exception
 // B968  02
@@ -319,7 +332,7 @@ Reply Format:
 
 #### Example
 
-```
+```json
 // All:
 // payload
 {

@@ -1,8 +1,8 @@
 {
-  "contentType": "TEXT",
-  "data": "FFFA02D800",
-  "metadata": {
-    "DevEUI": "24e1124707c483636",
-    "fPort": "85"
-  }
+    "contentType": "TEXT",
+    "data": "fffa02d800",
+    "metadata": {
+        "DevEUI": "24e1124707c483636",
+        "fPort": "85"
+    }
 }

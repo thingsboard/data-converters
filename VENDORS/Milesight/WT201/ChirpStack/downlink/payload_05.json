@@ -1,18 +1,18 @@
 {
-  "dst_config": {
-    "enable": 1,
-    "bias": 60,
-    "start_time": {
-      "month": 10,
-      "week": 1,
-      "weekday": 7,
-      "time": "2:45"
-    },
-    "end_time": {
-      "month": 4,
-      "week": 1,
-      "weekday": 7,
-      "time": "23:38"
+    "dst_config": {
+        "enable": 1,
+        "bias": 60,
+        "start_time": {
+            "month": 10,
+            "week": 1,
+            "weekday": 7,
+            "time": "2:45"
+        },
+        "end_time": {
+            "month": 4,
+            "week": 1,
+            "weekday": 7,
+            "time": "23:38"
+        }
     }
-  }
 }
