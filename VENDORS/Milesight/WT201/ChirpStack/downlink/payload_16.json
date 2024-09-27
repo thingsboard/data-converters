@@ -1,6 +1,6 @@
 {
-  "fan_regulate_humidity": {
-    "enable": 1,
-    "regulate_interval": 30
-  }
+    "fan_regulate_humidity": {
+        "enable": 1,
+        "regulate_interval": 30
+    }
 }

@@ -1,48 +1,64 @@
 {
-  "deviceName": "Device name",
-  "deviceType": "Chirpstack default device profile",
-  "groupName": "9-in-1 IAQ Sensor",
-  "attributes": {
-    "deduplicationId": "57433366-50a6-4dc2-8145-2df1bbc70d9e",
-    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
-    "tenantName": "ChirpStack",
-    "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75",
-    "applicationName": "Chirpstack application",
-    "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
-    "deviceProfileName": "Chirpstack default device profile",
-    "devEui": "1000000000000001",
-    "devAddr": "20000001",
-    "fPort": 85,
-    "frequency": 868500000,
-    "bandwidth": 125000,
-    "spreadingFactor": 7,
-    "codeRate": "CR_4_5"
-  },
-  "telemetry": {
-    "ts": 1684741625404,
-    "values": {
-      "hexString": "20CE5C470A65D09EC091",
-      "history": [{
-        "timestamp": 1695172444,
-        "fan_mode": "auto",
-        "fan_status": "standby",
-        "system_status": "on",
-        "temperature": 27.0,
-        "temperature_ctl_mode": "heat",
-        "temperature_ctl_status": "standby",
-        "temperature_target": 16.6
-      }],
-      "dr": 5,
-      "fCnt": 4,
-      "confirmed": false,
-      "gatewayId": "6a7e111a10000000",
-      "uplinkId": 24022,
-      "rssi": -35,
-      "snr": 11.5,
-      "channel": 2,
-      "rfChain": 1,
-      "context": "EFwMtA==",
-      "crcStatus": "CRC_OK"
-    }
-  }
+    "deviceName": "Device name",
+    "deviceType": "Chirpstack default device profile",
+    "groupName": "9-in-1 IAQ Sensor",
+    "attributes": {
+        "deduplicationId": "57433366-50a6-4dc2-8145-2df1bbc70d9e",
+        "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+        "tenantName": "ChirpStack",
+        "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75",
+        "applicationName": "Chirpstack application",
+        "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
+        "deviceProfileName": "Chirpstack default device profile",
+        "devEui": "1000000000000001",
+        "devAddr": "20000001",
+        "fPort": 85,
+        "frequency": 868500000,
+        "bandwidth": 125000,
+        "spreadingFactor": 7,
+        "codeRate": "CR_4_5"
+    },
+    "telemetry": [
+        {
+            "ts": 1695172444,
+            "values": {
+                "fan_mode": "auto",
+                "fan_status": "standby",
+                "system_status": "on",
+                "temperature": 27.0,
+                "temperature_ctl_mode": "heat",
+                "temperature_ctl_status": "standby",
+                "temperature_target": 16.6
+            }
+        },
+        {
+            "ts": 1698202747,
+            "values": {
+                "fan_mode": "circulate",
+                "fan_status": "high speed",
+                "system_status": "off",
+                "temperature": 32.6,
+                "temperature_ctl_mode": "cool",
+                "temperature_ctl_status": "em heat",
+                "temperature_target": 48.0
+            }
+        },
+        {
+            "ts": 1684741625404,
+            "values": {
+                "dr": 5,
+                "fCnt": 4,
+                "confirmed": false,
+                "gatewayId": "6a7e111a10000000",
+                "uplinkId": 24022,
+                "rssi": -35,
+                "snr": 11.5,
+                "channel": 2,
+                "rfChain": 1,
+                "context": "EFwMtA==",
+                "crcStatus": "CRC_OK",
+                "hexString": "20CE5C470A65D09EC09120CE7B843865C6A516B9"
+            }
+        }
+    ]
 }

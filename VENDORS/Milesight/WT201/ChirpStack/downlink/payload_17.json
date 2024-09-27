@@ -1,6 +1,6 @@
 {
-  "humidity_range": {
-    "min": 20,
-    "max": 80
-  }
+    "humidity_range": {
+        "min": 20,
+        "max": 80
+    }
 }
