@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
+  pull_request_target:
     paths:
       - 'VENDORS/**/uplink/**'
       - 'VENDORS/**/downlink/**'
@@ -12,7 +12,6 @@ jobs:
   build:
     name: Check data converters
     runs-on: ubuntu-20.04
-    environment: QA
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
