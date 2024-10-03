@@ -12,6 +12,7 @@ jobs:
   build:
     name: Check data converters
     runs-on: ubuntu-20.04
+    environment: QA
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
