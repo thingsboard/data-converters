@@ -11,7 +11,7 @@
     "values": {
       "battery": 85,
       "temperature": 23.8,
-      "humidity": 62,
+      "humidity": 62.0,
       "pir": "trigger",
       "light_level": 2,
       "co2": 936,
