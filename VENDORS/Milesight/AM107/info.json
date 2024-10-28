@@ -1,0 +1,5 @@
+{
+  "url": "https://www.milesight.com/iot/product/lorawan-sensor/am107",
+  "label": "AM107: 7-in-1 Indoor Air Quality Sensor for Comprehensive Monitoring",
+  "description": "AM107 is a 7-in-1 indoor ambience monitoring sensor that provides detailed measurements for temperature, humidity, CO2 concentration, TVOC, pressure, light, and PIR (Passive Infrared) motion detection. Designed with LoRaWAN® technology, AM107 supports various frequency bands, including CN470, IN865, RU864, EU868, US915, AU915, KR920, and AS923. The sensor features high precision with temperature accuracy of ±0.3°C within the range of 0°C to +70°C and humidity accuracy of ±3% within 10% to 90% RH. Additional capabilities include PIR detection with a 5-meter range, light measurement up to 60000 lux, and CO2 monitoring. AM107 is equipped with NFC for easy configuration and is ideal for use in offices, classrooms, libraries, and hospitals, ensuring optimal indoor air quality."
+}
