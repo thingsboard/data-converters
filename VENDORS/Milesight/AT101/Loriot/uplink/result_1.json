@@ -1,0 +1,21 @@
+[{
+  "deviceName": "AT101 1000000000000001",
+  "deviceType": "AT101",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 100,
+      "temperature": 26.6,
+      "position": "tilt",
+      "latitude": 24.62435,
+      "longitude": 118.030088,
+      "motion_status": "unknown",
+      "geofence_status": "unset"
+    }
+  }]
+}]
