@@ -1,0 +1,5 @@
+{
+  "url": "https://www.milesight.com/iot/product/lorawan-sensor/am319",
+  "label": "AM319(L): 9-in-1 IAQ Sensor (without display)",
+  "description": "AM319L is a 9-in-1 ambient monitoring sensor including measurements of temperature, humidity, CO2 concentration, TVOC, pressure, light, motion, PM2.5 & PM10, and HCHO/O3. Unlike AM319, it does not have a display for visual output. It transmits data to a network server using LoRaWAN® technology for remote monitoring."
+}
