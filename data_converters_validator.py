@@ -19,12 +19,12 @@ def find_payload_and_result_pairs(directory):
 
     pairs = []
 
-    if 'payload.json' in payloads and 'result_2.json' in results:
-        pairs.append(('payload.json', 'result_2.json'))
-    elif 'payload.json' in payloads and 'result_2.json' not in results:
-        print(f"Validation failed for {directory}: payload.json is present, but result_2.json is missing.")
-    elif 'result_2.json' in results and 'payload.json' not in payloads:
-        print(f"Validation failed for {directory}: result_2.json is present, but payload.json is missing.")
+    if 'payload_1.json' in payloads and 'result_1.json' in results:
+        pairs.append(('payload_1.json', 'result_1.json'))
+    elif 'payload_1.json' in payloads and 'result_1.json' not in results:
+        print(f"Validation failed for {directory}: payload_1.json is present, but result_1.json is missing.")
+    elif 'result_1.json' in results and 'payload_1.json' not in payloads:
+        print(f"Validation failed for {directory}: result_1.json is present, but payload_1.json is missing.")
 
     for payload_file in payloads:
         if re.match(r'payload_\d+\.json', payload_file):

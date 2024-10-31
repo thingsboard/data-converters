@@ -1,0 +1,5 @@
+{
+  "url": "https://www.milesight.com/iot/product/lorawan-sensor/am319",
+  "label": "AM307(L): 7-in-1 IAQ Sensor",
+  "description": "AM307L is a 7-in-1 ambient monitoring sensor including measurements of temperature, humidity, CO2 concentration, TVOC, pressure, light, and motion. Unlike AM307, it does not have a display for visual output. It transmits data to a network server using LoRaWAN® technology for remote monitoring."
+}
