@@ -1,0 +1,19 @@
+[{
+  "deviceName": "CT101/CT103 1000000000000001",
+  "deviceType": "CT101/CT103",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "power": "on",
+      "ipso_version": "v0.1",
+      "sn": "6746D38802580000",
+      "hardware_version": "v1.0",
+      "firmware_version": "v1.1"
+    }
+  }]
+}]
