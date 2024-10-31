@@ -1,5 +1,5 @@
 {
   "url": "https://www.milesight.com/iot/product/lorawan-sensor/ct10x",
-  "label": "CT10x: LoRaWAN® Smart Current Transformer",
-  "description": "The CT10x is a LoRaWAN® current transformer designed for remote energy monitoring and consumption analysis. Offering various current options and threshold alarms, the CT10x features a compact, detachable clamp design for easy, safe indoor installation without requiring power shutdown. Compatible with Milesight LoRaWAN® gateways and IoT Cloud, it supports remote monitoring via web or mobile app. Ideal for energy tracking in smart buildings, machine failure detection, and preventive maintenance."
+  "label": "CT101/103: LoRaWAN® Smart Current Transformer",
+  "description": "The CT101/103 are a LoRaWAN® current transformer designed for remote energy monitoring and consumption analysis. Offering various current options and threshold alarms, the CT10x features a compact, detachable clamp design for easy, safe indoor installation without requiring power shutdown. Compatible with Milesight LoRaWAN® gateways and IoT Cloud, it supports remote monitoring via web or mobile app. Ideal for energy tracking in smart buildings, machine failure detection, and preventive maintenance."
 }
