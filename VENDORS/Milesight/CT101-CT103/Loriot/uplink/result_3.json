@@ -1,0 +1,15 @@
+[{
+  "deviceName": "CT101/CT103 1000000000000001",
+  "deviceType": "CT101/CT103",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "current": 30.0
+    }
+  }]
+}]
