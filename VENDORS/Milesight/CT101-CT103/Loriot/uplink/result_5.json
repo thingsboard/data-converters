@@ -1,0 +1,18 @@
+[{
+  "deviceName": "CT101/CT103 1000000000000001",
+  "deviceType": "CT101/CT103",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "current_max": 30.0,
+      "current_min": 20.0,
+      "current": 25.0,
+      "alarm": ["threshold alarm", "over range alarm"]
+    }
+  }]
+}]

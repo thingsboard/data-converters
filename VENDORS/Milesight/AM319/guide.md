@@ -17,8 +17,6 @@
 |            PM10             | 0x0C | 0x7D |   2    | pm10(2B)<br/>pm10, unit: ug/m3                                                                                                                          |
 |             O3              | 0x0D | 0x7D |   2    | o3(2B)<br/>o3, unit: ppm                                                                                                                                |
 |            Beep             | 0x0E | 0x01 |   1    | beep(1B)                                                                                                                                                |
-| Historical Data<br/>(AM307) | 0x20 | 0xCE |   16   | timestamp(4B) + temperature(2B) + humidity(2B) + pir(1B) + light_level(1B) + co2(2B) + tvoc(2B) + pressure(2B)                                          |
-| Historical Data<br/>(AM308) | 0x20 | 0xCE |   20   | timestamp(4B) + temperature(2B) + humidity(2B) + pir(1B) + light_level(1B) + co2(2B) + tvoc(2B) + pressure(2B) + pm2_5(2B) + pm10(2B)                   |
 | Historical Data<br/>(AM319) | 0x20 | 0xCE |   22   | timestamp(4B) + temperature(2B) + humidity(2B) + pir(1B) + light_level(1B) + co2(2B) + tvoc(2B) + pressure(2B) + pm2_5(2B) + pm10(2B) + CH2O(2B)/O3(2B) |
 
 ## Example

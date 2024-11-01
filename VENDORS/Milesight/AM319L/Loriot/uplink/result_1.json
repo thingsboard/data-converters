@@ -1,0 +1,26 @@
+[{
+  "deviceName": "AM319L 1000000000000001",
+  "deviceType": "AM319L",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 85,
+      "temperature": 23.8,
+      "humidity": 62.0,
+      "pir": "trigger",
+      "light_level": 2,
+      "co2": 936,
+      "tvoc": 37,
+      "pressure": 1008.6,
+      "hcho": 0.04,
+      "pm2_5": 32,
+      "pm10": 48,
+      "beep": "no"
+    }
+  }]
+}]

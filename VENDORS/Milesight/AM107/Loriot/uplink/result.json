@@ -1,0 +1,24 @@
+[{
+  "deviceName": "AM107 1000000000000001",
+  "deviceType": "AM107",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 92,
+      "temperature": 30.8,
+      "humidity": 50.5,
+      "activity": 73,
+      "illumination": 28,
+      "infrared_and_visible": 121,
+      "infrared": 20,
+      "co2": 1255,
+      "tvoc": 7,
+      "pressure": 1004.7
+    }
+  }]
+}]
