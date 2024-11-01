@@ -1,0 +1,9 @@
+{
+    "msg": {
+        "Type": "Config",
+        "Config": [{
+            "Param": "smokeDetector",
+            "Value": 1
+        }]
+    }
+}

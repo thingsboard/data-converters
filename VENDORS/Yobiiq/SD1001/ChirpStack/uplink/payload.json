@@ -1,0 +1,59 @@
+{
+    "deduplicationId": "1fd53d79-2c7d-4a63-8bfa-5c9ce2179d53",
+    "time": "2024-10-31T15:03:19.746383778+00:00",
+    "deviceInfo": {
+        "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
+        "tenantName": "Development",
+        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
+        "applicationName": "SD1001",
+        "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
+        "deviceProfileName": "SD1001",
+        "deviceName": "DC0EE928",
+        "devEui": "8df95720000ee928",
+        "deviceClassEnabled": "CLASS_C",
+        "tags": {}
+    },
+    "devAddr": "01851d7d",
+    "adr": true,
+    "dr": 5,
+    "fCnt": 1,
+    "fPort": 8,
+    "confirmed": false,
+    "data": "AXVkAgsAAwAABAAABQAABgAA",
+    "object": {
+        "deviceModel": "SD-1001",
+        "batteryLevelInPercentage": 100.0,
+        "productCode": "1002015",
+        "manufacturer": "YOBIIQ B.V.",
+        "codecVersion": "1.1.0",
+        "lowBatteryAlarm": "Normal",
+        "faultAlarm": "Normal",
+        "powerEvent": "AC Power Off",
+        "smokeAlarm": "Normal"
+    },
+    "rxInfo": [{
+        "gatewayId": "647fdafffe012d39",
+        "uplinkId": 61045,
+        "nsTime": "2024-10-31T15:03:19.536132369+00:00",
+        "rssi": -33,
+        "snr": 10.0,
+        "channel": 5,
+        "location": {},
+        "context": "EstX5A==",
+        "metadata": {
+            "region_config_id": "eu868",
+            "region_common_name": "EU868"
+        },
+        "crcStatus": "CRC_OK"
+    }],
+    "txInfo": {
+        "frequency": 867500000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 7,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}
