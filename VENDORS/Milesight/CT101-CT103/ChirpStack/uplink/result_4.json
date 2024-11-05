@@ -19,7 +19,10 @@
   "telemetry": [{
     "ts": 1684741625404,
     "values": {
-      "alarm": "read failed"
+      "current_max": 30.0,
+      "current_min": 20.0,
+      "current": 25.0,
+      "alarm": ["threshold alarm", "over range alarm"]
     }
   }]
 }

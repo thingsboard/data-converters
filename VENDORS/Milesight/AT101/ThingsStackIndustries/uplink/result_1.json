@@ -21,12 +21,36 @@
     "ts": 1684398325906,
     "values": {
       "battery": 100,
-      "temperature": 26.6,
+      "temperature": 27.4,
       "position": "tilt",
-      "latitude": 24.62435,
-      "longitude": 118.030088,
+      "wifi_scan_result": "finish",
       "motion_status": "unknown",
-      "geofence_status": "unset"
+      "wifi": [{
+        "group": 0,
+        "mac": "24:e1:24:f5:b7:97",
+        "rssi": -77,
+        "motion_status": "unknown"
+      }, {
+        "group": 0,
+        "mac": "24:e1:24:ff:00:04",
+        "rssi": -56,
+        "motion_status": "unknown"
+      }, {
+        "group": 0,
+        "mac": "24:e1:24:f3:19:a8",
+        "rssi": -63,
+        "motion_status": "unknown"
+      }, {
+        "group": 0,
+        "mac": "06:50:c2:0e:aa:8d",
+        "rssi": -59,
+        "motion_status": "unknown"
+      }, {
+        "group": 0,
+        "mac": "24:e1:24:f7:21:c4",
+        "rssi": -71,
+        "motion_status": "unknown"
+      }]
     }
   }]
 }

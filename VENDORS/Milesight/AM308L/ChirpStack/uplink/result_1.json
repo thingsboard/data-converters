@@ -28,7 +28,21 @@
       "tvoc": 37,
       "pressure": 1008.6,
       "pm2_5": 32,
-      "pm10": 48
+      "pm10": 48,
+      "beep": "no"
+    }
+  }, {
+    "ts": 214578533,
+    "values": {
+      "temperature": 5760.0,
+      "humidity": 14080.0,
+      "trigger": "idle",
+      "light_level": 100,
+      "co2": 49665,
+      "tvoc": 2560,
+      "pressure": 3869.5,
+      "pm2_5": 6400,
+      "pm10": 12800
     }
   }]
 }

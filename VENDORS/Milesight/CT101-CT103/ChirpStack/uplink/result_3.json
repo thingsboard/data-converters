@@ -19,7 +19,7 @@
   "telemetry": [{
     "ts": 1684741625404,
     "values": {
-      "current": 30.0
+      "alarm": "read failed"
     }
   }]
 }

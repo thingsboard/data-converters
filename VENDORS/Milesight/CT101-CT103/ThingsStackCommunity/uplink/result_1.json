@@ -20,11 +20,7 @@
   "telemetry": [{
     "ts": 1684474415641,
     "values": {
-      "power": "on",
-      "ipso_version": "v0.1",
-      "sn": "6746D38802580000",
-      "hardware_version": "v1.0",
-      "firmware_version": "v1.1"
+      "total_current": 100.0
     }
   }]
 }
