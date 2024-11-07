@@ -19,7 +19,7 @@
   "telemetry": [{
     "ts": 1684741625404,
     "values": {
-      "total_current": 100.0
+      "current": 30.0
     }
   }]
 }

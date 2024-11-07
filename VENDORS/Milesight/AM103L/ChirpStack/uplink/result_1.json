@@ -24,5 +24,12 @@
       "humidity": 54.5,
       "co2": 453
     }
+  }, {
+    "ts": 1698765432,
+    "values": {
+      "temperature": 22.3,
+      "humidity": 55.0,
+      "co2": 400
+    }
   }]
 }

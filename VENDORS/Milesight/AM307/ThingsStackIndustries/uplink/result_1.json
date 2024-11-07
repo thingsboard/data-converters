@@ -30,5 +30,16 @@
       "pressure": 1008.6,
       "beep": "no"
     }
+  }, {
+    "ts": 214578533,
+    "values": {
+      "temperature": 5760.0,
+      "humidity": 14080.0,
+      "trigger": "idle",
+      "light_level": 100,
+      "co2": 49665,
+      "tvoc": 2560,
+      "pressure": 3869.5
+    }
   }]
 }
