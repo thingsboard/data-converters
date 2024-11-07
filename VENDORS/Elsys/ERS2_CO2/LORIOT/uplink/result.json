@@ -1,6 +1,6 @@
 [{
-  "deviceName": "ERS2 Lite 1000000000000001",
-  "deviceType": "ERS2 Lite",
+  "deviceName": "ERS2 CO2 1000000000000001",
+  "deviceType": "ERS2 CO2",
   "attributes": {
     "eui": "1000000000000001",
     "fPort": 85,
