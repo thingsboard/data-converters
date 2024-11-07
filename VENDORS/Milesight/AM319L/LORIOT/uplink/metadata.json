@@ -1,4 +1,4 @@
 {
   "integrationName": "Loriot integration",
-  "includeGatewayInfo": false
+  "includeGatewayInfo": "false"
 }
