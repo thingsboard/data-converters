@@ -1,0 +1,7 @@
+{
+    "contentType": "JSON",
+    "data": "{\"downlinks\":[{\"f_port\":50,\"frm_payload\":\"/wAB\",\"priority\":\"NORMAL\"}]}",
+    "metadata": {
+        "devId": "smokedetector"
+    }
+}

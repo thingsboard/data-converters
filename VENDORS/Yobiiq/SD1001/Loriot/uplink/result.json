@@ -1,0 +1,42 @@
+{
+    "deviceName": "5A494D4F040A0018",
+    "deviceType": "Smoke Detector",
+    "groupName": "Smoke Detectors",
+    "attributes": {
+        "devEui": "5A494D4F040A0018",
+        "seqdn": 1,
+        "seqq": 1,
+        "gweui": "24E124FFFFF24684",
+        "sf": 12,
+        "codr": "4/5",
+        "msgType": "System DL",
+        "ackRequested": false,
+        "codecVersion": "1.1.0",
+        "deviceModel": "SD-1001",
+        "productCode": "1002015",
+        "manufacturer": "YOBIIQ B.V."
+    },
+    "telemetry": {
+        "ts": 1730885308303,
+        "values": {
+            "seqdn": 1,
+            "seqq": 1,
+            "gweui": "24E124FFFFF24684",
+            "freq": 868500000,
+            "sf": 12,
+            "codr": "4/5",
+            "toa": 1155,
+            "msgType": "System DL",
+            "ackRequested": false,
+            "batteryLevelInPercentage": 100,
+            "powerEvent": "AC Power On",
+            "lowBatteryAlarm": "Alarm",
+            "faultAlarm": "Alarm",
+            "smokeAlarm": "Normal",
+            "codecVersion": "1.1.0",
+            "deviceModel": "SD-1001",
+            "productCode": "1002015",
+            "manufacturer": "YOBIIQ B.V."
+        }
+    }
+}
