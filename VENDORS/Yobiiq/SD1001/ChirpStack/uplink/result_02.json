@@ -21,11 +21,7 @@
         "values": {
             "smokeAlarm": "Alarm",
             "testButtonPressed": "Pushed",
-            "lowBatteryAlarm": "Alarm",
-            "snr": 10.0,
-            "rssi": -56,
-            "channel": 1,
-            "fCnt": 14
+            "lowBatteryAlarm": "Alarm"
         }
     }],
     "groupName": "Smoke Detectors"
