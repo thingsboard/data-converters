@@ -1,8 +1,8 @@
 {
-    "contentType": "JSON",
+    "contentType": "TEXT",
     "data": "/wAB",
     "metadata": {
-        "eui": "1000000000000001",
-        "fPort": "50"
+        "DevEUI": "5A494D4F040A0018",
+        "fPort": 50
     }
 }
