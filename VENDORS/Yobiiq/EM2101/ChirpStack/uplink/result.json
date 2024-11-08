@@ -1,0 +1,43 @@
+{
+    "deviceName": "EM2101_Testdevice",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
+        "tenantName": "Development",
+        "applicationId": "76e1ae7d-1268-4eab-805b-05425b5c0d75",
+        "applicationName": "EM2101",
+        "deviceProfileId": "266d8aff-e007-4497-8652-4297ce978956",
+        "deviceProfileName": "EM2101",
+        "devEui": "fc48c900000001c5",
+        "deviceClassEnabled": "CLASS_C",
+        "CustomerName": "Development",
+        "devAddr": "00976f25",
+        "frequency": 867300000,
+        "bandwidth": 125000,
+        "spreadingFactor": 7,
+        "codeRate": "CR_4_5",
+        "latestFPort": 2
+    },
+    "telemetry": [{
+        "ts": 1731062887952,
+        "values": {
+            "dr": 5,
+            "fCnt": 61,
+            "fPort": 2,
+            "rssi": -80,
+            "snr": 8.8,
+            "channel": 4
+        }
+    }, {
+        "ts": 1.7310663E12,
+        "values": {
+            "VoltageL1N": 227.1,
+            "CurrentL1": 92.0,
+            "ActivePowerL1": -7.0,
+            "Frequency": 50.0,
+            "PowerFactorL1": -0.45,
+            "PhaseAngleL1": 117.19
+        }
+    }]
+}
