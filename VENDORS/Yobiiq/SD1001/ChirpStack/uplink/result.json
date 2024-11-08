@@ -1,49 +1,31 @@
 {
-    "deviceName": "DC0EE928",
+    "deviceName": "DC0EE928 8df95720000ee928",
     "deviceType": "Smoke Detectors",
-    "groupName": "Smoke Detectors",
     "attributes": {
-        "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
-        "tenantName": "Development",
-        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
-        "applicationName": "SD1001",
-        "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
-        "deviceProfileName": "SD1001",
-        "devEui": "8df95720000ee928",
-        "deviceClassEnabled": "CLASS_C",
+        "eui": "8df95720000ee928",
         "devAddr": "01851d7d",
         "fPort": 8,
-        "deviceModel": "SD-1001",
-        "batteryLevelInPercentage": 100.0,
-        "productCode": "1002015",
-        "manufacturer": "YOBIIQ B.V.",
-        "codecVersion": "1.1.0",
-        "lowBatteryAlarm": "Normal",
-        "faultAlarm": "Normal",
-        "powerEvent": "AC Power Off",
-        "smokeAlarm": "Normal",
+        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
+        "applicationName": "SD1001",
+        "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
+        "tenantName": "Development",
+        "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
+        "deviceProfileName": "SD1001",
         "frequency": 867500000,
         "bandwidth": 125000,
         "spreadingFactor": 7,
         "codeRate": "CR_4_5"
     },
-    "telemetry": {
+    "telemetry": [{
         "ts": 1730386999746,
         "values": {
-            "dr": 5,
-            "fCnt": 1,
-            "confirmed": false,
-            "batteryLevelInPercentage": 100.0,
+            "battery": 100,
+            "powerEvent": "AC Power Off",
             "lowBatteryAlarm": "Normal",
             "faultAlarm": "Normal",
-            "powerEvent": "AC Power Off",
             "smokeAlarm": "Normal",
-            "gatewayId": "647fdafffe012d39",
-            "rssi": -33,
-            "snr": 10.0,
-            "channel": 5,
-            "context": "EstX5A==",
-            "crcStatus": "CRC_OK"
+            "interconnectAlarm": "Normal"
         }
-    }
+    }],
+    "groupName": "Smoke Detectors"
 }
