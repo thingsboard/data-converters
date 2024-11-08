@@ -25,11 +25,7 @@
             "faultAlarm": "Normal",
             "smokeAlarm": "Normal",
             "interconnectAlarm": "Normal",
-            "testButtonPressed": "Normal",
-            "snr": 9.2,
-            "rssi": -67,
-            "channel": 7,
-            "fCnt": 15
+            "testButtonPressed": "Normal"
         }
     }],
     "groupName": "Smoke Detectors"
