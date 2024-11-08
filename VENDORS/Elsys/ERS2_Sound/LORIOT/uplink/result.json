@@ -1,0 +1,21 @@
+[{
+  "deviceName": "ERS2 Sound1000000000000001",
+  "deviceType": "ERS2 Sound",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "temperature": 22.6,
+      "humidity": 41,
+      "light": 39,
+      "pir": 6,
+      "vdd": 3426,
+      "soundPeak": 7,
+      "soundAvg": 16
+    }
+  }]
+}]
