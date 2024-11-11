@@ -20,7 +20,7 @@
   "telemetry": [{
     "ts": 1684398325906,
     "values": {
-      "temparature": 22.6,
+      "temperature": 22.6,
       "humidity": 41,
       "vdd": 3426
     }
