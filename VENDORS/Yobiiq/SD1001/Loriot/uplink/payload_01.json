@@ -3,8 +3,8 @@
     "seqno": 1,
     "EUI": "5A494D4F040A0018",
     "ts": 1730885303197,
-    "fcnt": 0,
-    "port": 50,
+    "fcnt": 1,
+    "port": 8,
     "freq": 867500000,
     "rssi": -78,
     "snr": 7.8,
@@ -15,5 +15,5 @@
     "offline": false,
     "confirmed": true,
     "devaddr": "30A68BB8",
-    "data": "FF090100FF0A0105FF162401640000FF0F00FF0B00"
+    "data": "017564"
 }
