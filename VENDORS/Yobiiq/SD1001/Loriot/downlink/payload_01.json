@@ -2,6 +2,6 @@
     "Type": "Config",
     "Config": [{
         "Param": "smokeDetector",
-        "Value": 1
+        "Value": 0
     }]
 }
