@@ -1,6 +1,6 @@
 {
     "deviceName": "DC0EE928",
-    "deviceType": "Smoke Detectors",
+    "deviceType": "Smoke Detector",
     "groupName": "Smoke Detectors",
     "attributes": {
         "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
@@ -11,39 +11,24 @@
         "deviceProfileName": "SD1001",
         "devEui": "8df95720000ee928",
         "deviceClassEnabled": "CLASS_C",
-        "devAddr": "01851d7d",
-        "fPort": 8,
-        "deviceModel": "SD-1001",
-        "batteryLevelInPercentage": 100.0,
-        "productCode": "1002015",
-        "manufacturer": "YOBIIQ B.V.",
+        "tags": {},
         "codecVersion": "1.1.0",
-        "lowBatteryAlarm": "Normal",
-        "faultAlarm": "Normal",
-        "powerEvent": "AC Power Off",
-        "smokeAlarm": "Normal",
-        "frequency": 867500000,
-        "bandwidth": 125000,
-        "spreadingFactor": 7,
-        "codeRate": "CR_4_5"
+        "deviceModel": "SD-1001",
+        "productCode": "1002015",
+        "manufacturer": "YOBIIQ B.V."
     },
     "telemetry": {
-        "ts": 1730386999746,
+        "ts": 1731250531319,
         "values": {
+            "fPort": 50,
+            "confirmed": true,
+            "fCnt": 0,
             "dr": 5,
-            "fCnt": 1,
-            "confirmed": false,
-            "batteryLevelInPercentage": 100.0,
-            "lowBatteryAlarm": "Normal",
-            "faultAlarm": "Normal",
-            "powerEvent": "AC Power Off",
-            "smokeAlarm": "Normal",
-            "gatewayId": "647fdafffe012d39",
-            "rssi": -33,
-            "snr": 10.0,
-            "channel": 5,
-            "context": "EstX5A==",
-            "crcStatus": "CRC_OK"
+            "hardwareVersion": "V1.0",
+            "firmwareVersion": "V1.5",
+            "deviceSerialNumber": 2401640000,
+            "deviceClass": "Class A",
+            "powerEvent": "AC Power Off"
         }
     }
 }

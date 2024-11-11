@@ -1,6 +1,6 @@
 {
-    "deduplicationId": "7e44d912-0a10-4a03-abaf-66fa5bc403eb",
-    "time": "2024-10-31T14:23:59.171237962+00:00",
+    "deduplicationId": "1cf831a6-62e2-4dba-9e08-74e2408a15cb",
+    "time": "2024-11-10T14:55:31.319593255+00:00",
     "deviceInfo": {
         "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
         "tenantName": "Development",
@@ -8,44 +8,37 @@
         "applicationName": "SD1001",
         "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
         "deviceProfileName": "SD1001",
-        "deviceName": "SD1001-1",
-        "devEui": "fc48c9fffe001141",
+        "deviceName": "DC0EE928",
+        "devEui": "8df95720000ee928",
         "deviceClassEnabled": "CLASS_C",
         "tags": {}
     },
-    "devAddr": "00e799ff",
+    "devAddr": "00d19684",
     "adr": true,
     "dr": 5,
-    "fCnt": 14,
+    "fCnt": 2,
     "fPort": 8,
     "confirmed": true,
-    "data": "BQABBwABAwAB",
-    "object": {
-        "lowBatteryAlarm": "Alarm",
-        "productCode": "1002015",
-        "testButtonPressed": "Pushed",
-        "manufacturer": "YOBIIQ B.V.",
-        "codecVersion": "1.1.0",
-        "smokeAlarm": "Alarm",
-        "deviceModel": "SD-1001"
-    },
-    "rxInfo": [{
-        "gatewayId": "647fdafffe012d39",
-        "uplinkId": 56550,
-        "nsTime": "2024-10-31T14:23:58.964033969+00:00",
-        "rssi": -56,
-        "snr": 10.0,
-        "channel": 1,
-        "location": {},
-        "context": "hhfiQw==",
-        "metadata": {
-            "region_common_name": "EU868",
-            "region_config_id": "eu868"
-        },
-        "crcStatus": "CRC_OK"
-    }],
+    "data": "AXUQAgsBAwABBAABBQAABgAABwAA",
+    "rxInfo": [
+        {
+            "gatewayId": "647fdafffe012d39",
+            "uplinkId": 394,
+            "nsTime": "2024-11-10T14:55:31.109461854+00:00",
+            "rssi": -47,
+            "snr": 9.2,
+            "channel": 5,
+            "location": {},
+            "context": "IVAKpA==",
+            "metadata": {
+                "region_config_id": "eu868",
+                "region_common_name": "EU868"
+            },
+            "crcStatus": "CRC_OK"
+        }
+    ],
     "txInfo": {
-        "frequency": 868300000,
+        "frequency": 867500000,
         "modulation": {
             "lora": {
                 "bandwidth": 125000,
