@@ -1,0 +1,15 @@
+{
+    "Type" : "RequestSettings",
+    "RequestSettings" : [
+        "currentLimitFallback",
+        "voltageLimitFallback",
+        "powerLimitFallback",
+        "deactivationDelayFallback",
+        "activationDelayFallback",
+        "offsetCurrentFallback",
+        "offsetDelayFallback",
+        "resetTimeFallback",
+        "resetAmountFallback",
+        "currentLimitDynamic"
+    ]
+}
