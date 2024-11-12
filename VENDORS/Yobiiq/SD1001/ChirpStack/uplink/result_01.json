@@ -1,6 +1,6 @@
 {
-    "deviceName": "SD1001-1",
-    "deviceType": "Smoke Detectors",
+    "deviceName": "DC0EE928",
+    "deviceType": "Smoke Detector",
     "groupName": "Smoke Detectors",
     "attributes": {
         "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
@@ -9,41 +9,22 @@
         "applicationName": "SD1001",
         "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
         "deviceProfileName": "SD1001",
-        "devEui": "fc48c9fffe001141",
+        "devEui": "8df95720000ee928",
         "deviceClassEnabled": "CLASS_C",
-        "devAddr": "01e1a53a",
-        "fPort": 8,
-        "powerEvent": "AC Power On",
-        "lowBatteryAlarm": "Normal",
+        "tags": {},
         "codecVersion": "1.1.0",
-        "batteryLevelInPercentage": 100.0,
-        "smokeAlarm": "Normal",
         "deviceModel": "SD-1001",
         "productCode": "1002015",
-        "manufacturer": "YOBIIQ B.V.",
-        "faultAlarm": "Normal",
-        "frequency": 867900000,
-        "bandwidth": 125000,
-        "spreadingFactor": 7,
-        "codeRate": "CR_4_5"
+        "manufacturer": "YOBIIQ B.V."
     },
     "telemetry": {
-        "ts": 1730361199663,
+        "ts": 1731250531319,
         "values": {
-            "dr": 5,
-            "fCnt": 15,
+            "fPort": 8,
             "confirmed": true,
-            "powerEvent": "AC Power On",
-            "lowBatteryAlarm": "Normal",
-            "batteryLevelInPercentage": 100.0,
-            "smokeAlarm": "Normal",
-            "faultAlarm": "Normal",
-            "gatewayId": "647fdafffe012d39",
-            "rssi": -67,
-            "snr": 9.2,
-            "channel": 7,
-            "context": "EPzY5A==",
-            "crcStatus": "CRC_OK"
+            "fCnt": 1,
+            "dr": 5,
+            "batteryLevelInPercentage": 100
         }
     }
 }
