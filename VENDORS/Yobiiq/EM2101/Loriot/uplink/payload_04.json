@@ -1,0 +1,19 @@
+{
+    "cmd": "rx",
+    "seqno": 1,
+    "EUI": "FC48C900000001C5",
+    "ts": 1731410377000,
+    "fcnt": 4,
+    "port": 50,
+    "freq": 867500000,
+    "rssi": -78,
+    "snr": 7.8,
+    "toa": 1810,
+    "dr": "SF12 BW125 4/5",
+    "ack": false,
+    "bat": 255,
+    "offline": false,
+    "confirmed": false,
+    "devaddr": "30A68BC2",
+    "data": "FF3C0064FF3D00FAFF3E0E10FF3F003CFF40003CFF41003CFF42003CFF430258FF4403"
+}
