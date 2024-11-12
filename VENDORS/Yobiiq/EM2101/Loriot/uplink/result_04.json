@@ -9,7 +9,7 @@
         "manufacturer": "YOBIIQ B.V.",
         "devEui": "FC48C900000001C5",
         "latestFPort": 50,
-        "latestDownlinkStatus": "1731411286700-SUCCESS",
+        "latestDownlinkStatus": "1731410377000-SUCCESS",
         "latestIncomingSettings": {
             "latestSettingCurrentLimitFallback": 10.0,
             "latestSettingVoltageLimitFallback": 250,

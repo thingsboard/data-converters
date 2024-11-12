@@ -11,7 +11,7 @@
         "devId": "KWH - 32310067",
         "applicationId": "EM2101",
         "latestFPort": 50,
-        "latestDownlinkStatus": "1731408977399-SUCCESS",
+        "latestDownlinkStatus": "1731314591151-SUCCESS",
         "latestIncomingSettings": {
             "latestSettingCurrentLimitFallback": 10.0,
             "latestSettingVoltageLimitFallback": 250,

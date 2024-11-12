@@ -17,7 +17,7 @@
         "deviceClassEnabled": "CLASS_C",
         "tags": {},
         "latestFPort": 50,
-        "latestDownlinkStatus": "1731404330614-SUCCESS",
+        "latestDownlinkStatus": "1731336931319-SUCCESS",
         "latestIncomingSettings": {
             "latestSettingCurrentLimitFallback": 10.0,
             "latestSettingVoltageLimitFallback": 250,
