@@ -1,0 +1,8 @@
+{
+    "integrationName": "The Things Stack Industries integration",
+    "rc_fPort": "50",
+    "rc_confirmed": "false",
+    "cs_devEui": "FC48C900000001C5",
+    "cs_devId": "KWH - 32310067",
+    "cs_applicationId": "EM2101"
+}
