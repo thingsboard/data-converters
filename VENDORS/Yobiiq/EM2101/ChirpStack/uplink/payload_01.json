@@ -16,10 +16,10 @@
     "devAddr": "00d19684",
     "adr": true,
     "dr": 5,
-    "fCnt": 0,
-    "fPort": 50,
+    "fCnt": 1,
+    "fPort": 2,
     "confirmed": false,
-    "data": "/wkCAP8KIwH/FgHtAzP/DwL/CwH/AAH/KEVNMjEwMQ==",
+    "data": "/gNnMy4o/gwAAAkM/hAAAAE3/hT////W/iMTjP4dqP4gO6g=",
     "rxInfo": [
         {
             "gatewayId": "647fdafffe012d39",

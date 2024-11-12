@@ -1,0 +1,7 @@
+{
+    "Type" : "Relay",
+    "Relay" : {
+        "Param" : "relayCommand",
+        "Value" : 0
+    }
+}
