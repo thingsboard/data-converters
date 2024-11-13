@@ -18,10 +18,6 @@ This guide explains the data types used in the Elsys ERS2 device payloads. Each 
 
 - **Humidity (`0x02`)**: Represented in 1 byte, with a range of 0 to 100%. This is the relative humidity measured by the device.
 
-- **Light (`0x04`)**: Represented in 2 bytes, with a range of 0 to 65535 Lux. This value indicates the intensity of ambient light.
-
-- **Motion (PIR) (`0x05`)**: Represented in 1 byte, with a range of 0 to 255. This indicates the count of motions detected by the PIR sensor since the last transmission.
-
 - **Battery Voltage (VDD) (`0x07`)**: Represented in 2 bytes, with a range of 0 to 65535 mV. This value shows the current battery voltage of the device.
 
 - **Debug Information (`0x3D`)**: Represented in 4 bytes. This information depends on the device’s specific debug configuration and is intended for troubleshooting or debugging purposes.

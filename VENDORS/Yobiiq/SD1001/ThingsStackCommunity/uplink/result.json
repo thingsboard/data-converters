@@ -6,45 +6,22 @@
         "devEui": "5A494D4F040A0018",
         "devId": "smokedetector",
         "applicationId": "smokedetectors",
-        "fPort": 8,
-        "correlation_ids": ["gs:uplink:01JC0A8PDF12JZJMW3H2BD65Q3"],
-        "bandwidth": 125000,
-        "spreading_factor": 10,
-        "coding_rate": "4/5",
-        "frequency": "867900000",
-        "net_id": "000013",
-        "ns_id": "EC656E0000103819",
-        "tenant_id": "yobiiq",
-        "cluster_id": "eu2",
-        "cluster_address": "eu2.cloud.thethings.industries",
-        "tenant_address": "yobiiq.eu2.cloud.thethings.industries",
         "codecVersion": "1.1.0",
         "deviceModel": "SD-1001",
-        "manufacturer": "YOBIIQ B.V.",
         "productCode": "1002015",
-        "eui": "24E124FFFEF24699"
+        "manufacturer": "YOBIIQ B.V."
     },
     "telemetry": {
         "ts": 1730882591151,
         "values": {
-            "f_cnt": 1,
-            "frm_payload": "AXVYAgsAAwAABAAABQAABgAABwAA",
-            "batteryLevelInPercentage": 88,
-            "codecVersion": "1.1.0",
-            "deviceModel": "SD-1001",
-            "faultAlarm": "Normal",
-            "lowBatteryAlarm": "Normal",
-            "manufacturer": "YOBIIQ B.V.",
-            "powerEvent": "AC Power Off",
-            "productCode": "1002015",
-            "smokeAlarm": "Normal",
-            "rssi": -91,
-            "channel_rssi": -91,
-            "snr": 12.8,
-            "frequency_offset": "-121",
-            "channel_index": 7,
+            "fPort": 50,
             "confirmed": true,
-            "consumed_airtime": "0.493568s"
+            "fCnt": 0,
+            "hardwareVersion": "V1.0",
+            "firmwareVersion": "V1.5",
+            "deviceSerialNumber": 2401640000,
+            "deviceClass": "Class A",
+            "powerEvent": "AC Power Off"
         }
     }
 }

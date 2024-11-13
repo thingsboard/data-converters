@@ -2,6 +2,7 @@
     "contentType": "TEXT",
     "data": "/wAA",
     "metadata": {
+        "eui": "5A494D4F040A0018",
         "DevEUI": "5A494D4F040A0018",
         "fPort": 50
     }

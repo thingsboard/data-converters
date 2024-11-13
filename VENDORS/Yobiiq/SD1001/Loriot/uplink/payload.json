@@ -1,28 +1,19 @@
 {
-    "cmd": "txd",
+    "cmd": "rx",
+    "seqno": 1,
     "EUI": "5A494D4F040A0018",
-    "seqdn": 1,
-    "seqq": 1,
-    "ts": 1730885308303,
-    "gweui": "24E124FFFFF24684",
-    "freq": 868500000,
-    "sf": 12,
-    "codr": "4/5",
-    "toa": 1155,
-    "msgType": "System DL",
-    "time": 1730885308303,
-    "ackRequested": false,
-    "decoded": {
-        "data": {
-            "batteryLevelInPercentage": 100,
-            "powerEvent": "AC Power On",
-            "lowBatteryAlarm": "Alarm",
-            "faultAlarm": "Alarm",
-            "smokeAlarm": "Normal",
-            "codecVersion": "1.1.0",
-            "deviceModel": "SD-1001",
-            "productCode": "1002015",
-            "manufacturer": "YOBIIQ B.V."
-        }
-    }
+    "ts": 1730885303197,
+    "fcnt": 0,
+    "port": 50,
+    "freq": 867500000,
+    "rssi": -78,
+    "snr": 7.8,
+    "toa": 1810,
+    "dr": "SF12 BW125 4/5",
+    "ack": false,
+    "bat": 255,
+    "offline": false,
+    "confirmed": true,
+    "devaddr": "30A68BB8",
+    "data": "FF090100FF0A0105FF162401640000FF0F00FF0B00"
 }
