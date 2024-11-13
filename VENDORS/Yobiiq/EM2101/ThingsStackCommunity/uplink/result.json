@@ -14,6 +14,9 @@
         "hardwareVersion": "V2.0",
         "firmwareVersion": "V23.1",
         "deviceSerialNumber": 32310067,
+        "deviceClass": "Class C",
+        "powerEvent": "AC Power On",
+        "relayStatus": "HIGH",
         "deviceModel": "EM2101"
     },
     "telemetry": [{
