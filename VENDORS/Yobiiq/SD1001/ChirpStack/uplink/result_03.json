@@ -1,28 +1,44 @@
 {
-    "deviceName": "SD1001-1 fc48c9fffe001141",
+    "deviceName": "SD1001-1",
     "deviceType": "Smoke Detectors",
+    "groupName": "Smoke Detectors",
     "attributes": {
-        "eui": "fc48c9fffe001141",
-        "devAddr": "00e799ff",
-        "fPort": 8,
-        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
-        "applicationName": "SD1001",
         "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
         "tenantName": "Development",
+        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
+        "applicationName": "SD1001",
         "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
         "deviceProfileName": "SD1001",
+        "devEui": "fc48c9fffe001141",
+        "deviceClassEnabled": "CLASS_C",
+        "devAddr": "00e799ff",
+        "fPort": 8,
+        "codecVersion": "1.1.0",
+        "deviceModel": "SD-1001",
+        "lowBatteryAlarm": "Alarm",
+        "smokeAlarm": "Normal",
+        "productCode": "1002015",
+        "testButtonPressed": "Normal",
+        "manufacturer": "YOBIIQ B.V.",
         "frequency": 868100000,
         "bandwidth": 125000,
         "spreadingFactor": 7,
         "codeRate": "CR_4_5"
     },
-    "telemetry": [{
+    "telemetry": {
         "ts": 1730384646322,
         "values": {
+            "dr": 5,
+            "fCnt": 15,
+            "confirmed": true,
+            "lowBatteryAlarm": "Alarm",
             "smokeAlarm": "Normal",
             "testButtonPressed": "Normal",
-            "lowBatteryAlarm": "Alarm"
+            "gatewayId": "647fdafffe012d39",
+            "rssi": -59,
+            "snr": 9.8,
+            "context": "hoTMSw==",
+            "crcStatus": "CRC_OK"
         }
-    }],
-    "groupName": "Smoke Detectors"
+    }
 }
