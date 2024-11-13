@@ -1,9 +1,0 @@
-{
-    "Type": "Measure",
-    "Measure": {
-        "Interval": 15,
-        "Mode": 0,
-        "Status": 1,
-        "Measurement": ["voltageL1N", "currentL1", "activePowerL1", "frequency", "powerFactorL1", "phaseAngleL1", "activeEnergyImportL1T2"]
-    }
-}

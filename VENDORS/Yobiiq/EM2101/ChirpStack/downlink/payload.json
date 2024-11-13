@@ -1,7 +1,0 @@
-{
-    "Type" : "Config",
-    "Config" : {
-        "Param" : "restart",
-        "Value" : 1
-    }
-}

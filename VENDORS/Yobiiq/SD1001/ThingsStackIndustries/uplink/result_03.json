@@ -14,14 +14,15 @@
     "telemetry": {
         "ts": 1730882591151,
         "values": {
-            "fPort": 50,
+            "fPort": 8,
             "confirmed": true,
-            "fCnt": 0,
-            "hardwareVersion": "V1.0",
-            "firmwareVersion": "V1.5",
-            "deviceSerialNumber": 2401640000,
-            "deviceClass": "Class A",
-            "powerEvent": "AC Power Off"
+            "fCnt": 3,
+            "batteryLevelInPercentage": 100,
+            "powerEvent": "AC Power Off",
+            "lowBatteryAlarm": "Normal",
+            "faultAlarm": "Normal",
+            "smokeAlarm": "Normal",
+            "interconnectAlarm": "Normal"
         }
     }
 }

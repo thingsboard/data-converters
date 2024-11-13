@@ -1,7 +1,0 @@
-{
-    "Type" : "Dynamic",
-    "Dynamic" : {
-        "Param" : "voltageLimit",
-        "Value" : 240
-    }
-}

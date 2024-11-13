@@ -1,7 +1,0 @@
-{
-    "integrationName": "Yobiiq EM2101 ChirpStack",
-    "rc_fPort": "50",
-    "rc_confirmed": "false",
-    "cs_devEui": "fc48c900000001c5",
-    "cs_applicationId": "76e1ae7d-1268-4eab-805b-05425b5c0d75"
-}
