@@ -1,29 +1,20 @@
 {
-    "deviceName": "DC0EE928",
+    "deviceName": "5A494D4F040A0018",
     "deviceType": "Smoke Detector",
     "groupName": "Smoke Detectors",
     "attributes": {
-        "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
-        "tenantName": "Development",
-        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
-        "applicationName": "SD1001",
-        "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
-        "deviceProfileName": "SD1001",
-        "devEui": "8df95720000ee928",
-        "deviceClassEnabled": "CLASS_C",
-        "tags": {},
+        "devEui": "5A494D4F040A0018",
         "codecVersion": "1.1.0",
         "deviceModel": "SD-1001",
         "productCode": "1002015",
         "manufacturer": "YOBIIQ B.V."
     },
     "telemetry": {
-        "ts": 1731250531319,
+        "ts": 1730885303197,
         "values": {
             "fPort": 50,
             "confirmed": true,
             "fCnt": 0,
-            "dr": 5,
             "hardwareVersion": "V1.0",
             "firmwareVersion": "V1.5",
             "deviceSerialNumber": 2401640000,
