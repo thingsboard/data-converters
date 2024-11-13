@@ -1,0 +1,5 @@
+{
+  "url": "https://www.bosch.com/products-and-services/iot/parking-sensor",
+  "label": "Bosch Parking Sensor",
+  "description": "A smart parking sensor for efficient parking management. The Bosch Parking Sensor detects the occupancy status of parking spaces and uses LoRaWAN technology to transmit data in real-time, enabling optimized parking space utilization."
+}

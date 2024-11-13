@@ -1,0 +1,19 @@
+[{
+  "deviceName": "Bosch parking lot sensor1000000000000001",
+  "deviceType": "Parking sensor",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 3,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "type": "startup",
+      "occupied": false,
+      "resetCause": "Power On Reset",
+      "firmwareVersion": "2.29.0",
+      "debugInfo": "00 00 00 00 99 02 00 d1 00 05 00 00"
+    }
+  }]
+}]

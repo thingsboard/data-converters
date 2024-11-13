@@ -1,0 +1,30 @@
+{
+  "deviceName": "Bosch parking lot sensor eui-1000000000000001",
+  "deviceType": "Parking sensor",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 3,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "type": "startup",
+      "occupied": false,
+      "resetCause": "Power On Reset",
+      "firmwareVersion": "2.29.0",
+      "debugInfo": "00 00 00 00 99 02 00 d1 00 05 00 00"
+    }
+  }]
+}
