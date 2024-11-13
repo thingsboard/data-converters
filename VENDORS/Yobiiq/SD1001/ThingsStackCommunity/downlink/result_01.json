@@ -1,8 +1,0 @@
-{
-    "contentType": "JSON",
-    "data": "{\"downlinks\":[{\"f_port\":50,\"frm_payload\":\"/wAA\",\"priority\":\"NORMAL\"}]}",
-    "metadata": {
-        "eui": "smokedetector",
-        "devId": "smokedetector"
-    }
-}

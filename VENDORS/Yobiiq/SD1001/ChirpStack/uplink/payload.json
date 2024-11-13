@@ -1,6 +1,6 @@
 {
-    "deduplicationId": "1cf831a6-62e2-4dba-9e08-74e2408a15cb",
-    "time": "2024-11-10T14:55:31.319593255+00:00",
+    "deduplicationId": "1fd53d79-2c7d-4a63-8bfa-5c9ce2179d53",
+    "time": "2024-10-31T15:03:19.746383778+00:00",
     "deviceInfo": {
         "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
         "tenantName": "Development",
@@ -13,30 +13,39 @@
         "deviceClassEnabled": "CLASS_C",
         "tags": {}
     },
-    "devAddr": "00d19684",
+    "devAddr": "01851d7d",
     "adr": true,
     "dr": 5,
-    "fCnt": 0,
-    "fPort": 50,
-    "confirmed": true,
-    "data": "/wkBAP8KAQX/FiQBZAAA/w8A/wsA",
-    "rxInfo": [
-        {
-            "gatewayId": "647fdafffe012d39",
-            "uplinkId": 394,
-            "nsTime": "2024-11-10T14:55:31.109461854+00:00",
-            "rssi": -47,
-            "snr": 9.2,
-            "channel": 5,
-            "location": {},
-            "context": "IVAKpA==",
-            "metadata": {
-                "region_config_id": "eu868",
-                "region_common_name": "EU868"
-            },
-            "crcStatus": "CRC_OK"
-        }
-    ],
+    "fCnt": 1,
+    "fPort": 8,
+    "confirmed": false,
+    "data": "AXVkAgsAAwAABAAABQAABgAA",
+    "object": {
+        "deviceModel": "SD-1001",
+        "batteryLevelInPercentage": 100.0,
+        "productCode": "1002015",
+        "manufacturer": "YOBIIQ B.V.",
+        "codecVersion": "1.1.0",
+        "lowBatteryAlarm": "Normal",
+        "faultAlarm": "Normal",
+        "powerEvent": "AC Power Off",
+        "smokeAlarm": "Normal"
+    },
+    "rxInfo": [{
+        "gatewayId": "647fdafffe012d39",
+        "uplinkId": 61045,
+        "nsTime": "2024-10-31T15:03:19.536132369+00:00",
+        "rssi": -33,
+        "snr": 10.0,
+        "channel": 5,
+        "location": {},
+        "context": "EstX5A==",
+        "metadata": {
+            "region_config_id": "eu868",
+            "region_common_name": "EU868"
+        },
+        "crcStatus": "CRC_OK"
+    }],
     "txInfo": {
         "frequency": 867500000,
         "modulation": {

@@ -1,0 +1,35 @@
+{
+    "deviceName": "KWH - 32310067",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "FC48C900000001C5",
+        "devId": "KWH - 32310067",
+        "applicationId": "EM2101",
+        "latestFPort": 50,
+        "latestDownlinkStatus": "1731314591151-SUCCESS",
+        "latestIncomingSettings": {
+            "latestSettingCurrentLimitFallback": 10.0,
+            "latestSettingVoltageLimitFallback": 250,
+            "latestSettingPowerLimitFallback": 3600,
+            "latestSettingDeactivationDelayFallback": 60,
+            "latestSettingActivationDelayFallback": 60,
+            "latestSettingOffsetCurrentFallback": 6.0,
+            "latestSettingOffsetDelayFallback": 60,
+            "latestSettingResetTimeFallback": 600,
+            "latestSettingResetAmountFallback": 3
+        }
+    },
+    "telemetry": [{
+        "ts": 1731314591151,
+        "values": {
+            "fPort": 50,
+            "confirmed": true,
+            "fCnt": 4
+        }
+    }]
+}
