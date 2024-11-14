@@ -1,0 +1,20 @@
+[{
+  "deviceName": "G4 Parking sensor SM 1000000000000001",
+  "deviceType": "Parking sensor",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 2,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "type": "heartbeat",
+      "occupied": false,
+      "hw_health_status": 0,
+      "temperature": -10,
+      "battery_voltage": 2.32,
+      "battery_health": "critical"
+    }
+  }]
+}]
