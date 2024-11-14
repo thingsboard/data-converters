@@ -1,0 +1,61 @@
+{
+    "end_device_ids": {
+        "device_id": "KWH - 22310024",
+        "application_ids": {
+            "application_id": "EM4301CT"
+        },
+        "dev_eui": "FC48C900000001C5",
+        "join_eui": "FC48C90000000000",
+        "dev_addr": "27FC0372"
+    },
+    "correlation_ids": [
+        "gs:uplink:01JC0A8PDF12JZJMW3H2BD65Q3"
+    ],
+    "received_at": "2024-11-12T08:43:11.357207831Z",
+    "uplink_message": {
+        "session_key_id": "AZMAo/hlRtkqumRZxr4evA==",
+        "f_port": 50,
+        "f_cnt": 0,
+        "frm_payload": "/wkCAP8KASn/FgFUbIj/DwL/CwH/HgCW/x8F/yAAAADm/yEA5v8oRU00MzAxQ1Q=",
+        "rx_metadata": [
+            {
+                "gateway_ids": {
+                    "gateway_id": "testgateway-geleen",
+                    "eui": "24E124FFFEF24699"
+                },
+                "time": "2024-11-12T08:43:11.141155Z",
+                "timestamp": 1731400991,
+                "rssi": -91,
+                "channel_rssi": -91,
+                "snr": 12.8,
+                "frequency_offset": "-121",
+                "uplink_token": "CiAKHgoSdGVzdGdhdGV3YXktZ2VsZWVuEggk4ST//vJGmRCN5YOwBBoLCJ/YrLkGEPv59EcgyO3NnZfmEw==",
+                "channel_index": 7,
+                "received_at": "2024-11-11T08:43:11.140320562Z"
+            }
+        ],
+        "settings": {
+            "data_rate": {
+                "lora": {
+                    "bandwidth": 125000,
+                    "spreading_factor": 10,
+                    "coding_rate": "4/5"
+                }
+            },
+            "frequency": "867900000",
+            "timestamp": 1731400991,
+            "time": "2024-11-12T08:43:11.141155Z"
+        },
+        "received_at": "2024-11-12T08:43:11.151969423Z",
+        "confirmed": true,
+        "consumed_airtime": "0.493568s",
+        "network_ids": {
+            "net_id": "000013",
+            "ns_id": "EC656E0000103819",
+            "tenant_id": "yobiiq",
+            "cluster_id": "eu2",
+            "cluster_address": "eu2.cloud.thethings.industries",
+            "tenant_address": "yobiiq.eu2.cloud.thethings.industries"
+        }
+    }
+}

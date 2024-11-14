@@ -1,0 +1,14 @@
+{
+    "Type": "Measure",
+    "Measure": {
+        "Interval": 15,
+        "Mode": 0,
+        "Status": 1,
+        "Measurement": [
+            "activeEnergyImportL123T1",
+            "activeEnergyImportL123T2",
+            "activeEnergyExportL123T1",
+            "activeEnergyExportL123T2"
+        ]
+    }
+}

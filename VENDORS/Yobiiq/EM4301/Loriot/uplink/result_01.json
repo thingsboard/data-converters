@@ -1,0 +1,30 @@
+{
+    "deviceName": "FC48C900000001C5",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "FC48C900000001C5",
+        "latestFPort": 1
+    },
+    "telemetry": [{
+        "ts": 1731591525000,
+        "values": {
+            "fPort": 1,
+            "confirmed": false,
+            "fCnt": 1
+        }
+    }, {
+        "ts": 1731593700000,
+        "values": {
+            "timestamp": 1731593820,
+            "activeEnergyImportL123T1": 3,
+            "activeEnergyImportL123T2": 0,
+            "activeEnergyExportL123T1": 120436380,
+            "activeEnergyExportL123T2": 0
+        }
+    }]
+}

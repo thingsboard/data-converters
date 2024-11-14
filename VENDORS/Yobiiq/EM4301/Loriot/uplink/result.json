@@ -1,0 +1,31 @@
+{
+    "deviceName": "FC48C900000001C5",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "FC48C900000001C5",
+        "latestFPort": 50,
+        "hardwareVersion": "V2.0",
+        "firmwareVersion": "V1.29",
+        "deviceSerialNumber": 22310024,
+        "deviceClass": "Class C",
+        "powerEvent": "AC Power On",
+        "primaryCurrentTransformerRatio": 150,
+        "secondaryCurrentTransformerRatio": 5,
+        "primaryVoltageTransformerRatio": 230,
+        "secondaryVoltageTransformerRatio": 230,
+        "deviceModel": "EM4301CT"
+    },
+    "telemetry": [{
+        "ts": 1731591525000,
+        "values": {
+            "fPort": 50,
+            "confirmed": false,
+            "fCnt": 0
+        }
+    }]
+}
