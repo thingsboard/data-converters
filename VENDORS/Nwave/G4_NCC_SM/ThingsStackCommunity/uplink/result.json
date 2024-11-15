@@ -1,0 +1,29 @@
+{
+  "deviceName": "G4 Car Counter SM eui-1000000000000001",
+  "deviceType": "Parking sensor",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 2,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "type": "heartbeat",
+      "hw_health_status": 40,
+      "battery_voltage": 2.908,
+      "battery_voltage_mean_24h": 2.888
+    }
+  }]
+}
