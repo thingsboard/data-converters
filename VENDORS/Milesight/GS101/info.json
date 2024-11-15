@@ -1,5 +1,5 @@
 {
   "url": "https://www.milesight.com/iot/product/lorawan-sensor/gs101",
-  "label": "GS101: Soil Moisture and Temperature Sensor",
-  "description": "The GS101 is a robust soil moisture and temperature sensor designed for precision agriculture and environmental monitoring. Utilizing LoRaWAN technology, it provides real-time soil moisture and temperature data, enabling efficient management of water resources and optimization of crop yields. Ideal for a wide range of agricultural and ecological applications."
+  "label": "GS101: LoRaWAN® Gas Detector",
+  "description": "The GS101 is a LoRaWAN\n® residential gas detector to detect the natural\ngas leak and send alarms. When the concentration caused by gas leak reaches the preset threshold, the detector will trigger both LED light alarm and buzzer sound alarm, it also supports controlling outputs to close the gas valve and open the vent fans top revent potential accidents."
 }
