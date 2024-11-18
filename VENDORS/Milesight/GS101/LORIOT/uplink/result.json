@@ -1,0 +1,17 @@
+[{
+  "deviceName": "GS 101 1000000000000001",
+  "deviceType": "Gas sensor",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "state": "normal",
+      "valve": "open",
+      "relay": "close"
+    }
+  }]
+}]
