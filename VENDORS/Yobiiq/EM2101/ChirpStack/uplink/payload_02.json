@@ -1,0 +1,50 @@
+{
+    "deduplicationId": "1cf831a6-62e2-4dba-9e08-74e2408a15cb",
+    "time": "2024-11-11T14:55:31.319593255+00:00",
+    "deviceInfo": {
+        "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
+        "tenantName": "Development",
+        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
+        "applicationName": "EM2101",
+        "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
+        "deviceProfileName": "EM2101",
+        "deviceName": "KWH - 32310067",
+        "devEui": "fc48c900000001c5",
+        "deviceClassEnabled": "CLASS_C",
+        "tags": {}
+    },
+    "devAddr": "00d19684",
+    "adr": true,
+    "dr": 5,
+    "fCnt": 2,
+    "fPort": 11,
+    "confirmed": false,
+    "data": "AQEBAgIA",
+    "rxInfo": [
+        {
+            "gatewayId": "647fdafffe012d39",
+            "uplinkId": 394,
+            "nsTime": "2024-11-11T14:55:31.109461854+00:00",
+            "rssi": -47,
+            "snr": 9.2,
+            "channel": 5,
+            "location": {},
+            "context": "IVAKpA==",
+            "metadata": {
+                "region_config_id": "eu868",
+                "region_common_name": "EU868"
+            },
+            "crcStatus": "CRC_OK"
+        }
+    ],
+    "txInfo": {
+        "frequency": 867500000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 7,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}

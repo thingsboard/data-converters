@@ -1,0 +1,8 @@
+{
+    "contentType": "JSON",
+    "data": "{\"downlinks\":[{\"f_port\":50,\"frm_payload\":\"B0gA\",\"priority\":\"NORMAL\"}]}",
+    "metadata": {
+        "eui": "KWH - 32310067",
+        "devId": "KWH - 32310067"
+    }
+}
