@@ -1,0 +1,41 @@
+[{
+  "deviceName": "333737395E308C16",
+  "deviceType": "SensiLora2.0",
+  "attributes": {
+    "eui": "333737395E308C16",
+    "fPort": 2,
+    "frequency": 867300000
+  },
+  "telemetry": [{
+    "ts": 1731605261145,
+    "values": {
+      "pressure": 1011.1,
+      "temperature": 24.69,
+      "humidity": 56.47,
+      "accelerationX": 0.9512450499999999,
+      "accelerationY": -1.61809725,
+      "accelerationZ": 9.60071035,
+      "gyroX": -0.080022005,
+      "gyroY": -0.00733026,
+      "gyroZ": -0.010384534999999999,
+      "magX": -66.3,
+      "magY": 18.7,
+      "magZ": -16.0,
+      "light": 91,
+      "batteryVolt": 4.2
+    }
+  }]
+}, {
+  "deviceName": "Gateway 303734FFFF003000",
+  "deviceType": "Lora gateway",
+  "telemetry": [{
+    "ts": 1731605261145,
+    "values": {
+      "rssi": -52,
+      "snr": 10
+    }
+  }],
+  "attributes": {
+    "eui": "303734FFFF003000"
+  }
+}]
