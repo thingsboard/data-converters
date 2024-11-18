@@ -1,0 +1,18 @@
+[{
+  "deviceName": "G4 Car Counter FM 1000000000000001",
+  "deviceType": "Parking sensor",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 2,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "type": "heartbeat",
+      "hw_health_status": 40,
+      "battery_voltage": 2.908,
+      "battery_voltage_mean_24h": 2.888
+    }
+  }]
+}]
