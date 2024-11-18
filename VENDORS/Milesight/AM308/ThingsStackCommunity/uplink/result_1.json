@@ -33,7 +33,7 @@
       "beep": "no"
     }
   }, {
-    "ts": 214578533,
+    "ts": 214578533000,
     "values": {
       "temperature": 5760.0,
       "humidity": 14080.0,

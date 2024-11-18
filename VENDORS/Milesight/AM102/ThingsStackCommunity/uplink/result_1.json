@@ -25,7 +25,7 @@
       "humidity": 54.5
     }
   }, {
-    "ts": 1698765432,
+    "ts": 1698765432000,
     "values": {
       "temperature": 22.3,
       "humidity": 55.0
