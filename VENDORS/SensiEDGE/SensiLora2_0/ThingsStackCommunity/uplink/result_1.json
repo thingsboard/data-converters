@@ -1,0 +1,39 @@
+{
+  "deviceName": "eui-1000000000000001",
+  "deviceType": "SensiLora2.0",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "pressure": 1010.9,
+      "temperature": 24.08,
+      "humidity": 62.61,
+      "accelerationX": 0.00980665,
+      "accelerationY": -0.17651969999999997,
+      "accelerationZ": -9.875296549999998,
+      "gyroX": -0.028710185,
+      "gyroY": -0.0012217100000000002,
+      "gyroZ": -0.01343881,
+      "magX": -46.2,
+      "magY": 55.6,
+      "magZ": 39.300000000000004,
+      "light": 0,
+      "batteryVolt": 4.2
+    }
+  }]
+}

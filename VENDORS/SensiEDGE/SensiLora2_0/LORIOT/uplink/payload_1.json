@@ -1,0 +1,27 @@
+{
+  "cmd":"gw",
+  "seqno":637,
+  "EUI":"333737395E308C16",
+  "ts":1731605261145,
+  "fcnt":136,
+  "port":2,
+  "freq":867300000,
+  "toa":87,
+  "dr": "SF7 BW125 4/5",
+  "ack":false,
+  "gws":[
+    {
+      "rssi":-52,
+      "snr":10,
+      "ts":1731605261145,
+      "time":"2024-11-14T17:27:41.145Z",
+      "gweui":"303734FFFF003000",
+      "ant":0,
+      "lat":46.8076885,
+      "lon":7.100528}],
+  "bat":164,
+  "offline":false,
+  "confirmed":false,
+  "devaddr":"306580F2",
+  "data":"277d096818750001ffeefc11f993ffbafcfefe32022c0189000001a4"
+}

@@ -1,0 +1,38 @@
+{
+  "deviceName": "Device name 1000000000000001",
+  "deviceType": "SensiLora2.0",
+  "attributes": {
+    "eui": "1000000000000001",
+    "devAddr": "20000001",
+    "fPort": 85,
+    "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75",
+    "applicationName": "Chirpstack application",
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "tenantName": "ChirpStack",
+    "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
+    "deviceProfileName": "Chirpstack default device profile",
+    "frequency": 868500000,
+    "bandwidth": 125000,
+    "spreadingFactor": 7,
+    "codeRate": "CR_4_5"
+  },
+  "telemetry": [{
+    "ts": 1684741625404,
+    "values": {
+      "pressure": 1010.9,
+      "temperature": 24.08,
+      "humidity": 62.61,
+      "accelerationX": 0.00980665,
+      "accelerationY": -0.17651969999999997,
+      "accelerationZ": -9.875296549999998,
+      "gyroX": -0.028710185,
+      "gyroY": -0.0012217100000000002,
+      "gyroZ": -0.01343881,
+      "magX": -46.2,
+      "magY": 55.6,
+      "magZ": 39.300000000000004,
+      "light": 0,
+      "batteryVolt": 4.2
+    }
+  }]
+}
