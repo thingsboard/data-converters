@@ -20,13 +20,14 @@
             "fCnt": 1
         }
     }, {
-        "ts": 1731593700000,
+        "ts": 1731928500000,
         "values": {
-            "timestamp": 1731593820,
-            "activeEnergyImportL123T1": 3,
+            "timestamp": 1731929100,
+            "activeEnergyImportL123T1": 50859780,
             "activeEnergyImportL123T2": 0,
-            "activeEnergyExportL123T1": 120436380,
-            "activeEnergyExportL123T2": 0
+            "activeEnergyExportL123T1": 0,
+            "activeEnergyExportL123T2": 0,
+            "modbusErrorCode": 0
         }
     }]
 }
