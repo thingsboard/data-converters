@@ -17,9 +17,9 @@
     "adr": true,
     "dr": 5,
     "fCnt": 1,
-    "fPort": 2,
+    "fPort": 1,
     "confirmed": false,
-    "data": "/gNnMy4o/gwAAAkM/hAAAAE3/hT////W/iMTjP4dqP4gO6g=",
+    "data": "AQFnPCkkAgNnPCXcAwQAAAAABAUAAOnQCwoA",
     "rxInfo": [
         {
             "gatewayId": "647fdafffe012d39",

@@ -4,7 +4,7 @@
     "EUI": "FC48C900000001C5",
     "ts": 1731410377000,
     "fcnt": 1,
-    "port": 2,
+    "port": 1,
     "freq": 867500000,
     "rssi": -78,
     "snr": 7.8,
@@ -15,5 +15,5 @@
     "offline": false,
     "confirmed": false,
     "devaddr": "30A68BC2",
-    "data": "FE0367332E28FE0C0000090CFE1000000137FE14FFFFFFD6FE23138CFE1DA8FE203BA8"
+    "data": "0101673C29240203673C25DC03040000000004050000E9D00B0A00"
 }
