@@ -1,0 +1,8 @@
+{
+    "contentType": "JSON",
+    "data": "{\"downlinks\":[{\"f_port\":50,\"frm_payload\":\"/wsB\",\"priority\":\"NORMAL\"}]}",
+    "metadata": {
+        "eui": "RM200 - 2403080000",
+        "devId": "RM200 - 2403080000"
+    }
+}

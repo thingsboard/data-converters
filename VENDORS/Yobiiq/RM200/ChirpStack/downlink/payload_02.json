@@ -1,0 +1,16 @@
+{
+    "Type": "Config",
+    "Config": [{
+        "Param": "adr",
+        "Value": 0
+    }, {
+        "Param": "sf",
+        "Value": 3
+    },{
+        "Param" : "channel1Control",
+        "Value" : 1
+    },{
+        "Param" : "channel2Control",
+        "Value" : 0
+    }]
+}

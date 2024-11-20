@@ -1,0 +1,34 @@
+{
+    "deviceName": "RM200 - 2403080000",
+    "deviceType": "Digital Controller",
+    "groupName": "Digital Controllers",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "RM200",
+        "productCode": "P1002003",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "FC48C900000001C5",
+        "devId": "RM200 - 2403080000",
+        "applicationId": "RM200",
+        "latestFPort": 100,
+        "latestDownlinkStatus": "1731660191151-SUCCESS",
+        "latestIncomingParameters": {
+            "latestParameterAdr": "enabled",
+            "latestParameterSf": "SF7BW125",
+            "latestParameterLorawanWatchdogFunction": "enabled",
+            "latestParameterLorawanWatchdogTimeout": 720,
+            "latestParameterDefaultState": "RETAIN",
+            "latestParameterTimeoutState": "RETAIN",
+            "latestParameterButtonOverrideFunction": "enabled",
+            "latestParameterDeviceOperationMode": "normal"
+        }
+    },
+    "telemetry": [{
+        "ts": 1731660191151,
+        "values": {
+            "fPort": 100,
+            "confirmed": true,
+            "fCnt": 3
+        }
+    }]
+}

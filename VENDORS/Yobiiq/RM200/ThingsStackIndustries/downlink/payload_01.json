@@ -1,0 +1,7 @@
+{
+    "Type" : "Config",
+    "Config" : [{
+        "Param" : "rebootDevice",
+        "Value" : 1
+    }]
+}
