@@ -1,0 +1,16 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "R718H",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 6,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "batteryVolt": 3.6,
+      "pulseCount": 200
+    }
+  }]
+}]
