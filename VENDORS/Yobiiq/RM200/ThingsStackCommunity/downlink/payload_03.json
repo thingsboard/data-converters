@@ -1,0 +1,16 @@
+{
+    "Type": "Periodic",
+    "Periodic": {
+        "UplinkInterval": 15,
+        "Mode": 1,
+        "Status": 1,
+        "Registers": [
+            "channel1Control",
+            "channel1Counter",
+            "channel2Control",
+            "channel2Counter",
+            "internalCircuitTemperature",
+            "internalCircuitHumidity"
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "deviceName": "FC48C900000001C5",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "EM2101",
+        "productCode": "P1002009",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "FC48C900000001C5",
+        "latestFPort": 1
+    },
+    "telemetry": [{
+        "ts": 1731410377000,
+        "values": {
+            "fPort": 1,
+            "confirmed": false,
+            "fCnt": 1
+        }
+    }, {
+        "ts": 1731995100000,
+        "values": {
+            "timestamp": 1731995940,
+            "activeEnergyImportL1T1": 0,
+            "activeEnergyImportL1T2": 59856,
+            "modbusErrorCode": 0
+        }
+    }]
+}

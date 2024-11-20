@@ -14,9 +14,9 @@
     "received_at": "2024-11-11T08:43:11.357207831Z",
     "uplink_message": {
         "session_key_id": "AZMAo/hlRtkqumRZxr4evA==",
-        "f_port": 2,
+        "f_port": 1,
         "f_cnt": 1,
-        "frm_payload": "/gNnMy4o/gwAAAkM/hAAAAE3/hT////W/iMTjP4dqP4gO6g=",
+        "frm_payload": "AQFnPCkkAgNnPCXcAwQAAAAABAUAAOnQCwoA",
         "rx_metadata": [
             {
                 "gateway_ids": {
