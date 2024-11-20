@@ -10,24 +10,22 @@
         "devEui": "FC48C900000001C5",
         "devId": "KWH - 32310067",
         "applicationId": "EM2101",
-        "latestFPort": 2
+        "latestFPort": 1
     },
     "telemetry": [{
         "ts": 1731314591151,
         "values": {
-            "fPort": 2,
+            "fPort": 1,
             "confirmed": true,
             "fCnt": 1
         }
     }, {
-        "ts": 1731407400000,
+        "ts": 1731995100000,
         "values": {
-            "voltageL1N": 231.6,
-            "currentL1": 311,
-            "activePowerL1": -42,
-            "frequency": 50.04,
-            "powerFactorL1": -0.88,
-            "phaseAngleL1": 152.72
+            "timestamp": 1731995940,
+            "activeEnergyImportL1T1": 0,
+            "activeEnergyImportL1T2": 59856,
+            "modbusErrorCode": 0
         }
     }]
 }
