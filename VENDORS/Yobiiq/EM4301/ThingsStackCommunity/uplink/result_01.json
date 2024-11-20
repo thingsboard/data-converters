@@ -1,0 +1,33 @@
+{
+    "deviceName": "KWH - 22310024",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "FC48C900000001C5",
+        "devId": "KWH - 22310024",
+        "applicationId": "EM4301CT",
+        "latestFPort": 1
+    },
+    "telemetry": [{
+        "ts": 1731400991151,
+        "values": {
+            "fPort": 1,
+            "confirmed": true,
+            "fCnt": 1
+        }
+    }, {
+        "ts": 1731928500000,
+        "values": {
+            "timestamp": 1731929100,
+            "activeEnergyImportL123T1": 50859780,
+            "activeEnergyImportL123T2": 0,
+            "activeEnergyExportL123T1": 0,
+            "activeEnergyExportL123T2": 0,
+            "modbusErrorCode": 0
+        }
+    }]
+}
