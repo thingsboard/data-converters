@@ -1,0 +1,7 @@
+{
+    "Type" : "Config",
+    "Config" : {
+        "Param" : "primaryVoltageTransformerRatio",
+        "Value" : 230
+    }
+}

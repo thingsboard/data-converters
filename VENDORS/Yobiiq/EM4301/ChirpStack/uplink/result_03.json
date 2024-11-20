@@ -1,0 +1,44 @@
+{
+    "deviceName": "KWH - 22310024",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V.",
+        "tenantId": "2cc5244e-a4e4-48c6-aadc-df9ccde937b2",
+        "tenantName": "Development",
+        "applicationId": "075f3db0-9141-4bd2-a355-b5e3e4418b2f",
+        "applicationName": "EM4301CT",
+        "deviceProfileId": "74946a3b-98b1-4fd0-a332-7452f75ebed6",
+        "deviceProfileName": "EM4301CT",
+        "devEui": "fc48c900000001c5",
+        "deviceClassEnabled": "CLASS_C",
+        "tags": {},
+        "latestFPort": 3
+    },
+    "telemetry": [{
+        "ts": 1731407115319,
+        "values": {
+            "fPort": 3,
+            "confirmed": false,
+            "fCnt": 3,
+            "dr": 5
+        }
+    }, {
+        "ts": 1708618500000,
+        "values": {
+            "activePowerL123": 331371,
+            "activePowerL1": 100817,
+            "activePowerL2": 123262,
+            "activePowerL3": 107291,
+            "totalSystemActivePower": 557537,
+            "totalSystemReactivePower": 39.73,
+            "totalSystemApparentPower": 557.67,
+            "maximumL3CurrentDemand": 780709,
+            "averagePower": 110457,
+            "manufacturedYear": 2023
+        }
+    }]
+}
