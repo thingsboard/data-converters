@@ -1,0 +1,27 @@
+{
+    "deviceName": "smokedetector",
+    "deviceType": "Smoke Detector",
+    "groupName": "Smoke Detectors",
+    "attributes": {
+        "devEui": "5A494D4F040A0018",
+        "devId": "smokedetector",
+        "applicationId": "smokedetectors",
+        "codecVersion": "1.1.0",
+        "deviceModel": "SD-1001",
+        "productCode": "1002015",
+        "manufacturer": "YOBIIQ B.V."
+    },
+    "telemetry": {
+        "ts": 1730882591151,
+        "values": {
+            "fPort": 50,
+            "confirmed": true,
+            "fCnt": 0,
+            "hardwareVersion": "V1.0",
+            "firmwareVersion": "V1.5",
+            "deviceSerialNumber": 2401640000,
+            "deviceClass": "Class A",
+            "powerEvent": "AC Power Off"
+        }
+    }
+}
