@@ -1,0 +1,37 @@
+{
+    "deviceName": "FC48C900000001C5",
+    "deviceType": "Digital Controller",
+    "groupName": "Digital Controllers",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "RM200",
+        "productCode": "P1002003",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "FC48C900000001C5",
+        "latestFPort": 1
+    },
+    "telemetry": [{
+        "ts": 1731666315000,
+        "values": {
+            "fPort": 1,
+            "confirmed": false,
+            "fCnt": 1
+        }
+    }, {
+        "ts": 1731580000000,
+        "values": {
+            "channel1State": {
+                "state": "ON",
+                "reason": "AUTO"
+            },
+            "channel1Counter": 5,
+            "channel2State": {
+                "state": "OFF",
+                "reason": "MANUAL"
+            },
+            "channel2Counter": 4,
+            "internalCircuitTemperature": 18.75,
+            "internalCircuitHumidity": 56
+        }
+    }]
+}

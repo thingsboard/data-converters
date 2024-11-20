@@ -1,0 +1,12 @@
+{
+    "Type": "Reading",
+    "Reading": [
+        "adr", "sf",
+        "lorawanWatchdogFunction",
+        "lorawanWatchdogTimeout",       
+        "defaultState",
+        "timeoutState",
+        "buttonOverrideFunction", 
+        "deviceOperationMode"
+    ]
+}
