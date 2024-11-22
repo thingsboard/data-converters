@@ -1,0 +1,28 @@
+{
+  "deviceName": "eui-1000000000000001",
+  "deviceType": "RA0723",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 6,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "batteryVolt": 12.0,
+      "temperature": 25.0,
+      "humidity": 70.0
+    }
+  }]
+}
