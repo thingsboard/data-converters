@@ -20,7 +20,7 @@
   "telemetry": [{
     "ts": 1684398325906,
     "values": {
-      "batteryVolt": 3.6,
+      "battery_voltage": 3.6,
       "pulseCount": 200
     }
   }]
