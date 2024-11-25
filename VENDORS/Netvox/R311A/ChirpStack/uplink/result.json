@@ -19,7 +19,7 @@
     "telemetry": [{
         "ts": 1684741625404,
         "values": {
-            "batteryVolt": 2.8,
+            "battery_voltage": 2.8,
             "contact_switch": "on"
         }
     }]
