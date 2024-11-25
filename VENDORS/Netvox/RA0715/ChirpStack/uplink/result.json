@@ -1,6 +1,6 @@
 {
   "deviceName": "Device name 1000000000000001",
-  "deviceType": "RA0715А",
+  "deviceType": "RA0715",
   "attributes": {
     "eui": "1000000000000001",
     "devAddr": "20000001",

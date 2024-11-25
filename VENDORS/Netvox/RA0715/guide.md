@@ -45,7 +45,7 @@ The `NetvoxPayLoadData` field contains the specific data reported by the device 
 
 ## 5.2 Example of ConfigureCmd
 
-The **ConfigureCmd** allows configuration of the **RA0715A** device's reporting behavior and settings. This command is sent to **FPort: 0x07**.
+The **ConfigureCmd** allows configuration of the **RA0715** device's reporting behavior and settings. This command is sent to **FPort: 0x07**.
 
 ---
 

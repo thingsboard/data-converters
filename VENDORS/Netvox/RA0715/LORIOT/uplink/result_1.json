@@ -1,6 +1,6 @@
 [{
   "deviceName": "1000000000000001",
-  "deviceType": "RA0715А",
+  "deviceType": "RA0715",
   "attributes": {
     "eui": "1000000000000001",
     "fPort": 6,
@@ -10,7 +10,8 @@
     "ts": 1684478801936,
     "values": {
       "batteryVolt": 0.0,
-      "co2": 850.0
+      "temperature": 25.0,
+      "humidity": 90.0
     }
   }]
 }]
