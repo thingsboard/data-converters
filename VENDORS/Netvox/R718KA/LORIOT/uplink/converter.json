@@ -14,9 +14,7 @@
       "eui",
       "frequency",
       "dr",
-      "batteryVolt",
-      "softwareVersion",
-      "hardwareVersion"
+      "batteryVolt"
     ]
   },
   "additionalInfo": {

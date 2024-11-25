@@ -25,9 +25,7 @@
       "spreadingFactor",
       "codeRate",
       "tenantId",
-      "batteryVolt",
-      "softwareVersion",
-      "hardwareVersion"
+      "batteryVolt"
     ]
   },
   "additionalInfo": {

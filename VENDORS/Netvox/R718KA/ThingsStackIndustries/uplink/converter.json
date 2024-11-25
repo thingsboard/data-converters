@@ -25,9 +25,7 @@
       "codeRate",
       "tenantId",
       "applicationId",
-      "batteryVolt",
-      "softwareVersion",
-      "hardwareVersion"
+      "batteryVolt"
     ]
   },
   "additionalInfo": {

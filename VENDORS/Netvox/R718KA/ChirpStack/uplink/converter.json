@@ -24,9 +24,7 @@
       "channel",
       "rfChain",
       "eui",
-      "batteryVolt",
-      "softwareVersion",
-      "hardwareVersion"
+      "batteryVolt"
     ]
   },
   "additionalInfo": {
