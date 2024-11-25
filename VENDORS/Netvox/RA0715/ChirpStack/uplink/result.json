@@ -19,7 +19,7 @@
   "telemetry": [{
     "ts": 1684741625404,
     "values": {
-      "batteryVolt": 0.0,
+      "battery_voltage": 0.0,
       "co2": 850.0
     }
   }]
