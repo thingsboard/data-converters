@@ -20,7 +20,7 @@
   "telemetry": [{
     "ts": 1684474415641,
     "values": {
-      "batteryVolt": 12.0,
+      "battery_voltage": 12.0,
       "noise": 60.0
     }
   }]
