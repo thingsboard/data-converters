@@ -9,7 +9,7 @@
   "telemetry": [{
     "ts": 1684478801936,
     "values": {
-      "batteryVolt": 3.6,
+      "battery_voltage": 3.6,
       "temperature": 16.48,
       "humidity": 68.14
     }
