@@ -19,7 +19,7 @@
   "telemetry": [{
     "ts": 1684741625404,
     "values": {
-      "batteryVolt": 12.0,
+      "battery_voltage": 12.0,
       "pm2_5": 14
     }
   }]
