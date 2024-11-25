@@ -20,7 +20,7 @@
   "telemetry": [{
     "ts": 1684398325906,
     "values": {
-      "batteryVolt": 3.5,
+      "battery_voltage": 3.5,
       "current": 7,
       "fineCurrent": 7.8
     }
