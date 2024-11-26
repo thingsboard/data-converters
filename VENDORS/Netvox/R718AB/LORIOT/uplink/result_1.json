@@ -1,0 +1,20 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "R718AB",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 7,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "cmd": "readConfigReportRsp",
+      "minTime": 60,
+      "maxTime": 60,
+      "batteryChange": 0.1,
+      "tempChange": 1.0,
+      "humiChange": 1.0
+    }
+  }]
+}]

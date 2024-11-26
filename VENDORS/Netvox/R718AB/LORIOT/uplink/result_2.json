@@ -1,0 +1,20 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "R718AB",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 14,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "cmd": "getGlobalCalibrateRsp",
+      "sensor_type": "temperature sensor",
+      "channel": "temperature",
+      "multiplier": 1,
+      "divisor": 1,
+      "deltValue": 64536
+    }
+  }]
+}]
