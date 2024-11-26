@@ -1,0 +1,17 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "R311A",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 7,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "cmd": "getOnOffStateDurationRsp",
+      "on_state_duration": 5,
+      "off_state_duration": 10
+    }
+  }]
+}]
