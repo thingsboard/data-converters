@@ -1,0 +1,16 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "RA0715",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 6,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery_voltage": 0.0,
+      "co2": 850.0
+    }
+  }]
+}]
