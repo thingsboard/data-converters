@@ -1,7 +1,9 @@
 {
   "name": "The Things Stack Community Uplink Decoder for RA0715",
   "type": "UPLINK",
-  "debugMode": true,
+  "debugFailures" : false,
+  "debugAll" : true,
+  "debugAllUntil": 0,
   "configuration": {
     "scriptLang": "TBEL",
     "decoder": null,

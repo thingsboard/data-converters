@@ -1,7 +1,9 @@
 {
   "name": "The Things Stack Industries Uplink Decoder for RA0723",
   "type": "UPLINK",
-  "debugMode": true,
+  "debugFailures" : false,
+  "debugAll" : true,
+  "debugAllUntil": 0,
   "configuration": {
     "scriptLang": "TBEL",
     "decoder": null,
