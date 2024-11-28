@@ -1,9 +1,7 @@
 {
     "name": "ChirpStack Downlink data converter for Yobiiq SD-1001",
     "type": "DOWNLINK",
-    "debugFailures" : false,
-    "debugAll" : true,
-    "debugAllUntil": 0,
+    "debugMode": true,
     "configuration": {
       "scriptLang": "TBEL",
       "decoder": null,

@@ -1,9 +1,7 @@
 {
     "name": "ChirpStack downlink converter for Milesight WT201",
     "type": "DOWNLINK",
-    "debugFailures" : false,
-    "debugAll" : true,
-    "debugAllUntil": 0,
+    "debugMode": true,
     "configuration": {
         "scriptLang": "TBEL",
         "decoder": null,
