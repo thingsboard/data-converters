@@ -1,9 +1,7 @@
 {
   "name": "The Things Stack Industries Uplink Decoder for SensiLora2.0",
   "type": "UPLINK",
-  "debugFailures" : false,
-  "debugAll" : true,
-  "debugAllUntil": 0,
+  "debugMode": true,
   "configuration": {
     "scriptLang": "TBEL",
     "decoder": null,

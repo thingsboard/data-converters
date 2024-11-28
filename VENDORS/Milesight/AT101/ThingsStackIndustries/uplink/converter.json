@@ -1,9 +1,7 @@
 {
   "name": "Uplink data converter for The Things Stack Industries integration AT101",
   "type": "UPLINK",
-  "debugFailures" : false,
-  "debugAll" : true,
-  "debugAllUntil": 0,
+  "debugMode": true,
   "configuration": {
     "scriptLang": "TBEL",
     "decoder": null,

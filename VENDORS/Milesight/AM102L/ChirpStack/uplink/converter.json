@@ -1,9 +1,7 @@
 {
   "name": "ChirpStack uplink converter for Milesight AM102L",
   "type": "UPLINK",
-  "debugFailures" : false,
-  "debugAll" : true,
-  "debugAllUntil": 0,
+  "debugMode": true,
   "configuration": {
     "scriptLang": "TBEL",
     "decoder": null,
