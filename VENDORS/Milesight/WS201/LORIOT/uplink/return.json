@@ -1,0 +1,17 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "WS201",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 100,
+      "distance": 62,
+      "remaining": 69
+    }
+  }]
+}]
