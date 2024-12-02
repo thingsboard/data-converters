@@ -1,0 +1,27 @@
+{
+  "deviceName": "9010",
+  "deviceType": "DL-NTU",
+  "attributes": {
+    "lora_dev_eui": "0004A30B001ADCB5",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1501064048945,
+      "values": {
+        "status": 0,
+        "temperature": 21.81,
+        "turbidity_in_ntu": 31.8,
+        "turbidity_in_fnu": 31.8,
+        "turbidity_in_mg_l": 56.3,
+        "battery_voltage": 2.832,
+        "lora_frame_counter": 121,
+        "lora_frame_port": 1,
+        "lora_frequency": 868300000,
+        "lora_snr": -15.8,
+        "lora_rssi": -119,
+        "lora_spreading_factor": 11
+      }
+    }
+  ]
+}

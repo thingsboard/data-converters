@@ -1,0 +1,25 @@
+{
+  "deviceName": "736",
+  "deviceType": "DL-RHC",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA0000BCE",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1580982365447,
+      "values": {
+        "sensor_id": 20228605,
+        "air_humidity": 73.3,
+        "air_temperature": 15.23,
+        "battery_voltage": 3.168,
+        "lora_frame_counter": 101,
+        "lora_frame_port": 1,
+        "lora_frequency": 867700000,
+        "lora_spreading_factor": 11,
+        "lora_rssi": -16,
+        "lora_snr": 8.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "deviceName": "15934",
+  "deviceType": "DL-TP",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA0003BB8",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": "2024-11-10T12:51:50+00:00",
+      "values": {
+        "temperature_at_level_0": 27.48,
+        "temperature_at_level_1": 27.06,
+        "temperature_at_level_2": 27.2,
+        "temperature_at_level_3": 26.92,
+        "temperature_at_level_4": 27.39,
+        "temperature_at_level_5": 26.97,
+        "temperature_at_level_6": 27.55,
+        "temperature_at_level_7": 27.33,
+        "temperature_at_level_8": 27.43,
+        "temperature_at_level_9": 27.06,
+        "temperature_at_level_10": 27.21,
+        "temperature_at_level_11": -327.68,
+        "temperature_at_level_12": -327.68,
+        "temperature_at_level_13": -327.68,
+        "temperature_at_level_14": -327.68,
+        "temperature_at_level_15": -327.68,
+        "battery_voltage": 2.812,
+        "lora_frame_counter": 20,
+        "lora_frame_port": 1,
+        "lora_frequency": 868300000,
+        "lora_spreading_factor": 7,
+        "lora_rssi": -106,
+        "lora_snr": 3
+      }
+    }
+  ]
+}
