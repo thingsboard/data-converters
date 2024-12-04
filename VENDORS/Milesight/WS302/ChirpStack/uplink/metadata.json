@@ -1,3 +1,4 @@
 {
-  "integrationName": "ChirpStack integration"
+  "integrationName": "ChirpStack integration",
+  "includeGatewayInfo": "false"
 }
