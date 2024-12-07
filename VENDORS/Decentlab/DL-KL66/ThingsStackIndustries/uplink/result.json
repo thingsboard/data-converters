@@ -1,0 +1,28 @@
+{
+  "deviceName": "980",
+  "deviceType": "DL-KL66",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA0000BCE",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1580982365447,
+      "values": {
+        "counter_reading": 15350,
+        "measurement_interval": 0.999969482421875,
+        "frequency": 15350.468459120457,
+        "weight": -47.5066896399347,
+        "elongation": 0.6988257799379214,
+        "strain": 10.588269392998809,
+        "battery_voltage": 3.168,
+        "lora_frame_counter": 101,
+        "lora_frame_port": 1,
+        "lora_frequency": 867700000,
+        "lora_spreading_factor": 11,
+        "lora_rssi": -16,
+        "lora_snr": 8.5
+      }
+    }
+  ]
+}
