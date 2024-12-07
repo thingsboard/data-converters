@@ -1,0 +1,16 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "TS201",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "temperature": 30.8,
+      "temperature_alarm": "Threshold Alarm"
+    }
+  }]
+}]

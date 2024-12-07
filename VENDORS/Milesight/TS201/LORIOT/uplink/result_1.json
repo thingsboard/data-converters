@@ -1,0 +1,20 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "TS201",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {}
+  }, {
+    "ts": 1694145223000,
+    "values": {
+      "temperature": -6.7,
+      "read_status": "Success",
+      "event_type": "Alarm(Threshold or Mutation)"
+    }
+  }]
+}]
