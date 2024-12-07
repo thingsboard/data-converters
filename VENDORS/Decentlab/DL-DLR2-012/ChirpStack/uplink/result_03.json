@@ -1,0 +1,21 @@
+{
+  "deviceName": "6019",
+  "deviceType": "DL-DLR2-012",
+  "attributes": {
+    "lora_dev_eui": "0202020202020202",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "values": {
+        "battery_voltage": 3.123,
+        "lora_frame_counter": 10,
+        "lora_frame_port": 5,
+        "lora_frequency": 868100000,
+        "lora_spreading_factor": 11,
+        "lora_rssi": -48,
+        "lora_snr": 9
+      }
+    }
+  ]
+}
