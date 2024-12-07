@@ -1,0 +1,38 @@
+{
+  "deviceName": "2896",
+  "deviceType": "DL-SMTP",
+  "attributes": {
+    "lora_dev_eui": "0004A30B001ADCB5",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1501064048945,
+      "values": {
+        "soil_moisture_at_depth_0": -0.39,
+        "soil_temperature_at_depth_0": 27,
+        "soil_moisture_at_depth_1": -0.258,
+        "soil_temperature_at_depth_1": 27.12,
+        "soil_moisture_at_depth_2": -0.314,
+        "soil_temperature_at_depth_2": 27.06,
+        "soil_moisture_at_depth_3": 0.752,
+        "soil_temperature_at_depth_3": 27.25,
+        "soil_moisture_at_depth_4": 1.456,
+        "soil_temperature_at_depth_4": 27,
+        "soil_moisture_at_depth_5": 4.152,
+        "soil_temperature_at_depth_5": 27.25,
+        "soil_moisture_at_depth_6": -5,
+        "soil_temperature_at_depth_6": -327.68,
+        "soil_moisture_at_depth_7": -5,
+        "soil_temperature_at_depth_7": -327.68,
+        "battery_voltage": 2.875,
+        "lora_frame_counter": 121,
+        "lora_frame_port": 1,
+        "lora_frequency": 868300000,
+        "lora_snr": -15.8,
+        "lora_rssi": -119,
+        "lora_spreading_factor": 11
+      }
+    }
+  ]
+}
