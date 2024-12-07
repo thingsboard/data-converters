@@ -1,0 +1,25 @@
+{
+  "deviceName": "21125",
+  "deviceType": "DL-ALB",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA0003BB8",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": "2024-11-10T12:51:50+00:00",
+      "values": {
+        "incoming_radiation": 15.3,
+        "reflected_radiation": 3.4,
+        "albedo": 0.2222222222222222,
+        "battery_voltage": 3.027,
+        "lora_frame_counter": 20,
+        "lora_frame_port": 1,
+        "lora_frequency": 868300000,
+        "lora_spreading_factor": 7,
+        "lora_rssi": -106,
+        "lora_snr": 3
+      }
+    }
+  ]
+}
