@@ -1,0 +1,36 @@
+{
+  "deviceName": "15617",
+  "deviceType": "DL-ISF",
+  "attributes": {
+    "lora_dev_eui": "0202020202020202",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "values": {
+        "sap_flow": -0.192,
+        "heat_velocity_outer": -2.208,
+        "heat_velocity_inner": 0.144,
+        "alpha_outer": -0.05184,
+        "alpha_inner": 0.00352,
+        "beta_outer": -0.14816,
+        "beta_inner": -0.04128,
+        "tmax_outer": 37.392,
+        "tmax_inner": 35.634,
+        "temperature_outer": -4.36,
+        "max_voltage": 11.486,
+        "min_voltage": 10.862,
+        "diagnostic": 0,
+        "upstream_tmax_outer": 35.58,
+        "upstream_tmax_inner": 33.46,
+        "battery_voltage": 2.905,
+        "lora_frame_counter": 10,
+        "lora_frame_port": 5,
+        "lora_frequency": 868100000,
+        "lora_spreading_factor": 11,
+        "lora_rssi": -48,
+        "lora_snr": 9
+      }
+    }
+  ]
+}
