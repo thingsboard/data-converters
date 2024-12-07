@@ -1,0 +1,26 @@
+{
+  "deviceName": "4307",
+  "deviceType": "DL-TRS12",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA0003BB8",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": "2024-11-10T12:51:50+00:00",
+      "values": {
+        "dielectric_permittivity": 1.1831248966814998,
+        "volumetric_water_content": 0.006886900000000029,
+        "soil_temperature": 31.7,
+        "electrical_conductivity": 0,
+        "battery_voltage": 3.2,
+        "lora_frame_counter": 20,
+        "lora_frame_port": 1,
+        "lora_frequency": 868300000,
+        "lora_spreading_factor": 7,
+        "lora_rssi": -106,
+        "lora_snr": 3
+      }
+    }
+  ]
+}
