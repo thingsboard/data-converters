@@ -1,0 +1,34 @@
+{
+  "deviceName": "1400",
+  "deviceType": "DL-LP8P",
+  "attributes": {
+    "lora_dev_eui": "0004A30B001ADCB5",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1501064048945,
+      "values": {
+        "air_temperature": 24.35660461425781,
+        "air_humidity": 41.63221740722656,
+        "barometer_temperature": 24.05,
+        "barometric_pressure": 96800,
+        "co2_concentration": 473,
+        "co2_concentration_lpf": 500,
+        "co2_sensor_temperature": 23.95,
+        "capacitor_voltage_1": 3.032,
+        "capacitor_voltage_2": 2.997,
+        "co2_sensor_status": 0,
+        "raw_ir_reading": 38296,
+        "raw_ir_reading_lpf": 38201,
+        "battery_voltage": 3.109,
+        "lora_frame_counter": 121,
+        "lora_frame_port": 1,
+        "lora_frequency": 868300000,
+        "lora_snr": -15.8,
+        "lora_rssi": -119,
+        "lora_spreading_factor": 11
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "deviceName": "6252",
+  "deviceType": "DL-OPTOD",
+  "attributes": {
+    "lora_dev_eui": "0202020202020202",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "values": {
+        "status": 0,
+        "temperature": 21.46,
+        "oxygen_saturation": 97.52,
+        "oxygen_concentration": 8.69,
+        "oxygen_concentration_alt": 8.69,
+        "battery_voltage": 3.168,
+        "lora_frame_counter": 10,
+        "lora_frame_port": 5,
+        "lora_frequency": 868100000,
+        "lora_spreading_factor": 11,
+        "lora_rssi": -48,
+        "lora_snr": 9
+      }
+    }
+  ]
+}

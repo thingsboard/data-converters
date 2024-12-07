@@ -1,0 +1,22 @@
+{
+  "deviceName": "15934",
+  "deviceType": "DL-TP",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA000156B",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1732828102138,
+      "values": {
+        "battery_voltage": 2.812,
+        "lora_frame_counter": 26,
+        "lora_frame_port": 1,
+        "lora_frequency": 902500000,
+        "lora_spreading_factor": 9,
+        "lora_rssi": -114,
+        "lora_snr": 4.75
+      }
+    }
+  ]
+}
