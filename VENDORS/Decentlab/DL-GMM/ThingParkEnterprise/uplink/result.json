@@ -1,0 +1,29 @@
+{
+  "deviceName": "21291",
+  "deviceType": "DL-GMM",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA000156B",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1732828102138,
+      "values": {
+        "photosynthetically_active_radiation": 183,
+        "air_temperature": 23.36,
+        "air_humidity": 27.6,
+        "co2_concentration": 663,
+        "atmospheric_pressure": 95.87,
+        "vapor_pressure_deficit": 2.07,
+        "dew_point": 3.68,
+        "battery_voltage": 3.004,
+        "lora_frame_counter": 26,
+        "lora_frame_port": 1,
+        "lora_frequency": 902500000,
+        "lora_spreading_factor": 9,
+        "lora_rssi": -114,
+        "lora_snr": 4.75
+      }
+    }
+  ]
+}

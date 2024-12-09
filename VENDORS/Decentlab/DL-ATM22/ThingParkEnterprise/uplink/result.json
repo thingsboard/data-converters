@@ -1,0 +1,30 @@
+{
+  "deviceName": "2249",
+  "deviceType": "DL-ATM22",
+  "attributes": {
+    "lora_dev_eui": "70B3D57BA000156B",
+    "protocol_version": 2
+  },
+  "telemetry": [
+    {
+      "ts": 1732828102138,
+      "values": {
+        "wind_speed": 0.09,
+        "wind_direction": 29.9,
+        "maximum_wind_speed": 0.2,
+        "air_temperature": 26.4,
+        "x_orientation_angle": 0.2,
+        "y_orientation_angle": -2.4,
+        "north_wind_speed": 0.08,
+        "east_wind_speed": 0.04,
+        "battery_voltage": 3.061,
+        "lora_frame_counter": 26,
+        "lora_frame_port": 1,
+        "lora_frequency": 902500000,
+        "lora_spreading_factor": 9,
+        "lora_rssi": -114,
+        "lora_snr": 4.75
+      }
+    }
+  ]
+}
