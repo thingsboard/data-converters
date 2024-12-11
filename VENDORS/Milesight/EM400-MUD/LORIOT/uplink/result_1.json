@@ -1,17 +1,18 @@
-{
-  "cmd": "rx",
-  "seqno": 3040,
-  "EUI": "1000000000000001",
-  "ts": 1684478801936,
-  "fcnt": 2,
-  "port": 85,
-  "freq": 867500000,
-  "rssi": -21,
-  "snr": 10,
-  "toa": 206,
-  "dr": "SF9 BW125 4/5",
-  "ack": false,
-  "bat": 94,
-  "offline": false,
-  "data": "01755C0367010104824408050001"
-}
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "EM400-MUD",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 92,
+      "temperature": 25.7,
+      "distance": 2116,
+      "position": "tilt"
+    }
+  }]
+}]
