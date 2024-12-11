@@ -1,0 +1,17 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "EM310-UDL",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 92,
+      "distance": 2116,
+      "position": "tilt"
+    }
+  }]
+}]
