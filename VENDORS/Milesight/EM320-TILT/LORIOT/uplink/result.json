@@ -1,0 +1,21 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "EM320-TILT",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 100,
+      "angle_x": 0,
+      "angle_y": 0,
+      "angle_z": 90,
+      "threshold_x": "normal",
+      "threshold_y": "trigger",
+      "threshold_z": "normal"
+    }
+  }]
+}]
