@@ -58,6 +58,7 @@ Here is a breakdown of the structure:
     ```json
     {
       "url": "https://www.milesight.com/product/wt201/",
+      "label": "WT201: Smart Thermostat. Heat, EM (Emergency) Heat, Cool, Auto",
       "description": "The WT201 is a smart occupancy sensor that detects indoor movement and monitors various environmental factors."
     }
     ```
