@@ -1,8 +1,5 @@
 {
-  "url": [
-    "http://www.netvox.com.tw/product.asp?pro=R718N3",
-    "http://www.netvox.com.cn:8888/cmddoc"
-    ],
+  "url": "http://www.netvox.com.tw/product.asp?pro=R718N3",
   "label": "R718N3: Wireless 3-Phase Current Meter",
   "description": "The Netvox R718N3 3-Phase Current Meter is a LoRaWAN® end device with three external solid-core current transformers that can be used to obtain the current of a three-phase wiring system. R718N3 series have different measuring range for different variety of CT; 3 x 50A(Solid Core CT), 3 x 75A (Clamp-On CT), 3 x 150A (Clamp-On CT), 3 x 250A (Clamp-On CT), 3 x 630A (Clamp-On CT)."
 }
