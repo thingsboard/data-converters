@@ -5,8 +5,7 @@ on:
       - main
   pull_request_target:
     paths:
-      - 'VENDORS/**/uplink/**'
-      - 'VENDORS/**/downlink/**'
+      - 'VENDORS/**'
 
 jobs:
   build:
