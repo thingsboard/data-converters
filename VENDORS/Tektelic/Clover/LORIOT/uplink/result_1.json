@@ -1,0 +1,18 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "Clover",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 10,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "input1_frequency_to_moisture": "Dry",
+      "input1_frequency": 1401,
+      "input2_voltage_to_temp": 22.6,
+      "input2_voltage": 0.725
+    }
+  }]
+}]
