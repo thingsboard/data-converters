@@ -12,7 +12,6 @@ PASSWORD = os.getenv("PASSWORD")
 client = RestClientPE(base_url=ENDPOINT)
 client.login(username=USERNAME, password=PASSWORD)
 
-
 def find_payload_and_result_pairs(directory):
     payloads = sorted([f for f in os.listdir(directory) if re.match(r'payload(_\d+)?\.json', f)])
     results = sorted([f for f in os.listdir(directory) if re.match(r'result(_\d+)?\.json', f)])
@@ -145,16 +144,94 @@ def validate_uplink_downlink(directory):
     return success
 
 
+def validate_device_files(device_path):
+    required_files = {'info.json', 'photo.png'}
+    found_files = set(file for file in os.listdir(device_path) if os.path.isfile(os.path.join(device_path, file)))
+    missing_files = required_files - found_files
+
+    if missing_files:
+        print(f"Validation failed: Missing required files {', '.join(missing_files)} in {device_path}")
+        return False
+
+    info_path = os.path.join(device_path, 'info.json')
+    if os.path.getsize(info_path) == 0:
+        print(f"Validation failed: {info_path} is empty.")
+        return False
+
+    with open(info_path, 'r', encoding='utf-8') as info_file:
+        info_data = json.load(info_file)
+
+    required_keys = {'url', 'label', 'description'}
+    missing_keys = required_keys - info_data.keys()
+    if missing_keys:
+        print(f"Validation failed: Missing keys {', '.join(missing_keys)} in {info_path}")
+        return False
+
+    empty_keys = [
+        key for key in required_keys
+        if not isinstance(info_data[key], str) or not info_data[key].strip()
+    ]
+    if empty_keys:
+        print(f"Validation failed: Keys {', '.join(empty_keys)} in {info_path} have empty or invalid values.")
+        return False
+
+    if empty_keys:
+        print(f"Validation failed: Keys {', '.join(empty_keys)} in {info_path} have empty values.")
+        return False
+
+    return True
+
+
 def walk_vendors_directory(root_dir):
     all_success = True
 
-    for root, dirs, files in os.walk(root_dir):
-        if root.endswith('uplink') or root.endswith('downlink'):
-            success = validate_uplink_downlink(root)
-            if not success:
+    for company in os.listdir(root_dir):
+        company_path = os.path.join(root_dir, company)
+
+        if not os.path.isdir(company_path):
+            continue
+
+        for device in os.listdir(company_path):
+            device_path = os.path.join(company_path, device)
+
+            if not os.path.isdir(device_path):
+                continue
+
+            if not validate_device_files(device_path):
                 all_success = False
+                continue
+
+            integrations = [item for item in os.listdir(device_path) if os.path.isdir(os.path.join(device_path, item))]
+            if not integrations:
+                print(f"Validation failed: No integration directories found in {device_path}")
+                all_success = False
+                continue
+
+            for integration in integrations:
+                integration_path = os.path.join(device_path, integration)
+
+                if not os.path.isdir(integration_path):
+                    continue
+
+                uplink_path = os.path.join(integration_path, 'uplink')
+                downlink_path = os.path.join(integration_path, 'downlink')
+
+                if not os.path.exists(uplink_path) and not os.path.exists(downlink_path):
+                    print(f"Validation failed: Both 'uplink' and 'downlink' are missing in {integration_path}")
+                    all_success = False
+
+                if os.path.exists(uplink_path):
+                    success = validate_uplink_downlink(uplink_path)
+                    if not success:
+                        all_success = False
+
+                if os.path.exists(downlink_path):
+                    success = validate_uplink_downlink(downlink_path)
+                    if not success:
+                        all_success = False
 
     return all_success
+
 
 
 if __name__ == "__main__":
