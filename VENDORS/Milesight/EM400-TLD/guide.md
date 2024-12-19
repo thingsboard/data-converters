@@ -1,6 +1,6 @@
 # Multifunctional Ultrasonic Distance/Level Sensor - Milesight IoT
 
-The payload decoder function is applicable to EM400-MUD.
+The payload decoder function is applicable to EM400-TLD.
 
 ## Payload Definition
 

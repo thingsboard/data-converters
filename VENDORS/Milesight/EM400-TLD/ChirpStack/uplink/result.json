@@ -1,6 +1,6 @@
 {
   "deviceName": "Device name 1000000000000001",
-  "deviceType": "EM400-MUD",
+  "deviceType": "EM400-TLD",
   "attributes": {
     "eui": "1000000000000001",
     "devAddr": "20000001",

@@ -1,6 +1,6 @@
 [{
   "deviceName": "1000000000000001",
-  "deviceType": "EM400-MUD",
+  "deviceType": "EM400-TLD",
   "attributes": {
     "eui": "1000000000000001",
     "fPort": 85,
@@ -9,10 +9,10 @@
   "telemetry": [{
     "ts": 1684478801936,
     "values": {
-      "temperature": 23.2,
-      "temperature_abnormal": true,
-      "distance": 1601,
-      "distance_alarming": true
+      "battery": 92,
+      "temperature": 25.7,
+      "distance": 2116,
+      "position": "tilt"
     }
   }]
 }]
