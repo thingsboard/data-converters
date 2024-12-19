@@ -1,0 +1,16 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "Kiwi",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 10,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "rem_batt_capacity": 90,
+      "rem_batt_days": 2570
+    }
+  }]
+}]
