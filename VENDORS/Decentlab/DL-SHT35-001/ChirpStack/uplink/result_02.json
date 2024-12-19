@@ -1,6 +1,6 @@
 {
   "deviceName": "782",
-  "deviceType": "DL-SHT35",
+  "deviceType": "DL-SHT35-001",
   "attributes": {
     "lora_dev_eui": "0202020202020202",
     "protocol_version": 2
