@@ -182,6 +182,38 @@ def validate_device_files(device_path):
     return True
 
 
+def validate_company_files(company_path):
+    required_files = ['logo.svg', 'info.json']
+    all_present = True
+
+    for file in required_files:
+        file_path = os.path.join(company_path, file)
+        if not os.path.exists(file_path):
+            print(f"Validation failed: Missing '{file}' in {company_path}")
+            all_present = False
+
+    if "info.json" in required_files:
+        info_path = os.path.join(company_path, "info.json")
+        if os.path.exists(info_path):
+            with open(info_path, 'r') as f:
+                try:
+                    data = json.load(f)
+                except json.JSONDecodeError:
+                    print(f"Validation failed: 'info.json' in {company_path} is not valid JSON")
+                    return False
+
+            allowed_keys = {"description", "url"}
+            if set(data.keys()) != allowed_keys:
+                print(f"Validation failed: 'info.json' in {company_path} contains invalid keys. Allowed keys are {allowed_keys}.")
+                return False
+
+            for key in allowed_keys:
+                if not data[key] or not isinstance(data[key], str):
+                    print(f"Validation failed: '{key}' in 'info.json' in {company_path} is missing or empty.")
+                    return False
+
+    return all_present
+
 def walk_vendors_directory(root_dir):
     all_success = True
 
@@ -189,6 +221,10 @@ def walk_vendors_directory(root_dir):
         company_path = os.path.join(root_dir, company)
 
         if not os.path.isdir(company_path):
+            continue
+
+        if not validate_company_files(company_path):
+            all_success = False
             continue
 
         for device in os.listdir(company_path):
