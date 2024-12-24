@@ -1,0 +1,17 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "Comfort",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 10,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "ambient_temperature": 22.5,
+      "relative_humidity": 38.5,
+      "battery_voltage": 2.974
+    }
+  }]
+}]
