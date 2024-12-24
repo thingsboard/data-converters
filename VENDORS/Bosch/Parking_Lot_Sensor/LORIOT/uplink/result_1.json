@@ -1,5 +1,5 @@
 [{
-  "deviceName": "Bosch parking lot sensor1000000000000001",
+  "deviceName": "Bosch parking lot sensor 1000000000000001",
   "deviceType": "Parking sensor",
   "attributes": {
     "eui": "1000000000000001",
