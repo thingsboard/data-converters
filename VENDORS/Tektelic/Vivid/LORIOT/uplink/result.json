@@ -1,6 +1,6 @@
 [{
   "deviceName": "1000000000000001",
-  "deviceType": "vivid",
+  "deviceType": "Vivid",
   "attributes": {
     "eui": "1000000000000001",
     "fPort": 10,
