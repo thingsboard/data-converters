@@ -1,0 +1,44 @@
+[{
+    "deviceName": "G4 Car Counter FM 0102030405060708",
+    "deviceType": "Parking sensor",
+    "attributes": {
+        "eui": "0102030405060708",
+        "fPort": 2,
+        "frequency": 868300000
+    },
+    "telemetry": [{
+        "ts": 1690901260493,
+        "values": {
+            "type": "heartbeat",
+            "hw_health_status": 40,
+            "battery_voltage": 2.908,
+            "battery_voltage_mean_24h": 2.888
+        }
+    }]
+}, {
+    "deviceName": "Gateway 1020304080706050",
+    "deviceType": "Lora gateway",
+    "telemetry": [{
+        "ts": 1690901260493,
+        "values": {
+            "rssi": -38,
+            "snr": 8.5
+        }
+    }],
+    "attributes": {
+        "eui": "1020304080706050"
+    }
+}, {
+    "deviceName": "Gateway 1020304081716151",
+    "deviceType": "Lora gateway",
+    "telemetry": [{
+        "ts": 1690901260495,
+        "values": {
+            "rssi": -42,
+            "snr": 8.8
+        }
+    }],
+    "attributes": {
+        "eui": "1020304081716151"
+    }
+}]
