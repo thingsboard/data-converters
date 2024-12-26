@@ -1,6 +1,6 @@
 {
   "deviceName": "4410",
-  "deviceType": "DL-DLR2-004",
+  "deviceType": "DL-DLR2-005",
   "attributes": {
     "lora_dev_eui": "0102030405060708",
     "protocol_version": 2
