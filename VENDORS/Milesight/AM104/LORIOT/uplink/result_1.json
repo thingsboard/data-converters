@@ -1,0 +1,47 @@
+[{
+    "deviceName": "AM104 0102030405060708",
+    "deviceType": "AM104",
+    "attributes": {
+        "eui": "0102030405060708",
+        "fPort": 207,
+        "frequency": 868300000
+    },
+    "telemetry": [{
+        "ts": 1690901260493,
+        "values": {
+            "battery": 92,
+            "temperature": 30.8,
+            "humidity": 50.5,
+            "activity": 73,
+            "illumination": 28,
+            "infrared_and_visible": 121,
+            "infrared": 20
+        }
+    }]
+}, {
+    "deviceName": "Gateway 1020304080706050",
+    "deviceType": "Lora gateway",
+    "telemetry": [{
+        "ts": 1690901260493,
+        "values": {
+            "rssi": -38,
+            "snr": 8.5
+        }
+    }],
+    "attributes": {
+        "eui": "1020304080706050"
+    }
+}, {
+    "deviceName": "Gateway 1020304081716151",
+    "deviceType": "Lora gateway",
+    "telemetry": [{
+        "ts": 1690901260495,
+        "values": {
+            "rssi": -42,
+            "snr": 8.8
+        }
+    }],
+    "attributes": {
+        "eui": "1020304081716151"
+    }
+}]
