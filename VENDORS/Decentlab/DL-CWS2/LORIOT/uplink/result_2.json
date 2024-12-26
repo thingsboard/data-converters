@@ -1,0 +1,26 @@
+{
+  "deviceName": "22720",
+  "deviceType": "DL-CWS2",
+  "attributes": {
+    "lora_dev_eui": "0102030405060708",
+    "protocol_version": 2
+  },
+  "telemetry": [{
+    "ts": 1690901260493,
+    "values": {
+      "air_temperature_radiation_shield": 3.167391470206759,
+      "air_humidity_radiation_shield": 97.67299916075379,
+      "surface_temperature": 4.57,
+      "air_temperature": 3.19,
+      "air_humidity": 99.44,
+      "dew_point": 3.11,
+      "angle": 37,
+      "sensor_temperature": 3.04,
+      "battery_voltage": 2.961,
+      "lora_frame_counter": 3,
+      "lora_frame_port": 1,
+      "lora_frequency": 868300000,
+      "lora_spreading_factor": 12
+    }
+  }]
+}

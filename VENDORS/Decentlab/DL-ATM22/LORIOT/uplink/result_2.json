@@ -1,0 +1,18 @@
+{
+  "deviceName": "2249",
+  "deviceType": "DL-ATM22",
+  "attributes": {
+    "lora_dev_eui": "0102030405060708",
+    "protocol_version": 2
+  },
+  "telemetry": [{
+    "ts": 1690901260493,
+    "values": {
+      "battery_voltage": 3.061,
+      "lora_frame_counter": 3,
+      "lora_frame_port": 1,
+      "lora_frequency": 868300000,
+      "lora_spreading_factor": 12
+    }
+  }]
+}
