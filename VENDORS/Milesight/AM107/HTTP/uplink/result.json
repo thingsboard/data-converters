@@ -1,0 +1,27 @@
+{
+  "deviceName": "AM107 24e1641092176759",
+  "deviceType": "AM107",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "battery": 92,
+      "temperature": 30.8,
+      "humidity": 50.5,
+      "activity": 73,
+      "illumination": 28,
+      "infrared_and_visible": 121,
+      "infrared": 20,
+      "co2": 1255,
+      "tvoc": 7,
+      "pressure": 1004.7
+    }
+  }]
+}

@@ -1,0 +1,20 @@
+{
+  "deviceName": "WS202 24e1641092176759",
+  "deviceType": "WS202",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "battery": 16,
+      "pir": "trigger",
+      "daylight": "dark"
+    }
+  }]
+}
