@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack uplink converter for Milesight AT101/103",
+  "name": "ChirpStack uplink converter for Milesight CT101/103",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

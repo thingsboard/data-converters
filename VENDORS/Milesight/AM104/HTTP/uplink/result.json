@@ -1,0 +1,24 @@
+{
+  "deviceName": "AM104 24e1641092176759",
+  "deviceType": "AM104",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "battery": 92,
+      "temperature": 30.8,
+      "humidity": 50.5,
+      "activity": 73,
+      "illumination": 28,
+      "infrared_and_visible": 121,
+      "infrared": 20
+    }
+  }]
+}
