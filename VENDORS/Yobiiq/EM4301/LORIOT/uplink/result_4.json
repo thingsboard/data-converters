@@ -1,0 +1,30 @@
+{
+    "deviceName": "0102030405060708",
+    "deviceType": "Electricity Meter",
+    "groupName": "Electricity Meters",
+    "attributes": {
+        "codecVersion": "1.0.0",
+        "genericModel": "EM4301",
+        "productCode": "P1002011",
+        "manufacturer": "YOBIIQ B.V.",
+        "devEui": "0102030405060708",
+        "latestFPort": 1
+    },
+    "telemetry": [{
+        "ts": 1690901260493,
+        "values": {
+            "fPort": 1,
+            "fCnt": 3
+        }
+    }, {
+        "ts": 1731928500000,
+        "values": {
+            "timestamp": 1731929100,
+            "activeEnergyImportL123T1": 50859780,
+            "activeEnergyImportL123T2": 0,
+            "activeEnergyExportL123T1": 0,
+            "activeEnergyExportL123T2": 0,
+            "modbusErrorCode": 0
+        }
+    }]
+}

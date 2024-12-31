@@ -1,0 +1,28 @@
+{
+  "deviceName": "eui-1000000000000001",
+  "deviceType": "Flux",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 10,
+    "applicationId": "application-tti-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "tenant",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_address": "eu1.cloud.thethings.industries",
+    "bandwidth": 125000,
+    "frequency": "868500000"
+  },
+  "telemetry": [{
+    "ts": 1684398325906,
+    "values": {
+      "energy_consumption_meter_elapsed": 86400,
+      "energy_consumption_meter_consumed": 27216,
+      "energy_consumption_meter_status": 0
+    }
+  }]
+}

@@ -1,0 +1,22 @@
+{
+  "deviceName": "CT101/103 24e1641092176759",
+  "deviceType": "CT101/103",
+  "attributes": {
+    "ipso_version": "v0.1",
+    "sn": "6746D38802580000",
+    "hardware_version": "v1.0",
+    "firmware_version": "v1.1",
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "power": "on"
+    }
+  }]
+}

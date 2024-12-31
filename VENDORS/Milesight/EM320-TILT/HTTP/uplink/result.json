@@ -1,0 +1,24 @@
+{
+  "deviceName": "EM320-TILT 24e1641092176759",
+  "deviceType": "EM320-TILT",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "battery": 100,
+      "angle_x": 0,
+      "angle_y": 0,
+      "angle_z": 90,
+      "threshold_x": "normal",
+      "threshold_y": "trigger",
+      "threshold_z": "normal"
+    }
+  }]
+}

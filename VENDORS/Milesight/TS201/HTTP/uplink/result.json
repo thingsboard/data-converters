@@ -1,0 +1,23 @@
+{
+  "deviceName": "TS201 24e1641092176759",
+  "deviceType": "Smoke detector",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {}
+  }, {
+    "ts": 1694145223000,
+    "values": {
+      "temperature": -6.7,
+      "read_status": "Success",
+      "event_type": "Alarm(Threshold or Mutation)"
+    }
+  }]
+}
