@@ -1,6 +1,6 @@
 {
-  "deviceName": "VS340x 1000000000000001",
-  "deviceType": "VS340x",
+  "deviceName": "VS34x 1000000000000001",
+  "deviceType": "VS34x",
   "attributes": {
     "eui": "1000000000000001",
     "devAddr": "20000001",
