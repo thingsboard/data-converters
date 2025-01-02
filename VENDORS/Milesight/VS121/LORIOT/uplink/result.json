@@ -1,0 +1,17 @@
+[{
+  "deviceName": "VS121 1000000000000001",
+  "deviceType": "VS121",
+  "attributes": {
+    "protocol_version": 1,
+    "sn": "6600b0940976",
+    "hardware_version": "1.0",
+    "firmware_version": "31.7.0.75",
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {}
+  }]
+}]

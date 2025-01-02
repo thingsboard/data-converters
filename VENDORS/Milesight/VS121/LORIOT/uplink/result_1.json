@@ -1,0 +1,30 @@
+[{
+  "deviceName": "VS121 1000000000000001",
+  "deviceType": "VS121",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "region_1_count": 0,
+      "region_2_count": 1,
+      "region_3_count": 0,
+      "region_4_count": 0,
+      "region_5_count": 0,
+      "region_6_count": 0,
+      "region_7_count": 0,
+      "region_8_count": 3,
+      "region_9_count": 1,
+      "region_10_count": 0,
+      "region_11_count": 0,
+      "region_12_count": 0,
+      "region_13_count": 0,
+      "region_14_count": 0,
+      "region_15_count": 0,
+      "region_16_count": 0
+    }
+  }]
+}]
