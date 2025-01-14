@@ -1,0 +1,31 @@
+{
+  "applicationID": 1,
+  "applicationName": "cloud",
+  "deviceName": "24e1641092176759",
+  "devEUI": "24e1641092176759",
+  "time": "2020-0327T12:39:05.547336Z",
+  "rxInfo": [
+    {
+      "mac": "24e124fffef021be",
+      "rssi": -57,
+      "loRaSNR": 10,
+      "name": "local_gateway",
+      "latitude": 0,
+      "longitude": 0,
+      "altitude": 0
+    }
+  ],
+  "txInfo": {
+    "frequency": 868300000,
+    "dataRate": {
+      "modulation": "LORA",
+      "bandwidth": 125,
+      "spreadFactor": 7
+    },
+    "adr": false,
+    "codeRate": "4/5"
+  },
+  "fCnt": 0,
+  "fPort": 85,
+  "data": "AXVcA2c0AQRoZSDOnnRGYxABXQIAAAEAAA=="
+}
