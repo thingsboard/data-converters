@@ -1,0 +1,29 @@
+{
+  "deviceName": "EM300-SLD/ZLD eui-1000000000000001",
+  "deviceType": "EM300-SLD/ZLD",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "battery": 92,
+      "temperature": 30.8,
+      "humidity": 50.5,
+      "leakage_status": "normal"
+    }
+  }]
+}
