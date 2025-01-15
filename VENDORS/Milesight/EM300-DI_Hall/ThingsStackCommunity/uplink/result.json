@@ -20,7 +20,10 @@
   "telemetry": [{
     "ts": 1684474415641,
     "values": {
-      "battery": 94
+      "water_conv": 1.0,
+      "pulse_conv": 64.8,
+      "water": 1500.6,
+      "water_alarm": "water flow timeout alarm"
     }
   }]
 }
