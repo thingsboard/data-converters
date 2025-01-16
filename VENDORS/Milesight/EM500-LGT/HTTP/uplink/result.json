@@ -1,0 +1,19 @@
+{
+  "deviceName": "EM500-LGT 24e1641092176759",
+  "deviceType": "EM500-LGT",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "battery": 100,
+      "illumination": 80
+    }
+  }]
+}
