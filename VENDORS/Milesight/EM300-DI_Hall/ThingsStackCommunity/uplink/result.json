@@ -1,0 +1,29 @@
+{
+  "deviceName": "EM300-DI Hall eui-1000000000000001",
+  "deviceType": "EM300-DI Hall",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "water_conv": 1.0,
+      "pulse_conv": 64.8,
+      "water": 1500.6,
+      "water_alarm": "water flow timeout alarm"
+    }
+  }]
+}
