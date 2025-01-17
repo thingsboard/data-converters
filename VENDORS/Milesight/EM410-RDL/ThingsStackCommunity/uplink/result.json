@@ -1,0 +1,32 @@
+{
+  "deviceName": "EM410-RDL eui-1000000000000001",
+  "deviceType": "EM410-RDL",
+  "attributes": {
+    "device_status": -1,
+    "ipso_version": "v0.1",
+    "reset_event": 1,
+    "sn": "6862e21141780013",
+    "hardware_version": "v1.0",
+    "firmware_version": "v1.1",
+    "lorawan_class": "ClassA",
+    "tsl_version": "v1.0",
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {}
+  }]
+}
