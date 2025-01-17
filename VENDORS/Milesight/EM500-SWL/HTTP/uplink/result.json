@@ -1,0 +1,19 @@
+{
+  "deviceName": "EM500-SWL 24e1641092176759",
+  "deviceType": "EM500-SWL",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "battery": 100,
+      "water_level": 2
+    }
+  }]
+}
