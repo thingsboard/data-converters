@@ -24,7 +24,7 @@
       "device_id",
       "join_eui",
       "eui",
-]      "channel",
+      "channel",
       "devAddr",
       "spreadingFactor",
       "codeRate",
