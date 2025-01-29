@@ -1,0 +1,16 @@
+[{
+  "deviceName": "EM500-LGT 1000000000000001",
+  "deviceType": "EM500-LGT",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 100,
+      "illumination": 80
+    }
+  }]
+}]

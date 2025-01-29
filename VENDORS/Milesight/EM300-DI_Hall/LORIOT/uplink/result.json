@@ -1,0 +1,18 @@
+[{
+  "deviceName": "EM300-DI Hall 1000000000000001",
+  "deviceType": "EM300-DI Hall",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "water_conv": 1.0,
+      "pulse_conv": 64.8,
+      "water": 1500.6,
+      "water_alarm": "water flow timeout alarm"
+    }
+  }]
+}]

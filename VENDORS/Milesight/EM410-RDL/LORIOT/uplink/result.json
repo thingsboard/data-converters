@@ -1,0 +1,21 @@
+[{
+  "deviceName": "EM410-RDL 1000000000000001",
+  "deviceType": "EM410-RDL",
+  "attributes": {
+    "device_status": -1,
+    "ipso_version": "v0.1",
+    "reset_event": 1,
+    "sn": "6862e21141780013",
+    "hardware_version": "v1.0",
+    "firmware_version": "v1.1",
+    "lorawan_class": "ClassA",
+    "tsl_version": "v1.0",
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {}
+  }]
+}]
