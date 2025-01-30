@@ -1,0 +1,38 @@
+{
+  "deviceName": "VS360 eui-1000000000000001",
+  "deviceType": "VS360",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {}
+  }, {
+    "ts": 1693530747000,
+    "values": {
+      "period_in": 11,
+      "period_out": 4
+    }
+  }, {
+    "ts": 1693531647000,
+    "values": {
+      "period_in": 7,
+      "period_out": 2,
+      "total_in": 29,
+      "total_out": 8
+    }
+  }]
+}
