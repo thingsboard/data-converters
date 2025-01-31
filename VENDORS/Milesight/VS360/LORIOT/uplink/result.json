@@ -11,10 +11,10 @@
     "values": {
       "total_in": 4353,
       "total_out": 4360,
-      "total_count_alarm": "Threshold Alarm",
+      "total_count_alarm": "threshold alarm",
       "period_in": 1000,
       "period_out": 1001,
-      "period_count_alarm": "Threshold Alarm"
+      "period_count_alarm": "threshold alarm"
     }
   }]
 }]
