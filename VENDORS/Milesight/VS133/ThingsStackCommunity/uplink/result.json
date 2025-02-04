@@ -1,0 +1,33 @@
+{
+  "deviceName": "VS133 eui-1000000000000001",
+  "deviceType": "VS133",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "line_1.0_total_in": 72,
+      "line_1.0_total_out": 200,
+      "line_2.0_total_in": 0,
+      "line_2.0_total_out": 0,
+      "line_3.0_total_in": 0,
+      "line_3.0_total_out": 0,
+      "line_4.0_total_in": 5300,
+      "line_4.0_total_out": 6797
+    }
+  }]
+}
