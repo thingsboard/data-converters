@@ -1,6 +1,6 @@
 {
-  "deviceName": "VS360 eui-1000000000000001",
-  "deviceType": "VS360",
+  "deviceName": "VS133 eui-1000000000000001",
+  "deviceType": "VS133",
   "attributes": {
     "eui": "1000000000000001",
     "fPort": 85,
@@ -20,12 +20,14 @@
   "telemetry": [{
     "ts": 1684398325906,
     "values": {
-      "total_in": 4353,
-      "total_out": 4360,
-      "total_count_alarm": "threshold alarm",
-      "period_in": 1000,
-      "period_out": 1001,
-      "period_count_alarm": "threshold alarm"
+      "line_1.0_total_in": 72,
+      "line_1.0_total_out": 200,
+      "line_2.0_total_in": 0,
+      "line_2.0_total_out": 0,
+      "line_3.0_total_in": 0,
+      "line_3.0_total_out": 0,
+      "line_4.0_total_in": 5300,
+      "line_4.0_total_out": 6797
     }
   }]
 }

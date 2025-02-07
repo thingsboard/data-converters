@@ -1,0 +1,22 @@
+[{
+  "deviceName": "VS133 1000000000000001",
+  "deviceType": "VS133",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "line_1.0_total_in": 72,
+      "line_1.0_total_out": 200,
+      "line_2.0_total_in": 0,
+      "line_2.0_total_out": 0,
+      "line_3.0_total_in": 0,
+      "line_3.0_total_out": 0,
+      "line_4.0_total_in": 5300,
+      "line_4.0_total_out": 6797
+    }
+  }]
+}]

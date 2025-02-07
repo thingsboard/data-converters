@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for VS34x",
+  "name": "The Things Stack Industries Uplink Decoder for Milesight VS34x",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {
