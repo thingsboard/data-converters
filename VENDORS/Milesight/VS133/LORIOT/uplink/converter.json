@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for VS133",
+  "name": "Loriot Uplink Decoder for Milesight VS133",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

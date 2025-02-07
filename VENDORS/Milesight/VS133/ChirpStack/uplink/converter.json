@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for VS133",
+  "name": "ChirpStack Uplink Decoder for Milesight VS133",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

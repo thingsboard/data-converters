@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for VS133",
+  "name": "The Things Stack Community Uplink Decoder for Milesight VS133",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {
