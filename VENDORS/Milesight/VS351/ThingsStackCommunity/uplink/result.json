@@ -1,0 +1,31 @@
+{
+  "deviceName": "VS351 eui-1000000000000001",
+  "deviceType": "VS351",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "total_in": 4353,
+      "total_out": 4360,
+      "total_count_alarm": "threshold alarm",
+      "period_in": 1000,
+      "period_out": 1001,
+      "period_count_alarm": "threshold alarm"
+    }
+  }]
+}
