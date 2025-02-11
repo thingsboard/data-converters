@@ -1,0 +1,33 @@
+{
+  "deviceName": "CD10 eui-1000000000000001",
+  "deviceType": "CD10",
+  "attributes": {
+    "status": 1,
+    "button": 0,
+    "eui": "1000000000000001",
+    "fPort": 127,
+    "applicationId": "application-tts-name",
+    "devAddr": "20000001",
+    "spreadingFactor": 7,
+    "codeRate": "4/5",
+    "tenantId": "ttn",
+    "device_id": "eui-1000000000000001",
+    "join_eui": "2000000000000001",
+    "net_id": "000013",
+    "cluster_id": "eu1",
+    "cluster_adress": "eu1.cloud.thethings.network",
+    "bandwidth": 125000,
+    "frequency": "867100000"
+  },
+  "telemetry": [{
+    "ts": 1684474415641,
+    "values": {
+      "co2threshold": 1,
+      "co2calibration": 0,
+      "battery": 3.6,
+      "temperature": 23.1,
+      "humidity": 67,
+      "co2_ppm": 6407
+    }
+  }]
+}
