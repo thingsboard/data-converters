@@ -1,0 +1,22 @@
+[{
+  "deviceName": "CD10 1000000000000001",
+  "deviceType": "CD10",
+  "attributes": {
+    "status": 1,
+    "button": 0,
+    "eui": "1000000000000001",
+    "fPort": 127,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "co2threshold": 1,
+      "co2calibration": 0,
+      "battery": 3.6,
+      "temperature": 23.1,
+      "humidity": 67,
+      "co2_ppm": 6407
+    }
+  }]
+}]
