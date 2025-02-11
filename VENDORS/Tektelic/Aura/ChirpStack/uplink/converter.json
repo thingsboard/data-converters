@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Aura",
+  "name": "ChirpStack Uplink Decoder for Tektelic Aura",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

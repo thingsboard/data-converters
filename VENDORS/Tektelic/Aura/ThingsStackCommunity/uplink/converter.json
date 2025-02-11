@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for Aura",
+  "name": "The Things Stack Community Uplink Decoder for Tektelic Aura",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

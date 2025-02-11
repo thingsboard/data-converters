@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for RA0723",
+  "name": "The Things Stack Community Uplink Decoder for Netvox RA0723",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

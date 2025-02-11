@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Vivid",
+  "name": "Loriot Uplink Decoder for Tektelic Vivid",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

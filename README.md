@@ -71,7 +71,7 @@ Here is a breakdown of the structure:
 
   - **uplink** - Subfolder for uplink data converters:
 
-    - `converter.json` - The converter entity exported as JSON from the platform. Both TBEL and JS converters are supported.
+    - `converter.json` - The converter entity exported as JSON from the platform. Both TBEL and JS converters are supported. Converter Naming Format: `[Converter Name] Uplink Decoder for [Vendor Name] [Model Name]`.
     - `metadata.json` - Represents a map of metadata keys and values.
     - `payload.json` - An example of an incoming payload for the device and integration type. This payload will automatically load into the debug window when the converter is imported from the library. You may also use `payload.txt` or `payload.base64` for text or binary payload representation.
     - `result.json` - Expected result from the converter based on the provided payload and metadata, used to validate that the converter works correctly.

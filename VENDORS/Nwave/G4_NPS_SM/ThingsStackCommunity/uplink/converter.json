@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for G4 parking sensor - Surface Mount",
+  "name": "The Things Stack Community Uplink Decoder for Nwave G4 parking sensor - Surface Mount",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

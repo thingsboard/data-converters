@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for EM310-TILT",
+  "name": "Loriot Uplink Decoder for Milesight EM310-TILT",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

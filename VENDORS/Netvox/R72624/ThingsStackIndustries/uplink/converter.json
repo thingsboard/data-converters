@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for R72624",
+  "name": "The Things Stack Industries Uplink Decoder for Netvox R72624",
   "type": "UPLINK",
   "debugFailures" : false,
   "debugAll" : true,

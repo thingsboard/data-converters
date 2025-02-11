@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Kiwi",
+  "name": "Loriot Uplink Decoder for Tektelic Kiwi",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

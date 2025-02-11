@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for SensiLora2.0",
+  "name": "ChirpStack Uplink Decoder for SensiEDGE SensiLora2.0",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

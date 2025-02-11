@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for The Things Stack Community integration AM-107",
+  "name": "The Things Stack Community Uplink Decoder for Milesight AM-107",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

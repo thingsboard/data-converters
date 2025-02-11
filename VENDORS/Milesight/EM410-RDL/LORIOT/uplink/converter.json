@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for EM410-RDL",
+  "name": "Loriot Uplink Decoder for Milesight EM410-RDL",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

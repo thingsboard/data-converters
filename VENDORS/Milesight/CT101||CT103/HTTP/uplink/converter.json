@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for CT101/103",
+  "name": "HTTP Uplink Decoder for Milesight CT101/103",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

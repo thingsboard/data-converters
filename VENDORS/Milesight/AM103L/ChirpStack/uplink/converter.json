@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack uplink converter for Milesight AM103L",
+  "name": "ChirpStack Uplink Decoder for Milesight AM103L",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for G4 parking sensor - Surface Mount",
+  "name": "ChirpStack Uplink Decoder for Nwave G4 parking sensor - Surface Mount",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

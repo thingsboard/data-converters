@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack uplink converter for Milesight AM104",
+  "name": "ChirpStack Uplink Decoder for Milesight AM104",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Flux",
+  "name": "Loriot Uplink Decoder for Tektelic Flux",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

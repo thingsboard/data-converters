@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Flux",
+  "name": "ChirpStack Uplink Decoder for Tektelic Flux",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

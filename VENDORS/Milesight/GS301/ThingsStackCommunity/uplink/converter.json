@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for GS301",
+  "name": "The Things Stack Community Uplink Decoder for Milesight GS301",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

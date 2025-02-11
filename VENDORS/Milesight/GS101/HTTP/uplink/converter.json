@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for GS101",
+  "name": "HTTP Uplink Decoder for Milesight GS101",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

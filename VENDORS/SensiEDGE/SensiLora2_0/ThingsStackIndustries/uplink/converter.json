@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for SensiLora2.0",
+  "name": "The Things Stack Industries Uplink Decoder for SensiEDGE SensiLora2.0",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

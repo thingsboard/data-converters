@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for EM500-C02",
+  "name": "ChirpStack Uplink Decoder for Milesight EM500-C02",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

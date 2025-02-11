@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Vivid",
+  "name": "ChirpStack Uplink Decoder for Tektelic Vivid",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

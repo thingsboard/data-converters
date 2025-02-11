@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for WS201",
+  "name": "HTTP Uplink integration for Milesight WS201",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

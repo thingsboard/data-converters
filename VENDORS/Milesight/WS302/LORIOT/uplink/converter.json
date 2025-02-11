@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for WS302",
+  "name": "Loriot Uplink Decoder for Milesight WS302",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

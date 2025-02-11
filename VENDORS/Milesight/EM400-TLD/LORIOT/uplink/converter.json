@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for EM400-TLD",
+  "name": "Loriot Uplink Decoder for Milesight EM400-TLD",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

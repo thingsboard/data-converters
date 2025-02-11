@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for VS360",
+  "name": "ChirpStack Uplink Decoder for Milesight VS360",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

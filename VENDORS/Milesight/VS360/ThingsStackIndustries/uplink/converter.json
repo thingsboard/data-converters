@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for VS360",
+  "name": "The Things Stack Industries Uplink Decoder for Milesight VS360",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

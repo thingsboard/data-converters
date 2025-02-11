@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for AM103",
+  "name": "HTTP Uplink Decoder for Milesight AM103",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

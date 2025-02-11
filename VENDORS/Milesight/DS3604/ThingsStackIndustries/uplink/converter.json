@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for The Things Stack Industries integration DS3604",
+  "name": "The Things Stack Industries Uplink Decoder for Milesight DS3604",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

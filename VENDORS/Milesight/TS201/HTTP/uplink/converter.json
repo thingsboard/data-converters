@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for TS201",
+  "name": "HTTP Uplink Decoder for Milesight TS201",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

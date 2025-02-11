@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for G4 car counter sensor - Flush Mount",
+  "name": "ChirpStack Uplink Decoder for Nwave G4 car counter sensor - Flush Mount",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

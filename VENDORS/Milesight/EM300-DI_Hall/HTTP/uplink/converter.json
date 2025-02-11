@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for EM300-DI Hall",
+  "name": "HTTP Uplink integration for Milesight EM300-DI Hall",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

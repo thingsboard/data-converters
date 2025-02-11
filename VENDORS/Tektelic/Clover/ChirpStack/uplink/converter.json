@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Clover",
+  "name": "ChirpStack Uplink Decoder for Tektelic Clover",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

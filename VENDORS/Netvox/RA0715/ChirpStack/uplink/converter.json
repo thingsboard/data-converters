@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for  RA0715",
+  "name": "ChirpStack Uplink Decoder for Netvox RA0715",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

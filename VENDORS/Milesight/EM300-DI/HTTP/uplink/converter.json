@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for EM300-DI",
+  "name": "HTTP Uplink integration for Milesight EM300-DI",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

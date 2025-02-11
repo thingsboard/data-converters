@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for EM400-UDL",
+  "name": "HTTP Uplink Decoder for Milesight EM400-UDL",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

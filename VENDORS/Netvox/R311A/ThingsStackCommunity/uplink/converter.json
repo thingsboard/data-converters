@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for R311A",
+  "name": "The Things Stack Community Uplink Decoder for Netvox R311A",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {
