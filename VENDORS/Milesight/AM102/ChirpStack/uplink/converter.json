@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack uplink converter for Milesight AM102",
+  "name": "Chirp Stack Uplink Converter for Milesight AM102",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

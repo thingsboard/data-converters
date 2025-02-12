@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Decentlab DL-ILT",
+  "name": "Chirp Stack Uplink Converter for Decentlab DL-ILT",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

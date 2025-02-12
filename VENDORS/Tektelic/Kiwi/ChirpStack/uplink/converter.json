@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Kiwi",
+  "name": "Chirp Stack Uplink Converter for Tektelic Kiwi",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

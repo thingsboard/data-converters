@@ -1,39 +1,39 @@
 {
-    "name": "ChirpStack uplink converter for Milesight VS133",
-    "type": "UPLINK",
-    "debugMode": true,
-    "configuration": {
-        "scriptLang": "TBEL",
-        "decoder": null,
-        "tbelDecoder": "var data = decodeToJson(payload);\nvar deviceName = data.deviceInfo.deviceName;\nvar deviceType = data.deviceInfo.deviceProfileName;\nvar groupName = 'People counting sensor';\n// var customerName = 'Customer A';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// If you want to parse incoming data somehow, you can add your code to this function.\n// input: bytes\n// expected output:\n//  {\n//    \"attributes\": {\"attributeKey\": \"attributeValue\"},\n//    \"telemetry\": {\"telemetryKey\": \"telemetryValue\"}\n//  }\n//\n// In the example - bytes will be saved as HEX string and also parsed as light level, battery level and PIR sensor value.\n//\n\nvar total_in_chns = [0x03, 0x06, 0x09, 0x0c];\nvar total_out_chns = [0x04, 0x07, 0x0a, 0x0d];\nvar period_chns = [0x05, 0x08, 0x0b, 0x0e];\n\nfunction decodePayload(inputArray) {\n    var output = { attributes:{}, telemetry: {}};\n    // --- Decoding code --- //\n    var input = bytesToExecutionArrayList(inputArray);\n    output.telemetry.HEX_bytes = bytesToHex(input);\n    var decoded = {};\n    decoded.hexString = bytesToHex(input);\n    for (var i = 0; i < input.length - 2; ) {\n        var channel_id = input[i++] & 0xff;\n        var channel_type = input[i++] & 0xff;\n\n        // LINE TOTAL IN\n        if (total_in_chns.indexOf(channel_id) >= 0 && channel_type === 0xD2) {\n            var channel_in_name = \"line_\" + ((channel_id - total_in_chns[0]) / 3 + 1);\n            decoded[channel_in_name + \"_total_in\"] = parseBytesToInt(input, i, 4, false);\n            i += 4;\n        }\n        // LINE TOTAL OUT\n        else if (total_out_chns.indexOf(channel_id) >= 0 && channel_type === 0xD2) {\n            var channel_out_name = \"line_\" + ((channel_id - total_out_chns[0]) / 3 + 1);\n            decoded[channel_out_name + \"_total_out\"] = parseBytesToInt(input, i, 4, false);\n            i += 4;\n        }\n        // LINE PERIOD\n        else if (period_chns.indexOf(channel_id) >= 0 && channel_type === 0xCC) {\n            var channel_period_name = \"line_\" + ((channel_id - period_chns[0]) / 3 + 1);\n            decoded[channel_period_name + \"_period_in\"] = parseBytesToInt(input, i, 2, false);\n            decoded[channel_period_name + \"_period_out\"] = parseBytesToInt(input, i + 2, 2, false);\n            i += 4;\n        }\n        // REGION COUNT\n        else if (channel_id === 0x0f && channel_type === 0xE3) {\n            decoded.region_1_count = input[i];\n            decoded.region_2_count = input[i + 1];\n            decoded.region_3_count = input[i + 2];\n            decoded.region_4_count = input[i + 3];\n            i += 4;\n        }\n        // REGION DWELL TIME\n        else if (channel_id === 0x10 && channel_type === 0xE4) {\n            var dwell_channel_name = \"region_\" + input[i];\n            decoded[dwell_channel_name + \"_avg_dwell\"] = parseBytesToInt(input, i + 1, 2, false);\n            decoded[dwell_channel_name + \"_max_dwell\"] = parseBytesToInt(input, i + 3, 2, false);\n            i += 5;\n        } else {\n            break;\n        }\n    }\n    output.telemetry = decoded;\n\n    // --- Decoding code --- //\n    return output;\n}\n\n// --- attributes and telemetry objects ---\nvar telemetry = {};\nvar attributes = {};\n// --- attributes and telemetry objects ---\n\n// --- Timestamp parsing\nvar dateString = data.time;\nvar timestamp = -1;\nif (dateString != null) {\n    timestamp = new Date(dateString).getTime();\n    if (timestamp == -1) {\n        var secondsSeparatorIndex = dateString.lastIndexOf('.') + 1;\n        var millisecondsEndIndex = dateString.lastIndexOf('+');\n        if (millisecondsEndIndex == -1) {\n            millisecondsEndIndex = dateString.lastIndexOf('Z');\n        }\n        if (millisecondsEndIndex == -1) {\n            millisecondsEndIndex = dateString.lastIndexOf('-');\n        }\n        if (millisecondsEndIndex == -1) {\n            if (dateString.length >= secondsSeparatorIndex + 3) {\n                dateString = dateString.substring(0, secondsSeparatorIndex + 3);\n            }\n        } else {\n            dateString = dateString.substring(0, secondsSeparatorIndex + 3) +\n                dateString.substring(millisecondsEndIndex, dateString.length);\n        }\n        timestamp = new Date(dateString).getTime();\n    }\n}\n// If we cannot parse timestamp - we will use the current timestamp\nif (timestamp == -1) {\n    timestamp = Date.now();\n}\n// --- Timestamp parsing\n\n// You can add some keys manually to attributes or telemetry\nattributes.deduplicationId = data.deduplicationId;\n\n// You can exclude some keys from the result\nvar excludeFromAttributesList = [\"deviceName\", \"rxInfo\", \"confirmed\", \"data\", \"deduplicationId\",\"time\", \"adr\", \"dr\", \"fCnt\"];\nvar excludeFromTelemetryList = [\"data\", \"deviceInfo\", \"txInfo\", \"devAddr\", \"adr\", \"time\", \"fPort\", \"region_common_name\", \"region_config_id\", \"deduplicationId\"];\n\n// Message parsing\n// To avoid paths in the decoded objects we passing false value to function as \"pathInKey\" argument.\n// Warning: pathInKey can cause already found fields to be overwritten with the last value found.\n\nvar telemetryData = toFlatMap(data, excludeFromTelemetryList, false);\nvar attributesData = toFlatMap(data, excludeFromAttributesList, false);\n\nvar uplinkDataList = [];\n\n// Passing incoming bytes to decodePayload function, to get custom decoding\nvar customDecoding = decodePayload(base64ToBytes(data.data));\n\n// Collecting data to result\nif (customDecoding.?telemetry.size() > 0) {\n    telemetry.putAll(customDecoding.telemetry);\n}\n\nif (customDecoding.?attributes.size() > 0) {\n    attributes.putAll(customDecoding.attributes);\n}\n\ntelemetry.putAll(telemetryData);\nattributes.putAll(attributesData);\n\nvar result = {\n    deviceName: deviceName,\n    deviceType: deviceType,\n//  assetName: assetName,\n//  assetType: assetType,\n//  customerName: customerName,\n    groupName: groupName,\n    attributes: attributes,\n    telemetry: {\n        ts: timestamp,\n        values: telemetry\n    }\n};\n\nreturn result;",
-        "encoder": null,
-        "tbelEncoder": null,
-        "updateOnlyKeys": [
-            "tenantId",
-            "tenantName",
-            "applicationId",
-            "applicationName",
-            "deviceProfileId",
-            "deviceProfileName",
-            "devEui",
-            "devAddr",
-            "fPort",
-            "frequency",
-            "bandwidth",
-            "spreadingFactor",
-            "codeRate",
-            "battery",
-            "pir",
-            "daylight",
-            "confirmed",
-            "gatewayId",
-            "channel",
-            "rfChain",
-            "crcStatus"
-        ]
-    },
-    "additionalInfo": {
-        "description": ""
-    },
-    "edgeTemplate": false
+  "name": "Chirp Stack Uplink Converter for Milesight VS133",
+  "type": "UPLINK",
+  "debugMode": true,
+  "configuration": {
+    "scriptLang": "TBEL",
+    "decoder": null,
+    "tbelDecoder": "var data = decodeToJson(payload);\nvar deviceName = data.deviceInfo.deviceName;\nvar deviceType = data.deviceInfo.deviceProfileName;\nvar groupName = 'People counting sensor';\n// var customerName = 'Customer A';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// If you want to parse incoming data somehow, you can add your code to this function.\n// input: bytes\n// expected output:\n//  {\n//    \"attributes\": {\"attributeKey\": \"attributeValue\"},\n//    \"telemetry\": {\"telemetryKey\": \"telemetryValue\"}\n//  }\n//\n// In the example - bytes will be saved as HEX string and also parsed as light level, battery level and PIR sensor value.\n//\n\nvar total_in_chns = [0x03, 0x06, 0x09, 0x0c];\nvar total_out_chns = [0x04, 0x07, 0x0a, 0x0d];\nvar period_chns = [0x05, 0x08, 0x0b, 0x0e];\n\nfunction decodePayload(inputArray) {\n    var output = { attributes:{}, telemetry: {}};\n    // --- Decoding code --- //\n    var input = bytesToExecutionArrayList(inputArray);\n    output.telemetry.HEX_bytes = bytesToHex(input);\n    var decoded = {};\n    decoded.hexString = bytesToHex(input);\n    for (var i = 0; i < input.length - 2; ) {\n        var channel_id = input[i++] & 0xff;\n        var channel_type = input[i++] & 0xff;\n\n        // LINE TOTAL IN\n        if (total_in_chns.indexOf(channel_id) >= 0 && channel_type === 0xD2) {\n            var channel_in_name = \"line_\" + ((channel_id - total_in_chns[0]) / 3 + 1);\n            decoded[channel_in_name + \"_total_in\"] = parseBytesToInt(input, i, 4, false);\n            i += 4;\n        }\n        // LINE TOTAL OUT\n        else if (total_out_chns.indexOf(channel_id) >= 0 && channel_type === 0xD2) {\n            var channel_out_name = \"line_\" + ((channel_id - total_out_chns[0]) / 3 + 1);\n            decoded[channel_out_name + \"_total_out\"] = parseBytesToInt(input, i, 4, false);\n            i += 4;\n        }\n        // LINE PERIOD\n        else if (period_chns.indexOf(channel_id) >= 0 && channel_type === 0xCC) {\n            var channel_period_name = \"line_\" + ((channel_id - period_chns[0]) / 3 + 1);\n            decoded[channel_period_name + \"_period_in\"] = parseBytesToInt(input, i, 2, false);\n            decoded[channel_period_name + \"_period_out\"] = parseBytesToInt(input, i + 2, 2, false);\n            i += 4;\n        }\n        // REGION COUNT\n        else if (channel_id === 0x0f && channel_type === 0xE3) {\n            decoded.region_1_count = input[i];\n            decoded.region_2_count = input[i + 1];\n            decoded.region_3_count = input[i + 2];\n            decoded.region_4_count = input[i + 3];\n            i += 4;\n        }\n        // REGION DWELL TIME\n        else if (channel_id === 0x10 && channel_type === 0xE4) {\n            var dwell_channel_name = \"region_\" + input[i];\n            decoded[dwell_channel_name + \"_avg_dwell\"] = parseBytesToInt(input, i + 1, 2, false);\n            decoded[dwell_channel_name + \"_max_dwell\"] = parseBytesToInt(input, i + 3, 2, false);\n            i += 5;\n        } else {\n            break;\n        }\n    }\n    output.telemetry = decoded;\n\n    // --- Decoding code --- //\n    return output;\n}\n\n// --- attributes and telemetry objects ---\nvar telemetry = {};\nvar attributes = {};\n// --- attributes and telemetry objects ---\n\n// --- Timestamp parsing\nvar dateString = data.time;\nvar timestamp = -1;\nif (dateString != null) {\n    timestamp = new Date(dateString).getTime();\n    if (timestamp == -1) {\n        var secondsSeparatorIndex = dateString.lastIndexOf('.') + 1;\n        var millisecondsEndIndex = dateString.lastIndexOf('+');\n        if (millisecondsEndIndex == -1) {\n            millisecondsEndIndex = dateString.lastIndexOf('Z');\n        }\n        if (millisecondsEndIndex == -1) {\n            millisecondsEndIndex = dateString.lastIndexOf('-');\n        }\n        if (millisecondsEndIndex == -1) {\n            if (dateString.length >= secondsSeparatorIndex + 3) {\n                dateString = dateString.substring(0, secondsSeparatorIndex + 3);\n            }\n        } else {\n            dateString = dateString.substring(0, secondsSeparatorIndex + 3) +\n                dateString.substring(millisecondsEndIndex, dateString.length);\n        }\n        timestamp = new Date(dateString).getTime();\n    }\n}\n// If we cannot parse timestamp - we will use the current timestamp\nif (timestamp == -1) {\n    timestamp = Date.now();\n}\n// --- Timestamp parsing\n\n// You can add some keys manually to attributes or telemetry\nattributes.deduplicationId = data.deduplicationId;\n\n// You can exclude some keys from the result\nvar excludeFromAttributesList = [\"deviceName\", \"rxInfo\", \"confirmed\", \"data\", \"deduplicationId\",\"time\", \"adr\", \"dr\", \"fCnt\"];\nvar excludeFromTelemetryList = [\"data\", \"deviceInfo\", \"txInfo\", \"devAddr\", \"adr\", \"time\", \"fPort\", \"region_common_name\", \"region_config_id\", \"deduplicationId\"];\n\n// Message parsing\n// To avoid paths in the decoded objects we passing false value to function as \"pathInKey\" argument.\n// Warning: pathInKey can cause already found fields to be overwritten with the last value found.\n\nvar telemetryData = toFlatMap(data, excludeFromTelemetryList, false);\nvar attributesData = toFlatMap(data, excludeFromAttributesList, false);\n\nvar uplinkDataList = [];\n\n// Passing incoming bytes to decodePayload function, to get custom decoding\nvar customDecoding = decodePayload(base64ToBytes(data.data));\n\n// Collecting data to result\nif (customDecoding.?telemetry.size() > 0) {\n    telemetry.putAll(customDecoding.telemetry);\n}\n\nif (customDecoding.?attributes.size() > 0) {\n    attributes.putAll(customDecoding.attributes);\n}\n\ntelemetry.putAll(telemetryData);\nattributes.putAll(attributesData);\n\nvar result = {\n    deviceName: deviceName,\n    deviceType: deviceType,\n//  assetName: assetName,\n//  assetType: assetType,\n//  customerName: customerName,\n    groupName: groupName,\n    attributes: attributes,\n    telemetry: {\n        ts: timestamp,\n        values: telemetry\n    }\n};\n\nreturn result;",
+    "encoder": null,
+    "tbelEncoder": null,
+    "updateOnlyKeys": [
+      "tenantId",
+      "tenantName",
+      "applicationId",
+      "applicationName",
+      "deviceProfileId",
+      "deviceProfileName",
+      "devEui",
+      "devAddr",
+      "fPort",
+      "frequency",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate",
+      "battery",
+      "pir",
+      "daylight",
+      "confirmed",
+      "gatewayId",
+      "channel",
+      "rfChain",
+      "crcStatus"
+    ]
+  },
+  "additionalInfo": {
+    "description": ""
+  },
+  "edgeTemplate": false
 }

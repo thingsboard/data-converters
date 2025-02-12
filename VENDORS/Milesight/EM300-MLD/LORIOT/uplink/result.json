@@ -1,0 +1,16 @@
+[{
+  "deviceName": "EM300-MLD 1000000000000001",
+  "deviceType": "EM300-MLD",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 92,
+      "leakage_status": "normal"
+    }
+  }]
+}]

@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for  EM310-UDL",
+  "name": "Chirp Stack Uplink Converter for Milesight EM310-UDL",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

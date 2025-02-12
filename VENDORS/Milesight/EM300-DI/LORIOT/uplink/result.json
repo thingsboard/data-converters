@@ -1,0 +1,25 @@
+[{
+  "deviceName": "EM300-DI 1000000000000001",
+  "deviceType": "EM300-DI",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "battery": 92,
+      "temperature": 30.8,
+      "humidity": 50
+    }
+  }, {
+    "ts": 1665561758000,
+    "values": {
+      "temperature": 27.2,
+      "humidity": 46.5,
+      "gpio_type": "pulse",
+      "pulse": 256
+    }
+  }]
+}]

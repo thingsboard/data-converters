@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-GMM",
+  "name": "Loriot Uplink Converter for Decentlab DL-GMM",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

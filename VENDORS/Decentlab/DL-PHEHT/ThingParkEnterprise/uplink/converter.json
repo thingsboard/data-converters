@@ -1,5 +1,5 @@
 {
-  "name": "ThingParkEnterprise Uplink Decoder for Decentlab DL-PHEHT",
+  "name": "Thing Park Enterprise Uplink Converter for Decentlab DL-PHEHT",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

@@ -1,0 +1,23 @@
+{
+  "deviceName": "EM310-TILT 24e1641092176759",
+  "deviceType": "EM310-TILT",
+  "attributes": {
+    "fPort": 85,
+    "applicationName": "cloud",
+    "frequency": 868300000,
+    "bandwidth": 125,
+    "spreadingFactor": 7,
+    "codeRate": "4/5"
+  },
+  "telemetry": [{
+    "ts": 1585312745547,
+    "values": {
+      "angle_x": 0.0,
+      "angle_y": 0.0,
+      "angle_z": 90.0,
+      "threshold_x": "trigger",
+      "threshold_y": "trigger",
+      "threshold_z": "trigger"
+    }
+  }]
+}

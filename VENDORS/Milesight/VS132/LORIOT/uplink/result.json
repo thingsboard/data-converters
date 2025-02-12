@@ -1,0 +1,22 @@
+[{
+  "deviceName": "VS132 1000000000000001",
+  "deviceType": "VS132",
+  "attributes": {
+    "protocol_version": 1,
+    "sn": "6614c39694870000",
+    "hardware_version": "1.2",
+    "firmware_version": "132.1.0.1",
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "total_counter_in": 190,
+      "total_counter_out": 305,
+      "periodic_counter_in": 0,
+      "periodic_counter_out": 0
+    }
+  }]
+}]

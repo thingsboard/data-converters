@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for R716S",
+  "name": "Loriot Uplink Converter for Netvox R716S",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,0 +1,17 @@
+[{
+  "deviceName": "1000000000000001",
+  "deviceType": "Flux",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 10,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "energy_consumption_meter_elapsed": 86400,
+      "energy_consumption_meter_consumed": 27216,
+      "energy_consumption_meter_status": 0
+    }
+  }]
+}]

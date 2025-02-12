@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack uplink converter for Milesight DS3604",
+  "name": "Chirp Stack Uplink Converter for Milesight DS3604",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

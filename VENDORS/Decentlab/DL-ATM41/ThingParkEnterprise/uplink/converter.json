@@ -1,5 +1,5 @@
 {
-  "name": "ThingParkEnterprise Uplink Decoder for Decentlab DL-ATM41",
+  "name": "Thing Park Enterprise Uplink Converter for Decentlab DL-ATM41",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

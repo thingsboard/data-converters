@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Decentlab DL-TRS11",
+  "name": "Chirp Stack Uplink Converter for Decentlab DL-TRS11",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

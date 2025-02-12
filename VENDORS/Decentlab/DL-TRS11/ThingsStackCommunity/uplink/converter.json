@@ -1,5 +1,5 @@
 {
-  "name": "ThingsStackCommunity Uplink Decoder for Decentlab DL-TRS11",
+  "name": "Things Stack Community Uplink Converter for Decentlab DL-TRS11",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,
