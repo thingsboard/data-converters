@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Milesight VS350",
+  "name": "Loriot Uplink Converter for Milesight VS350",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

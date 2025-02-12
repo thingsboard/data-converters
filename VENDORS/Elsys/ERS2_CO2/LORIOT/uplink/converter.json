@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Elsys ERS2 C02 Device",
+  "name": "Loriot Uplink Converter for Elsys ERS2_CO2",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

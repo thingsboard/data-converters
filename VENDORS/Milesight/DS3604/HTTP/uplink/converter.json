@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink Decoder for Milesight DS3604",
+  "name": "Http Uplink Converter for Milesight DS3604",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Tektelic Aura",
+  "name": "Loriot Uplink Converter for Tektelic Aura",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

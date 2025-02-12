@@ -1,5 +1,5 @@
 {
-  "name": "UThe Things Stack Community Uplink Decoder for Milesight AM102",
+  "name": "Things Stack Community Uplink Converter for Milesight AM102",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

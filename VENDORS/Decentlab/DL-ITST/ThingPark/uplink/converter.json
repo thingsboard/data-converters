@@ -1,5 +1,5 @@
 {
-  "name": "ThingPark Uplink Decoder for Decentlab DL-ITST",
+  "name": "Thing Park Uplink Converter for Decentlab DL-ITST",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

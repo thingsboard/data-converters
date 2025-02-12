@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Nwave G4 car counter sensor - Surface Mount",
+  "name": "Chirp Stack Uplink Converter for Nwave G4_NCC_SM",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

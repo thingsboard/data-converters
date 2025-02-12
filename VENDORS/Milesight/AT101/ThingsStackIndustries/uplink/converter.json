@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for Milesight AT101",
+  "name": "Things Stack Industries Uplink Converter for Milesight AT101",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

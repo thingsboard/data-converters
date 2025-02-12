@@ -1,5 +1,5 @@
 {
-  "name": "ThingParkEnterprise Uplink Decoder for Decentlab DL-LP8P",
+  "name": "Thing Park Enterprise Uplink Converter for Decentlab DL-LP8P",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

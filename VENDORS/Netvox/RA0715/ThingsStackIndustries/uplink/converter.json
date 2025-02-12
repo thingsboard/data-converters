@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder Netvox for RA0715",
+  "name": "Things Stack Industries Uplink Converter for Netvox RA0715",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

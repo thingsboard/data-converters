@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Milesight EM300-DI Hall",
+  "name": "Loriot Uplink Converter for Milesight EM300-DI_Hall",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

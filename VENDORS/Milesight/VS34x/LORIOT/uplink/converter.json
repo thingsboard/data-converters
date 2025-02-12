@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for Milesight VS34x",
+  "name": "Loriot Uplink Converter for Milesight VS34x",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for Tektelic Flux",
+  "name": "Things Stack Community Uplink Converter for Tektelic Flux",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

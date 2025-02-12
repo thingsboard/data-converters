@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for Milesight EM500-UDL",
+  "name": "Things Stack Community Uplink Converter for Milesight EM500-UDL",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for Milesight EM500-PT100",
+  "name": "Http Uplink Converter for Milesight EM500-PT100",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

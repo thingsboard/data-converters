@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink data converter for Yobiiq RM200",
+  "name": "Loriot Uplink Converter for Yobiiq RM200",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

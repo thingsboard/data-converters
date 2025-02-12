@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Bosch parking lot sensor",
+  "name": "Chirp Stack Uplink Converter for Bosch Parking_Lot_Sensor",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Nwave G4 parking sensor - Flush Mount",
+  "name": "Loriot Uplink Converter for Nwave G4_NPS_FM",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

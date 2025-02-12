@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-PR36",
+  "name": "Loriot Uplink Converter for Decentlab DL-PR36",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink data converter for Yobiiq RM200",
+  "name": "Chirp Stack Uplink Converter for Yobiiq RM200",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

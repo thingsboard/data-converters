@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Milesight EM320-TILT",
+  "name": "Chirp Stack Uplink Converter for Milesight EM320-TILT",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

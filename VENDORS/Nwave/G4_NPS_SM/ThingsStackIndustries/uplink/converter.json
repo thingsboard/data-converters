@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for Nwave G4 parking sensor - Surface Mount",
+  "name": "Things Stack Industries Uplink Converter for Nwave G4_NPS_SM",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

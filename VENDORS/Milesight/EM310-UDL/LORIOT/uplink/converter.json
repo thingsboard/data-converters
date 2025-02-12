@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Milesight EM310-UDL",
+  "name": "Loriot Uplink Converter for Milesight EM310-UDL",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

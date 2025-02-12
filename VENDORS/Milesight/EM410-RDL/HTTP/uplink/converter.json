@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for Milesight EM410-RDL",
+  "name": "Http Uplink Converter for Milesight EM410-RDL",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {
