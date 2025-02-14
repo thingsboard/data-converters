@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Yobiiq SD1001",
+  "name": "ChirpStack Uplink Converter for Yobiiq SD1001",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

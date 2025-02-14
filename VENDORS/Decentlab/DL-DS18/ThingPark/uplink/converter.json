@@ -1,5 +1,5 @@
 {
-  "name": "Thing Park Uplink Converter for Decentlab DL-DS18",
+  "name": "ThingPark Uplink Converter for Decentlab DL-DS18",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

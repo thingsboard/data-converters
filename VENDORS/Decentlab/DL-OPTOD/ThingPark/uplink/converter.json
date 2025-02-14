@@ -1,5 +1,5 @@
 {
-  "name": "Thing Park Uplink Converter for Decentlab DL-OPTOD",
+  "name": "ThingPark Uplink Converter for Decentlab DL-OPTOD",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

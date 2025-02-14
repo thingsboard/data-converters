@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Decentlab DL-BLG",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-BLG",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

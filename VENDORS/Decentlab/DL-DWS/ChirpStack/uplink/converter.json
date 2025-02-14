@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Decentlab DL-DWS",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-DWS",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

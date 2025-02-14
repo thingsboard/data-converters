@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Decentlab DL-PR36CTD",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-PR36CTD",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

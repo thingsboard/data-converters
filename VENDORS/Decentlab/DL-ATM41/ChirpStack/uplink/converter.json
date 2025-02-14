@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Decentlab DL-ATM41",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-ATM41",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

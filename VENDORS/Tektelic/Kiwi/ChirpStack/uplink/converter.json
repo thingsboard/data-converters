@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Tektelic Kiwi",
+  "name": "ChirpStack Uplink Converter for Tektelic Kiwi",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Netvox R718A",
+  "name": "ChirpStack Uplink Converter for Netvox R718A",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

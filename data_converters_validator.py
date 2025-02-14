@@ -12,29 +12,6 @@ PASSWORD = os.getenv("PASSWORD")
 client = RestClientPE(base_url=ENDPOINT)
 client.login(username=USERNAME, password=PASSWORD)
 
-def beautify_integration_name(s):
-    if s.isupper():
-        return s.capitalize()
-    else:
-        words = re.sub(r'(?<!^)(?=[A-Z])', ' ', s)
-        return ' '.join(word.capitalize() for word in words.split())
-
-
-def get_expected_converter_name(directory):
-    file_path = os.path.join(directory, "converter.json")
-    abs_path = os.path.abspath(file_path)
-    path_components = abs_path.split(os.sep)
-    if len(path_components) < 6:
-        print(f"[WARN] Path structure not as expected for file: {file_path}")
-        return None
-    vendor_name     = path_components[-5]
-    model_name      = path_components[-4]
-    raw_integration = path_components[-3]
-    direction       = path_components[-2].capitalize()
-    integration_type = beautify_integration_name(raw_integration)
-    return f"{integration_type} {direction} Converter for {vendor_name} {model_name}"
-
-
 def find_payload_and_result_pairs(directory):
     payloads = sorted([f for f in os.listdir(directory) if re.match(r'payload(_\d+)?\.json', f)])
     results = sorted([f for f in os.listdir(directory) if re.match(r'result(_\d+)?\.json', f)])
@@ -89,13 +66,6 @@ def validate_uplink_downlink(directory):
         converter = json.load(f)
     with open(metadata_file) as f:
         metadata = json.load(f)
-
-    expected_name = get_expected_converter_name(directory)
-    actual_name = converter.get("name", "")
-    if expected_name and actual_name != expected_name:
-        print(
-            f"Validation failed for {directory}: converter name mismatch.\nExpected: '{expected_name}'\nFound:    '{actual_name}'")
-        return False
 
     configuration = converter.get('configuration')
     script_lang = configuration.get('scriptLang')

@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Tektelic Aura",
+  "name": "ChirpStack Uplink Converter for Tektelic Aura",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

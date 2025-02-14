@@ -1,5 +1,5 @@
 {
-  "name": "Thing Park Enterprise Uplink Converter for Decentlab DL-GMM",
+  "name": "ThingParkEnterprise Uplink Converter for Decentlab DL-GMM",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Milesight EM400-TLD",
+  "name": "ChirpStack Uplink Converter for Milesight EM400-TLD",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

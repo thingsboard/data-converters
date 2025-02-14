@@ -1,5 +1,5 @@
 {
-  "name": "Thing Park Uplink Converter for Decentlab DL-PR36",
+  "name": "ThingPark Uplink Converter for Decentlab DL-PR36",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

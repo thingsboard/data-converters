@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Tektelic Flux",
+  "name": "ChirpStack Uplink Converter for Tektelic Flux",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Downlink Converter for Yobiiq EM2101",
+  "name": "ChirpStack Downlink Converter for Yobiiq EM2101",
   "type": "DOWNLINK",
   "debugMode": true,
   "configuration": {

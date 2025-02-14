@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Milesight TS201",
+  "name": "ChirpStack Uplink Converter for Milesight TS201",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

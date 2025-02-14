@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Decentlab DL-ISF",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-ISF",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

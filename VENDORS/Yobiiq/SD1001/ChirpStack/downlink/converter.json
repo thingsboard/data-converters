@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Downlink Converter for Yobiiq SD1001",
+  "name": "ChirpStack Downlink Converter for Yobiiq SD1001",
   "type": "DOWNLINK",
   "debugMode": true,
   "configuration": {

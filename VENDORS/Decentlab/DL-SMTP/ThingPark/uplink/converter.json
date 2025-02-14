@@ -1,5 +1,5 @@
 {
-  "name": "Thing Park Uplink Converter for Decentlab DL-SMTP",
+  "name": "ThingPark Uplink Converter for Decentlab DL-SMTP",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Elsys ERS2_Lite",
+  "name": "ChirpStack Uplink Converter for Elsys ERS2_Lite",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

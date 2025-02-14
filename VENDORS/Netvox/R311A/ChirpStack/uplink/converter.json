@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Netvox R311A",
+  "name": "ChirpStack Uplink Converter for Netvox R311A",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

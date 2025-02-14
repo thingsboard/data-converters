@@ -1,5 +1,5 @@
 {
-  "name": "Chirp Stack Uplink Converter for Netvox RA0715",
+  "name": "ChirpStack Uplink Converter for Netvox RA0715",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

@@ -1,5 +1,5 @@
 {
-  "name": "Thing Park Uplink Converter for Decentlab DL-DLR2-011",
+  "name": "ThingPark Uplink Converter for Decentlab DL-DLR2-011",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,
