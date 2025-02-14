@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Decentlab DL-DLR2-010",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-DLR2-010",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

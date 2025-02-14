@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for The Things Stack Community integration DS3604",
+  "name": "Things Stack Community Uplink Converter for Milesight DS3604",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

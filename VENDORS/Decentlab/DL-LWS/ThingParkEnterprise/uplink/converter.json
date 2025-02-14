@@ -1,5 +1,5 @@
 {
-  "name": "ThingParkEnterprise Uplink Decoder for Decentlab DL-LWS",
+  "name": "ThingParkEnterprise Uplink Converter for Decentlab DL-LWS",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

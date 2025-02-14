@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Decentlab DL-MBX",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-MBX",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

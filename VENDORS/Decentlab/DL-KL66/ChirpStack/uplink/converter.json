@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Decentlab DL-KL66",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-KL66",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

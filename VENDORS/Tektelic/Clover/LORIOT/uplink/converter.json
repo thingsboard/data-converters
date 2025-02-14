@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Clover",
+  "name": "Loriot Uplink Converter for Tektelic Clover",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for Loriot integration DS3604",
+  "name": "Loriot Uplink Converter for Milesight DS3604",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Downlink data converter for Yobiiq RM200",
+  "name": "Things Stack Community Downlink Converter for Yobiiq RM200",
   "type": "DOWNLINK",
   "debugMode": true,
   "configuration": {

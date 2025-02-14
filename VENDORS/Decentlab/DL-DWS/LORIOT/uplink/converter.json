@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-DWS",
+  "name": "Loriot Uplink Converter for Decentlab DL-DWS",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

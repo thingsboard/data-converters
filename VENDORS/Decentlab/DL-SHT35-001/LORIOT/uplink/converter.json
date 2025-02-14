@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-SHT35-001",
+  "name": "Loriot Uplink Converter for Decentlab DL-SHT35-001",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

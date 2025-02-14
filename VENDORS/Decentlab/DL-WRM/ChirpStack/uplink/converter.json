@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Decentlab DL-WRM",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-WRM",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

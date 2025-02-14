@@ -1,5 +1,5 @@
 {
-  "name": "ThingPark Uplink Decoder for Decentlab DL-DLR2-012",
+  "name": "ThingPark Uplink Converter for Decentlab DL-DLR2-012",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

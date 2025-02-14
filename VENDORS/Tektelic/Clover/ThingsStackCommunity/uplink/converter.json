@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for Clover",
+  "name": "Things Stack Community Uplink Converter for Tektelic Clover",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

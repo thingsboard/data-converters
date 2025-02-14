@@ -1,5 +1,5 @@
 {
-  "name": "ThingPark Uplink Decoder for Decentlab DL-TRS12",
+  "name": "ThingPark Uplink Converter for Decentlab DL-TRS12",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

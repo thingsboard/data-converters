@@ -1,5 +1,5 @@
 {
-  "name": "ThingsStackIndustries Uplink Decoder for Decentlab DL-PR36CTD",
+  "name": "Things Stack Industries Uplink Converter for Decentlab DL-PR36CTD",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

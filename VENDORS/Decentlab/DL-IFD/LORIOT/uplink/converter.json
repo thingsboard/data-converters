@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-IFD",
+  "name": "Loriot Uplink Converter for Decentlab DL-IFD",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

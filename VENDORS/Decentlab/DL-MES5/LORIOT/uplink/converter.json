@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-MES5",
+  "name": "Loriot Uplink Converter for Decentlab DL-MES5",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

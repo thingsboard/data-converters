@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for R718DA2",
+  "name": "Loriot Uplink Converter for Netvox R718DA2",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

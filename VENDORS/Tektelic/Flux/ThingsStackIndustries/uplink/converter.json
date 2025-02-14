@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for Flux",
+  "name": "Things Stack Industries Uplink Converter for Tektelic Flux",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

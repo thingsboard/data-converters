@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for Elsys ERS2 CO2 Device",
+  "name": "Things Stack Industries Uplink Converter for Elsys ERS2_CO2",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

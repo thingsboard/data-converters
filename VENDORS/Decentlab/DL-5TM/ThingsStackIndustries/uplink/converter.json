@@ -1,5 +1,5 @@
 {
-  "name": "ThingsStackIndustries Uplink Decoder for Decentlab DL-5TM",
+  "name": "Things Stack Industries Uplink Converter for Decentlab DL-5TM",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

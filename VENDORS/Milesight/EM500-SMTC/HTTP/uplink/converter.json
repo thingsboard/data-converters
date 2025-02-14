@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for EM500-SMTC",
+  "name": "Http Uplink Converter for Milesight EM500-SMTC",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Decentlab DL-LPW",
+  "name": "ChirpStack Uplink Converter for Decentlab DL-LPW",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

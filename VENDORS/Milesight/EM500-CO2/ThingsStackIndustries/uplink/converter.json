@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for EM500-C02",
+  "name": "Things Stack Industries Uplink Converter for Milesight EM500-CO2",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-ITST",
+  "name": "Loriot Uplink Converter for Decentlab DL-ITST",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

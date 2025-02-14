@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for SensiLora2.0",
+  "name": "Loriot Uplink Converter for SensiEDGE SensiLora2_0",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

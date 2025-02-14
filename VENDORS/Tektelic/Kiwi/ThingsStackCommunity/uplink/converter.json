@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for Kiwi",
+  "name": "Things Stack Community Uplink Converter for Tektelic Kiwi",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

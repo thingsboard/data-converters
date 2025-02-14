@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Elsys ERS2 Sound Device",
+  "name": "ChirpStack Uplink Converter for Elsys ERS2_Sound",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

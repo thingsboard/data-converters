@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for Elsys ERS2 VOC Device",
+  "name": "Loriot Uplink Converter for Elsys ERS2_VOC",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

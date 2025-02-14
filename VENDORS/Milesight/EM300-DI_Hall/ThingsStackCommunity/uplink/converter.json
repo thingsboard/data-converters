@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for EM300-DI Hall",
+  "name": "Things Stack Community Uplink Converter for Milesight EM300-DI_Hall",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

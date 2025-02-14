@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for EM320-TILT",
+  "name": "Things Stack Industries Uplink Converter for Milesight EM320-TILT",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

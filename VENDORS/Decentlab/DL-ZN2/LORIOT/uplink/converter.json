@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-ZN2",
+  "name": "Loriot Uplink Converter for Decentlab DL-ZN2",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,
