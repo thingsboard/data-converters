@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for TS101",
+  "name": "Http Uplink Converter for Milesight TS101",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

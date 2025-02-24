@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for EM300-TH",
+  "name": "Things Stack Industries Uplink Converter for Milesight EM300-TH",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

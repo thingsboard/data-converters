@@ -1,5 +1,5 @@
 {
-  "name": "ThingParkEnterprise Uplink Decoder for Decentlab DL-ISD",
+  "name": "ThingParkEnterprise Uplink Converter for Decentlab DL-ISD",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for AM308",
+  "name": "Http Uplink Converter for Milesight AM308",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

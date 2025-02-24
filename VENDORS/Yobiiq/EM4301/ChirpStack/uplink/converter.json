@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink data converter for Yobiiq EM43xx series",
+  "name": "ChirpStack Uplink Converter for Yobiiq EM4301",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

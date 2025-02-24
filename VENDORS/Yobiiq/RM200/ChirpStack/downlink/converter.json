@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Downlink data converter for Yobiiq RM200",
+  "name": "ChirpStack Downlink Converter for Yobiiq RM200",
   "type": "DOWNLINK",
   "debugMode": true,
   "configuration": {

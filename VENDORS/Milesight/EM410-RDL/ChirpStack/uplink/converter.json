@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for EM410-RDL",
+  "name": "ChirpStack Uplink Converter for Milesight EM410-RDL",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

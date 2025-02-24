@@ -1,5 +1,5 @@
 {
-  "name": "ThingParkEnterprise Uplink Decoder for Decentlab DL-SHT35-002",
+  "name": "ThingParkEnterprise Uplink Converter for Decentlab DL-SHT35-002",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

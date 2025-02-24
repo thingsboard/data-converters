@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for GS101",
+  "name": "Loriot Uplink Converter for Milesight GS101",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

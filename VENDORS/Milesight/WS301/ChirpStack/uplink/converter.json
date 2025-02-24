@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for  WS301",
+  "name": "ChirpStack Uplink Converter for Milesight WS301",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

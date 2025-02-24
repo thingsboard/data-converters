@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for Vivid",
+  "name": "Things Stack Community Uplink Converter for Tektelic Vivid",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

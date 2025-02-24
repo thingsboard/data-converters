@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for The Things Stack Industries integration CT101/CT103",
+  "name": "Things Stack Industries Uplink Converter for Milesight CT101||CT103",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

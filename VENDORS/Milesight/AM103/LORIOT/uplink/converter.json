@@ -1,5 +1,5 @@
 {
-  "name": "Uplink data converter for Loriot integration AM-103",
+  "name": "Loriot Uplink Converter for Milesight AM103",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

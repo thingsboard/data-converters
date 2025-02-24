@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Downlink data converter for Yobiiq EM43xx series",
+  "name": "ChirpStack Downlink Converter for Yobiiq EM4301",
   "type": "DOWNLINK",
   "debugMode": true,
   "configuration": {

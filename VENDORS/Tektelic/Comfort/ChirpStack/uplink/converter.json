@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Comfort",
+  "name": "ChirpStack Uplink Converter for Tektelic Comfort",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

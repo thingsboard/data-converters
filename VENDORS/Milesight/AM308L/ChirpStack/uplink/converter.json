@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack uplink converter for Milesight AM308L",
+  "name": "ChirpStack Uplink Converter for Milesight AM308L",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

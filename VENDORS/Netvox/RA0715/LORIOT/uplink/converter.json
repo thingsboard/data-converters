@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for RA0715",
+  "name": "Loriot Uplink Converter for Netvox RA0715",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

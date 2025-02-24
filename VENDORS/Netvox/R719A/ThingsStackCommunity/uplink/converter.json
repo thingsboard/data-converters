@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for R719A",
+  "name": "Things Stack Community Uplink Converter for Netvox R719A",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {
