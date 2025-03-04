@@ -1,5 +1,5 @@
 {
-  "name": "Http Uplink Converter for Milesight AT101",
+  "name": "HTTP Uplink Converter for Milesight AT101",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

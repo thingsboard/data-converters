@@ -1,5 +1,5 @@
 {
-  "name": "Http Uplink Converter for Milesight EM300-MLD",
+  "name": "HTTP Uplink Converter for Milesight EM300-MLD",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

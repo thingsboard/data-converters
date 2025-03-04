@@ -1,5 +1,5 @@
 {
-  "name": "Things Stack Industries Uplink Converter for SensiEDGE SensiLora2_0",
+  "name": "Things Stack Industries Uplink Converter for SensiEDGE SensiLora2.0",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

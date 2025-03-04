@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Converter for Nwave G4_NCC_FM",
+  "name": "ChirpStack Uplink Converter for Nwave G4 NCC FM",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

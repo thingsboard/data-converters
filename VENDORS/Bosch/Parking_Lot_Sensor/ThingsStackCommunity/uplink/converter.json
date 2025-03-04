@@ -1,5 +1,5 @@
 {
-  "name": "Things Stack Community Uplink Converter for Bosch Parking_Lot_Sensor",
+  "name": "Things Stack Community Uplink Converter for Bosch Parking Sensor",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

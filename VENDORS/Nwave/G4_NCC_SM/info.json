@@ -1,5 +1,5 @@
 {
   "url": "https://www.nwave.io/smart-parking-sensor/",
-  "label": "Nwave Car Counter Sensor SM",
+  "label": "G4 NCC SM: Car Counter Sensor SM",
   "description": "The Nwave Car Counter SM Sensor is an advanced vehicle counting solution designed to provide real-time data on the number of cars entering and exiting a specific area. Utilizing LoRaWAN technology, this sensor enables accurate vehicle flow monitoring, ideal for applications in parking facilities, traffic management, and smart city projects."
 }
