@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for TS201",
+  "name": "Loriot Uplink Converter for Milesight TS201",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

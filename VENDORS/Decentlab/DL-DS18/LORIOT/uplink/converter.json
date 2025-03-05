@@ -1,5 +1,5 @@
 {
-  "name": "LORIOT Uplink Decoder for Decentlab DL-DS18",
+  "name": "Loriot Uplink Converter for Decentlab DL-DS18",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

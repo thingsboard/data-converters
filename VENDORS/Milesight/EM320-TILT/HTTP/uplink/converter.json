@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for EM320-TILT",
+  "name": "HTTP Uplink Converter for Milesight EM320-TILT",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

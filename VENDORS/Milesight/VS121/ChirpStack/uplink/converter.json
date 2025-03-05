@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for VS121",
+  "name": "ChirpStack Uplink Converter for Milesight VS121",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

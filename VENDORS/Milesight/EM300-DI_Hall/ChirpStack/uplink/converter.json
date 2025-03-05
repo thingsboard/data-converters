@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for EM300-DI Hall",
+  "name": "ChirpStack Uplink Converter for Milesight EM300-DI Hall",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

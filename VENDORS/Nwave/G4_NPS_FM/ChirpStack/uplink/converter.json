@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for G4 parking sensor - Flush Mount",
+  "name": "ChirpStack Uplink Converter for Nwave G4 NPS FM",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

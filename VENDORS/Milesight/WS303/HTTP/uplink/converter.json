@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for WS303",
+  "name": "HTTP Uplink Converter for Milesight WS303",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

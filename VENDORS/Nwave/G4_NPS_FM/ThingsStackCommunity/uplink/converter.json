@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for G4 parking sensor - Flush Mount",
+  "name": "Things Stack Community Uplink Converter for Nwave G4 NPS FM",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

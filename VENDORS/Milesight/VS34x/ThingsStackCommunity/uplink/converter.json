@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for VS34x",
+  "name": "Things Stack Community Uplink Converter for Milesight VS34x",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Uplink data converter for Yobiiq EM2101",
+  "name": "Things Stack Industries Uplink Converter for Yobiiq EM2101",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

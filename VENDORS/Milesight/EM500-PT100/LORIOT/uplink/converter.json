@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for EM500-PT100",
+  "name": "Loriot Uplink Converter for Milesight EM500-PT100",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

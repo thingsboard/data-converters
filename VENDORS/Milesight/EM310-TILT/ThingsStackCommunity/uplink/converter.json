@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for EM310-TILT",
+  "name": "Things Stack Community Uplink Converter for Milesight EM310-TILT",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

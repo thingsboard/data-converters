@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for EM500-PT100",
+  "name": "ChirpStack Uplink Converter for Milesight EM500-PT100",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

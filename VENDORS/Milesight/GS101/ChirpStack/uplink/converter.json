@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for GS101",
+  "name": "ChirpStack Uplink Converter for Milesight GS101",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

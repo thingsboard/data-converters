@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Decoder for Elsys ERS2 Lite Device",
+  "name": "ChirpStack Uplink Converter for Elsys ERS2_Lite",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

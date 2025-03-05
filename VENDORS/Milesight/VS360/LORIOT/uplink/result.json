@@ -1,0 +1,20 @@
+[{
+  "deviceName": "VS360 1000000000000001",
+  "deviceType": "VS360",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "total_in": 4353,
+      "total_out": 4360,
+      "total_count_alarm": "threshold alarm",
+      "period_in": 1000,
+      "period_out": 1001,
+      "period_count_alarm": "threshold alarm"
+    }
+  }]
+}]

@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Industries Uplink Decoder for R718DA2",
+  "name": "Things Stack Industries Uplink Converter for Netvox R718DA2",
   "type": "UPLINK",
   "debugMode": true,
   "configuration": {

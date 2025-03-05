@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Decoder for EM300-MLD",
+  "name": "Loriot Uplink Converter for Milesight EM300-MLD",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

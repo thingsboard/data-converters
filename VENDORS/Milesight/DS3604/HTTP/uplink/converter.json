@@ -1,5 +1,5 @@
 {
-  "name": "HTTP Uplink integration for DS3604",
+  "name": "HTTP Uplink Converter for Milesight DS3604",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

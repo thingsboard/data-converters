@@ -1,5 +1,5 @@
 {
-  "name": "ThingsStackCommunity Uplink Decoder for Decentlab DL-DS18",
+  "name": "Things Stack Community Uplink Converter for Decentlab DL-DS18",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

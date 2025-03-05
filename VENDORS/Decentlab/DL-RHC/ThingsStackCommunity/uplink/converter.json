@@ -1,5 +1,5 @@
 {
-  "name": "ThingsStackCommunity Uplink Decoder for Decentlab DL-RHC",
+  "name": "Things Stack Community Uplink Converter for Decentlab DL-RHC",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

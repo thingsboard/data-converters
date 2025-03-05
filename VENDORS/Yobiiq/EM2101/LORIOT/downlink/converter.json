@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Downlink data converter for Yobiiq EM2101",
+  "name": "Loriot Downlink Converter for Yobiiq EM2101",
   "type": "DOWNLINK",
   "debugMode": true,
   "configuration": {

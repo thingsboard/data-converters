@@ -1,0 +1,27 @@
+[{
+  "deviceName": "VS360 1000000000000001",
+  "deviceType": "VS360",
+  "attributes": {
+    "eui": "1000000000000001",
+    "fPort": 85,
+    "frequency": 867500000
+  },
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {}
+  }, {
+    "ts": 1693530747000,
+    "values": {
+      "period_in": 11,
+      "period_out": 4
+    }
+  }, {
+    "ts": 1693531647000,
+    "values": {
+      "period_in": 7,
+      "period_out": 2,
+      "total_in": 29,
+      "total_out": 8
+    }
+  }]
+}]

@@ -1,5 +1,5 @@
 {
-  "name": "ThingPark Uplink Decoder for Decentlab DL-IFD",
+  "name": "ThingPark Uplink Converter for Decentlab DL-IFD",
   "type": "UPLINK",
   "debugMode": true,
   "edgeTemplate": false,

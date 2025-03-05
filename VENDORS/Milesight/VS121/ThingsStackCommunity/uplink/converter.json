@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Decoder for VS121",
+  "name": "Things Stack Community Uplink Converter for Milesight VS121",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {
