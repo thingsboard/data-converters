@@ -12,6 +12,12 @@ PASSWORD = os.getenv("PASSWORD")
 client = RestClientPE(base_url=ENDPOINT)
 client.login(username=USERNAME, password=PASSWORD)
 
+ALLOWED_INTEGRATION_DIRECTORIES = {'SIGFOX', 'THINGPARK', 'TPE', 'CHIRPSTACK', 'PARTICLE', 'HTTP', 'MQTT', 'PUB_SUB',
+                                   'AWS_IOT', 'AWS_SQS', 'AWS_KINESIS', 'IBM_WATSON_IOT', 'TTN', 'TTI',
+                                   'AZURE_EVENT_HUB', 'OPC_UA', 'CUSTOM', 'UDP', 'TCP', 'KAFKA', 'AZURE_IOT_HUB',
+                                   'APACHE_PULSAR', 'RABBITMQ', 'LORIOT', 'COAP', 'TUYA', 'AZURE_SERVICE_BUS', 'KPN'}
+
+
 def find_payload_and_result_pairs(directory):
     payloads = sorted([f for f in os.listdir(directory) if re.match(r'payload(_\d+)?\.json', f)])
     results = sorted([f for f in os.listdir(directory) if re.match(r'result(_\d+)?\.json', f)])
@@ -204,7 +210,8 @@ def validate_company_files(company_path):
 
             allowed_keys = {"description", "url"}
             if set(data.keys()) != allowed_keys:
-                print(f"Validation failed: 'info.json' in {company_path} contains invalid keys. Allowed keys are {allowed_keys}.")
+                print(
+                    f"Validation failed: 'info.json' in {company_path} contains invalid keys. Allowed keys are {allowed_keys}.")
                 return False
 
             for key in allowed_keys:
@@ -213,6 +220,7 @@ def validate_company_files(company_path):
                     return False
 
     return all_present
+
 
 def walk_vendors_directory(root_dir):
     all_success = True
@@ -244,6 +252,11 @@ def walk_vendors_directory(root_dir):
                 continue
 
             for integration in integrations:
+                if integration.upper() not in ALLOWED_INTEGRATION_DIRECTORIES:
+                    print(f"Validation failed: Integration directory '{integration}' is not recognized.")
+                    all_success = False
+                    continue
+
                 integration_path = os.path.join(device_path, integration)
 
                 if not os.path.isdir(integration_path):
@@ -267,7 +280,6 @@ def walk_vendors_directory(root_dir):
                         all_success = False
 
     return all_success
-
 
 
 if __name__ == "__main__":
