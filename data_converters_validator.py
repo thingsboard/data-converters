@@ -134,7 +134,7 @@ def validate_uplink_downlink(directory):
         elif 'downlink' in directory:
             encoder = configuration.get("encoder") if script_lang == "JS" else configuration.get("tbelEncoder")
             request["encoder"] = encoder
-            request["msg"] = json.dumps(processed_payload)
+            request["msg"] = processed_payload
             request["msgType"] = "POST_TELEMETRY_REQUEST"
             request["integrationMetadata"] = {}
             actual_result = client.converter_controller.test_down_link_converter_using_post(
