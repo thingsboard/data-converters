@@ -1,18 +1,23 @@
 [{
-  "deviceName": "ERS2 CO2 Lite 1000000000000001",
-  "deviceType": "ERS2 CO2 Lite",
-  "attributes": {
-    "eui": "1000000000000001",
-    "fPort": 85,
-    "frequency": 867500000
-  },
-  "telemetry": [{
-    "ts": 1684478801936,
-    "values": {
-      "temperature": 22.6,
-      "humidity": 41,
-      "co2": 776,
-      "vdd": 3426
+    "entityType": "DEVICE",
+    "name": "Device 1000000000000001",
+    "profile": "",
+    "label": "",
+    "customer": "",
+    "group": "",
+    "telemetry": [{
+        "ts": 1684478801936,
+        "values": {
+            "temperature": 22.6,
+            "humidity": 41,
+            "co2": 776,
+            "vdd": 3426
+        }
+    }],
+    "attributes": {
+        "fPort": 85,
+        "dr": "SF9 BW125 4/5",
+        "frequency": 867500000,
+        "eui": 1000000000000001
     }
-  }]
 }]
