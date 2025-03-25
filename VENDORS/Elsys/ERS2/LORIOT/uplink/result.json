@@ -1,7 +1,8 @@
 [{
     "entityType": "DEVICE",
     "name": "Device 1000000000000001",
-    "profile": "default",
+    "profile": "",
+    "label": "",
     "customer": "",
     "group": "",
     "telemetry": [{
@@ -22,8 +23,9 @@
     }
 }, {
     "entityType": "DEVICE",
-    "name": "Device 1000000000000001",
-    "profile": "default",
+    "name": "Gateway 1020304080706050",
+    "profile": "Lora gateway",
+    "label": "",
     "customer": "",
     "group": "",
     "telemetry": [{
@@ -41,8 +43,9 @@
     }
 }, {
     "entityType": "DEVICE",
-    "name": "Device 1000000000000001",
-    "profile": "default",
+    "name": "Gateway 1020304081716151",
+    "profile": "Lora gateway",
+    "label": "",
     "customer": "",
     "group": "",
     "telemetry": [{
