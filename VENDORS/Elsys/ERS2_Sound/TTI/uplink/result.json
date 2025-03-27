@@ -1,29 +1,34 @@
 {
-    "entityType": "DEVICE",
-    "name": "Device 1000000000000001",
-    "profile": "application-tti-name",
-    "label": "eui-1000000000000001",
-    "customer": "",
-    "group": "",
-    "telemetry": [{
-        "ts": 1684398325906,
-        "values": {
-            "temperature": 22.6,
-            "humidity": 41,
-            "light": 39,
-            "pir": 6,
-            "vdd": 3426,
-            "soundPeak": 7,
-            "soundAvg": 16
-        }
-    }],
-    "attributes": {
-        "devAddr": 20000001,
-        "fPort": 85,
-        "frequency": 868500000,
-        "bandwidth": 125000,
-        "spreadingFactor": 7,
-        "eui": 1000000000000001,
-        "tenantId": "tenant"
+  "entityType": "DEVICE",
+  "name": "ERS2 Sound 1000000000000001",
+  "profile": "application-tti-name",
+  "label": "eui-1000000000000001",
+  "customer": "",
+  "group": "",
+  "telemetry": [{
+    "ts": 1684398325906,
+    "values": {
+      "temperature": 22.6,
+      "humidity": 41,
+      "light": 39,
+      "pir": 6,
+      "vdd": 3426,
+      "soundPeak": 7,
+      "soundAvg": 16
     }
+  }],
+  "attributes": {
+    "devAddr": 20000001,
+    "fPort": 85,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "frequency": 868500000,
+    "joinEui": 2000000000000001,
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": 1000000000000001,
+    "tenantId": "tenant",
+    "applicationId": "application-tti-name"
+  }
 }

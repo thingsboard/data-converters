@@ -12,7 +12,7 @@
     "rpc:/ttn.lorawan.v3.GsNs/HandleUplink:01H0S7ZJGSF3M38ZRZVTM38DEC",
     "rpc:/ttn.lorawan.v3.NsAs/HandleUplink:01H0S7ZJQ8R2EH5AA269AKM8DX"
   ],
-  "data": "AXVeAwABBAAB",
+  "data": "AQDiAikEACcFBgcNYhUHEA==",
   "devAddr": 20000001,
   "deviceId": "eui-1000000000000001",
   "eui": 1000000000000001,

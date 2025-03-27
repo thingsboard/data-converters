@@ -1,6 +1,6 @@
 [{
   "entityType": "DEVICE",
-  "name": "ERS2 Lite 1000000000000001",
+  "name": "ERS2 Sound 1000000000000001",
   "profile": "",
   "label": "",
   "customer": "",
@@ -10,7 +10,11 @@
     "values": {
       "temperature": 22.6,
       "humidity": 41,
-      "vdd": 3426
+      "light": 39,
+      "pir": 6,
+      "vdd": 3426,
+      "soundPeak": 7,
+      "soundAvg": 16
     }
   }],
   "attributes": {

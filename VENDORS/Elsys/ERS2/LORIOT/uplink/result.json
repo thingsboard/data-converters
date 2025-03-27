@@ -1,64 +1,23 @@
 [{
-    "entityType": "DEVICE",
-    "name": "Device 1000000000000001",
-    "profile": "",
-    "label": "",
-    "customer": "",
-    "group": "",
-    "telemetry": [{
-        "ts": 1684478801936,
-        "values": {
-            "temperature": 22.6,
-            "humidity": 41,
-            "light": 39,
-            "pir": 6,
-            "vdd": 3426
-        }
-    }],
-    "attributes": {
-        "fPort": 85,
-        "dr": "SF9 BW125 4/5",
-        "frequency": 867500000,
-        "eui": 1000000000000001
+  "entityType": "DEVICE",
+  "name": "ERS2 1000000000000001",
+  "profile": "",
+  "label": "",
+  "customer": "",
+  "group": "",
+  "telemetry": [{
+    "ts": 1684478801936,
+    "values": {
+      "temperature": 22.6,
+      "humidity": 41,
+      "light": 39,
+      "pir": 6,
+      "vdd": 3426
     }
-}, {
-    "entityType": "DEVICE",
-    "name": "Gateway 1020304080706050",
-    "profile": "Lora gateway",
-    "label": "",
-    "customer": "",
-    "group": "",
-    "telemetry": [{
-        "ts": 1690901260493,
-        "values": {
-            "rssi": -38,
-            "snr": 8.5
-        }
-    }],
-    "attributes": {
-        "eui": "1020304080706050",
-        "fPort": 85,
-        "dr": "SF9 BW125 4/5",
-        "frequency": 867500000
-    }
-}, {
-    "entityType": "DEVICE",
-    "name": "Gateway 1020304081716151",
-    "profile": "Lora gateway",
-    "label": "",
-    "customer": "",
-    "group": "",
-    "telemetry": [{
-        "ts": 1690901260495,
-        "values": {
-            "rssi": -42,
-            "snr": 8.8
-        }
-    }],
-    "attributes": {
-        "eui": "1020304081716151",
-        "fPort": 85,
-        "dr": "SF9 BW125 4/5",
-        "frequency": 867500000
-    }
+  }],
+  "attributes": {
+    "fPort": 85,
+    "frequency": 867500000,
+    "eui": 1000000000000001
+  }
 }]

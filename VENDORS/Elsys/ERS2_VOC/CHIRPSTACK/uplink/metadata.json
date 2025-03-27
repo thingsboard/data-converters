@@ -5,7 +5,7 @@
   "bandwidth": 125000,
   "codeRate": "CR_4_5",
   "confirmed": false,
-  "data": "AQDiAikEACcFBgYDCAcNYg==",
+  "data": "AQDiAikEACcFBgcNYhwNYg==",
   "deduplicationId": "57433366-50a6-4dc2-8145-2df1bbc70d9e",
   "devAddr": 20000001,
   "deviceName": "Device name",

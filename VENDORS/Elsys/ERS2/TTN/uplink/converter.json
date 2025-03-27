@@ -4,13 +4,13 @@
   "integrationType": "TTN",
   "debugMode": false,
   "debugSettings": {
-    "failuresEnabled": false,
+    "failuresEnabled": true,
     "allEnabled": false,
     "allEnabledUntil": 0
   },
   "configuration": {
     "scriptLang": "TBEL",
-    "decoder": "// Decode an uplink message from a buffer\n// payload - array of bytes\n// metadata - key/value object\n\n/** Decoder **/\n\n// decode payload to string\nvar payloadStr = decodeToString(payload);\n\n// decode payload to JSON\n// var data = decodeToJson(payload);\n\nvar deviceName = 'Device A';\nvar deviceType = 'thermostat';\nvar customerName = 'Customer C';\nvar groupName = 'thermostat devices';\nvar manufacturer = 'Example corporation';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// Result object with device/asset attributes/telemetry data\nvar result = {\n// Use deviceName and deviceType or assetName and assetType, but not both.\n   deviceName: deviceName,\n   deviceType: deviceType,\n// assetName: assetName,\n// assetType: assetType,\n// customerName: customerName,\n   groupName: groupName,\n   attributes: {\n       model: 'Model A',\n       serialNumber: 'SN111',\n       integrationName: metadata['integrationName'],\n       manufacturer: manufacturer\n   },\n   telemetry: {\n       temperature: 42,\n       humidity: 80,\n       rawData: payloadStr\n   }\n};\n\n/** Helper functions **/\n\nfunction decodeToString(payload) {\n   return String.fromCharCode.apply(String, payload);\n}\n\nfunction decodeToJson(payload) {\n   // covert payload to string.\n   var str = decodeToString(payload);\n\n   // parse string to JSON\n   var data = JSON.parse(str);\n   return data;\n}\n\nreturn result;",
+    "decoder": null,
     "tbelDecoder": "// If you want to override configuration from converter you can set value instead of null to variables below.\nvar entityType = null; // Entity type allows you to choose type of created entity. Can be DEVICE or ASSET.\nvar name = null; // Device or asset name.\nvar profile = null; // Device or asset profile name.\nvar group = null; // If group is not null - created entity will be added to the entity group with such name.\nvar customer = null; // If customer is not null - created entity will be assigned to customer with such name.\n\n// If you want to parse incoming data somehow, you can add your code to decodePayload function.\n// input: bytes\n// Note ts represents a timestamp in milliseconds since the Unix epoch (January 1, 1970)\n// expected output:\n//  {\n//    \"attributes\": {\"attributeKey\": \"attributeValue\"},\n//    \"telemetry\": [{\"ts\": 1730898982391, \"values\": {\"telemetryKey\":\"telemetryValue\"}, {\"ts\": 1730518182391, \"values\": {\"telemetryKey\":\"telemetryValue\"}}]\n//  }\n\nfunction decodePayload(input) {\n    var output = {\n        attributes: {},\n        telemetry: []\n    };\n\n    // --- Timestamp parsing\n    var dateString = metadata.uplinkMessageReceivedAt;\n\n    if ((metadata.simulated != null && metadata.simulated) || dateString == null) {\n        dateString = metadata.receivedAt;\n    }\n\n    timestamp = parseDateToTimestamp(dateString);\n    // --- Timestamp parsing\n\n    var decoded = {}; // Key/value telemetry object.\n    for (var i = 0; i < input.length;) {\n        var type = input[i++] & 0xff;\n        \n        if (type == 0x01) { \n            // Temperature Converts to °C\n            decoded.temperature = parseBytesToInt(input, i, 2, true) / 10;\n            i += 2;\n        } else if (type == 0x02) { // Humidity\n            decoded.humidity = input[i];\n            i += 1;\n        } else if (type == 0x04) { // Light\n            decoded.light = parseBytesToInt(input, i, 2, true);\n            i += 2;\n        } else if (type == 0x05) { // Motion (PIR)\n            decoded.pir = input[i];\n            i += 1;\n        } else if (type == 0x07) { // Battery Voltage (VDD)\n            decoded.vdd = parseBytesToInt(input, i, 2, true);   \n            i += 2;\n        }\n    }\n\n    output.telemetry = [{\n        ts: timestamp,\n        values: decoded\n    }];\n\n    // --- Decoding code --- //\n    return output;\n}\n\n// --- attributes and telemetry objects ---\nvar telemetry = [];\nvar attributes = {};\n// --- attributes and telemetry objects ---\nvar customDecoding = decodePayload(payload);\n\n// Collecting data to result\nif (customDecoding.?telemetry.size() > 0) {\n    if (customDecoding.telemetry instanceof java.util.ArrayList) {\n        foreach(telemetryObj: customDecoding.telemetry) {\n            if (telemetryObj.ts != null && telemetryObj.values != null) {\n                telemetry.add(telemetryObj);\n            }\n        }\n    } else {\n        telemetry.putAll(customDecoding.telemetry);\n    }\n}\n\nif (customDecoding.?attributes.size() > 0) {\n    attributes.putAll(customDecoding.attributes);\n}\n\nvar result = {\n    type: entityType,\n    name: name,\n    profile: profile,\n    customer: customer,\n    group: group,\n\n    attributes: attributes,\n    telemetry: telemetry\n};\n\nreturn result;\n\nfunction parseDateToTimestamp(dateString) {\n    var date = new Date(dateString);\n    var timestamp = date.getTime();\n\n    // If we cannot parse timestamp - we will use the current timestamp\n    if (timestamp == -1) {\n        timestamp = Date.now();\n    }\n\n    return timestamp;\n}",
     "encoder": null,
     "tbelEncoder": null,
@@ -23,14 +23,15 @@
       "codeRate",
       "frequency",
       "brandId",
-      "modelId",
-      "hardwareVersion",
-      "firmwareVersion",
-      "attributes",
-      "tenantId"
+      "tenantId",
+      "applicationId",
+      "deviceId",
+      "joinEui",
+      "netId",
+      "clusterId"
     ],
     "type": "DEVICE",
-    "name": "Device $eui",
+    "name": "ERS2 $eui",
     "profile": "$applicationId",
     "label": "$deviceId",
     "customer": "",
@@ -45,11 +46,12 @@
       "codeRate",
       "frequency",
       "brandId",
-      "modelId",
-      "hardwareVersion",
-      "firmwareVersion",
-      "attributes",
-      "tenantId"
+      "tenantId",
+      "applicationId",
+      "deviceId",
+      "joinEui",
+      "netId",
+      "clusterId"
     ]
   },
   "additionalInfo": {
