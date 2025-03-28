@@ -1,4 +1,75 @@
 {
-  "integrationName": "ChirpStack integration",
-  "includeGatewayInfo": "false"
+  "applicationId": "application-tti-name",
+  "bandwidth": 125000,
+  "clusterId": "eu1",
+  "consumedAirtime": "0.097536s",
+  "correlationIds": [
+    "as:up:01H0PZDGB1NW6NAPD815NGHPF6",
+    "gs:conn:01H0FJRSXSYT7VKNYXJ89F95XT",
+    "gs:up:host:01H0FJRSY3MZMGPPFBQ4FZV4T8",
+    "gs:uplink:01H0PZDG4HHGFRTXRTXD4PFTH7",
+    "ns:uplink:01H0PZDG4JZ3BM0K6J89EQK1J7",
+    "rpc:/ttn.lorawan.v3.GsNs/HandleUplink:01H0PZDG4J02F85RYFPCNSNXCR",
+    "rpc:/ttn.lorawan.v3.NsAs/HandleUplink:01H0PZDGB081PMP806BJHNHX1A"
+  ],
+  "data": "AQDiAikGAwgHDWI=",
+  "devAddr": 20000001,
+  "deviceId": "eui-1000000000000001",
+  "eui": 1000000000000001,
+  "fCnt": 5017,
+  "fPort": 85,
+  "frequency": 868500000,
+  "includeGatewayInfo": false,
+  "integrationName": "Test TTI",
+  "joinEui": 2000000000000001,
+  "netId": "000013",
+  "receivedAt": "2023-05-18T08:25:26.112483370Z",
+  "rssi": -24,
+  "rxMetadata": [
+    {
+      "channel_index": 2,
+      "channel_rssi": -24,
+      "frequency_offset": 671,
+      "gateway_ids": {
+        "eui": "6A7E111A10000000",
+        "gateway_id": "eui-6A7E111A10000000"
+      },
+      "received_at": "2023-05-18T08:25:25.869324983Z",
+      "rssi": -24,
+      "snr": 12,
+      "time": "2023-05-18T08:25:25.885310Z",
+      "timestamp": 818273765,
+      "uplink_token": "CiIKIAoUZXVpLTZBN0UxMTFBMTAwMDAwMDASCCThJP/+9k6eEOW7l4YDGgwI9cGXowYQ5KPhrwMgiI2rp+jpOA="
+    },
+    {
+      "channel_rssi": -24,
+      "frequency_offset": "671",
+      "gateway_ids": {
+        "gateway_id": "packetbroker"
+      },
+      "packet_broker": {
+        "forwarder_cluster_id": "eu1.cloud.thethings.network",
+        "forwarder_gateway_eui": "6A7E111A10000000",
+        "forwarder_gateway_id": "eui-6a7e111a10000000",
+        "forwarder_net_id": "000013",
+        "forwarder_tenant_id": "ttn",
+        "home_network_cluster_id": "eu1.cloud.thethings.industries",
+        "home_network_net_id": "000013",
+        "home_network_tenant_id": "tenant",
+        "message_id": "01H0PZDG4MF9AYSMNY44MAVTDH"
+      },
+      "received_at": "2023-05-18T08:25:25.906038642Z",
+      "rssi": -24,
+      "snr": 12,
+      "time": "2023-05-18T08:25:25.885310Z",
+      "uplink_token": "eyJnIjoiWlhsS2FHSkhZMmxQYVVwQ1RWUkpORkl3VGs1VE1XTnBURU5LYkdKdFRXbFBhVXBDVFZSSk5GSXdUazVKYVhkcFlWaFphVTlwU201a01uaGhWVlJvZDFSWFVuRmlSM1JtVFcxT2RVbHBkMmxrUjBadVNXcHZhV05ZY0RKT1IyeExaREpSZVZwR1pIUmpNRXBLVlVoR2RFNVZkR3BWVTBvNUxua3paVVJTWVRaM1lXOU1kbTQwVm5sdmIyWmlPWGN1ZUhCZmVrcElaa3hIWlZadGRVUlFVeTVuYlRaVlZXRXdkakpHV0VKMGJUUjZaMjVXUkVoeGVHRjRaMlJKTlVkS1VsbERhemc1VDNCbk5rVk1iM1JDUkVZM1VWbHdZbEJDTkdOblNqWjBlbkphYUV4MFRVMHhZMVZFTTFac01XdExURUo0YURaMFExTnhhMVJsWWw4eE5FdHlVVXcyZUhsRWFFbEhlakJITXpoTE0xaFdlRzR5VUVjMk4wNUViME5WTkhoTmRrazFZVk5oWkUwd2FXVnFjR294VGtoMFduZHlZMDFxVlVGNmRsbERUazlNY2s5eFdVeFpWMk5XTG1WVFFYVkpNVkptT1U5NWRqUTNhSEoxTUZoalYxRT0iLCJhIjp7ImZuaWQiOiIwMDAwMTMiLCJmdGlkIjoidHRuIiwiZmNpZCI6ImV1MS5jbG91ZC50aGV0aGluZ3MubmV0d29yayJ9fQ=="
+    }
+  ],
+  "sessionKeyId": "AYfg8rhha5n+FWx0ZaAprA==",
+  "snr": 12,
+  "spreadingFactor": 7,
+  "tenantId": "tenant",
+  "time": "2023-05-18T08:25:25.885310Z",
+  "timestamp": 818273765,
+  "uplinkMessageReceivedAt": "2023-05-18T08:25:25.906399073Z"
 }

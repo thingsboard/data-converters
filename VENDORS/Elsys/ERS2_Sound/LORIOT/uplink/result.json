@@ -1,11 +1,10 @@
 [{
-  "deviceName": "ERS2 Sound1000000000000001",
-  "deviceType": "ERS2 Sound",
-  "attributes": {
-    "eui": "1000000000000001",
-    "fPort": 85,
-    "frequency": 867500000
-  },
+  "entityType": "DEVICE",
+  "name": "ERS2 Sound 1000000000000001",
+  "profile": "",
+  "label": "",
+  "customer": "",
+  "group": "",
   "telemetry": [{
     "ts": 1684478801936,
     "values": {
@@ -17,5 +16,10 @@
       "soundPeak": 7,
       "soundAvg": 16
     }
-  }]
+  }],
+  "attributes": {
+    "fPort": 85,
+    "frequency": 867500000,
+    "eui": 1000000000000001
+  }
 }]
