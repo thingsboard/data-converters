@@ -1,19 +1,4 @@
 {
-  "ack": false,
-  "battery": 94,
-  "cmd": "rx",
-  "data": "0100e20229070d62",
-  "dr": "SF9 BW125 4/5",
-  "eui": 1000000000000001,
-  "fPort": 85,
-  "frequency": 867500000,
-  "fСnt": 2,
-  "includeGatewayInfo": false,
-  "integrationName": "Test LORIOT",
-  "offline": false,
-  "rssi": -21,
-  "seqno": 3040,
-  "snr": 10,
-  "toa": 206,
-  "ts": 1684478801936
+  "integrationName": "Loriot integration",
+  "includeGatewayInfo": "false"
 }
