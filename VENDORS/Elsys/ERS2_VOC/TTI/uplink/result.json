@@ -3,8 +3,6 @@
   "name": "ERS2 VOC 1000000000000001",
   "profile": "application-tti-name",
   "label": "eui-1000000000000001",
-  "customer": "",
-  "group": "",
   "telemetry": [{
     "ts": 1684398325906,
     "values": {
@@ -17,16 +15,16 @@
     }
   }],
   "attributes": {
-    "devAddr": 20000001,
+    "devAddr": "20000001",
     "fPort": 85,
     "clusterId": "eu1",
     "deviceId": "eui-1000000000000001",
-    "frequency": 868500000,
-    "joinEui": 2000000000000001,
+    "frequency": "868500000",
+    "joinEui": "2000000000000001",
     "bandwidth": 125000,
     "netId": "000013",
     "spreadingFactor": 7,
-    "eui": 1000000000000001,
+    "eui": "1000000000000001",
     "tenantId": "tenant",
     "applicationId": "application-tti-name"
   }
