@@ -1,10 +1,7 @@
 [{
   "entityType": "DEVICE",
   "name": "ERS2 CO2 1000000000000001",
-  "profile": "",
-  "label": "",
-  "customer": "",
-  "group": "",
+  "profile": "default",
   "telemetry": [{
     "ts": 1684478801936,
     "values": {
@@ -19,6 +16,6 @@
   "attributes": {
     "fPort": 85,
     "frequency": 867500000,
-    "eui": 1000000000000001
+    "eui": "1000000000000001"
   }
 }]

@@ -18,24 +18,21 @@ ALLOWED_INTEGRATION_DIRECTORIES = {'SIGFOX', 'THINGPARK', 'TPE', 'CHIRPSTACK', '
                                    'APACHE_PULSAR', 'RABBITMQ', 'LORIOT', 'COAP', 'TUYA', 'AZURE_SERVICE_BUS', 'KPN'}
 
 def find_payload_and_result_pairs(directory):
-    payloads = sorted([f for f in os.listdir(directory) if re.match(r'payload(_\d+)?\.(json|base64)$', f)])
-    results = sorted([f for f in os.listdir(directory) if re.match(r'result(_\d+)?\.json$', f)])
+    payloads = sorted([f for f in os.listdir(directory) if re.match(r'payload(_\d+)?\.json', f)])
+    results = sorted([f for f in os.listdir(directory) if re.match(r'result(_\d+)?\.json', f)])
 
     pairs = []
 
-    payload_main = next((f for f in payloads if re.match(r'payload\.(json|base64)$', f)), None)
-    result_main = 'result.json'
-    if payload_main and result_main in results:
-        pairs.append((payload_main, result_main))
-    elif payload_main and result_main not in results:
-        print(f"Validation failed for {directory}: {payload_main} is present, but {result_main} is missing.")
-    elif result_main in results and not payload_main:
-        print(f"Validation failed for {directory}: {result_main} is present, but payload file is missing.")
+    if 'payload.json' in payloads and 'result.json' in results:
+        pairs.append(('payload.json', 'result.json'))
+    elif 'payload.json' in payloads and 'result.json' not in results:
+        print(f"Validation failed for {directory}: payload.json is present, but result.json is missing.")
+    elif 'result.json' in results and 'payload.json' not in payloads:
+        print(f"Validation failed for {directory}: result.json is present, but payload.json is missing.")
 
     for payload_file in payloads:
-        match = re.match(r'payload_(\d+)\.(json|base64)$', payload_file)
-        if match:
-            suffix = match.group(1)
+        if re.match(r'payload_\d+\.json', payload_file):
+            suffix = re.search(r'_(\d+)\.json', payload_file).group(1)
             result_file = f"result_{suffix}.json"
             if result_file in results:
                 pairs.append((payload_file, result_file))
@@ -43,72 +40,13 @@ def find_payload_and_result_pairs(directory):
                 print(f"Validation failed for {directory}: {payload_file} is present, but {result_file} is missing.")
 
     for result_file in results:
-        match = re.match(r'result_(\d+)\.json$', result_file)
-        if match:
-            suffix = match.group(1)
-            payload_file_json = f"payload_{suffix}.json"
-            payload_file_base64 = f"payload_{suffix}.base64"
-            if payload_file_json not in payloads and payload_file_base64 not in payloads:
-                print(
-                    f"Validation failed for {directory}: {result_file} is present, but neither {payload_file_json} nor {payload_file_base64} is present.")
+        if re.match(r'result_\d+\.json', result_file):
+            suffix = re.search(r'_(\d+)\.json', result_file).group(1)
+            payload_file = f"payload_{suffix}.json"
+            if payload_file not in payloads:
+                print(f"Validation failed for {directory}: {result_file} is present, but {payload_file} is missing.")
 
     return pairs
-
-def find_payload_result_metadata_triples(directory):
-    payloads = sorted([f for f in os.listdir(directory) if re.match(r'payload(_\d+)?\.(json|base64)$', f)])
-    results = sorted([f for f in os.listdir(directory) if re.match(r'result(_\d+)?\.json$', f)])
-    metadatas = sorted([f for f in os.listdir(directory) if re.match(r'metadata(_\d+)?\.json$', f)])
-
-    triples = []
-
-    payload_main = next((f for f in payloads if re.match(r'payload\.(json|base64)$', f)), None)
-    result_main = 'result.json'
-    metadata_main = 'metadata.json'
-    if payload_main and result_main in results and metadata_main in metadatas:
-        triples.append((payload_main, result_main, metadata_main))
-    else:
-        if payload_main and result_main not in results:
-            print(f"Validation failed for {directory}: {payload_main} is present, but {result_main} is missing.")
-        if payload_main and metadata_main not in metadatas:
-            print(f"Validation failed for {directory}: {payload_main} is present, but {metadata_main} is missing.")
-        if result_main in results and not payload_main:
-            print(f"Validation failed for {directory}: {result_main} is present, but payload file is missing.")
-        if metadata_main in metadatas and not payload_main:
-            print(f"Validation failed for {directory}: {metadata_main} is present, but payload file is missing.")
-
-    for payload_file in payloads:
-        match = re.match(r'payload_(\d+)\.(json|base64)$', payload_file)
-        if match:
-            suffix = match.group(1)
-            result_file = f"result_{suffix}.json"
-            metadata_file = f"metadata_{suffix}.json"
-            if result_file in results and metadata_file in metadatas:
-                triples.append((payload_file, result_file, metadata_file))
-            else:
-                if result_file not in results:
-                    print(f"Validation failed for {directory}: {payload_file} is present, but {result_file} is missing.")
-                if metadata_file not in metadatas:
-                    print(f"Validation failed for {directory}: {payload_file} is present, but {metadata_file} is missing.")
-
-    for result_file in results:
-        match = re.match(r'result_(\d+)\.json$', result_file)
-        if match:
-            suffix = match.group(1)
-            payload_file_json = f"payload_{suffix}.json"
-            payload_file_base64 = f"payload_{suffix}.base64"
-            if payload_file_json not in payloads and payload_file_base64 not in payloads:
-                print(f"Validation failed for {directory}: {result_file} is present, but neither {payload_file_json} nor {payload_file_base64} is present.")
-
-    for metadata_file in metadatas:
-        match = re.match(r'metadata_(\d+)\.json$', metadata_file)
-        if match:
-            suffix = match.group(1)
-            payload_file_json = f"payload_{suffix}.json"
-            payload_file_base64 = f"payload_{suffix}.base64"
-            if payload_file_json not in payloads and payload_file_base64 not in payloads:
-                print(f"Validation failed for {directory}: {metadata_file} is present, but neither {payload_file_json} nor {payload_file_base64} is present.")
-
-    return triples
 
 
 def validate_uplink_downlink(directory):
@@ -132,85 +70,75 @@ def validate_uplink_downlink(directory):
     with open(converter_file) as f:
         converter = json.load(f)
     with open(metadata_file) as f:
-        global_metadata = json.load(f)
+        metadata = json.load(f)
 
     configuration = converter.get('configuration')
-    version = converter.get('converterVersion')
     script_lang = configuration.get('scriptLang')
+    version = converter.get('converterVersion')
+    integration_type = converter.get('integrationType')
+    is_dedicated = version == 2 and integration_type in ALLOWED_INTEGRATION_DIRECTORIES
 
-    if version == 2 and 'uplink' in directory:
-        file_pairs = find_payload_result_metadata_triples(directory)
-    else:
-        file_pairs = find_payload_and_result_pairs(directory)
+    payload_result_pairs = find_payload_and_result_pairs(directory)
 
-    if not file_pairs:
-        pair_type = "payload-result-metadata" if (version == 2 and 'uplink' in directory) else "payload-result"
-        print(f"Validation failed for {directory}: No valid {pair_type} pairs found.")
+    if not payload_result_pairs:
+        print(f"Validation failed for {directory}: No valid payload-result pairs found.")
         return False
 
     success = True
 
-    for files in file_pairs:
-        if version == 2 and 'uplink' in directory:
-            payload_file, result_file, local_metadata_file = files
-        else:
-            payload_file, result_file = files
+    for payload_file, result_file in payload_result_pairs:
+        request = {
+            "metadata": metadata,
+        }
 
-        payload_path = os.path.join(directory, payload_file)
-        result_path = os.path.join(directory, result_file)
+        if not os.path.exists(os.path.join(directory, payload_file)):
+            print(f"Validation failed for {directory}: {payload_file} is missing.")
+            success = False
+            continue
+        if os.path.getsize(os.path.join(directory, payload_file)) == 0:
+            print(f"Validation failed for {directory}: {payload_file} is empty.")
+            success = False
+            continue
 
-        for path, name in ((payload_path, payload_file), (result_path, result_file)):
-            if not os.path.exists(path):
-                print(f"Validation failed for {directory}: {name} is missing.")
-                success = False
-                continue
-            if os.path.getsize(path) == 0:
-                print(f"Validation failed for {directory}: {name} is empty.")
-                success = False
-                continue
+        if not os.path.exists(os.path.join(directory, result_file)):
+            print(f"Validation failed for {directory}: {result_file} is missing.")
+            success = False
+            continue
+        if os.path.getsize(os.path.join(directory, result_file)) == 0:
+            print(f"Validation failed for {directory}: {result_file} is empty.")
+            success = False
+            continue
 
-        if version == 2 and 'uplink' in directory:
-            local_metadata_path = os.path.join(directory, local_metadata_file)
-            if not os.path.exists(local_metadata_path):
-                print(f"Validation failed for {directory}: {local_metadata_file} is missing.")
-                success = False
-                continue
-            if os.path.getsize(local_metadata_path) == 0:
-                print(f"Validation failed for {directory}: {local_metadata_file} is empty.")
-                success = False
-                continue
-
-        with open(payload_path) as pf:
-            if payload_file.endswith('.json'):
-                payload_data = json.load(pf)
-                if 'uplink' in directory:
-                    processed_payload = base64.b64encode(json.dumps(payload_data).encode('utf-8')).decode('utf-8')
-                else:
-                    processed_payload = json.dumps(payload_data)
-            elif payload_file.endswith('.base64'):
-                processed_payload = pf.read().strip()
-
-        with open(result_path) as rf:
+        with open(os.path.join(directory, payload_file)) as pf:
+            payload = json.load(pf)
+        with open(os.path.join(directory, result_file)) as rf:
             expected_result = json.load(rf)
 
-        if 'downlink' in directory or version != 2:
-            request = {"metadata": global_metadata}
-        else:
-            with open(local_metadata_path) as mf:
-                local_metadata = json.load(mf)
-            request = {"metadata": local_metadata}
-
         if 'uplink' in directory:
+            if is_dedicated :
+                request["payload"] = payload
+                unwrap_response = client.api_client.call_api('/api/converter/unwrap/' + integration_type,
+                                                             'POST',
+                                                             body=request,
+                                                             async_req=False,
+                                                             auth_settings = ['X-Authorization'],
+                                                             response_type='JsonNode')[0]
+                request["payload"] = unwrap_response["payload"]
+                request["metadata"] = unwrap_response["metadata"]
+            else :
+                encoded_payload = base64.b64encode(json.dumps(payload).encode('utf-8')).decode('utf-8')
+                request["payload"] = encoded_payload
+
             decoder = configuration.get("decoder") if script_lang == "JS" else configuration.get("tbelDecoder")
-            request["converter"] = converter
             request["decoder"] = decoder
-            request["payload"] = processed_payload
+            request["converter"] = converter
+
             actual_result = client.converter_controller.test_up_link_converter_using_post(
                 async_req='false', body=request, script_lang=script_lang)
         elif 'downlink' in directory:
             encoder = configuration.get("encoder") if script_lang == "JS" else configuration.get("tbelEncoder")
             request["encoder"] = encoder
-            request["msg"] = processed_payload
+            request["msg"] = json.dumps(payload)
             request["msgType"] = "POST_TELEMETRY_REQUEST"
             request["integrationMetadata"] = {}
             actual_result = client.converter_controller.test_down_link_converter_using_post(
@@ -219,33 +147,24 @@ def validate_uplink_downlink(directory):
             raise ValueError(f"Directory '{directory}' is not recognized as 'uplink' or 'downlink'.")
 
         result_value = actual_result.get()
-        output = result_value.get('outputMsg') if (version == 2 and 'uplink' in directory) else result_value.get(
-            'output')
+        output = result_value.get('outputMsg') if is_dedicated else json.loads(result_value.get('output'))
         error = result_value.get('error')
 
         if error != '':
             success = False
-            result_message = (f"Validation failed for {directory} with payload {payload_file} "
-                              f"and result {result_file} with error: {error}\n")
+            result_message = f"Validation failed for {directory} with payload {payload_file} and result {result_file} with error: {error}\n"
+        elif output == expected_result:
+            result_message = f"Validation passed for {directory} with payload {payload_file} and result {result_file}\n"
         else:
-            parsed_output = output if (version == 2 and 'uplink' in directory) else json.loads(output)
-            if parsed_output == expected_result:
-                result_message = (f"Validation passed for {directory} with payload {payload_file} "
-                                  f"and result {result_file}\n")
-            else:
-                success = False
-                result_message = (f"Validation failed for {directory} with payload {payload_file} "
-                                  f"and result {result_file}. Expected output does not match.\n")
+            success = False
+            result_message = f"Validation failed for {directory} with payload {payload_file} and result {result_file}. Expected output does not match.\n"
 
         print(result_message)
+
         time.sleep(1)
 
     return success
 
-def get_converter_version(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        converter_data = json.load(f)
-    return converter_data.get('converterVersion')
 
 def validate_device_files(device_path):
     required_files = {'info.json', 'photo.png'}
