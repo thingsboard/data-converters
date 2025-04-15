@@ -1,11 +1,7 @@
 [{
-  "deviceName": "ERS2 1000000000000001",
-  "deviceType": "ERS2",
-  "attributes": {
-    "eui": "1000000000000001",
-    "fPort": 85,
-    "frequency": 867500000
-  },
+  "entityType": "DEVICE",
+  "name": "ERS2 1000000000000001",
+  "profile": "default",
   "telemetry": [{
     "ts": 1684478801936,
     "values": {
@@ -15,5 +11,10 @@
       "pir": 6,
       "vdd": 3426
     }
-  }]
+  }],
+  "attributes": {
+    "fPort": 85,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
 }]
