@@ -1,0 +1,29 @@
+{
+  "entityType": "DEVICE",
+  "name": "Device 1000000000000001",
+  "profile": "application-tts-name",
+  "label": "eui-1000000000000001",
+  "telemetry": {
+    "ts": 1684474415641,
+    "values": {
+      "battery": 100,
+      "occupancy": "occupied",
+      "illuminance": "dim"
+    }
+  },
+  "attributes": {
+    "devAddr": 20000001,
+    "fPort": 85,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "clusterAddress": "eu1.cloud.thethings.network",
+    "frequency": 867100000,
+    "joinEui": 2000000000000001,
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": 1000000000000001,
+    "tenantId": "ttn",
+    "applicationId": "application-tts-name"
+  }
+}
