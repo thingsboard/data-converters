@@ -1,0 +1,38 @@
+{
+  "entityType": "DEVICE",
+  "name": "Device 1000000000000001",
+  "profile": "application-tti-name",
+  "label": "eui-1000000000000001",
+  "telemetry": {
+    "ts": 1684398325906,
+    "values": {
+      "detection_status": "vacant",
+      "target_status": "normal",
+      "use_time_now": 57360,
+      "use_time_today": 20550,
+      "region_1_occupancy": "vacant",
+      "region_2_occupancy": "vacant",
+      "region_3_occupancy": "vacant",
+      "region_4_occupancy": "vacant",
+      "region_1_out_of_bed_time": 45060,
+      "region_2_out_of_bed_time": 0,
+      "region_3_out_of_bed_time": 0,
+      "region_4_out_of_bed_time": 0
+    }
+  },
+  "attributes": {
+    "devAddr": 20000001,
+    "fPort": 85,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "clusterAddress": "eu1.cloud.thethings.industries",
+    "frequency": 868500000,
+    "joinEui": 2000000000000001,
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": 1000000000000001,
+    "tenantId": "tenant",
+    "applicationId": "application-tti-name"
+  }
+}

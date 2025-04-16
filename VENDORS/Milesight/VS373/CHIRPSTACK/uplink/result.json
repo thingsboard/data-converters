@@ -1,0 +1,40 @@
+{
+  "entityType": "DEVICE",
+  "name": "Device 1000000000000001",
+  "profile": "Chirpstack default device profile",
+  "label": "Device name",
+  "telemetry": {
+    "ts": 1684741625404,
+    "values": {
+      "detection_status": "vacant",
+      "target_status": "normal",
+      "use_time_now": 57360,
+      "use_time_today": 20550,
+      "region_1_occupancy": "vacant",
+      "region_2_occupancy": "vacant",
+      "region_3_occupancy": "vacant",
+      "region_4_occupancy": "vacant",
+      "region_1_out_of_bed_time": 45060,
+      "region_2_out_of_bed_time": 0,
+      "region_3_out_of_bed_time": 0,
+      "region_4_out_of_bed_time": 0
+    }
+  },
+  "attributes": {
+    "devAddr": 20000001,
+    "fPort": 85,
+    "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
+    "dr": 5,
+    "frequency": 868500000,
+    "tenantName": "ChirpStack",
+    "applicationName": "Chirpstack application",
+    "deviceProfileName": "Chirpstack default device profile",
+    "bandwidth": 125000,
+    "adr": true,
+    "codeRate": "CR_4_5",
+    "spreadingFactor": 7,
+    "eui": 1000000000000001,
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75"
+  }
+}
