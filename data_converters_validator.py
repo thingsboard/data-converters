@@ -74,10 +74,9 @@ def validate_uplink_downlink(directory):
 
     configuration = converter.get('configuration')
     script_lang = configuration.get('scriptLang')
-
-    request = {
-        "metadata": metadata,
-    }
+    version = converter.get('converterVersion')
+    integration_type = converter.get('integrationType')
+    is_dedicated = version == 2 and integration_type in ALLOWED_INTEGRATION_DIRECTORIES
 
     payload_result_pairs = find_payload_and_result_pairs(directory)
 
@@ -88,6 +87,10 @@ def validate_uplink_downlink(directory):
     success = True
 
     for payload_file, result_file in payload_result_pairs:
+        request = {
+            "metadata": metadata,
+        }
+
         if not os.path.exists(os.path.join(directory, payload_file)):
             print(f"Validation failed for {directory}: {payload_file} is missing.")
             success = False
@@ -112,10 +115,24 @@ def validate_uplink_downlink(directory):
             expected_result = json.load(rf)
 
         if 'uplink' in directory:
+            if is_dedicated :
+                request["payload"] = payload
+                unwrap_response = client.api_client.call_api('/api/converter/unwrap/' + integration_type,
+                                                             'POST',
+                                                             body=request,
+                                                             async_req=False,
+                                                             auth_settings = ['X-Authorization'],
+                                                             response_type='JsonNode')[0]
+                request["payload"] = unwrap_response["payload"]
+                request["metadata"] = unwrap_response["metadata"]
+            else :
+                encoded_payload = base64.b64encode(json.dumps(payload).encode('utf-8')).decode('utf-8')
+                request["payload"] = encoded_payload
+
             decoder = configuration.get("decoder") if script_lang == "JS" else configuration.get("tbelDecoder")
-            encoded_payload = base64.b64encode(json.dumps(payload).encode('utf-8')).decode('utf-8')
             request["decoder"] = decoder
-            request["payload"] = encoded_payload
+            request["converter"] = converter
+
             actual_result = client.converter_controller.test_up_link_converter_using_post(
                 async_req='false', body=request, script_lang=script_lang)
         elif 'downlink' in directory:
@@ -130,13 +147,13 @@ def validate_uplink_downlink(directory):
             raise ValueError(f"Directory '{directory}' is not recognized as 'uplink' or 'downlink'.")
 
         result_value = actual_result.get()
-        output = result_value.get('output')
+        output = result_value.get('outputMsg') if is_dedicated else json.loads(result_value.get('output'))
         error = result_value.get('error')
 
         if error != '':
             success = False
             result_message = f"Validation failed for {directory} with payload {payload_file} and result {result_file} with error: {error}\n"
-        elif json.loads(output) == expected_result:
+        elif output == expected_result:
             result_message = f"Validation passed for {directory} with payload {payload_file} and result {result_file}\n"
         else:
             success = False
