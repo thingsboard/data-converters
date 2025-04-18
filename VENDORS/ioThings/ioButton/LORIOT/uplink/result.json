@@ -1,0 +1,37 @@
+[{
+  "entityType": "DEVICE",
+  "name": "ioButton 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "batteryLevel": 253,
+      "externalSensor": {
+        "type": "buttonState",
+        "state": "Success",
+        "clickCnt": 7
+      }
+    }
+  },
+  "attributes": {
+    "uplinkReasonButton": false,
+    "uplinkReasonMovement": false,
+    "uplinkReasonGpio": false,
+    "containsGps": false,
+    "containsOnboardSensors": true,
+    "containsSpecial": false,
+    "crc": "0",
+    "containsTemperature": false,
+    "containsLight": false,
+    "containsAccelerometerCurrent": false,
+    "containsAccelerometerMax": false,
+    "containsWifiPositioningData": false,
+    "buttonEventInfo": false,
+    "containsExternalSensors": true,
+    "containsBluetoothData": false,
+    "buttonClickReason": "none",
+    "fPort": 85,
+    "frequency": 867500000,
+    "eui": 1000000000000001
+  }
+}]

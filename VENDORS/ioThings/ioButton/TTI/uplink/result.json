@@ -1,0 +1,48 @@
+{
+  "entityType": "DEVICE",
+  "name": "ioButton 1000000000000001",
+  "profile": "application-tti-name",
+  "label": "eui-1000000000000001",
+  "telemetry": {
+    "ts": 1684398325906,
+    "values": {
+      "batteryLevel": 253,
+      "externalSensor": {
+        "type": "buttonState",
+        "state": "Success",
+        "clickCnt": 7
+      }
+    }
+  },
+  "attributes": {
+    "uplinkReasonButton": false,
+    "uplinkReasonMovement": false,
+    "uplinkReasonGpio": false,
+    "containsGps": false,
+    "containsOnboardSensors": true,
+    "containsSpecial": false,
+    "crc": "0",
+    "containsTemperature": false,
+    "containsLight": false,
+    "containsAccelerometerCurrent": false,
+    "containsAccelerometerMax": false,
+    "containsWifiPositioningData": false,
+    "buttonEventInfo": false,
+    "containsExternalSensors": true,
+    "containsBluetoothData": false,
+    "buttonClickReason": "none",
+    "devAddr": 20000001,
+    "fPort": 85,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "clusterAddress": "eu1.cloud.thethings.industries",
+    "frequency": 868500000,
+    "joinEui": 2000000000000001,
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": 1000000000000001,
+    "tenantId": "tenant",
+    "applicationId": "application-tti-name"
+  }
+}
