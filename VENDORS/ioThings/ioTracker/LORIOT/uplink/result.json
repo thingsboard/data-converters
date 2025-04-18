@@ -5,7 +5,7 @@
   "telemetry": {
     "ts": 1684478801936,
     "values": {
-      "batteryLevel": 249,
+      "batteryLevel": 249.0,
       "temperature": 28.14,
       "lightIntensity": 1.32,
       "maxAccelerationNew": 0.384,
@@ -31,6 +31,6 @@
     "buttonClickReason": "none",
     "fPort": 85,
     "frequency": 867500000,
-    "eui": 1000000000000001
+    "eui": "1000000000000001"
   }
 }]

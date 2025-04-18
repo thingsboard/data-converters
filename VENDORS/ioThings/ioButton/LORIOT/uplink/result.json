@@ -5,7 +5,7 @@
   "telemetry": {
     "ts": 1684478801936,
     "values": {
-      "batteryLevel": 253,
+      "batteryLevel": 253.0,
       "externalSensor": {
         "type": "buttonState",
         "state": "Success",
@@ -32,6 +32,6 @@
     "buttonClickReason": "none",
     "fPort": 85,
     "frequency": 867500000,
-    "eui": 1000000000000001
+    "eui": "1000000000000001"
   }
 }]
