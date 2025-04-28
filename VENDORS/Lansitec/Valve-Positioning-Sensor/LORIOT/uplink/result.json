@@ -1,0 +1,9 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "deviceProfile",
+  "telemetry": {
+      "type": "VceState",
+      "direction": "CW",
+      "vceState": "Open"
+  }
+}
