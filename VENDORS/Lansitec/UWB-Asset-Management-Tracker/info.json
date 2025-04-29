@@ -1,0 +1,5 @@
+{
+  "url": "https://www.lansitec.com/products/uwb-asset-management-tracker",
+  "label": "UWB Asset Management Tracker",
+  "description": "UWB Asset Management Tracker is designed using LoRaWAN and UWB technologies. It calculates the distance with anchors and forward the distance information to a LoRaWAN gateway to calculate its position in the server. The accuracy can be as low as 10cm."
+}

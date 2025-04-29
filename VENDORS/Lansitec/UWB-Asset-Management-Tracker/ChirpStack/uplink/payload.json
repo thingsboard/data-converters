@@ -1,0 +1,51 @@
+{
+    "deduplicationId": "7c451416-f9b6-40bb-a55d-954fff469c83",
+    "time": "2025-04-18T01:44:27.575454140+00:00",
+    "deviceInfo": {
+        "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+        "tenantName": "ChirpStack",
+        "applicationId": "1cc99dcb-45dd-429b-a7ba-451e8df09bb1",
+        "applicationName": "UWB",
+        "deviceProfileId": "1c5807e4-570b-4bf0-b73e-097c9a90eaff",
+        "deviceProfileName": "us915_1(channels 8-15)",
+        "deviceName": "70b3d5a424080020",
+        "devEui": "70b3d5a424080020",
+        "deviceClassEnabled": "CLASS_A",
+        "tags": {}
+    },
+    "devAddr": "00dbb9f7",
+    "adr": false,
+    "dr": 3,
+    "fCnt": 12655,
+    "fPort": 34,
+    "confirmed": false,
+    "data": "gAQkCAAQAAHIJAgAEQACbiQIABIAAxgkCAATAAHqAAAAAAA=",
+    "rxInfo": [
+        {
+            "gatewayId": "00800000a000625e",
+            "uplinkId": 42660,
+            "nsTime": "2025-04-18T01:44:27.332196566+00:00",
+            "rssi": -51,
+            "snr": 10.8,
+            "channel": 5,
+            "rfChain": 1,
+            "location": {},
+            "context": "GQMM1A==",
+            "metadata": {
+                "region_config_id": "us915_1",
+                "region_common_name": "US915"
+            },
+            "crcStatus": "CRC_OK"
+        }
+    ],
+    "txInfo": {
+        "frequency": 904900000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 7,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}
