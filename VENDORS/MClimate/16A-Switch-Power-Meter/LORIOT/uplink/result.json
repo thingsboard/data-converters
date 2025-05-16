@@ -1,0 +1,21 @@
+[{
+  "entityType": "DEVICE",
+  "name": "16ASPM 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "internalTemperature": 28,
+      "relayState": "ON",
+      "energy_kWh": 55190.552,
+      "power_W": 1497,
+      "acVoltage_V": 231,
+      "acCurrent_mA": 6482
+    }
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": 1000000000000001
+  }
+}]
