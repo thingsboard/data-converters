@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Converter for Container Tracker",
+  "name": "ChirpStack Uplink Converter for Lansitec Container Tracker",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

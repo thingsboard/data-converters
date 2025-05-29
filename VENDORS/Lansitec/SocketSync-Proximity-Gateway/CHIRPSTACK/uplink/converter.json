@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Converter for SocketSync Proximity Gateway",
+  "name": "ChirpStack Uplink Converter for Lansitec SocketSync Proximity Gateway",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

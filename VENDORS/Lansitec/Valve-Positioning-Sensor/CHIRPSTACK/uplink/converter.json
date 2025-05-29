@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Converter for Valve Positioning Sensor",
+  "name": "ChirpStack Uplink Converter for Lansitec Valve Positioning Sensor",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

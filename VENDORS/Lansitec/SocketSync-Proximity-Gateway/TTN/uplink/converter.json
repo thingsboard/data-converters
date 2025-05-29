@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Converter for SocketSync Proximity Gateway",
+  "name": "Things Stack Community Uplink Converter for Lansitec SocketSync Proximity Gateway",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Converter for Badge Tracker",
+  "name": "ChirpStack Uplink Converter for Lansitec Badge Tracker",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

@@ -1,5 +1,5 @@
 {
-  "name": "The Things Stack Community Uplink Converter for Temperature Humidity Sensor",
+  "name": "Things Stack Community Uplink Converter for Lansitec Temperature Humidity Sensor",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

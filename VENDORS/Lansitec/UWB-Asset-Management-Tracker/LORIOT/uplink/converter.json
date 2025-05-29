@@ -1,5 +1,5 @@
 {
-  "name": "Loriot Uplink Converter for UWB Badge Tracker",
+  "name": "Loriot Uplink Converter for Lansitec UWB Badge Asset Management Tracker",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

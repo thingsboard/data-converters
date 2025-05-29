@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Converter for Helmet Sensor",
+  "name": "ChirpStack Uplink Converter for Lansitec Helmet Sensor",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {

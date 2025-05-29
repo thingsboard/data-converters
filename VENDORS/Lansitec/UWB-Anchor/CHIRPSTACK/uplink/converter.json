@@ -1,5 +1,5 @@
 {
-  "name": "ChirpStack Uplink Converter for UWB Badge Tracker",
+  "name": "ChirpStack Uplink Converter for Lansitec UWB Anchor",
   "type": "UPLINK",
   "debugMode": false,
   "debugSettings": {
