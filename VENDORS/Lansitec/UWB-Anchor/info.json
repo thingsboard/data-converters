@@ -1,5 +1,5 @@
 {
   "url": "https://www.lansitec.com/products/uwb-anchor",
-  "label": "UWB Anchor",
+  "label": "UWB Anchor: Anchor Precision",
   "description": "UWB Anchor is designed using LoRaWAN and UWB technologies. It works with surrounding UWB trackers to calculate distances between devices, regularly synchronizes time with other anchors, and transmits heartbeat data to the LoRaWAN gateway."
 }

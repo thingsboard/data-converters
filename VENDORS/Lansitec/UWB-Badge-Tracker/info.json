@@ -1,5 +1,5 @@
 {
   "url": "https://www.lansitec.com/products/uwb-badge-tracker/",
-  "label": "UWB Badge Tracker",
+  "label": "UWB Badge Tracker: Pinpoint Precision",
   "description": "UWB Badge Tracker is designed using LoRaWAN and UWB technologies. It calculates the distance with anchors and forward the distance information to a LoRaWAN gateway to calculate its position in the server. The accuracy can be as low as 10cm."
 }

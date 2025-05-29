@@ -1,5 +1,5 @@
 {
   "url": "https://www.lansitec.com/products/macro-proximity-sensor/",
-  "label": "Macro Proximity Gateway",
+  "label": "Macro Proximity Gateway: Proximity Alerting",
   "description": "Macro Proximity Gateway is equipped with Bluetooth 5.0 and LoRaWAN capabilities. When a Bluetooth beacons comes into close proximity, the sensor activates buzzing and flashing. It then transmits the beacon’s ID and received signal strength indicator (RSSI) to a LoRaWAN gateway. The sensor calculates the distance based on the RSSI between the two devices. Additionally, the proximity sensor functions as a Bluetooth gateway, collecting messages from nearby Bluetooth beacons and forwarding them to the LoRaWAN gateway. Users can adjust settings such as the alarm range, duration, heartbeat message period, beacon report interval, Bluetooth receiving duration, and message payload size. It has multiple battery capacity options with at least one year battery life."
 }
