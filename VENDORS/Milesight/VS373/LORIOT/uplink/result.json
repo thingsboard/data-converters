@@ -1,0 +1,27 @@
+[{
+  "entityType": "DEVICE",
+  "name": "Device 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "detection_status": "vacant",
+      "target_status": "normal",
+      "use_time_now": 57360,
+      "use_time_today": 20550,
+      "region_1_occupancy": "vacant",
+      "region_2_occupancy": "vacant",
+      "region_3_occupancy": "vacant",
+      "region_4_occupancy": "vacant",
+      "region_1_out_of_bed_time": 45060,
+      "region_2_out_of_bed_time": 0,
+      "region_3_out_of_bed_time": 0,
+      "region_4_out_of_bed_time": 0
+    }
+  },
+  "attributes": {
+    "fPort": 85,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]
