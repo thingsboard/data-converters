@@ -6,7 +6,7 @@
   "debugSettings": {
     "failuresEnabled": true,
     "allEnabled": false,
-    "allEnabledUntil": 1748612741443
+    "allEnabledUntil": 0
   },
   "configuration": {
     "scriptLang": "TBEL",
