@@ -1,0 +1,20 @@
+{
+  "deduplicationId": "7e797eda-824d-4b44-bd20-79bb93d5ee5e",
+  "time": "2025-04-17T08:10:02.728+00:00",
+  "deviceInfo": {
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "tenantName": "ChirpStack",
+    "applicationId": "e77303cd-c298-414a-a270-672fe1d6cba2",
+    "applicationName": "Sample Application",
+    "deviceProfileId": "3fda0131-818f-42f4-8a64-7c21cb92b9ac",
+    "deviceProfileName": "Default device profile",
+    "deviceName": "My device chirpstack",
+    "devEui": "24e124707c483636",
+    "deviceClassEnabled": "CLASS_A",
+    "tags": {}
+  },
+  "margin": 8,
+  "externalPowerSource": true,
+  "batteryLevelUnavailable": false,
+  "batteryLevel": 0.0
+}
