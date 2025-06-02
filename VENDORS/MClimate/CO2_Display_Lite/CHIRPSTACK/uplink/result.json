@@ -16,7 +16,7 @@
   },
   "attributes": {
     "devAddr": "20000001",
-    "fPort": 85,
+    "fPort": 2,
     "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
     "dr": 5,
     "frequency": 868500000,

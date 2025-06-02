@@ -16,7 +16,7 @@
   },
   "attributes": {
     "devAddr": "20000001",
-    "fPort": 85,
+    "fPort": 2,
     "clusterId": "eu1",
     "deviceId": "eui-1000000000000001",
     "clusterAddress": "eu1.cloud.thethings.industries",
