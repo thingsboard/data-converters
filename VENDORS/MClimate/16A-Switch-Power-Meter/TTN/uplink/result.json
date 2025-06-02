@@ -21,7 +21,7 @@
     "deviceId": "eui-1000000000000001",
     "clusterAddress": "eu1.cloud.thethings.network",
     "frequency": "867100000",
-    "joinEui": 2000000000000001,
+    "joinEui": "2000000000000001",
     "bandwidth": 125000,
     "netId": "000013",
     "spreadingFactor": 7,
