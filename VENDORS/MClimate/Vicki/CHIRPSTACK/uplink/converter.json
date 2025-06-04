@@ -35,17 +35,7 @@
     "label": "$deviceName",
     "customer": "",
     "group": "",
-    "telemetry": [
-      "fCnt",
-      "data",
-      "decoded",
-      "latitude",
-      "longitude",
-      "rssi",
-      "snr",
-      "channel",
-      "altitude"
-    ],
+    "telemetry": null,
     "attributes": [
       "eui",
       "devAddr",

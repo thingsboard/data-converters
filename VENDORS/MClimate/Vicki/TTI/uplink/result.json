@@ -28,7 +28,7 @@
     "motorPosition": 250,
     "valveOpenness": 17,
     "devAddr": "20000001",
-    "fPort": 2,
+    "fPort": 1,
     "clusterId": "eu1",
     "deviceId": "eui-1000000000000001",
     "clusterAddress": "eu1.cloud.thethings.industries",
