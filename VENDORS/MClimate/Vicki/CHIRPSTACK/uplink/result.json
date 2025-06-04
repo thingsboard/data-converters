@@ -10,11 +10,7 @@
       "sensorTemperature": 18.01,
       "relativeHumidity": 46.88,
       "batteryVoltage": 3.5,
-      "targetTemperatureFloat": 29,
-      "data": "Ae0DM18OTGM=",
-      "fCnt": 4,
-      "rssi": -35,
-      "snr": 11.5
+      "targetTemperatureFloat": 29
     }
   },
   "attributes": {
