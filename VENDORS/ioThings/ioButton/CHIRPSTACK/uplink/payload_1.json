@@ -1,0 +1,21 @@
+{
+  "time": "2025-06-03T15:58:23.002+00:00",
+  "deviceInfo": {
+    "tenantId": "dc521d3e-9043-435d-8b1a-ffb26b620349",
+    "tenantName": "ChirpStack",
+    "applicationId": "1136142a-973f-4794-ac5f-ba4510104ef6",
+    "applicationName": "Sample Application",
+    "deviceProfileId": "27a109ac-3a32-4d10-b757-118e22afb277",
+    "deviceProfileName": "Default device profile",
+    "deviceName": "My Panic device",
+    "devEui": "70b3d59930001530",
+    "deviceClassEnabled": "CLASS_A",
+    "tags": {}
+  },
+  "level": "WARNING",
+  "code": "UPLINK_F_CNT_RETRANSMISSION",
+  "description": "Uplink was flagged as re-transmission / frame-counter did not increment",
+  "context": {
+    "deduplication_id": "3f5d5e01-2301-44bd-a54d-70c0c6ddc8a4"
+  }
+}
