@@ -1,17 +1,18 @@
 [{
-  "deviceName": "1000000000000001",
-  "deviceType": "WS202",
-  "attributes": {
-    "eui": "1000000000000001",
-    "fPort": 85,
-    "frequency": 867500000
-  },
-  "telemetry": [{
+  "entityType": "DEVICE",
+  "name": "WS202 1000000000000001",
+  "profile": "default",
+  "telemetry": {
     "ts": 1684478801936,
     "values": {
       "battery": 16,
       "pir": "trigger",
       "daylight": "dark"
     }
-  }]
+  },
+  "attributes": {
+    "fPort": 85,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
 }]

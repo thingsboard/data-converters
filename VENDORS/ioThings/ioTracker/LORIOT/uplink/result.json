@@ -1,0 +1,36 @@
+[{
+  "entityType": "DEVICE",
+  "name": "ioTracker 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "batteryLevel": 249.0,
+      "temperature": 28.14,
+      "lightIntensity": 1.32,
+      "maxAccelerationNew": 0.384,
+      "maxAccelerationHistory": 9.984
+    }
+  },
+  "attributes": {
+    "uplinkReasonButton": false,
+    "uplinkReasonMovement": true,
+    "uplinkReasonGpio": false,
+    "containsGps": false,
+    "containsOnboardSensors": true,
+    "containsSpecial": false,
+    "crc": "0",
+    "containsTemperature": true,
+    "containsLight": true,
+    "containsAccelerometerCurrent": false,
+    "containsAccelerometerMax": true,
+    "containsWifiPositioningData": false,
+    "buttonEventInfo": false,
+    "containsExternalSensors": false,
+    "containsBluetoothData": false,
+    "buttonClickReason": "none",
+    "fPort": 85,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]
