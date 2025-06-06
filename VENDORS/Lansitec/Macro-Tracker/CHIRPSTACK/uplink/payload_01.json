@@ -1,0 +1,51 @@
+{
+    "deduplicationId": "1062deb5-53ff-4df4-8c2b-fb4e4ad41a05",
+    "time": "2025-04-24T08:09:42.876426727+00:00",
+    "deviceInfo": {
+        "tenantId": "d306440b-6d43-444f-a409-a2d259745cc9",
+        "tenantName": "Lansitec",
+        "applicationId": "fe66421b-ab0c-4f30-b9db-a99c72f75fc2",
+        "applicationName": "Lansitec-Application",
+        "deviceProfileId": "7c7fa283-0d3a-47ea-aae3-7862cb71e392",
+        "deviceProfileName": "EU868_OTAA",
+        "deviceName": "70B3D5A4D4104770",
+        "devEui": "70b3d5a4d4104770",
+        "deviceClassEnabled": "CLASS_A",
+        "tags": {}
+    },
+    "devAddr": "01ab834e",
+    "adr": false,
+    "dr": 3,
+    "fCnt": 7,
+    "fPort": 34,
+    "confirmed": true,
+    "data": "ITFbBEwADwA=",
+    "rxInfo": [
+        {
+            "gatewayId": "00800000a000308f",
+            "uplinkId": 31308,
+            "nsTime": "2025-04-24T08:09:42.668922934+00:00",
+            "rssi": -75,
+            "snr": 5,
+            "channel": 5,
+            "rfChain": 1,
+            "location": {},
+            "context": "FWZPXA==",
+            "metadata": {
+                "region_config_id": "eu868",
+                "region_common_name": "EU868"
+            },
+            "crcStatus": "CRC_OK"
+        }
+    ],
+    "txInfo": {
+        "frequency": 867500000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 9,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}

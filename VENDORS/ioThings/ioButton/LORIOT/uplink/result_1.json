@@ -1,0 +1,10 @@
+[{
+  "entityType": "DEVICE",
+  "name": "ioButton 70B3D59930001530",
+  "profile": "default",
+  "telemetry": {},
+  "attributes": {
+    "frequency": 868300000,
+    "eui": "70B3D59930001530"
+  }
+}]

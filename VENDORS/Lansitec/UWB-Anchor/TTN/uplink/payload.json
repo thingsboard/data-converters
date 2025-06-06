@@ -1,0 +1,53 @@
+{
+  "end_device_ids": {
+      "device_id": "deveui-70b3d5a4d4104770",
+      "application_ids": {
+          "application_id": "lansitec-bluetooth-gateway"
+      },
+      "dev_eui": "70B3D5A4D4104770",
+      "join_eui": "2C26C50211000003",
+      "dev_addr": "260ADC1D"
+  },
+  "correlation_ids": ["gs:uplink:01JSNYA0RR7GN1BJGXNDC1E56K"],
+  "received_at": "2025-04-25T07:41:33.030769457Z",
+  "uplink_message": {
+      "session_key_id": "AZZrwB/ji0uBFpU2ARP2lQ==",
+      "f_port": 34,
+      "f_cnt": 17,
+      "frm_payload": "IAAAAAAkZAAAAAAbAAAAAAAAAAA=",
+      "rx_metadata": [{
+          "gateway_ids": {
+              "gateway_id": "eu868",
+              "eui": "00800000A000308F"
+          },
+          "timestamp": 2671465852,
+          "rssi": -93,
+          "channel_rssi": -93,
+          "snr": 2.2,
+          "uplink_token": "ChMKEQoFZXU4NjgSCACAAACgADCPEPyq7fkJGgwIrPmswAYQ86GKiQMg4NiX/t9N",
+          "channel_index": 1,
+          "received_at": "2025-04-25T07:41:32.715017869Z"
+      }],
+      "settings": {
+          "data_rate": {
+              "lora": {
+                  "bandwidth": 125000,
+                  "spreading_factor": 9,
+                  "coding_rate": "4/5"
+              }
+          },
+          "frequency": "868300000",
+          "timestamp": 2671465852
+      },
+      "received_at": "2025-04-25T07:41:32.825653502Z",
+      "consumed_airtime": "0.185344s",
+      "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000000103",
+          "tenant_id": "lansitec-testplan",
+          "cluster_id": "au1",
+          "cluster_address": "au1.cloud.thethings.industries",
+          "tenant_address": "lansitec-testplan.au1.cloud.thethings.industries"
+      }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "entityType": "DEVICE",
+  "name": "ioTracker 70b3d59930001530",
+  "profile": "Default device profile",
+  "label": "My Panic device",
+  "telemetry": {},
+  "attributes": {
+    "deviceProfileId": "27a109ac-3a32-4d10-b757-118e22afb277",
+    "tenantName": "ChirpStack",
+    "eui": "70b3d59930001530",
+    "tenantId": "dc521d3e-9043-435d-8b1a-ffb26b620349",
+    "applicationId": "1136142a-973f-4794-ac5f-ba4510104ef6",
+    "applicationName": "Sample Application",
+    "deviceProfileName": "Default device profile"
+  }
+}

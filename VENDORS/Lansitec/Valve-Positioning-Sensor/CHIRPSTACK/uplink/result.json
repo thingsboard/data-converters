@@ -1,0 +1,9 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "EU868_OTAA",
+  "telemetry": {
+      "type": "VceState",
+      "direction": "CW",
+      "vceState": "Open"
+  }
+}

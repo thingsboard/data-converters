@@ -1,0 +1,14 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "lansitec-bluetooth-gateway",
+  "telemetry": {
+      "type": "DeviceType1",
+      "number": 3,
+      "beacon1": "01020304",
+      "rssi1": "-81dBm",
+      "beacon2": "00990098",
+      "rssi2": "-73dBm",
+      "beacon3": "001027DC",
+      "rssi3": "-86dBm"
+  }
+}

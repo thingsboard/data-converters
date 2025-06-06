@@ -1,0 +1,10 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "EU868_OTAA",
+  "telemetry": {
+      "type": "PositionBeacon",
+      "length": 1,
+      "beacon1": "22223333",
+      "rssi1": "-78dBm"
+  }
+}

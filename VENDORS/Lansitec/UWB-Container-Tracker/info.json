@@ -1,0 +1,5 @@
+{
+  "url": "https://www.lansitec.com/products/uwb-container-tracker",
+  "label": "UWB Container Tracker: Container Precision",
+  "description": "UWB Container Tracker is designed using LoRaWAN and UWB technologies. It calculates the distance with anchors and forward the distance information to a LoRaWAN gateway to calculate its position in the server. The accuracy can be as low as 10cm."
+}

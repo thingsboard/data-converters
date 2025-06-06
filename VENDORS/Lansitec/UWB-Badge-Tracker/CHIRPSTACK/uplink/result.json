@@ -1,0 +1,17 @@
+{
+  "deviceName": "70b3d5a424080020",
+  "deviceType": "us915_1(channels 8-15)",
+  "telemetry": {
+      "type": "Distance",
+      "uwbBeaconCount": 4,
+      "majorminor1": "24080010",
+      "distance1": 456,
+      "majorminor2": "24080011",
+      "distance2": 622,
+      "majorminor3": "24080012",
+      "distance3": 792,
+      "majorminor4": "24080013",
+      "distance4": 490,
+      "wearState": "no wear"
+  }
+}

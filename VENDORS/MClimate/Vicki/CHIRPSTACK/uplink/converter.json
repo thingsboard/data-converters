@@ -1,0 +1,60 @@
+{
+  "name": "ChirpStack Uplink Converter for MClimate Vicki",
+  "type": "UPLINK",
+  "integrationType": "CHIRPSTACK",
+  "debugMode": false,
+  "debugSettings": {
+    "failuresEnabled": true,
+    "allEnabled": false,
+    "allEnabledUntil": 0
+  },
+  "configuration": {
+    "scriptLang": "TBEL",
+    "decoder": null,
+    "tbelDecoder": "/**\n * Decodes the incoming payload and returns a structured object containing telemetry data and attributes.\n *\n * @param {byte[]} input - The raw payload received as an array of bytes.\n * @returns {Object} output - The structured output with decoded telemetry and attributes.\n */\nfunction decodePayload(input) {\n    // Initialize the output object with empty attributes and telemetry for clarity.\n    var result = { attributes: {}, telemetry: {}};\n\n    var values = {};\n    var timestamp = metadata.ts;\n\n    var reason = input[0];\n    \n    if (reason == 1 || reason == 129) {\n        var b6 = input[6];  \n        var motorRange = ((b6 & 0x0F) << 8) + input[5];  \n\n        var highNibble = b6 / 16;                                               \n        var b4 = input[4]; \n\n        var hexB4 = String.format(\"%02x\", b4);\n\n        var motorPos1 = Character.toLowerCase(Character.forDigit(highNibble, 16));\n\n        var combinedHex = \"\" + motorPos1 + hexB4;  \n\n        var motorPosition = Integer.parseInt(combinedHex, 16);                   \n        motorPosition = motorPosition & 0xFFF;  \n\n        var batteryTmp = (input[7] >> 4) & 0x0F;  \n        var batteryVoltage = 2 + batteryTmp * 0.1;\n        \n        var b7 = input[7];  \n        result.attributes.openWindow           = ((b7 >> 3) & 0x01) == 1;  \n        result.attributes.highMotorConsumption = ((b7 >> 2) & 0x01) == 1;  \n        result.attributes.lowMotorConsumption  = ((b7 >> 1) & 0x01) == 1;  \n        result.attributes.brokenSensor         = ( b7        & 0x01) == 1;  \n\n        var b8 = input[8];  \n        result.attributes.childLock            = ((b8 >> 7) & 0x01) == 1;  \n        result.attributes.calibrationFailed    = ((b8 >> 6) & 0x01) == 1;  \n        result.attributes.attachedBackplate    = ((b8 >> 5) & 0x01) == 1;  \n        result.attributes.perceiveAsOnline     = ((b8 >> 4) & 0x01) == 1;  \n        result.attributes.antiFreezeProtection = ((b8 >> 3) & 0x01) == 1;\n        \n        var sensorTemp = 0;  \n        if (reason == 1) {  \n            sensorTemp = (input[2] * 165) / 256 - 40;  \n        }  \n        if (reason == 81) {  \n            sensorTemp = (input[2] - 28.3) / 5.6;  \n        }  \n\n        result.attributes.reason            = reason;  \n        values.targetTemperature = input[1];  \n        values.sensorTemperature = toFixed(sensorTemp, 2);  \n        values.relativeHumidity  =  toFixed((input[3] * 100) / 256, 2);  \n        result.attributes.motorRange        = motorRange;  \n        result.attributes.motorPosition     = motorPosition;  \n        values.batteryVoltage    =  toFixed(batteryVoltage, 2);  \n        result.attributes.valveOpenness     = motorRange != 0 \n                             ? Math.round(( 1- Double.parseDouble(motorPosition) / motorRange) * 100)\n                             : 0;  \n        values.targetTemperatureFloat = input[1];\n    } else {  \n        var lastBytes = input.slice(size(input) - 9, input.length());  \n        var b6 = lastBytes[6];\n        var motorRange = ((b6 & 0x0F) << 8) + lastBytes[5];\n        var motorPosition = (((b6 >> 4) & 0x0F) << 8) + lastBytes[4];\n        var batteryTmp = (lastBytes[7] >> 4) & 0x0F;\n        var batteryVoltage = 2 + batteryTmp * 0.1;\n\n        var b7l = lastBytes[7];\n        var openWindowLA           = ((b7l >> 3) & 0x01) == 1;\n        var highMotorConsumptionLA = ((b7l >> 2) & 0x01) == 1;\n        var lowMotorConsumptionLA  = ((b7l >> 1) & 0x01) == 1;\n        var brokenSensorLA         = ( b7l       & 0x01) == 1;\n\n        var b8l = lastBytes[8];\n        var childLockLA            = ((b8l >> 7) & 0x01) == 1;\n        var calibrationFailedLA    = ((b8l >> 6) & 0x01) == 1;\n        var attachedBackplateLA    = ((b8l >> 5) & 0x01) == 1;\n        var perceiveAsOnlineLA     = ((b8l >> 4) & 0x01) == 1;\n        var antiFreezeProtectionLA = ((b8l >> 3) & 0x01) == 1;\n\n        var sensorTempLA = 0;\n        if (lastBytes[0] == 1) {  \n            sensorTempLA = (lastBytes[2] * 165) / 256 - 40;  \n        }\n        if (lastBytes[0] == 81) {  \n            sensorTempLA = (lastBytes[2] - 28.33333) / 5.66666;  \n        }\n\n      result.attributes.reason = lastBytes[0];\n      values.targetTemperature = lastBytes[1];\n      values.sensorTemperature = toFixed(sensorTempLA, 2);\n      values.relativeHumidity = toFixed((lastBytes[3] * 100) / 256, 2);\n      result.attributes.motorRange = motorRange;\n      result.attributes.motorPosition = motorPosition;\n      values.batteryVoltage = toFixed(batteryVoltage, 2);\n      result.attributes.openWindow = openWindowLA;\n      result.attributes.highMotorConsumption = highMotorConsumptionLA;\n      result.attributes.lowMotorConsumption = lowMotorConsumptionLA;\n      result.attributes.brokenSensor = brokenSensorLA;\n      result.attributes.childLock = childLockLA;\n      result.attributes.calibrationFailed = calibrationFailedLA;\n      result.attributes.attachedBackplate = attachedBackplateLA;\n      result.attributes.perceiveAsOnline = perceiveAsOnlineLA;\n      result.attributes.antiFreezeProtection = antiFreezeProtectionLA;\n      result.attributes.valveOpenness =\n        motorRange != 0 \n        ? toFixed((1 - (motorPosition / motorRange)) * 100) \n        : 0;\n      values.targetTemperatureFloat = lastBytes[1];\n  }\n\n    result.telemetry = {\n        ts: timestamp,\n        values: values\n    };\n\n    return result;\n}\n\nvar result = {};\n\nif (payload != null && payload.length != 0) {\n    result = decodePayload(payload);\n}\n\n// Return the final result object.\nreturn result;",
+    "encoder": null,
+    "tbelEncoder": null,
+    "updateOnlyKeys": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "tenantId",
+      "tenantName",
+      "applicationId",
+      "applicationName",
+      "adr",
+      "dr",
+      "frequency",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate"
+    ],
+    "type": "DEVICE",
+    "name": "Vicki $eui",
+    "profile": "$deviceProfileName",
+    "label": "$deviceName",
+    "customer": "",
+    "group": "",
+    "telemetry": null,
+    "attributes": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "tenantId",
+      "tenantName",
+      "applicationId",
+      "applicationName",
+      "adr",
+      "dr",
+      "frequency",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate"
+    ]
+  },
+  "additionalInfo": {
+    "description": ""
+  },
+  "edgeTemplate": false,
+  "converterVersion": 2
+}

@@ -1,0 +1,21 @@
+[{
+  "entityType": "DEVICE",
+  "name": "CO2 Display Lite 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "sensorTemperature": 21.1,
+      "relativeHumidity": 52.73,
+      "batteryVoltage": 2.732,
+      "CO2": 569,
+      "powerSourceStatus": 0,
+      "lux": 279
+    }
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]

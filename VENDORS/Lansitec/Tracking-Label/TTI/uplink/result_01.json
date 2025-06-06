@@ -1,0 +1,13 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "lansitec-bluetooth-gateway",
+  "telemetry": {
+      "type": "Heartbeat",
+      "battery": "48%",
+      "rssi": "-93dBm",
+      "snr": "10dB",
+      "gnssState": "Off",
+      "moveState": 0,
+      "chargeState": "Power cable disconnected"
+  }
+}

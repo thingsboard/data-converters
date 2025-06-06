@@ -1,0 +1,5 @@
+{
+  "url": "https://www.lansitec.com/products/contact-tracing-badge/",
+  "label": "Contact Tracing Badge: Proximity Protection",
+  "description": "Contact Tracing Badge is designed based on Bluetooth 5.0 and LoRaWAN technology. It uses RSSI for distance measurement and contact tracing. The badge is mainly used for keeping social distance at the workplace or hospital and is especially useful during COVID-19. Proximity detection function: the badge beeps when other badges approach. The badge can use vibration and sound to alert the user even without the LoRaWAN network. NFC function is also integrated into the badge to facilitate management."
+}

@@ -1,0 +1,18 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "EU868_OTAA",
+  "telemetry": {
+      "type": "HeartbeatMessage",
+      "deviceState": 0,
+      "powerVol": 36,
+      "powerPersent": 100,
+      "uwbRangeCount": 0,
+      "bleOnCount": 0,
+      "gnssOnCount": 0,
+      "temperature": 27,
+      "movementTime": 0,
+      "wearTime": 0,
+      "chargeTime": 0,
+      "messageId": 0
+  }
+}

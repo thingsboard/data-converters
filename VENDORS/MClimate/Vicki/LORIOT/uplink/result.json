@@ -1,0 +1,33 @@
+{
+  "entityType": "DEVICE",
+  "name": "Vicki 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "targetTemperature": 29,
+      "sensorTemperature": 18.01,
+      "relativeHumidity": 46.88,
+      "batteryVoltage": 3.5,
+      "targetTemperatureFloat": 29
+    }
+  },
+  "attributes": {
+    "openWindow": false,
+    "highMotorConsumption": false,
+    "lowMotorConsumption": false,
+    "brokenSensor": false,
+    "childLock": true,
+    "calibrationFailed": false,
+    "attachedBackplate": false,
+    "perceiveAsOnline": false,
+    "antiFreezeProtection": false,
+    "reason": 1,
+    "motorRange": 300,
+    "motorPosition": 250,
+    "valveOpenness": 17,
+    "fPort": 1,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}

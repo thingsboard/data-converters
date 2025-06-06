@@ -1,0 +1,15 @@
+{
+  "cmd": "txd",
+  "EUI": "70B3D59930001530",
+  "seqdn": 5,
+  "seqq": 5,
+  "ts": 1749035849414,
+  "gweui": "24E124FFFEF64E9E",
+  "freq": 868300000,
+  "sf": 12,
+  "codr": "4/5",
+  "toa": 1155,
+  "msgType": "System DL",
+  "time": 1749035849414,
+  "ackRequested": false
+}
