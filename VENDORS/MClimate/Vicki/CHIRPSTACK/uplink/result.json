@@ -1,0 +1,44 @@
+{
+  "entityType": "DEVICE",
+  "name": "Vicki 1000000000000001",
+  "profile": "Chirpstack default device profile",
+  "label": "Device name",
+  "telemetry": {
+    "ts": 1684741625404,
+    "values": {
+      "targetTemperature": 29,
+      "sensorTemperature": 18.01,
+      "relativeHumidity": 46.88,
+      "batteryVoltage": 3.5,
+      "targetTemperatureFloat": 29
+    }
+  },
+  "attributes": {
+    "openWindow": false,
+    "highMotorConsumption": false,
+    "lowMotorConsumption": false,
+    "brokenSensor": false,
+    "childLock": true,
+    "calibrationFailed": false,
+    "attachedBackplate": false,
+    "perceiveAsOnline": false,
+    "antiFreezeProtection": false,
+    "reason": 1,
+    "motorRange": 300,
+    "motorPosition": 250,
+    "valveOpenness": 17,
+    "devAddr": "20000001",
+    "fPort": 1,
+    "dr": 5,
+    "frequency": 868500000,
+    "tenantName": "ChirpStack",
+    "applicationName": "Chirpstack application",
+    "bandwidth": 125000,
+    "adr": true,
+    "codeRate": "CR_4_5",
+    "spreadingFactor": 7,
+    "eui": "1000000000000001",
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75"
+  }
+}
