@@ -1,0 +1,14 @@
+{
+  "deviceName": "AM308 My device chirpstack",
+  "deviceType": "AM308",
+  "attributes": {
+    "eui": "24e124707c483636",
+    "applicationId": "e77303cd-c298-414a-a270-672fe1d6cba2",
+    "applicationName": "Sample Application",
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "tenantName": "ChirpStack",
+    "deviceProfileId": "3fda0131-818f-42f4-8a64-7c21cb92b9ac",
+    "deviceProfileName": "Default device profile"
+  },
+  "telemetry": []
+}
