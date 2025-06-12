@@ -1,0 +1,12 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "EU868_OTAA",
+  "telemetry": {
+      "type": "Heartbeat",
+      "battery": "50%",
+      "rssi": "-94dBm",
+      "snr": "10dB",
+      "version": 15,
+      "chargeState": "Not charging"
+  }
+}
