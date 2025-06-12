@@ -1,0 +1,14 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "EU868_OTAA",
+  "telemetry": {
+      "type": "Heartbeat",
+      "version": 0,
+      "battery": "80%",
+      "rssi": "-32dBm",
+      "snr": 1,
+      "temperature": "17.34℃",
+      "humidity": "48%",
+      "crc": 0
+  }
+}

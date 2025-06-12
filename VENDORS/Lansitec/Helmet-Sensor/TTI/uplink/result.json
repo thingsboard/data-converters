@@ -1,0 +1,16 @@
+{
+  "deviceName": "70B3D5A4D4104770",
+  "deviceType": "lansitec-bluetooth-gateway",
+  "telemetry": {
+      "type": "Beacon",
+      "wearState": "Wearing",
+      "pressure": "100469.9pa",
+      "number": 3,
+      "beacon1": "00010001",
+      "rssi1": "-39dBm",
+      "beacon2": "00101127",
+      "rssi2": "-57dBm",
+      "beacon3": "00990098",
+      "rssi3": "-72dBm"
+  }
+}
