@@ -1,0 +1,14 @@
+{
+  "entityType": "DEVICE",
+  "name": "iOKE868 1000000000000001",
+  "profile": "default",
+  "telemetry": {},
+  "attributes": {
+    "meter_id": "B0-00-E4",
+    "decodeErrors": ["unsupported type: 0xB2"],
+    "info_log": ["use of payload parser V1.19 for 'IMST iO881A for LoRaWAN®'"],
+    "fPort": 5,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}
