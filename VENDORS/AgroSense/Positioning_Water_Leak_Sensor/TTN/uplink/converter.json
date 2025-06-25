@@ -1,0 +1,58 @@
+{
+  "name": "Things Stack Community Uplink Converter for AgroSense Positioning Water Leak Sensor",
+  "type": "UPLINK",
+  "integrationType": "TTN",
+  "debugMode": false,
+  "debugSettings": {
+    "failuresEnabled": true,
+    "allEnabled": false,
+    "allEnabledUntil": 0
+  },
+  "configuration": {
+    "scriptLang": "TBEL",
+    "decoder": "// Decode an uplink message from a buffer\n// payload - array of bytes\n// metadata - key/value object\n\n/** Decoder **/\n\n// decode payload to string\nvar payloadStr = decodeToString(payload);\n\n// decode payload to JSON\n// var data = decodeToJson(payload);\n\nvar deviceName = 'Device A';\nvar deviceType = 'thermostat';\nvar customerName = 'Customer C';\nvar groupName = 'thermostat devices';\nvar manufacturer = 'Example corporation';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// Result object with device/asset attributes/telemetry data\nvar result = {\n// Use deviceName and deviceType or assetName and assetType, but not both.\n   deviceName: deviceName,\n   deviceType: deviceType,\n// assetName: assetName,\n// assetType: assetType,\n// customerName: customerName,\n   groupName: groupName,\n   attributes: {\n       model: 'Model A',\n       serialNumber: 'SN111',\n       integrationName: metadata['integrationName'],\n       manufacturer: manufacturer\n   },\n   telemetry: {\n       temperature: 42,\n       humidity: 80,\n       rawData: payloadStr\n   }\n};\n\n/** Helper functions **/\n\nfunction decodeToString(payload) {\n   return String.fromCharCode.apply(String, payload);\n}\n\nfunction decodeToJson(payload) {\n   // covert payload to string.\n   var str = decodeToString(payload);\n\n   // parse string to JSON\n   var data = JSON.parse(str);\n   return data;\n}\n\nreturn result;",
+    "tbelDecoder": "/**\n * Decodes the incoming payload and returns a structured object containing telemetry data and attributes.\n *\n * @param {byte[]} input - The raw payload received as an array of bytes.\n * @returns {Object} output - The structured output with decoded telemetry and attributes.\n */\n\nfunction decodePayload(input) {\n    var result = {attributes: {}, telemetry: {}};\n    \n    result.telemetry.battery = parseBytesToInt(input, 2, 1) / 10.0;\n    result.telemetry.water_leak_flag = input[3] & 0xff;\n    result.telemetry.water_leak_cnt = input[4] * 256 + input[5];\n    result.telemetry.water_leak_time_seconds = (input[6] * 16777216 + input[7] * 65536 + input[8] * 256 + input[9]);\n\n    return result;\n}\n\nvar result = {};\n\nif (payload != null && payload.length > 0) {\n    result = decodePayload(payload);\n}\n\nreturn result;",
+    "encoder": null,
+    "tbelEncoder": null,
+    "updateOnlyKeys": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate",
+      "frequency",
+      "hardwareVersion",
+      "firmwareVersion",
+      "tenantId"
+    ],
+    "type": "DEVICE",
+    "name": "Positioning Water Leak Sensor $eui",
+    "profile": "$applicationId",
+    "label": "$deviceId",
+    "customer": "",
+    "group": "",
+    "telemetry": null,
+    "attributes": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate",
+      "frequency",
+      "tenantId",
+      "joinEui",
+      "deviceId",
+      "clusterId",
+      "clusterAddress",
+      "netId",
+      "applicationId"
+    ]
+  },
+  "additionalInfo": {
+    "description": ""
+  },
+  "edgeTemplate": false,
+  "converterVersion": 2
+}
