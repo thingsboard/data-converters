@@ -1,0 +1,15 @@
+{
+  "entityType": "DEVICE",
+  "name": "Air Temperature Humidity Sensor 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "battery": 2.9,
+    "humidity": 39.3,
+    "temperature": 24.8
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}
