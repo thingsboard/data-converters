@@ -1,0 +1,41 @@
+{
+  "name": "Loriot Uplink Converter for AgroSense Positioning Water Leak Sensor",
+  "type": "UPLINK",
+  "integrationType": "LORIOT",
+  "debugMode": false,
+  "debugSettings": {
+    "failuresEnabled": true,
+    "allEnabled": false,
+    "allEnabledUntil": 1749039897801
+  },
+  "configuration": {
+    "scriptLang": "TBEL",
+    "decoder": "/**\n * Decodes the incoming payload and returns a structured object containing telemetry data and attributes.\n *\n * @param {number[]} input - The raw payload received as an array of bytes.\n * @returns {Object} output - The structured output with decoded telemetry and attributes.\n */\n\nfunction decodePayload(input) {\n    // Initialize the output object with empty attributes and telemetry for clarity.\n    var result = { attributes: {}, telemetry: {}};\n\n    // Decode serial number (SN) from the first 4 bytes of the payload.\n    // Press '?' icon in the top right corner to learn more about built in helper functions and capabilities.\n    result.attributes.sn = parseBytesToInt(input, 0, 4);\n\n    // Extract the timestamp from metadata (represented in milliseconds).\n    var timestamp = metadata.ts; // ts from the incoming message.\n\n    // Initialize an object to store decoded key/value telemetry data.\n    var values = {};\n\n    // Decode battery level from the 5th byte of the payload.\n    values.battery = parseBytesToInt(input, 4, 1);\n\n    // Decode temperature from the 6th and 7th bytes of the payload (divided by 100).\n    values.temperature = parseBytesToInt(input, 5, 2) / 100.0;\n\n    // Decode saturation from the 8th byte of the payload.\n    values.saturation = parseBytesToInt(input, 7, 1);\n\n    // Combine the timestamp with values and add it to the telemetry.\n    result.telemetry = {\n        ts: timestamp,\n        values: values\n    };\n\n    // Return the fully constructed output object.\n    return result;\n    // Same logic, less code:\n    // return {\n    //     attributes: {\n    //         sn: parseBytesToInt(input, 0, 4)\n    //     },\n    //     telemetry: {\n    //         ts: metadata.ts,\n    //         values: {\n    //             battery: parseBytesToInt(input, 4, 1),\n    //             temperature: parseBytesToInt(input, 5, 2) / 100.0,\n    //             saturation: parseBytesToInt(input, 7, 1)\n    //         }\n    //     }\n    // };\n}\n\nvar result = decodePayload(payload);\n// Uncomment this code block to overwrite values set in the main configuration window. Useful if you extract device/asset/customer/group names from the payload;\n// result.type = 'DEVICE'; // Entity type allows you to choose type of created entity. Can be 'DEVICE' or 'ASSET'.\n// result.name = 'Temperature Sensor'; // Device or asset name (the value must be unique)\n// result.profile = 'IndustrialSensorProfile'; // Device or asset profile name.\n// result.customer = 'MyCustomer'; // If customer is not null - created entity will be assigned to customer with such name.\n// result.group = 'SensorsGroup'; // If group is not null - created entity will be added to the entity group with such name.\n\n// Return the final result object.\nreturn result;\n\n/**\n * Parse a slice of bytes from an array into an integer (big-endian).\n *\n * @param {number[]} input - The array of bytes.\n * @param {number} offset - The starting index.\n * @param {number} length - The number of bytes to convert.\n * @returns {number} - The resulting integer.\n */\nfunction parseBytesToInt(input, offset, length) {\n  var result = 0;\n  for (var i = offset; i < offset + length; i++) {\n    result = (result << 8) | (input[i] & 0xFF);\n  }\n  return result;\n}",
+    "tbelDecoder": "/**\n * Decodes the incoming payload and returns a structured object containing telemetry data and attributes.\n *\n * @param {byte[]} input - The raw payload received as an array of bytes.\n * @returns {Object} output - The structured output with decoded telemetry and attributes.\n */\n\nfunction decodePayload(input) {\n    var result = {attributes: {}, telemetry: {}};\n    \n    result.telemetry.battery = parseBytesToInt(input, 2, 1) / 10.0;\n    result.telemetry.water_leak_flag = input[3] & 0xff;\n    result.telemetry.water_leak_cnt = input[4] * 256 + input[5];\n    result.telemetry.water_leak_time_seconds = (input[6] * 16777216 + input[7] * 65536 + input[8] * 256 + input[9]);\n\n    return result;\n}\n\nvar result = {};\n\nif (payload != null && payload.length > 0) {\n    result = decodePayload(payload);\n}\n\nreturn result;",
+    "encoder": null,
+    "tbelEncoder": null,
+    "updateOnlyKeys": [
+      "eui",
+      "fPort",
+      "frequency",
+      "dr"
+    ],
+    "type": "DEVICE",
+    "name": "Positioning Water Leak Sensor $eui",
+    "profile": "",
+    "label": "",
+    "customer": "",
+    "group": "",
+    "telemetry": null,
+    "attributes": [
+      "eui",
+      "fPort",
+      "frequency"
+    ]
+  },
+  "additionalInfo": {
+    "description": ""
+  },
+  "edgeTemplate": false,
+  "converterVersion": 2
+}
