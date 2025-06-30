@@ -1,4 +1,4 @@
-[{
+{
   "entityType": "DEVICE",
   "name": "16ASPM 1000000000000001",
   "profile": "default",
@@ -18,4 +18,4 @@
     "frequency": 867500000,
     "eui": "1000000000000001"
   }
-}]
+}
