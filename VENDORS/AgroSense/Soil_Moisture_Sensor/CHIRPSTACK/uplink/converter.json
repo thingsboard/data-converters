@@ -1,0 +1,64 @@
+{
+  "name": "ChirpStack Uplink Converter for AgroSense Soil Moisture Sensor",
+  "type": "UPLINK",
+  "integrationType": "CHIRPSTACK",
+  "debugMode": false,
+  "debugSettings": {
+    "failuresEnabled": true,
+    "allEnabled": false,
+    "allEnabledUntil": 1749813006362
+  },
+  "configuration": {
+    "scriptLang": "TBEL",
+    "decoder": null,
+    "tbelDecoder": "/**\n * Decodes the incoming payload and returns a structured object containing telemetry data and attributes.\n *\n * @param {byte[]} input - The raw payload received as an array of bytes.\n * @returns {Object} output - The structured output with decoded telemetry and attributes.\n */\n\nfunction decodePayload(input) {\n    var result = {attributes: {}, telemetry: {}};\n    \n    result.telemetry.battery = parseBytesToInt(input, 4, 1) / 10.0;\n    result.telemetry.soil_adc = parseBytesToInt(input, 2, 1) * 256 + parseBytesToInt(input, 3, 1);\n    \n    return result;\n}\n\nvar result = {};\n\nif (payload != null && payload.length > 0) {\n    result = decodePayload(payload);\n}\n\nreturn result;",
+    "encoder": null,
+    "tbelEncoder": null,
+    "updateOnlyKeys": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "tenantId",
+      "tenantName",
+      "applicationId",
+      "applicationName",
+      "adr",
+      "dr",
+      "frequency",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate",
+      "deviceProfileId",
+      "deviceProfileName"
+    ],
+    "type": "DEVICE",
+    "name": "Soil Moisture Sensor $eui",
+    "profile": "$deviceProfileName",
+    "label": "$deviceName",
+    "customer": "",
+    "group": "",
+    "telemetry": null,
+    "attributes": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "tenantId",
+      "tenantName",
+      "applicationId",
+      "applicationName",
+      "adr",
+      "dr",
+      "frequency",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate",
+      "deviceProfileId",
+      "deviceProfileName"
+    ]
+  },
+  "additionalInfo": {
+    "description": ""
+  },
+  "edgeTemplate": false,
+  "converterVersion": 2
+}

@@ -1,0 +1,14 @@
+{
+  "entityType": "DEVICE",
+  "name": "Soil Moisture Sensor 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "battery": 3,
+    "soil_adc": 1479
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}

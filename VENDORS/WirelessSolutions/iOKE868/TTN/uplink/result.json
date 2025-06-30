@@ -1,0 +1,25 @@
+{
+  "entityType": "DEVICE",
+  "name": "iOKE868 1000000000000001",
+  "profile": "application-tts-name",
+  "label": "eui-1000000000000001",
+  "telemetry": {},
+  "attributes": {
+    "meter_id": "B0-00-E4",
+    "decodeErrors": ["unsupported type: 0xB2"],
+    "info_log": ["use of payload parser V1.19 for 'IMST iO881A for LoRaWAN®'"],
+    "devAddr": "20000001",
+    "fPort": 5,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "clusterAddress": "eu1.cloud.thethings.network",
+    "frequency": "867100000",
+    "joinEui": "2000000000000001",
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": "1000000000000001",
+    "tenantId": "ttn",
+    "applicationId": "application-tts-name"
+  }
+}

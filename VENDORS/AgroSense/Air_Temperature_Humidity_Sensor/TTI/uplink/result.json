@@ -1,0 +1,26 @@
+{
+  "entityType": "DEVICE",
+  "name": "Air Temperature Humidity Sensor 1000000000000001",
+  "profile": "application-tti-name",
+  "label": "eui-1000000000000001",
+  "telemetry": {
+    "battery": 2.9,
+    "humidity": 39.3,
+    "temperature": 24.8
+  },
+  "attributes": {
+    "devAddr": "20000001",
+    "fPort": 2,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "clusterAddress": "eu1.cloud.thethings.industries",
+    "frequency": "868500000",
+    "joinEui": "2000000000000001",
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": "1000000000000001",
+    "tenantId": "tenant",
+    "applicationId": "application-tti-name"
+  }
+}

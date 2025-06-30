@@ -1,0 +1,27 @@
+{
+  "entityType": "DEVICE",
+  "name": "Positioning Water Leak Sensor 1000000000000001",
+  "profile": "application-tti-name",
+  "label": "eui-1000000000000001",
+  "telemetry": {
+    "battery": 2.9,
+    "water_leak_flag": 0,
+    "water_leak_cnt": 2,
+    "water_leak_time_seconds": 3
+  },
+  "attributes": {
+    "devAddr": "20000001",
+    "fPort": 2,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "clusterAddress": "eu1.cloud.thethings.industries",
+    "frequency": "868500000",
+    "joinEui": "2000000000000001",
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": "1000000000000001",
+    "tenantId": "tenant",
+    "applicationId": "application-tti-name"
+  }
+}
