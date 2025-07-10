@@ -1,0 +1,21 @@
+[{
+  "entityType": "DEVICE",
+  "name": "Vapeless Pro 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "temperature": 23.45,
+      "humidity": 34,
+      "battery": 3.53,
+      "vape_index": 0,
+      "violence": 0,
+      "noise": 41
+    }
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]
