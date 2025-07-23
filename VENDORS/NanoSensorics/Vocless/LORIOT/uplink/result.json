@@ -1,0 +1,19 @@
+[{
+  "entityType": "DEVICE",
+  "name": "Vocless 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "voc": 101.5,
+      "temperature": 22.5,
+      "humidity": 35,
+      "battery": 3.3
+    }
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]
