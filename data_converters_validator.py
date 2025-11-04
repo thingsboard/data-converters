@@ -147,7 +147,13 @@ def validate_uplink_downlink(directory):
             raise ValueError(f"Directory '{directory}' is not recognized as 'uplink' or 'downlink'.")
 
         result_value = actual_result.get()
-        output = result_value.get('outputMsg') if is_dedicated else json.loads(result_value.get('output'))
+        if is_dedicated:
+            output = result_value.get('outputMsg')
+        else:
+            output = result_value.get('output')
+            if not output:
+                raise ValueError(f"No 'output' field for converter from {directory} with payload {payload_file}.")
+            output = json.loads(output)
         error = result_value.get('error')
 
         if error != '':
