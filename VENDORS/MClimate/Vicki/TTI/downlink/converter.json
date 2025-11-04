@@ -1,7 +1,7 @@
 {
   "name": "Things Stack Industries Downlink Converter for MClimate Vicki",
   "type": "DOWNLINK",
-  "integrationType": null,
+  "integrationType": "TTI",
   "debugMode": false,
   "debugSettings": {
     "failuresEnabled": true,
