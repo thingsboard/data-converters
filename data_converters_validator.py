@@ -152,7 +152,7 @@ def validate_uplink_downlink(directory):
         else:
             output = result_value.get('output')
             if not output:
-                raise ValueError(f"No 'output' field for converter from {directory} with payload {payload_file}.")
+                raise ValueError(f"No 'output' field for converter from {directory} with payload {payload_file} and result {result_value}.")
             output = json.loads(output)
         error = result_value.get('error')
 
