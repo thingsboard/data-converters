@@ -1,0 +1,11 @@
+{
+    "deviceName": "rs261-erik-internal",
+    "deviceType": "thingsboard-ttn-demo",
+    "telemetry": {
+        "temperature": 22.1,
+        "battery_status": "Good",
+        "rssi": -69,
+        "snr": 8.5,
+        "spreading_factor": 7
+    }
+}
