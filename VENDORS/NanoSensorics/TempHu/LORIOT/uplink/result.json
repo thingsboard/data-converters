@@ -1,0 +1,18 @@
+[{
+  "entityType": "DEVICE",
+  "name": "TempHu 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "temperature": 26.11,
+      "humidity": 35,
+      "battery": 3.18
+    }
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]
