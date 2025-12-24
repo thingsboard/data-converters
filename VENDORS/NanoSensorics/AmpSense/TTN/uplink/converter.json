@@ -1,0 +1,58 @@
+{
+  "name": "Things Stack Community Uplink Converter for NanoSensorics AmpSense",
+  "type": "UPLINK",
+  "integrationType": "TTN",
+  "debugMode": false,
+  "debugSettings": {
+    "failuresEnabled": true,
+    "allEnabled": false,
+    "allEnabledUntil": 1751620534238
+  },
+  "configuration": {
+    "scriptLang": "TBEL",
+    "decoder": "// Decode an uplink message from a buffer\n// payload - array of bytes\n// metadata - key/value object\n\n/** Decoder **/\n\n// decode payload to string\nvar payloadStr = decodeToString(payload);\n\n// decode payload to JSON\n// var data = decodeToJson(payload);\n\nvar deviceName = 'Device A';\nvar deviceType = 'thermostat';\nvar customerName = 'Customer C';\nvar groupName = 'thermostat devices';\nvar manufacturer = 'Example corporation';\n// use assetName and assetType instead of deviceName and deviceType\n// to automatically create assets instead of devices.\n// var assetName = 'Asset A';\n// var assetType = 'building';\n\n// Result object with device/asset attributes/telemetry data\nvar result = {\n// Use deviceName and deviceType or assetName and assetType, but not both.\n   deviceName: deviceName,\n   deviceType: deviceType,\n// assetName: assetName,\n// assetType: assetType,\n// customerName: customerName,\n   groupName: groupName,\n   attributes: {\n       model: 'Model A',\n       serialNumber: 'SN111',\n       integrationName: metadata['integrationName'],\n       manufacturer: manufacturer\n   },\n   telemetry: {\n       temperature: 42,\n       humidity: 80,\n       rawData: payloadStr\n   }\n};\n\n/** Helper functions **/\n\nfunction decodeToString(payload) {\n   return String.fromCharCode.apply(String, payload);\n}\n\nfunction decodeToJson(payload) {\n   // covert payload to string.\n   var str = decodeToString(payload);\n\n   // parse string to JSON\n   var data = JSON.parse(str);\n   return data;\n}\n\nreturn result;",
+    "tbelDecoder": "function decodePayload(input) {\n    var result = { attributes: {}, telemetry: {} };\n    var timestamp = metadata.ts;\n    var values = {};\n    var fPort = metadata.fPort;\n    \n    if (fPort == 2) {\n        values.currentA = parseBytesToInt(input, 0, 2) / 100;\n        values.currentB = parseBytesToInt(input, 2, 2) / 100;\n        values.currentC = parseBytesToInt(input, 4, 2) / 100;\n        values.battery = parseBytesToInt(input, 6, 1) + parseBytesToInt(input, 7, 1) / 100;\n    } else {\n        values.data = input;\n    }\n\n    result.telemetry = {\n        ts: timestamp,\n        values: values\n    };\n    return result;\n}\n\nvar result = {};\n\nif (payload != null && payload.length > 0) {\n    result = decodePayload(payload);\n}\n\nreturn result;",
+    "encoder": null,
+    "tbelEncoder": null,
+    "updateOnlyKeys": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate",
+      "frequency",
+      "hardwareVersion",
+      "firmwareVersion",
+      "tenantId"
+    ],
+    "type": "DEVICE",
+    "name": "AmpSense $eui",
+    "profile": "$applicationId",
+    "label": "$deviceId",
+    "customer": "",
+    "group": "",
+    "telemetry": null,
+    "attributes": [
+      "eui",
+      "devAddr",
+      "fPort",
+      "bandwidth",
+      "spreadingFactor",
+      "codeRate",
+      "frequency",
+      "tenantId",
+      "joinEui",
+      "deviceId",
+      "clusterId",
+      "clusterAddress",
+      "netId",
+      "applicationId"
+    ]
+  },
+  "additionalInfo": {
+    "description": ""
+  },
+  "edgeTemplate": false,
+  "converterVersion": 2
+}
