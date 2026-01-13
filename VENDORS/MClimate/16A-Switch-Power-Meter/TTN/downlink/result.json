@@ -1,0 +1,7 @@
+{
+  "contentType": "JSON",
+  "data": "{\"downlinks\":[{\"f_port\":2,\"frm_payload\":\"wQE=\",\"priority\":\"NORMAL\"}]}",
+  "metadata": {
+    "devId": "16asmp-tb"
+  }
+}

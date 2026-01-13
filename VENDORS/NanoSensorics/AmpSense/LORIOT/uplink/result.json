@@ -1,0 +1,19 @@
+[{
+  "entityType": "DEVICE",
+  "name": "AmpSense 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "currentA": 5.07,
+      "currentB": 5.06,
+      "currentC": 5.08,
+      "battery": 3.55
+    }
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]

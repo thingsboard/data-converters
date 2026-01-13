@@ -1,0 +1,30 @@
+{
+  "entityType": "DEVICE",
+  "name": "Carbonless 1000000000000001",
+  "profile": "application-tts-name",
+  "label": "eui-1000000000000001",
+  "telemetry": {
+    "ts": 1684474415641,
+    "values": {
+      "co2": 856,
+      "temperature": 26.34,
+      "humidity": 43,
+      "battery": 3.58
+    }
+  },
+  "attributes": {
+    "devAddr": "20000001",
+    "fPort": 2,
+    "clusterId": "eu1",
+    "deviceId": "eui-1000000000000001",
+    "clusterAddress": "eu1.cloud.thethings.network",
+    "frequency": "867100000",
+    "joinEui": "2000000000000001",
+    "bandwidth": 125000,
+    "netId": "000013",
+    "spreadingFactor": 7,
+    "eui": "1000000000000001",
+    "tenantId": "ttn",
+    "applicationId": "application-tts-name"
+  }
+}

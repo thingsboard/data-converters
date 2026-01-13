@@ -1,0 +1,32 @@
+{
+  "entityType": "DEVICE",
+  "name": "Carbonless 1000000000000001",
+  "profile": "Chirpstack default device profile",
+  "label": "Device name",
+  "telemetry": {
+    "ts": 1684741625404,
+    "values": {
+      "co2": 856,
+      "temperature": 26.34,
+      "humidity": 43,
+      "battery": 3.58
+    }
+  },
+  "attributes": {
+    "devAddr": "20000001",
+    "fPort": 2,
+    "deviceProfileId": "605d08d4-65f5-4d2c-8a5a-3d2457662f79",
+    "dr": 5,
+    "frequency": 868500000,
+    "tenantName": "ChirpStack",
+    "applicationName": "Chirpstack application",
+    "deviceProfileName": "Chirpstack default device profile",
+    "bandwidth": 125000,
+    "adr": true,
+    "codeRate": "CR_4_5",
+    "spreadingFactor": 7,
+    "eui": "1000000000000001",
+    "tenantId": "52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+    "applicationId": "ca739e26-7b67-4f14-b69e-d568c22a5a75"
+  }
+}

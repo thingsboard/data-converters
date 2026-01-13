@@ -1,0 +1,19 @@
+[{
+  "entityType": "DEVICE",
+  "name": "Carbonless 1000000000000001",
+  "profile": "default",
+  "telemetry": {
+    "ts": 1684478801936,
+    "values": {
+      "co2": 856,
+      "temperature": 26.34,
+      "humidity": 43,
+      "battery": 3.58
+    }
+  },
+  "attributes": {
+    "fPort": 2,
+    "frequency": 867500000,
+    "eui": "1000000000000001"
+  }
+}]

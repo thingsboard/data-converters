@@ -1,0 +1,10 @@
+{
+  "contentType": "TEXT",
+  "data": "12",
+  "metadata": {
+    "port": 2,
+    "EUI": "1000000000000001",
+    "priority": 2,
+    "isHexEncoded": true
+  }
+}

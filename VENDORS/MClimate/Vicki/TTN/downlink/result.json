@@ -1,0 +1,7 @@
+{
+  "contentType": "JSON",
+  "data": "{\"downlinks\":[{\"f_port\":2,\"frm_payload\":\"Eg==\",\"priority\":\"NORMAL\"}]}",
+  "metadata": {
+    "devId": "vicki"
+  }
+}
