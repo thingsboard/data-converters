@@ -131,15 +131,19 @@ def validate_uplink_downlink(directory):
         if error != '':
             success = False
             result_message = f"Validation failed for {directory} with payload {payload_file} and result {result_file} with error: {error}\n"
-        elif json.loads(output) == expected_result:
-            result_message = f"Validation passed for {directory} with payload {payload_file} and result {result_file}\n"
         else:
-            success = False
-            result_message = (
-                f"Validation failed for {directory} with payload {payload_file} and result {result_file}. Expected output does not match.\n"
-                f"Expected:\n{json.dumps(expected_result, indent=2)}\n"
-                f"Actual:\n{json.dumps(output, indent=2)}\n"
-            )
+            # Parse the JSON output
+            parsed_output = json.loads(output)
+
+            if parsed_output == expected_result:
+                result_message = f"Validation passed for {directory} with payload {payload_file} and result {result_file}\n"
+            else:
+                success = False
+                result_message = (
+                    f"Validation failed for {directory} with payload {payload_file} and result {result_file}. Expected output does not match.\n"
+                    f"Expected:\n{json.dumps(expected_result, indent=2)}\n"
+                    f"Actual:\n{json.dumps(parsed_output, indent=2)}\n"
+                )
 
         print(result_message)
 

@@ -9,12 +9,14 @@
     "spreadingFactor": 7,
     "codeRate": "4/5"
   },
-  "telemetry": [{
-    "ts": 1703329530547,
-    "values": {
-      "battery": 92,
-      "temperature": -5.2,
-      "humidity": 50.5
+  "telemetry": [
+    {
+      "ts": 1703326530547,
+      "values": {
+        "battery": 92,
+        "temperature": -5.2,
+        "humidity": 50.5
+      }
     }
-  }]
+  ]
 }
