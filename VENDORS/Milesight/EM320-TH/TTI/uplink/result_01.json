@@ -17,12 +17,14 @@
     "bandwidth": 125000,
     "frequency": "868500000"
   },
-  "telemetry": [{
-    "ts": 1703329530906,
-    "values": {
-      "battery": 92,
-      "temperature": -5.2,
-      "humidity": 50.5
+  "telemetry": [
+    {
+      "ts": 1703326530906,
+      "values": {
+        "battery": 92,
+        "temperature": -5.2,
+        "humidity": 50.5
+      }
     }
-  }]
+  ]
 }
