@@ -1,0 +1,21 @@
+[
+  {
+    "deviceName": "EM320-TH 1000000000000001",
+    "deviceType": "EM320-TH",
+    "attributes": {
+      "eui": "1000000000000001",
+      "fPort": 85,
+      "frequency": 867500000
+    },
+    "telemetry": [
+      {
+        "ts": 1703326530547,
+        "values": {
+          "battery": 92,
+          "temperature": -5.2,
+          "humidity": 50.5
+        }
+      }
+    ]
+  }
+]
